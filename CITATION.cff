@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+message: "If you use this benchmark, please cite it as below."
+title: "Page2AI Benchmark: reproducible web-to-Markdown extraction comparison"
+abstract: >-
+  An open, reproducible benchmark that compares Page2AI, Firecrawl v2,
+  and Jina Reader on documentation frameworks (Mintlify, Docusaurus,
+  Starlight, Nextra, Fumadocs). Includes automatic scorers for chars,
+  headings, code blocks, tables, and empty-alt image ratio. Framed as an
+  exploratory case study, not a statistical benchmark.
+type: software
+version: 0.1.0
+date-released: 2026-07-24
+license: MIT
+repository-code: "https://github.com/igorsaevets/page2ai-benchmark"
+url: "https://igorsaevets.github.io/page2ai-docs/comparison/"
+authors:
+  - given-names: Igor
+    family-names: Saevets
+    orcid: "https://orcid.org/0009-0006-8636-1377"
+    email: igorsaevets@gmail.com
+    website: "https://igorsaevets.github.io/page2ai-docs/about/"
+keywords:
+  - benchmark
+  - markdown
+  - web-scraping
+  - llm
+  - rag
+  - documentation
+  - page2ai
+  - mcp
+  - reproducibility
+identifiers:
+  - type: url
+    value: "https://github.com/igorsaevets/page2ai-benchmark"
+    description: GitHub repository
