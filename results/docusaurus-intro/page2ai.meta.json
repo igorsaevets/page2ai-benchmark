@@ -1,0 +1,12 @@
+{
+  "tool": "page2ai",
+  "site": "docusaurus-intro",
+  "url": "https://docusaurus.io/docs/introduction",
+  "adapter": "@page2ai/core headless (Node)",
+  "note": "The Chrome extension surface (tab-widget dedup, DOM interaction) is not exercised by this runner. See analysis.md.",
+  "elapsed_ms": 663,
+  "chars": 221,
+  "title": "",
+  "baseUrl": "https://docusaurus.io/docs/introduction",
+  "run_date": "2026-07-24T11:43:52.071Z"
+}

@@ -1,0 +1,17 @@
+{
+  "site": "mintlify-anthropic",
+  "tools": {
+    "page2ai": {
+      "chars": 21254,
+      "code_blocks": 3,
+      "lang_labeled": 2,
+      "lang_labeled_fraction": 0.667,
+      "tables_present": 0,
+      "frontmatter_present": 1,
+      "headings": 10,
+      "links": 43,
+      "nav_pollution_lines": 0
+    }
+  },
+  "run_date": "2026-07-24T11:46:50.743Z"
+}

@@ -1,0 +1,12 @@
+{
+  "tool": "page2ai",
+  "site": "nextra-docs",
+  "url": "https://nextra.site/docs",
+  "adapter": "@page2ai/core headless (Node)",
+  "note": "The Chrome extension surface (tab-widget dedup, DOM interaction) is not exercised by this runner. See analysis.md.",
+  "elapsed_ms": 227,
+  "chars": 2024,
+  "title": "Introduction | Nextra",
+  "baseUrl": "https://nextra.site/docs",
+  "run_date": "2026-07-24T11:43:52.728Z"
+}

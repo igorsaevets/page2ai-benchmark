@@ -1,0 +1,12 @@
+{
+  "tool": "page2ai",
+  "site": "starlight-getting-started",
+  "url": "https://starlight.astro.build/getting-started/",
+  "adapter": "@page2ai/core headless (Node)",
+  "note": "The Chrome extension surface (tab-widget dedup, DOM interaction) is not exercised by this runner. See analysis.md.",
+  "elapsed_ms": 423,
+  "chars": 6056,
+  "title": "Getting Started | Starlight",
+  "baseUrl": "https://starlight.astro.build/getting-started/",
+  "run_date": "2026-07-24T11:43:52.498Z"
+}

@@ -1,0 +1,17 @@
+{
+  "site": "starlight-getting-started",
+  "tools": {
+    "page2ai": {
+      "chars": 6056,
+      "code_blocks": 9,
+      "lang_labeled": 9,
+      "lang_labeled_fraction": 1,
+      "tables_present": 0,
+      "frontmatter_present": 1,
+      "headings": 9,
+      "links": 36,
+      "nav_pollution_lines": 0
+    }
+  },
+  "run_date": "2026-07-24T11:46:50.745Z"
+}

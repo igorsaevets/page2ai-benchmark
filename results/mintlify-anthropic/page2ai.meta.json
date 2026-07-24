@@ -1,0 +1,12 @@
+{
+  "tool": "page2ai",
+  "site": "mintlify-anthropic",
+  "url": "https://docs.anthropic.com/en/docs/build-with-claude/extended-thinking",
+  "adapter": "@page2ai/core headless (Node)",
+  "note": "The Chrome extension surface (tab-widget dedup, DOM interaction) is not exercised by this runner. See analysis.md.",
+  "elapsed_ms": 408,
+  "chars": 21254,
+  "title": "Extended thinking",
+  "baseUrl": "https://platform.claude.com/docs/en/build-with-claude/extended-thinking.md",
+  "run_date": "2026-07-24T11:43:51.407Z"
+}

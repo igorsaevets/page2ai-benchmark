@@ -1,0 +1,8 @@
+{
+  "tool": "page2ai",
+  "site": "fumadocs-mdx",
+  "url": "https://fumadocs.dev/docs/next-mdx-remote-client",
+  "error": "fetch-protected: HTTP 404 Not Found, content-type= (url: https://fumadocs.dev/docs/next-mdx-remote-client)",
+  "elapsed_ms": 661,
+  "run_date": "2026-07-24T11:43:53.390Z"
+}

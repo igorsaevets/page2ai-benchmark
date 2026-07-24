@@ -1,0 +1,93 @@
+{
+  "sites": [
+    {
+      "slug": "mintlify-anthropic",
+      "framework": "Mintlify",
+      "url": "https://docs.anthropic.com/en/docs/build-with-claude/extended-thinking",
+      "expected_code_blocks": 6,
+      "expected_language_tabs": true,
+      "expected_jsx_components": ["Note", "CodeGroup", "Tabs"],
+      "notes": "Multi-language code tabs (Python, TypeScript, cURL). Mintlify Note callouts."
+    },
+    {
+      "slug": "docusaurus-intro",
+      "framework": "Docusaurus",
+      "url": "https://docusaurus.io/docs/introduction",
+      "expected_code_blocks": 3,
+      "expected_language_tabs": false,
+      "expected_jsx_components": ["admonition:tip", "admonition:info"],
+      "notes": "Standard Docusaurus admonitions"
+    },
+    {
+      "slug": "starlight-getting-started",
+      "framework": "Starlight (Astro)",
+      "url": "https://starlight.astro.build/getting-started/",
+      "expected_code_blocks": 4,
+      "expected_language_tabs": false,
+      "expected_jsx_components": ["Card", "CardGrid"],
+      "notes": "Starlight Card components, Shiki code highlighting"
+    },
+    {
+      "slug": "nextra-docs",
+      "framework": "Nextra",
+      "url": "https://nextra.site/docs",
+      "expected_code_blocks": 2,
+      "expected_language_tabs": false,
+      "expected_jsx_components": ["Callout"],
+      "notes": "Nextra Callouts, MDX"
+    },
+    {
+      "slug": "fumadocs-mdx",
+      "framework": "Fumadocs",
+      "url": "https://fumadocs.dev/docs/next-mdx-remote-client",
+      "expected_code_blocks": 5,
+      "expected_language_tabs": false,
+      "expected_jsx_components": ["Callout", "Tabs", "Steps"],
+      "notes": "Newer framework, less common in extractor training data"
+    }
+  ],
+  "tools": [
+    {
+      "slug": "page2ai",
+      "name": "Page2AI",
+      "version": "1.2.0",
+      "type": "chrome-extension",
+      "invocation": "Chrome + extension + Alt+Shift+M",
+      "cost_per_request": 0,
+      "telemetry": false,
+      "local": true
+    },
+    {
+      "slug": "firecrawl",
+      "name": "Firecrawl",
+      "version": "v2 API",
+      "type": "cloud-api",
+      "invocation": "POST /v2/scrape with API key",
+      "cost_per_request": 1,
+      "telemetry": true,
+      "local": false
+    },
+    {
+      "slug": "jina",
+      "name": "Jina Reader",
+      "version": "r.jina.ai (2026-07)",
+      "type": "cloud-api",
+      "invocation": "GET https://r.jina.ai/{url}",
+      "cost_per_request": 0,
+      "telemetry": true,
+      "local": false
+    }
+  ],
+  "tasks": [
+    {
+      "slug": "main-content",
+      "name": "Extract main content",
+      "description": "Full article body as clean Markdown, no nav/footer/ads. Preserve headings, paragraphs, lists, tables."
+    },
+    {
+      "slug": "code-blocks",
+      "name": "Extract code blocks",
+      "description": "All code blocks with language labels, in original document order. Preserve multi-language tab structure where applicable."
+    }
+  ]
+}
