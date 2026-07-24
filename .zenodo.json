@@ -1,0 +1,46 @@
+{
+  "title": "Page2AI Benchmark: reproducible web-to-Markdown extraction comparison",
+  "description": "An open, reproducible benchmark that compares Page2AI, Firecrawl v2, and Jina Reader on documentation frameworks (Mintlify, Docusaurus, Starlight, Nextra, Fumadocs). Includes automatic scorers for chars, headings, code blocks, tables, and empty-alt image ratio. Framed as an exploratory case study, not a statistical benchmark.",
+  "creators": [
+    {
+      "name": "Saevets, Igor",
+      "orcid": "0009-0006-8636-1377",
+      "affiliation": "Independent"
+    }
+  ],
+  "keywords": [
+    "benchmark",
+    "markdown",
+    "web-scraping",
+    "llm",
+    "rag",
+    "documentation",
+    "page2ai",
+    "mcp",
+    "model-context-protocol",
+    "reproducibility"
+  ],
+  "license": "MIT",
+  "upload_type": "software",
+  "access_right": "open",
+  "language": "eng",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/igorsaevets/page2ai-benchmark",
+      "relation": "isSupplementTo",
+      "scheme": "url",
+      "resource_type": "software"
+    },
+    {
+      "identifier": "https://igorsaevets.github.io/page2ai-docs/comparison/",
+      "relation": "documents",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://www.npmjs.com/package/@page2ai/core",
+      "relation": "isDerivedFrom",
+      "scheme": "url"
+    }
+  ],
+  "notes": "By Igor Saevets. Central author page: https://igorsaevets.github.io/page2ai-docs/about/"
+}
