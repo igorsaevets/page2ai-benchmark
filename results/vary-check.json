@@ -1,5 +1,5 @@
 {
-  "run_date": "2026-07-25T13:58:40.731Z",
+  "run_date": "2026-07-25T15:06:57.387Z",
   "rows": [
     {
       "slug": "fumadocs",
@@ -40,14 +40,15 @@
     {
       "slug": "hono",
       "url": "https://hono.dev/docs/getting-started/basic",
-      "content_type": "text/html",
-      "vary": "accept",
-      "declares_vary_accept": true,
-      "cache_control": "public, max-age=0, must-revalidate",
+      "content_type": "text/markdown; charset=utf-8",
+      "vary": "",
+      "declares_vary_accept": false,
+      "cache_control": null,
       "cdn": "yes"
     }
   ],
   "missing_vary_accept": [
-    "fumadocs"
+    "fumadocs",
+    "hono"
   ]
 }
