@@ -1,10 +1,12 @@
 {
-  "run_date": "2026-07-25T14:53:39.638Z",
+  "run_date": "2026-07-25T15:25:22.003Z",
   "input": "WebMainBench_545.jsonl",
   "samples": 545,
   "field_availability": {
-    "note": "The repository README documents main_html and convert_main_content as 'available for all 7,809 samples'. In the published 545-sample file they are measured here.",
+    "note": "The README documents main_html and convert_main_content as 'available for all 7,809 samples'. They are not, in the published 545 file. CORRECTED 2026-07-25: this is a missing DERIVED output, not missing source evidence. Every row carries the full annotated html, and the repository ships webmainbench/utils/main_html.py with extract_main_html(), keyed on the cc-select attribute, which reconstructs the subtree. The first version of this script called it a reproducibility failure. That was wrong.",
     "main_html_empty": 445,
+    "of_those_whose_html_carries_cc_select": 444,
+    "rows_with_nonempty_html": 545,
     "convert_main_content_empty": 200,
     "groundtruth_content_empty": 0
   },
@@ -25,12 +27,15 @@
       "pct": 0.7
     },
     "bare_url_text": {
-      "n": 102,
-      "pct": 18.7
+      "n": 81,
+      "pct": 14.9,
+      "raw_regex_over_whole_document": 102,
+      "note": "n excludes fenced code, inline code, raw HTML and link targets. The raw figure was published first and was too high."
     },
     "markdown_table_row": {
-      "n": 39,
-      "pct": 7.2
+      "n": 38,
+      "pct": 7,
+      "raw_including_fenced_code": 39
     },
     "math_delimiter": {
       "n": 253,

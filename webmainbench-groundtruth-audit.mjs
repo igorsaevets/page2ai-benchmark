@@ -45,7 +45,12 @@ if (!INPUT) {
 // and hyperlinks are different claims and are counted separately here.
 const MD_LINK = /(?<!!)\[[^\]\n]*\]\([^)\s]+/;
 const MD_IMAGE = /!\[[^\]\n]*\]\([^)\s]*/;
+// A raw /https?:\/\/\S+/ over the whole document counts URLs that sit inside fenced code,
+// inline code, raw HTML attributes and Markdown link targets. Those are not "a destination
+// surviving as unlinked text". The first published run of this script reported 102 on the
+// raw regex; excluding those contexts gives 78. Corrected 2026-07-25.
 const BARE_URL = /https?:\/\/\S+/;
+// Likewise a pipe row inside a fenced block is not a Markdown table. 39 raw, 38 outside.
 const MD_TABLE_ROW = /^\s*\|.*\|\s*$/m;
 const MATH_DELIM = /\$\$?[^$\n]+\$\$?|\\\(|\\\[|\\begin\{(equation|align|math)/;
 const FENCE = /```[\s\S]*?```/g;
@@ -70,7 +75,11 @@ const c = {
   with_link: 0,
   with_image: 0,
   with_bare_url: 0,
+  with_bare_url_raw: 0,
   with_table_row: 0,
+  with_table_row_raw: 0,
+  empty_main_html_but_html_annotated: 0,
+  html_present: 0,
   with_math: 0,
   with_heading: 0,
   with_fence: 0,
@@ -112,10 +121,25 @@ for await (const line of rl) {
   const lang = r.meta?.language || "unknown";
   langs.set(lang, (langs.get(lang) || 0) + 1);
 
+  // Context-stripped copy: no fenced or inline code, no raw HTML tags, no link/image targets.
+  const prose = gt
+    .replace(/```[\s\S]*?```/g, "")
+    .replace(/`[^`\n]*`/g, "")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/!?\[[^\]\n]*\]\([^)\s]*\)/g, "");
+
   if (MD_LINK.test(gt)) c.with_link++;
   if (MD_IMAGE.test(gt)) c.with_image++;
-  if (BARE_URL.test(gt)) c.with_bare_url++;
-  if (MD_TABLE_ROW.test(gt)) c.with_table_row++;
+  if (BARE_URL.test(gt)) c.with_bare_url_raw++;
+  if (BARE_URL.test(prose)) c.with_bare_url++;
+  if (MD_TABLE_ROW.test(gt)) c.with_table_row_raw++;
+  if (MD_TABLE_ROW.test(gt.replace(/```[\s\S]*?```/g, ""))) c.with_table_row++;
+  // Can the annotated subtree be recovered where main_html is blank? The repository ships
+  // webmainbench/utils/main_html.py with extract_main_html(), keyed on a cc-select attribute
+  // in the full html field. If that attribute is present, the field is a missing DERIVED
+  // output, not missing source evidence. This distinction was got wrong in the first version.
+  if (!r.main_html && /cc-select/i.test(r.html || "")) c.empty_main_html_but_html_annotated++;
+  if (r.html) c.html_present++;
   if (MATH_DELIM.test(gt)) c.with_math++;
   if (HEADING.test(gt)) c.with_heading++;
 
@@ -158,8 +182,10 @@ const report = {
   samples: c.total,
   field_availability: {
     note:
-      "The repository README documents main_html and convert_main_content as 'available for all 7,809 samples'. In the published 545-sample file they are measured here.",
+      "The README documents main_html and convert_main_content as 'available for all 7,809 samples'. They are not, in the published 545 file. CORRECTED 2026-07-25: this is a missing DERIVED output, not missing source evidence. Every row carries the full annotated html, and the repository ships webmainbench/utils/main_html.py with extract_main_html(), keyed on the cc-select attribute, which reconstructs the subtree. The first version of this script called it a reproducibility failure. That was wrong.",
     main_html_empty: c.empty_main_html,
+    of_those_whose_html_carries_cc_select: c.empty_main_html_but_html_annotated,
+    rows_with_nonempty_html: c.html_present,
     convert_main_content_empty: c.empty_convert_main_content,
     groundtruth_content_empty: c.empty_groundtruth,
   },
@@ -173,8 +199,17 @@ const report = {
   constructs_present_in_reference: {
     markdown_link: { n: c.with_link, pct: pct(c.with_link) },
     markdown_image: { n: c.with_image, pct: pct(c.with_image) },
-    bare_url_text: { n: c.with_bare_url, pct: pct(c.with_bare_url) },
-    markdown_table_row: { n: c.with_table_row, pct: pct(c.with_table_row) },
+    bare_url_text: {
+      n: c.with_bare_url,
+      pct: pct(c.with_bare_url),
+      raw_regex_over_whole_document: c.with_bare_url_raw,
+      note: "n excludes fenced code, inline code, raw HTML and link targets. The raw figure was published first and was too high.",
+    },
+    markdown_table_row: {
+      n: c.with_table_row,
+      pct: pct(c.with_table_row),
+      raw_including_fenced_code: c.with_table_row_raw,
+    },
     math_delimiter: { n: c.with_math, pct: pct(c.with_math) },
     heading: { n: c.with_heading, pct: pct(c.with_heading) },
     fenced_block: { n: c.with_fence, pct: pct(c.with_fence) },
