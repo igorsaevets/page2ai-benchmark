@@ -12,11 +12,11 @@
     {
       "slug": "docusaurus-intro",
       "framework": "Docusaurus",
-      "url": "https://docusaurus.io/docs/introduction",
-      "expected_code_blocks": 3,
+      "url": "https://docusaurus.io/docs",
+      "expected_code_blocks": 2,
       "expected_language_tabs": false,
       "expected_jsx_components": ["admonition:tip", "admonition:info"],
-      "notes": "Standard Docusaurus admonitions"
+      "notes": "Standard Docusaurus admonitions. URL corrected 2026-07-25: the previous target /docs/introduction is a 639-byte meta-refresh stub (<meta http-equiv=\"refresh\" content=\"0; url=/docs\">), not a content page. Server-rendered HTML at /docs carries the full article."
     },
     {
       "slug": "starlight-getting-started",
@@ -39,11 +39,11 @@
     {
       "slug": "fumadocs-mdx",
       "framework": "Fumadocs",
-      "url": "https://fumadocs.dev/docs/next-mdx-remote-client",
-      "expected_code_blocks": 5,
-      "expected_language_tabs": false,
+      "url": "https://www.fumadocs.dev/docs/manual-installation/next",
+      "expected_code_blocks": 11,
+      "expected_language_tabs": true,
       "expected_jsx_components": ["Callout", "Tabs", "Steps"],
-      "notes": "Newer framework, less common in extractor training data"
+      "notes": "Newer framework, less common in extractor training data. URL corrected 2026-07-25: the previous target /docs/next-mdx-remote-client was removed upstream and now 308-redirects to a soft-404 page on the www host. This replacement carries package-manager Tabs (npm/pnpm/yarn/bun), which is the tab-widget deduplication case."
     }
   ],
   "tools": [

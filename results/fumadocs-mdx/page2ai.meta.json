@@ -1,0 +1,12 @@
+{
+  "tool": "page2ai",
+  "site": "fumadocs-mdx",
+  "url": "https://www.fumadocs.dev/docs/manual-installation/next",
+  "adapter": "@page2ai/core headless (Node)",
+  "note": "The Chrome extension surface (tab-widget dedup, DOM interaction) is not exercised by this runner. See analysis.md.",
+  "elapsed_ms": 431,
+  "chars": 264,
+  "title": "",
+  "baseUrl": "https://www.fumadocs.dev/docs/manual-installation/next",
+  "run_date": "2026-07-25T13:46:58.264Z"
+}

@@ -2,16 +2,16 @@
   "site": "docusaurus-intro",
   "tools": {
     "page2ai": {
-      "chars": 221,
-      "code_blocks": 0,
+      "chars": 14377,
+      "code_blocks": 2,
       "lang_labeled": 0,
       "lang_labeled_fraction": 0,
       "tables_present": 0,
       "frontmatter_present": 1,
-      "headings": 0,
-      "links": 0,
+      "headings": 18,
+      "links": 53,
       "nav_pollution_lines": 0
     }
   },
-  "run_date": "2026-07-24T11:46:50.739Z"
+  "run_date": "2026-07-25T13:46:58.364Z"
 }

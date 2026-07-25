@@ -2,7 +2,23 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21539768.svg)](https://doi.org/10.5281/zenodo.21539768)
 
-Open comparison of five extractors on five documentation frameworks. Focus on documentation-site extraction quality, not general web crawling.
+> **The v0.1.0 results are withdrawn. See [RETRACTION-2026-07-25.md](RETRACTION-2026-07-25.md).**
+>
+> Four of the five v0.1.0 rows were wrong. The one positive result was measuring the
+> publisher's own Markdown rather than any conversion: `docs.anthropic.com` serves
+> `content-type: text/markdown` in response to the Accept header this project sends, and the
+> recorded output was a 100% verbatim copy of it. Two "SPA limitation" verdicts were
+> misdiagnoses of a redirect stub and of a wrong metrics row.
+>
+> The general point is larger than this repo. **5 of 15 major documentation sites return
+> Markdown when a client asks for it** (`node content-negotiation-survey.mjs`). Any
+> comparison of extraction tools that does not record the Accept header sent and the
+> content type received cannot be interpreted on those sites, because it is partly measuring
+> header choice rather than conversion quality. No benchmark known to this project currently
+> controls for it.
+
+Open comparison of web-to-Markdown extractors on documentation frameworks. Focus on
+documentation-site extraction quality, not general web crawling.
 
 ## Scope
 
@@ -13,10 +29,10 @@ Five documentation-site frameworks × three tools × two tasks = 30 data points.
 | Framework | Target URL | Why |
 |-----------|-----------|-----|
 | Mintlify | https://docs.anthropic.com/en/docs/build-with-claude/extended-thinking | Uses `<Note>`, `<CodeGroup>`, multi-language tab structure |
-| Docusaurus | https://docusaurus.io/docs/introduction | Admonitions, live code blocks, sidebars |
+| Docusaurus | https://docusaurus.io/docs | Admonitions, live code blocks, sidebars. Corrected 2026-07-25: `/docs/introduction` is a meta-refresh stub |
 | Starlight (Astro) | https://starlight.astro.build/getting-started/ | Card components, Shiki-highlighted code, sidebar nav |
 | Nextra | https://nextra.site/docs | Callouts, code tabs, tables |
-| Fumadocs | https://fumadocs.dev/docs/next-mdx-remote-client | Newer framework, less-tested tools handle this poorly |
+| Fumadocs | https://www.fumadocs.dev/docs/manual-installation/next | Newer framework. Corrected 2026-07-25: previous URL removed upstream. Serves Markdown under content negotiation |
 
 ## Tools under test
 

@@ -21,9 +21,15 @@
     "bench:firecrawl": "node runners/firecrawl.mjs",
     "bench:page2ai": "node runners/page2ai.mjs",
     "metrics": "node metrics.mjs",
-    "report": "node report.mjs"
+    "report": "node report.mjs",
+    "probe:negotiation": "node content-negotiation-survey.mjs",
+    "probe:accept": "node repro-accept.mjs",
+    "probe:passthrough": "node repro-passthrough.mjs",
+    "probe:vary": "node vary-check.mjs",
+    "probe:ua": "node ua-sensitivity.mjs"
   },
   "dependencies": {
-    "@page2ai/core": "^0.1.0"
+    "@page2ai/core": "^0.1.0",
+    "linkedom": "^0.18.0"
   }
 }

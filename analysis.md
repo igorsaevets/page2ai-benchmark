@@ -1,73 +1,121 @@
 ---
-title: Page2AI benchmark v0.1.0 — infrastructure demo + Page2AI headless baseline
+title: Page2AI benchmark — analysis (v0.1.0 results withdrawn, corrected 2026-07-25)
 author: Igor Saevets
 about_url: https://igorsaevets.github.io/page2ai-docs/about/
-run_date: 2026-07-24
+run_date: 2026-07-25
+supersedes: v0.1.0 analysis dated 2026-07-24
 ---
 
-# Page2AI benchmark v0.1.0 — analysis
+# Analysis
 
-**Framing.** This is an exploratory, reproducibility-first infrastructure release, not a statistically powered head-to-head comparison. `n=1` per cell. Numbers below characterize the Page2AI Node adapter (`@page2ai/core@0.1.0`) against five real documentation-framework URLs. External extractor slots (Jina Reader, Firecrawl) are wired but require the operator to supply their own API keys — the free Jina Reader tier stopped serving unauthenticated requests in 2025-2026, and Firecrawl has always required a key.
+**The v0.1.0 result table published on 2026-07-24 is withdrawn.** The reasons, the evidence
+and the reproduction steps are in [RETRACTION-2026-07-25.md](RETRACTION-2026-07-25.md). This
+file now holds the corrected measurements and the protocol change they forced.
 
-See [Comparison page on the docs site](https://igorsaevets.github.io/page2ai-docs/comparison/) for the qualitative feature matrix.
+## The confound that invalidated v0.1.0
 
-## What was measured
+`@page2ai/core` sends `accept: text/html,text/markdown,text/plain,application/xhtml+xml,*/*;q=0.5`.
+Several documentation platforms honour that header and return their own Markdown instead of
+HTML. When they do, no conversion happens and the recorded output is the publisher's text.
 
-Five documentation frameworks × 1 tool (Page2AI headless via `@page2ai/core`) × 2 tasks (main content, code-block preservation). Raw Markdown outputs in `results/<site>/page2ai.md`, computed metrics in `results/<site>/metrics.json`. Rerun with `npm run bench && npm run metrics`.
+Measured on 2026-07-25 across 15 widely used documentation sites, two requests each:
 
-## Results — Page2AI headless (Node adapter)
+| Behaviour | Sites | Count |
+|---|---|---:|
+| Returns `text/markdown` when asked | Fumadocs, docs.anthropic.com (Mintlify), Vercel, Supabase, Hono | **5 / 15** |
+| Ignores the Accept header, always HTML | Docusaurus, Starlight, Nextra, VitePress, MDN, Svelte, Astro, Tailwind, Stripe, Biome | 10 / 15 |
 
-| Site | Chars | Code blocks | Lang-labeled | Headings | Links | Nav pollution | Verdict |
+Raw data: `results/content-negotiation.json`. Reproduce: `node content-negotiation-survey.mjs`.
+
+This splits the sites under test into two populations that must not be scored together.
+
+## Corrected measurements, Page2AI headless Node adapter
+
+`@page2ai/core@0.1.0`, no browser, no JavaScript execution. Character counts are of the
+Markdown body; metrics are recomputed from the stored outputs by `metrics.mjs`.
+
+### Conversion track — sites that only serve HTML
+
+These numbers do measure HTML-to-Markdown conversion.
+
+| Site | Chars | Code blocks | Lang-labeled | Headings | Links | Nav pollution | Note |
 |---|---:|---:|---:|---:|---:|---:|---|
-| Mintlify (docs.anthropic.com) | 21254 | 3 | 2 | 10 | 43 | 0 | **Good** — full page, clean, code lang preserved |
-| Docusaurus (docusaurus.io) | 221 | 0 | 0 | 0 | 0 | 0 | **SPA limitation** — headless HTTP sees pre-hydration skeleton |
-| Starlight (starlight.astro.build) | 6056 | 4 | 0 | 8 | 22 | 0 | **Good** — Astro SSR pre-renders content |
-| Nextra (nextra.site) | 2024 | 0 | 0 | 0 | 0 | 0 | **SPA limitation** — needs JS hydration |
-| Fumadocs (fumadocs.dev) | 0 | 0 | 0 | 0 | 0 | 0 | **URL 404** — Fumadocs docs structure changed, needs sites.json update |
+| Docusaurus (docusaurus.io/docs) | 14377 | 2 | 0 | 18 | 53 | 0 | Corrected URL. v0.1.0 pointed at a meta-refresh stub and reported 221 chars |
+| Starlight (starlight.astro.build) | 6056 | 9 | 9 | 9 | 36 | 0 | Unchanged from v0.1.0 and unaffected by the confound |
+| Nextra (nextra.site/docs) | 2024 | 0 | 0 | 7 | 10 | 0 | Extraction was always fine. The v0.1.0 row's "0 headings, 0 links" was wrong |
 
-## What this tells us
+Code-block language labelling is the clearest differentiator so far: Starlight output carries
+a language label on 9 of 9 fences, Docusaurus on 0 of 2. That is a real, reproducible
+difference in how the two sites mark up code, and it is exactly the kind of structural
+property a conversion benchmark should be measuring.
 
-**Static SSR frameworks (Mintlify, Starlight): Page2AI's Node adapter produces publication-quality Markdown.** Content, structure, code blocks with language tags all survive. Frontmatter with OpenGraph/JSON-LD metadata is preserved.
+### Negotiation track — sites that serve Markdown on request
 
-**SPA-rendered frameworks (Docusaurus, Nextra, Fumadocs): the Node adapter is a lower bound.** `@page2ai/core@0.1.0` fetches raw HTML and parses it with `linkedom` — no JavaScript execution, no client-side hydration. For these frameworks, the Page2AI Chrome extension (which sees the fully hydrated live DOM after user navigation) produces very different, much richer output. That comparison requires the extension-runner path, which is deferred to `page2ai-benchmark` v0.2.
+These numbers do **not** measure conversion. They measure what the publisher chose to send.
 
-**SPA support is on the Page2AI roadmap.** `@page2ai/core` v0.3 will ship a Playwright/Puppeteer adapter that runs a headless browser before extraction. That will bring the Node surface up to parity with the Chrome extension on SPA sites.
+| Site | Chars returned | What actually happened |
+|---|---:|---|
+| Mintlify (docs.anthropic.com) | 20534 | Server returned its own Markdown. Recorded output is a 100% verbatim copy (481/481 shingles). v0.1.0 scored this as "publication-quality Markdown" produced by the tool |
+| Fumadocs (www.fumadocs.dev) | 0 | Server returned its own Markdown; the library passed it to an HTML parser, found no `<article>`, and emitted an empty body |
 
-## Reproducibility
+The Fumadocs row is a bug in `@page2ai/core`, not a property of the site. A tool that asks for
+Markdown and receives Markdown should return it, not parse it as HTML. Reproduce with
+`node repro-accept.mjs`.
 
-Every number above is reproducible with:
+## What is not claimed
+
+This is one tool on five URLs, `n=1` per cell. Nothing here supports a ranking, and nothing
+here is a statement that any tool is better than any other. No competing tool has been run.
+The Firecrawl and Jina runner scripts exist but have not produced results, so every
+comparative statement in earlier versions of this file was unsupported and has been removed.
+
+## Protocol for v0.2
+
+1. **Log the negotiation.** Record the Accept header sent, the `content-type` received and
+   the `Vary` header, per request, into the results files.
+2. **Score the two tracks separately.** On the negotiation track the question is whether a
+   tool discovers and uses the better representation, and what that saves in tokens. On the
+   conversion track the question is structural fidelity.
+3. **Do not treat publisher Markdown as neutral ground truth for conversion.** It is
+   generated from the same source as the HTML rather than independently; it can omit content
+   the HTML contains, as with Fumadocs at 9429 bytes of Markdown against 386089 bytes of
+   HTML; and it can include material addressed to agents that is not part of the article.
+   Where it is used at all, label it a weak reference and record retrieval URL, timestamp and
+   content hash rather than redistributing the text.
+4. **Only locally runnable, no-API-key tools**, so that every number can be reproduced by a
+   stranger without credentials. Candidates: trafilatura, readability with turndown,
+   markitdown, docling, markdownify, alongside Page2AI.
+5. **Structural metrics on an AST, not on a string.** Heading hierarchy, list nesting depth,
+   code-fence language labels, table preservation, link recall, and tokens per unit of
+   preserved content.
+6. **Crawl politely.** One request per URL per configuration, spaced, read-only, public
+   documentation pages only. Note that one of the five negotiating sites does not declare
+   `Vary: Accept` on a publicly cacheable response, so volume requests with a Markdown Accept
+   header carry a shared-cache risk. See `vary-check.mjs`.
+
+## Reproduction
 
 ```bash
 git clone https://github.com/igorsaevets/page2ai-benchmark
 cd page2ai-benchmark
 npm install
-npm run bench:page2ai
-npm run metrics
+node runners/page2ai.mjs && node metrics.mjs   # the corrected table above
+node content-negotiation-survey.mjs            # the 5-of-15 finding
+node repro-accept.mjs                          # isolates the confound to one header
+node repro-passthrough.mjs                     # the 100% overlap on docs.anthropic.com
+node vary-check.mjs                            # cache-correctness check
 ```
 
-Node >= 18 required. No API keys needed for the Page2AI runner.
-
-For the Jina Reader runner (`npm run bench:jina`) and Firecrawl runner (`FIRECRAWL_API_KEY=... npm run bench:firecrawl`), bring your own key. Free-tier availability at Jina Reader changed in 2025-2026; the runner script is preserved for operators with paid access.
-
-## Anti-claim disclaimer
-
-This is not "Page2AI beats X on documentation extraction." It is a set of numbers about one path of one tool on five URLs. Statistical significance requires `n >= 30` per cell and controlled trials. This dataset is a starting point for community comparison, not a marketing claim.
-
-Publishing this as `v0.1.0` unblocks:
-- Reproducibility infrastructure for downstream comparison work
-- Provisional patent Section F quantitative claims (baseline behavior of the `@page2ai/core` Node path)
-- Public dataset that other extractors can be dropped into with a runner script
-
-## Sites-under-test rationale
-
-Documentation frameworks were picked because that's where Page2AI's design decisions (tab-widget dedup, code-block language preservation, frontmatter extraction) matter most. General web crawling, news scraping, e-commerce, and JavaScript-heavy SPAs are separate axes with their own tradeoffs.
-
-Fumadocs URL will be updated to a live URL in v0.1.1.
+Node 18 or newer. No API keys required for any of the above.
 
 ## Author
 
 Written and maintained by **[Igor Saevets](https://igorsaevets.github.io/page2ai-docs/about/)** — [LinkedIn](https://www.linkedin.com/in/igorsaevets/) · [GitHub](https://github.com/igorsaevets) · [ORCID 0009-0006-8636-1377](https://orcid.org/0009-0006-8636-1377).
 
+Page2AI is written by the same author as this benchmark. That conflict of interest is the
+reason the raw outputs, the harness and the reproduction scripts are all public, and the
+reason the withdrawal above is published rather than quietly edited.
+
 ## License
 
-MIT. Fork, extend, add tools, add sites, publish your own version. Cite this dataset by SWHID or DOI once assigned.
+MIT. Fork, extend, add tools, add sites, publish your own version.

@@ -1,0 +1,53 @@
+{
+  "run_date": "2026-07-25T13:58:40.731Z",
+  "rows": [
+    {
+      "slug": "fumadocs",
+      "url": "https://www.fumadocs.dev/docs/manual-installation/next",
+      "content_type": "text/markdown",
+      "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+      "declares_vary_accept": false,
+      "cache_control": "public, max-age=0, must-revalidate",
+      "cdn": "yes"
+    },
+    {
+      "slug": "anthropic",
+      "url": "https://docs.anthropic.com/en/docs/build-with-claude/extended-thinking",
+      "content_type": "text/markdown; charset=utf-8",
+      "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch,Cookie, Accept",
+      "declares_vary_accept": true,
+      "cache_control": "private, no-store",
+      "cdn": "yes"
+    },
+    {
+      "slug": "vercel",
+      "url": "https://vercel.com/docs/functions",
+      "content_type": "text/markdown; charset=utf-8",
+      "vary": "Accept",
+      "declares_vary_accept": true,
+      "cache_control": "public, max-age=3600",
+      "cdn": "yes"
+    },
+    {
+      "slug": "supabase",
+      "url": "https://supabase.com/docs/guides/auth",
+      "content_type": "text/markdown; charset=utf-8",
+      "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept",
+      "declares_vary_accept": true,
+      "cache_control": "public, max-age=86400",
+      "cdn": "yes"
+    },
+    {
+      "slug": "hono",
+      "url": "https://hono.dev/docs/getting-started/basic",
+      "content_type": "text/html",
+      "vary": "accept",
+      "declares_vary_accept": true,
+      "cache_control": "public, max-age=0, must-revalidate",
+      "cdn": "yes"
+    }
+  ],
+  "missing_vary_accept": [
+    "fumadocs"
+  ]
+}

@@ -1,0 +1,309 @@
+{
+  "run_date": "2026-07-25T13:52:18.563Z",
+  "html_accept": "text/html,application/xhtml+xml",
+  "markdown_accept": "text/html,text/markdown,text/plain,application/xhtml+xml,*/*;q=0.5",
+  "total": 15,
+  "serving_markdown": 5,
+  "rows": [
+    {
+      "slug": "fumadocs",
+      "framework": "Fumadocs",
+      "url": "https://www.fumadocs.dev/docs/manual-installation/next",
+      "as_html": {
+        "status": 200,
+        "content_type": "text/html; charset=utf-8",
+        "bytes": 386089,
+        "looks_markdown": false,
+        "head": "<!DOCTYPE html><html lang=\"en\" class=\"geist_b462b272-module_"
+      },
+      "as_markdown": {
+        "status": 200,
+        "content_type": "text/markdown",
+        "bytes": 9429,
+        "looks_markdown": true,
+        "head": "# Fumadocs (Framework Mode): Next.js URL: /docs/manual-insta"
+      },
+      "serves_markdown_on_negotiation": true
+    },
+    {
+      "slug": "anthropic",
+      "framework": "Mintlify",
+      "url": "https://docs.anthropic.com/en/docs/build-with-claude/extended-thinking",
+      "as_html": {
+        "status": 200,
+        "content_type": "text/html; charset=utf-8",
+        "bytes": 954900,
+        "looks_markdown": false,
+        "head": "<!DOCTYPE html><html class=\"h-screen antialiased bg-page __v"
+      },
+      "as_markdown": {
+        "status": 200,
+        "content_type": "text/markdown; charset=utf-8",
+        "bytes": 20535,
+        "looks_markdown": true,
+        "head": "# Extended thinking Configure manual extended thinking with"
+      },
+      "serves_markdown_on_negotiation": true
+    },
+    {
+      "slug": "docusaurus",
+      "framework": "Docusaurus",
+      "url": "https://docusaurus.io/docs",
+      "as_html": {
+        "status": 200,
+        "content_type": "text/html; charset=UTF-8",
+        "bytes": 49524,
+        "looks_markdown": false,
+        "head": "<!doctype html><html lang=en dir=ltr class=\"docs-wrapper plu"
+      },
+      "as_markdown": {
+        "status": 200,
+        "content_type": "text/html; charset=UTF-8",
+        "bytes": 49524,
+        "looks_markdown": false,
+        "head": "<!doctype html><html lang=en dir=ltr class=\"docs-wrapper plu"
+      },
+      "serves_markdown_on_negotiation": false
+    },
+    {
+      "slug": "starlight",
+      "framework": "Starlight",
+      "url": "https://starlight.astro.build/getting-started/",
+      "as_html": {
+        "status": 200,
+        "content_type": "text/html; charset=UTF-8",
+        "bytes": 80178,
+        "looks_markdown": false,
+        "head": "<!DOCTYPE html><html lang=\"en\" dir=\"ltr\" data-theme=\"dark\" d"
+      },
+      "as_markdown": {
+        "status": 200,
+        "content_type": "text/html; charset=UTF-8",
+        "bytes": 80178,
+        "looks_markdown": false,
+        "head": "<!DOCTYPE html><html lang=\"en\" dir=\"ltr\" data-theme=\"dark\" d"
+      },
+      "serves_markdown_on_negotiation": false
+    },
+    {
+      "slug": "nextra",
+      "framework": "Nextra",
+      "url": "https://nextra.site/docs",
+      "as_html": {
+        "status": 200,
+        "content_type": "text/html; charset=utf-8",
+        "bytes": 235253,
+        "looks_markdown": false,
+        "head": "<!DOCTYPE html><!--g4CUMIGXcym8ezi18iIfd--><html lang=\"en\" d"
+      },
+      "as_markdown": {
+        "status": 200,
+        "content_type": "text/html; charset=utf-8",
+        "bytes": 235253,
+        "looks_markdown": false,
+        "head": "<!DOCTYPE html><!--g4CUMIGXcym8ezi18iIfd--><html lang=\"en\" d"
+      },
+      "serves_markdown_on_negotiation": false
+    },
+    {
+      "slug": "vitepress",
+      "framework": "VitePress",
+      "url": "https://vitepress.dev/guide/getting-started",
+      "as_html": {
+        "status": 200,
+        "content_type": "text/html; charset=UTF-8",
+        "bytes": 57973,
+        "looks_markdown": false,
+        "head": "<!DOCTYPE html> <html lang=\"en-US\" dir=\"ltr\"> <head> <"
+      },
+      "as_markdown": {
+        "status": 200,
+        "content_type": "text/html; charset=UTF-8",
+        "bytes": 57973,
+        "looks_markdown": false,
+        "head": "<!DOCTYPE html> <html lang=\"en-US\" dir=\"ltr\"> <head> <"
+      },
+      "serves_markdown_on_negotiation": false
+    },
+    {
+      "slug": "mdn",
+      "framework": "Yari",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept",
+      "as_html": {
+        "status": 200,
+        "content_type": "text/html",
+        "bytes": 216457,
+        "looks_markdown": false,
+        "head": " <!doctype html> <html lang=\"en-US\" "
+      },
+      "as_markdown": {
+        "status": 200,
+        "content_type": "text/html",
+        "bytes": 216457,
+        "looks_markdown": false,
+        "head": " <!doctype html> <html lang=\"en-US\" "
+      },
+      "serves_markdown_on_negotiation": false
+    },
+    {
+      "slug": "svelte",
+      "framework": "custom",
+      "url": "https://svelte.dev/docs/svelte/what-are-runes",
+      "as_html": {
+        "status": 200,
+        "content_type": "text/html; charset=utf-8",
+        "bytes": 80891,
+        "looks_markdown": false,
+        "head": "<!doctype html> <html lang=\"en\" class=\"theme-default typo-de"
+      },
+      "as_markdown": {
+        "status": 200,
+        "content_type": "text/html; charset=utf-8",
+        "bytes": 80891,
+        "looks_markdown": false,
+        "head": "<!doctype html> <html lang=\"en\" class=\"theme-default typo-de"
+      },
+      "serves_markdown_on_negotiation": false
+    },
+    {
+      "slug": "astro",
+      "framework": "Starlight",
+      "url": "https://docs.astro.build/en/getting-started/",
+      "as_html": {
+        "status": 200,
+        "content_type": "text/html",
+        "bytes": 151685,
+        "looks_markdown": false,
+        "head": "<!DOCTYPE html> <html lang=\"en\" dir=\"ltr\" data-theme=\"dark\" "
+      },
+      "as_markdown": {
+        "status": 200,
+        "content_type": "text/html",
+        "bytes": 151685,
+        "looks_markdown": false,
+        "head": "<!DOCTYPE html> <html lang=\"en\" dir=\"ltr\" data-theme=\"dark\" "
+      },
+      "serves_markdown_on_negotiation": false
+    },
+    {
+      "slug": "tailwind",
+      "framework": "custom",
+      "url": "https://tailwindcss.com/docs/installation/using-vite",
+      "as_html": {
+        "status": 200,
+        "content_type": "text/html; charset=utf-8",
+        "bytes": 365390,
+        "looks_markdown": false,
+        "head": "<!DOCTYPE html><html lang=\"en\" class=\"inter_6a166f28-module_"
+      },
+      "as_markdown": {
+        "status": 200,
+        "content_type": "text/html; charset=utf-8",
+        "bytes": 365390,
+        "looks_markdown": false,
+        "head": "<!DOCTYPE html><html lang=\"en\" class=\"inter_6a166f28-module_"
+      },
+      "serves_markdown_on_negotiation": false
+    },
+    {
+      "slug": "stripe",
+      "framework": "custom",
+      "url": "https://docs.stripe.com/api",
+      "as_html": {
+        "status": 200,
+        "content_type": "text/html; charset=utf-8",
+        "bytes": 1205702,
+        "looks_markdown": false,
+        "head": "<!doctype html> <html id=\"​\" lang=\"en-US\"> <h"
+      },
+      "as_markdown": {
+        "status": 200,
+        "content_type": "text/html; charset=utf-8",
+        "bytes": 1205702,
+        "looks_markdown": false,
+        "head": "<!doctype html> <html id=\"​\" lang=\"en-US\"> <h"
+      },
+      "serves_markdown_on_negotiation": false
+    },
+    {
+      "slug": "vercel",
+      "framework": "custom",
+      "url": "https://vercel.com/docs/functions",
+      "as_html": {
+        "status": 200,
+        "content_type": "text/html; charset=utf-8",
+        "bytes": 979016,
+        "looks_markdown": false,
+        "head": "<!DOCTYPE html><html data-dpl-id=\"dpl_GKXEApqJUbzSbxTfssFLYa"
+      },
+      "as_markdown": {
+        "status": 200,
+        "content_type": "text/markdown; charset=utf-8",
+        "bytes": 7461,
+        "looks_markdown": true,
+        "head": "--- title: Vercel Functions product: vercel url: /docs/funct"
+      },
+      "serves_markdown_on_negotiation": true
+    },
+    {
+      "slug": "supabase",
+      "framework": "custom",
+      "url": "https://supabase.com/docs/guides/auth",
+      "as_html": {
+        "status": 200,
+        "content_type": "text/html; charset=utf-8",
+        "bytes": 184572,
+        "looks_markdown": false,
+        "head": "<!DOCTYPE html><!--qMf2yu_1kaX6uwPC8eOJm--><html lang=\"en\" c"
+      },
+      "as_markdown": {
+        "status": 200,
+        "content_type": "text/markdown; charset=utf-8",
+        "bytes": 6226,
+        "looks_markdown": true,
+        "head": "# Auth Use Supabase to authenticate and authorize your user"
+      },
+      "serves_markdown_on_negotiation": true
+    },
+    {
+      "slug": "hono",
+      "framework": "VitePress",
+      "url": "https://hono.dev/docs/getting-started/basic",
+      "as_html": {
+        "status": 200,
+        "content_type": "text/html",
+        "bytes": 98738,
+        "looks_markdown": false,
+        "head": "<!DOCTYPE html> <html lang=\"en-US\" dir=\"ltr\"> <head> <"
+      },
+      "as_markdown": {
+        "status": 200,
+        "content_type": "text/markdown; charset=utf-8",
+        "bytes": 4722,
+        "looks_markdown": true,
+        "head": "# Getting Started Using Hono is super easy. We can set up t"
+      },
+      "serves_markdown_on_negotiation": true
+    },
+    {
+      "slug": "biome",
+      "framework": "Starlight",
+      "url": "https://biomejs.dev/guides/getting-started/",
+      "as_html": {
+        "status": 200,
+        "content_type": "text/html; charset=UTF-8",
+        "bytes": 141461,
+        "looks_markdown": false,
+        "head": "<!DOCTYPE html><html lang=\"en\" dir=\"ltr\" data-theme=\"dark\" d"
+      },
+      "as_markdown": {
+        "status": 200,
+        "content_type": "text/html; charset=UTF-8",
+        "bytes": 141461,
+        "looks_markdown": false,
+        "head": "<!DOCTYPE html><html lang=\"en\" dir=\"ltr\" data-theme=\"dark\" d"
+      },
+      "serves_markdown_on_negotiation": false
+    }
+  ]
+}
