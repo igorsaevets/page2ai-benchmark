@@ -1,5 +1,7 @@
 # Page2AI web-to-markdown benchmark
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21539768.svg)](https://doi.org/10.5281/zenodo.21539768)
+
 Open comparison of five extractors on five documentation frameworks. Focus on documentation-site extraction quality, not general web crawling.
 
 ## Scope
