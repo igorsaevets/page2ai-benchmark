@@ -70,6 +70,44 @@ reported exactly what it had done and the scoring ignored it. The Fumadocs row i
 `@page2ai/core`: a tool that receives `content-type: text/markdown` should return that body
 rather than parse it as HTML. Reproduce with `node repro-accept.mjs`.
 
+## Which real tools are affected, measured 2026-07-25
+
+The confound above is not specific to this project. It follows from the `Accept` header a
+tool sends, which is usually an undocumented implementation detail. Each row below is a
+verbatim default header, taken from the tool's own source where the tool sets one, fetched
+once per site against 14 documentation sites.
+
+| Header profile | Source of the header | Sites returning finished Markdown |
+|---|---|---:|
+| `microsoft/markitdown` | `packages/markitdown/src/markitdown/_markitdown.py`, added deliberately in PR #1554 to support Cloudflare's Markdown-for-agents work | **4 / 14** |
+| `@page2ai/core` | `src/node/index.ts` | **4 / 14** |
+| `trafilatura` | `trafilatura/downloads.py` sets no `Accept` key at all | 0 / 14 |
+| python-requests default `*/*` | library default | 0 / 14 |
+| curl default `*/*` | library default | 0 / 14 |
+| node `fetch` / undici default | library default | 0 / 14 |
+| Chromium navigation default | browser default | 0 / 14 |
+
+The four sites that respond with Markdown are docs.anthropic.com, Vercel, Supabase and Hono.
+The size difference on those four is not marginal:
+
+| Site | Markdown bytes | HTML bytes | ratio |
+|---|---:|---:|---:|
+| docs.anthropic.com | 20,535 | 954,824 | 46.5x |
+| vercel.com/docs | 7,461 | 979,016 | 131.2x |
+| supabase.com/docs | 6,226 | 184,572 | 29.6x |
+| hono.dev/docs | 5,137 | 96,479 | 18.8x |
+
+Two of seven profiles receive a document between 19 and 131 times smaller and skip conversion
+entirely. Receiving the publisher's Markdown is the better outcome for a user; the point is
+that a comparison run across these sites without recording the header is ranking fetch
+configuration. Reproduce with `node tool-accept-matrix.mjs`; raw data in
+`results/tool-accept-matrix.json`.
+
+`fumadocs.dev` is excluded from that matrix on purpose. It negotiates Markdown on a publicly
+cacheable response without declaring `Vary: Accept`, so spreading seven `Accept` values across
+it risks an intermediary caching the Markdown for a client that asked for HTML. Its behaviour
+is already established by `repro-accept.mjs`, which needs two requests rather than seven.
+
 ## What is not claimed
 
 This is one tool on five URLs, `n=1` per cell. Nothing here supports a ranking, and nothing
@@ -123,6 +161,19 @@ node content-negotiation-survey.mjs            # the 5-of-15 finding
 node repro-accept.mjs                          # isolates the confound to one header
 node repro-passthrough.mjs                     # the 100% overlap on docs.anthropic.com
 node vary-check.mjs                            # cache-correctness check
+node tool-accept-matrix.mjs                    # which real tools' headers receive Markdown
+```
+
+One further script in this repository measures a different project rather than this one.
+`webmainbench-groundtruth-audit.mjs` counts what the reference documents in the published
+`WebMainBench_545.jsonl` actually contain. It was written to check, from the file alone,
+which of the points raised in `opendatalab/WebMainBench` issue #71 can be settled by counting.
+It confirms two of them, does not support a third, and surfaces a field-availability problem.
+It writes only aggregate counts and redistributes none of the dataset text. Run it with a
+local copy of the file:
+
+```bash
+node webmainbench-groundtruth-audit.mjs /path/to/WebMainBench_545.jsonl
 ```
 
 Node 18 or newer. No API keys required for any of the above.

@@ -26,7 +26,9 @@
     "probe:accept": "node repro-accept.mjs",
     "probe:passthrough": "node repro-passthrough.mjs",
     "probe:vary": "node vary-check.mjs",
-    "probe:ua": "node ua-sensitivity.mjs"
+    "probe:ua": "node ua-sensitivity.mjs",
+    "probe:tool-headers": "node tool-accept-matrix.mjs",
+    "audit:webmainbench": "node webmainbench-groundtruth-audit.mjs"
   },
   "dependencies": {
     "@page2ai/core": "^0.1.0",

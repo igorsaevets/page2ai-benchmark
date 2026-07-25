@@ -1,0 +1,1013 @@
+{
+  "run_date": "2026-07-25T14:50:49.326Z",
+  "note": "Header profiles, not tool runs. fumadocs.dev deliberately excluded, see the ethics note at the top of tool-accept-matrix.mjs.",
+  "sites": 14,
+  "profiles": [
+    {
+      "id": "markitdown",
+      "label": "microsoft/markitdown",
+      "accept": "text/markdown, text/html;q=0.9, text/plain;q=0.8, */*;q=0.1",
+      "provenance": "read from source 2026-07-25",
+      "sites_serving_markdown": 4,
+      "sites": [
+        "anthropic",
+        "vercel",
+        "supabase",
+        "hono"
+      ]
+    },
+    {
+      "id": "page2ai-core",
+      "label": "@page2ai/core",
+      "accept": "text/html,text/markdown,text/plain,application/xhtml+xml,*/*;q=0.5",
+      "provenance": "own source",
+      "sites_serving_markdown": 4,
+      "sites": [
+        "anthropic",
+        "vercel",
+        "supabase",
+        "hono"
+      ]
+    },
+    {
+      "id": "trafilatura",
+      "label": "trafilatura",
+      "accept": null,
+      "provenance": "read from source 2026-07-25, sets no Accept key",
+      "sites_serving_markdown": 0,
+      "sites": []
+    },
+    {
+      "id": "requests-default",
+      "label": "python-requests default",
+      "accept": "*/*",
+      "provenance": "library default",
+      "sites_serving_markdown": 0,
+      "sites": []
+    },
+    {
+      "id": "curl-default",
+      "label": "curl default",
+      "accept": "*/*",
+      "provenance": "library default",
+      "sites_serving_markdown": 0,
+      "sites": []
+    },
+    {
+      "id": "node-fetch",
+      "label": "node fetch (undici) default",
+      "accept": null,
+      "provenance": "library default",
+      "sites_serving_markdown": 0,
+      "sites": []
+    },
+    {
+      "id": "chromium-browser",
+      "label": "Chromium navigation default",
+      "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8",
+      "provenance": "browser default, not attributed to a specific tool",
+      "sites_serving_markdown": 0,
+      "sites": []
+    }
+  ],
+  "effect_size": [
+    {
+      "slug": "anthropic",
+      "markdown_bytes": 20535,
+      "html_bytes": 954824,
+      "ratio": 46.5,
+      "vary_declared": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch,Cookie, Accept"
+    },
+    {
+      "slug": "vercel",
+      "markdown_bytes": 7461,
+      "html_bytes": 979016,
+      "ratio": 131.2,
+      "vary_declared": "Accept"
+    },
+    {
+      "slug": "supabase",
+      "markdown_bytes": 6226,
+      "html_bytes": 184572,
+      "ratio": 29.6,
+      "vary_declared": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept"
+    },
+    {
+      "slug": "hono",
+      "markdown_bytes": 5137,
+      "html_bytes": 96479,
+      "ratio": 18.8,
+      "vary_declared": "accept"
+    }
+  ],
+  "rows": [
+    {
+      "slug": "anthropic",
+      "framework": "Mintlify",
+      "url": "https://docs.anthropic.com/en/docs/build-with-claude/extended-thinking",
+      "by_profile": {
+        "markitdown": {
+          "status": 200,
+          "content_type": "text/markdown; charset=utf-8",
+          "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch,Cookie, Accept",
+          "bytes": 20535,
+          "served_markdown": true,
+          "head": "# Extended thinking Configure manual extended thinking with a fixed b"
+        },
+        "page2ai-core": {
+          "status": 200,
+          "content_type": "text/markdown; charset=utf-8",
+          "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch,Cookie, Accept",
+          "bytes": 20535,
+          "served_markdown": true,
+          "head": "# Extended thinking Configure manual extended thinking with a fixed b"
+        },
+        "trafilatura": {
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+          "bytes": 954824,
+          "served_markdown": false,
+          "head": "<!DOCTYPE html><html class=\"h-screen antialiased bg-page __variable_04"
+        },
+        "requests-default": {
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+          "bytes": 954900,
+          "served_markdown": false,
+          "head": "<!DOCTYPE html><html class=\"h-screen antialiased bg-page __variable_04"
+        },
+        "curl-default": {
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+          "bytes": 954900,
+          "served_markdown": false,
+          "head": "<!DOCTYPE html><html class=\"h-screen antialiased bg-page __variable_04"
+        },
+        "node-fetch": {
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+          "bytes": 954900,
+          "served_markdown": false,
+          "head": "<!DOCTYPE html><html class=\"h-screen antialiased bg-page __variable_04"
+        },
+        "chromium-browser": {
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+          "bytes": 954900,
+          "served_markdown": false,
+          "head": "<!DOCTYPE html><html class=\"h-screen antialiased bg-page __variable_04"
+        }
+      },
+      "profiles_receiving_markdown": [
+        "markitdown",
+        "page2ai-core"
+      ]
+    },
+    {
+      "slug": "docusaurus",
+      "framework": "Docusaurus",
+      "url": "https://docusaurus.io/docs",
+      "by_profile": {
+        "markitdown": {
+          "status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "vary": "Accept-Encoding",
+          "bytes": 49524,
+          "served_markdown": false,
+          "head": "<!doctype html><html lang=en dir=ltr class=\"docs-wrapper plugin-docs p"
+        },
+        "page2ai-core": {
+          "status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "vary": "Accept-Encoding",
+          "bytes": 49524,
+          "served_markdown": false,
+          "head": "<!doctype html><html lang=en dir=ltr class=\"docs-wrapper plugin-docs p"
+        },
+        "trafilatura": {
+          "status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "vary": "Accept-Encoding",
+          "bytes": 49165,
+          "served_markdown": false,
+          "head": "<!doctype html><html lang=en dir=ltr class=\"docs-wrapper plugin-docs p"
+        },
+        "requests-default": {
+          "status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "vary": "Accept-Encoding",
+          "bytes": 49165,
+          "served_markdown": false,
+          "head": "<!doctype html><html lang=en dir=ltr class=\"docs-wrapper plugin-docs p"
+        },
+        "curl-default": {
+          "status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "vary": "Accept-Encoding",
+          "bytes": 49165,
+          "served_markdown": false,
+          "head": "<!doctype html><html lang=en dir=ltr class=\"docs-wrapper plugin-docs p"
+        },
+        "node-fetch": {
+          "status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "vary": "Accept-Encoding",
+          "bytes": 49165,
+          "served_markdown": false,
+          "head": "<!doctype html><html lang=en dir=ltr class=\"docs-wrapper plugin-docs p"
+        },
+        "chromium-browser": {
+          "status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "vary": "Accept-Encoding",
+          "bytes": 49524,
+          "served_markdown": false,
+          "head": "<!doctype html><html lang=en dir=ltr class=\"docs-wrapper plugin-docs p"
+        }
+      },
+      "profiles_receiving_markdown": []
+    },
+    {
+      "slug": "starlight",
+      "framework": "Starlight",
+      "url": "https://starlight.astro.build/getting-started/",
+      "by_profile": {
+        "markitdown": {
+          "status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "vary": "Accept-Encoding",
+          "bytes": 80178,
+          "served_markdown": false,
+          "head": "<!DOCTYPE html><html lang=\"en\" dir=\"ltr\" data-theme=\"dark\" data-has-to"
+        },
+        "page2ai-core": {
+          "status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "vary": "Accept-Encoding",
+          "bytes": 80178,
+          "served_markdown": false,
+          "head": "<!DOCTYPE html><html lang=\"en\" dir=\"ltr\" data-theme=\"dark\" data-has-to"
+        },
+        "trafilatura": {
+          "status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "vary": "Accept-Encoding",
+          "bytes": 80178,
+          "served_markdown": false,
+          "head": "<!DOCTYPE html><html lang=\"en\" dir=\"ltr\" data-theme=\"dark\" data-has-to"
+        },
+        "requests-default": {
+          "status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "vary": "Accept-Encoding",
+          "bytes": 80178,
+          "served_markdown": false,
+          "head": "<!DOCTYPE html><html lang=\"en\" dir=\"ltr\" data-theme=\"dark\" data-has-to"
+        },
+        "curl-default": {
+          "status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "vary": "Accept-Encoding",
+          "bytes": 80178,
+          "served_markdown": false,
+          "head": "<!DOCTYPE html><html lang=\"en\" dir=\"ltr\" data-theme=\"dark\" data-has-to"
+        },
+        "node-fetch": {
+          "status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "vary": "Accept-Encoding",
+          "bytes": 80178,
+          "served_markdown": false,
+          "head": "<!DOCTYPE html><html lang=\"en\" dir=\"ltr\" data-theme=\"dark\" data-has-to"
+        },
+        "chromium-browser": {
+          "status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "vary": "Accept-Encoding",
+          "bytes": 80178,
+          "served_markdown": false,
+          "head": "<!DOCTYPE html><html lang=\"en\" dir=\"ltr\" data-theme=\"dark\" data-has-to"
+        }
+      },
+      "profiles_receiving_markdown": []
+    },
+    {
+      "slug": "nextra",
+      "framework": "Nextra",
+      "url": "https://nextra.site/docs",
+      "by_profile": {
+        "markitdown": {
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+          "bytes": 235253,
+          "served_markdown": false,
+          "head": "<!DOCTYPE html><!--g4CUMIGXcym8ezi18iIfd--><html lang=\"en\" dir=\"ltr\"><"
+        },
+        "page2ai-core": {
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+          "bytes": 235253,
+          "served_markdown": false,
+          "head": "<!DOCTYPE html><!--g4CUMIGXcym8ezi18iIfd--><html lang=\"en\" dir=\"ltr\"><"
+        },
+        "trafilatura": {
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+          "bytes": 235253,
+          "served_markdown": false,
+          "head": "<!DOCTYPE html><!--g4CUMIGXcym8ezi18iIfd--><html lang=\"en\" dir=\"ltr\"><"
+        },
+        "requests-default": {
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+          "bytes": 235253,
+          "served_markdown": false,
+          "head": "<!DOCTYPE html><!--g4CUMIGXcym8ezi18iIfd--><html lang=\"en\" dir=\"ltr\"><"
+        },
+        "curl-default": {
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+          "bytes": 235253,
+          "served_markdown": false,
+          "head": "<!DOCTYPE html><!--g4CUMIGXcym8ezi18iIfd--><html lang=\"en\" dir=\"ltr\"><"
+        },
+        "node-fetch": {
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+          "bytes": 235253,
+          "served_markdown": false,
+          "head": "<!DOCTYPE html><!--g4CUMIGXcym8ezi18iIfd--><html lang=\"en\" dir=\"ltr\"><"
+        },
+        "chromium-browser": {
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+          "bytes": 235253,
+          "served_markdown": false,
+          "head": "<!DOCTYPE html><!--g4CUMIGXcym8ezi18iIfd--><html lang=\"en\" dir=\"ltr\"><"
+        }
+      },
+      "profiles_receiving_markdown": []
+    },
+    {
+      "slug": "vitepress",
+      "framework": "VitePress",
+      "url": "https://vitepress.dev/guide/getting-started",
+      "by_profile": {
+        "markitdown": {
+          "status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "vary": "Accept-Encoding",
+          "bytes": 57973,
+          "served_markdown": false,
+          "head": "<!DOCTYPE html> <html lang=\"en-US\" dir=\"ltr\"> <head> <meta chars"
+        },
+        "page2ai-core": {
+          "status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "vary": "Accept-Encoding",
+          "bytes": 57973,
+          "served_markdown": false,
+          "head": "<!DOCTYPE html> <html lang=\"en-US\" dir=\"ltr\"> <head> <meta chars"
+        },
+        "trafilatura": {
+          "status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "vary": "Accept-Encoding",
+          "bytes": 57973,
+          "served_markdown": false,
+          "head": "<!DOCTYPE html> <html lang=\"en-US\" dir=\"ltr\"> <head> <meta chars"
+        },
+        "requests-default": {
+          "status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "vary": "Accept-Encoding",
+          "bytes": 57973,
+          "served_markdown": false,
+          "head": "<!DOCTYPE html> <html lang=\"en-US\" dir=\"ltr\"> <head> <meta chars"
+        },
+        "curl-default": {
+          "status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "vary": "Accept-Encoding",
+          "bytes": 57973,
+          "served_markdown": false,
+          "head": "<!DOCTYPE html> <html lang=\"en-US\" dir=\"ltr\"> <head> <meta chars"
+        },
+        "node-fetch": {
+          "status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "vary": "Accept-Encoding",
+          "bytes": 57973,
+          "served_markdown": false,
+          "head": "<!DOCTYPE html> <html lang=\"en-US\" dir=\"ltr\"> <head> <meta chars"
+        },
+        "chromium-browser": {
+          "status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "vary": "Accept-Encoding",
+          "bytes": 57973,
+          "served_markdown": false,
+          "head": "<!DOCTYPE html> <html lang=\"en-US\" dir=\"ltr\"> <head> <meta chars"
+        }
+      },
+      "profiles_receiving_markdown": []
+    },
+    {
+      "slug": "mdn",
+      "framework": "Yari",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept",
+      "by_profile": {
+        "markitdown": {
+          "status": 200,
+          "content_type": "text/html",
+          "vary": "Accept-Encoding",
+          "bytes": 216457,
+          "served_markdown": false,
+          "head": " <!doctype html> <html lang=\"en-US\" data-t"
+        },
+        "page2ai-core": {
+          "status": 200,
+          "content_type": "text/html",
+          "vary": "Accept-Encoding",
+          "bytes": 216457,
+          "served_markdown": false,
+          "head": " <!doctype html> <html lang=\"en-US\" data-t"
+        },
+        "trafilatura": {
+          "status": 200,
+          "content_type": "text/html",
+          "vary": "Accept-Encoding",
+          "bytes": 216457,
+          "served_markdown": false,
+          "head": " <!doctype html> <html lang=\"en-US\" data-t"
+        },
+        "requests-default": {
+          "status": 200,
+          "content_type": "text/html",
+          "vary": "Accept-Encoding",
+          "bytes": 216457,
+          "served_markdown": false,
+          "head": " <!doctype html> <html lang=\"en-US\" data-t"
+        },
+        "curl-default": {
+          "status": 200,
+          "content_type": "text/html",
+          "vary": "Accept-Encoding",
+          "bytes": 216457,
+          "served_markdown": false,
+          "head": " <!doctype html> <html lang=\"en-US\" data-t"
+        },
+        "node-fetch": {
+          "status": 200,
+          "content_type": "text/html",
+          "vary": "Accept-Encoding",
+          "bytes": 216457,
+          "served_markdown": false,
+          "head": " <!doctype html> <html lang=\"en-US\" data-t"
+        },
+        "chromium-browser": {
+          "status": 200,
+          "content_type": "text/html",
+          "vary": "Accept-Encoding",
+          "bytes": 216457,
+          "served_markdown": false,
+          "head": " <!doctype html> <html lang=\"en-US\" data-t"
+        }
+      },
+      "profiles_receiving_markdown": []
+    },
+    {
+      "slug": "svelte",
+      "framework": "custom",
+      "url": "https://svelte.dev/docs/svelte/what-are-runes",
+      "by_profile": {
+        "markitdown": {
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "vary": null,
+          "bytes": 80891,
+          "served_markdown": false,
+          "head": "<!doctype html> <html lang=\"en\" class=\"theme-default typo-default\"> <"
+        },
+        "page2ai-core": {
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "vary": null,
+          "bytes": 80891,
+          "served_markdown": false,
+          "head": "<!doctype html> <html lang=\"en\" class=\"theme-default typo-default\"> <"
+        },
+        "trafilatura": {
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "vary": null,
+          "bytes": 80891,
+          "served_markdown": false,
+          "head": "<!doctype html> <html lang=\"en\" class=\"theme-default typo-default\"> <"
+        },
+        "requests-default": {
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "vary": null,
+          "bytes": 80891,
+          "served_markdown": false,
+          "head": "<!doctype html> <html lang=\"en\" class=\"theme-default typo-default\"> <"
+        },
+        "curl-default": {
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "vary": null,
+          "bytes": 80891,
+          "served_markdown": false,
+          "head": "<!doctype html> <html lang=\"en\" class=\"theme-default typo-default\"> <"
+        },
+        "node-fetch": {
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "vary": null,
+          "bytes": 80891,
+          "served_markdown": false,
+          "head": "<!doctype html> <html lang=\"en\" class=\"theme-default typo-default\"> <"
+        },
+        "chromium-browser": {
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "vary": null,
+          "bytes": 80891,
+          "served_markdown": false,
+          "head": "<!doctype html> <html lang=\"en\" class=\"theme-default typo-default\"> <"
+        }
+      },
+      "profiles_receiving_markdown": []
+    },
+    {
+      "slug": "astro",
+      "framework": "Starlight",
+      "url": "https://docs.astro.build/en/getting-started/",
+      "by_profile": {
+        "markitdown": {
+          "status": 200,
+          "content_type": "text/html",
+          "vary": null,
+          "bytes": 151685,
+          "served_markdown": false,
+          "head": "<!DOCTYPE html> <html lang=\"en\" dir=\"ltr\" data-theme=\"dark\" data-has-s"
+        },
+        "page2ai-core": {
+          "status": 200,
+          "content_type": "text/html",
+          "vary": null,
+          "bytes": 151685,
+          "served_markdown": false,
+          "head": "<!DOCTYPE html> <html lang=\"en\" dir=\"ltr\" data-theme=\"dark\" data-has-s"
+        },
+        "trafilatura": {
+          "status": 200,
+          "content_type": "text/html",
+          "vary": null,
+          "bytes": 151685,
+          "served_markdown": false,
+          "head": "<!DOCTYPE html> <html lang=\"en\" dir=\"ltr\" data-theme=\"dark\" data-has-s"
+        },
+        "requests-default": {
+          "status": 200,
+          "content_type": "text/html",
+          "vary": null,
+          "bytes": 151685,
+          "served_markdown": false,
+          "head": "<!DOCTYPE html> <html lang=\"en\" dir=\"ltr\" data-theme=\"dark\" data-has-s"
+        },
+        "curl-default": {
+          "status": 200,
+          "content_type": "text/html",
+          "vary": null,
+          "bytes": 151685,
+          "served_markdown": false,
+          "head": "<!DOCTYPE html> <html lang=\"en\" dir=\"ltr\" data-theme=\"dark\" data-has-s"
+        },
+        "node-fetch": {
+          "status": 200,
+          "content_type": "text/html",
+          "vary": null,
+          "bytes": 151685,
+          "served_markdown": false,
+          "head": "<!DOCTYPE html> <html lang=\"en\" dir=\"ltr\" data-theme=\"dark\" data-has-s"
+        },
+        "chromium-browser": {
+          "status": 200,
+          "content_type": "text/html",
+          "vary": null,
+          "bytes": 151685,
+          "served_markdown": false,
+          "head": "<!DOCTYPE html> <html lang=\"en\" dir=\"ltr\" data-theme=\"dark\" data-has-s"
+        }
+      },
+      "profiles_receiving_markdown": []
+    },
+    {
+      "slug": "tailwind",
+      "framework": "custom",
+      "url": "https://tailwindcss.com/docs/installation/using-vite",
+      "by_profile": {
+        "markitdown": {
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, accept-encoding",
+          "bytes": 365390,
+          "served_markdown": false,
+          "head": "<!DOCTYPE html><html lang=\"en\" class=\"inter_6a166f28-module__775SPq__v"
+        },
+        "page2ai-core": {
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, accept-encoding",
+          "bytes": 365390,
+          "served_markdown": false,
+          "head": "<!DOCTYPE html><html lang=\"en\" class=\"inter_6a166f28-module__775SPq__v"
+        },
+        "trafilatura": {
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, accept-encoding",
+          "bytes": 365390,
+          "served_markdown": false,
+          "head": "<!DOCTYPE html><html lang=\"en\" class=\"inter_6a166f28-module__775SPq__v"
+        },
+        "requests-default": {
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, accept-encoding",
+          "bytes": 365390,
+          "served_markdown": false,
+          "head": "<!DOCTYPE html><html lang=\"en\" class=\"inter_6a166f28-module__775SPq__v"
+        },
+        "curl-default": {
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, accept-encoding",
+          "bytes": 365390,
+          "served_markdown": false,
+          "head": "<!DOCTYPE html><html lang=\"en\" class=\"inter_6a166f28-module__775SPq__v"
+        },
+        "node-fetch": {
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, accept-encoding",
+          "bytes": 365390,
+          "served_markdown": false,
+          "head": "<!DOCTYPE html><html lang=\"en\" class=\"inter_6a166f28-module__775SPq__v"
+        },
+        "chromium-browser": {
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, accept-encoding",
+          "bytes": 365390,
+          "served_markdown": false,
+          "head": "<!DOCTYPE html><html lang=\"en\" class=\"inter_6a166f28-module__775SPq__v"
+        }
+      },
+      "profiles_receiving_markdown": []
+    },
+    {
+      "slug": "stripe",
+      "framework": "custom",
+      "url": "https://docs.stripe.com/api",
+      "by_profile": {
+        "markitdown": {
+          "status": 200,
+          "content_type": "text/plain; charset=utf-8",
+          "vary": "Accept",
+          "bytes": 1562,
+          "served_markdown": false,
+          "head": "# API Reference The Stripe API is organized around [REST](http://en.w"
+        },
+        "page2ai-core": {
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "vary": "Accept",
+          "bytes": 1205702,
+          "served_markdown": false,
+          "head": "<!doctype html> <html id=\"​\" lang=\"en-US\"> <head> "
+        },
+        "trafilatura": {
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "vary": "Accept",
+          "bytes": 1205626,
+          "served_markdown": false,
+          "head": "<!doctype html> <html id=\"​\" lang=\"en-US\"> <head> "
+        },
+        "requests-default": {
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "vary": "Accept",
+          "bytes": 1205642,
+          "served_markdown": false,
+          "head": "<!doctype html> <html id=\"​\" lang=\"en-US\"> <head> "
+        },
+        "curl-default": {
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "vary": "Accept",
+          "bytes": 1205702,
+          "served_markdown": false,
+          "head": "<!doctype html> <html id=\"​\" lang=\"en-US\"> <head> "
+        },
+        "node-fetch": {
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "vary": "Accept",
+          "bytes": 1205702,
+          "served_markdown": false,
+          "head": "<!doctype html> <html id=\"​\" lang=\"en-US\"> <head> "
+        },
+        "chromium-browser": {
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "vary": "Accept",
+          "bytes": 1205702,
+          "served_markdown": false,
+          "head": "<!doctype html> <html id=\"​\" lang=\"en-US\"> <head> "
+        }
+      },
+      "profiles_receiving_markdown": []
+    },
+    {
+      "slug": "vercel",
+      "framework": "custom",
+      "url": "https://vercel.com/docs/functions",
+      "by_profile": {
+        "markitdown": {
+          "status": 200,
+          "content_type": "text/markdown; charset=utf-8",
+          "vary": "Accept",
+          "bytes": 7461,
+          "served_markdown": true,
+          "head": "--- title: Vercel Functions product: vercel url: /docs/functions canon"
+        },
+        "page2ai-core": {
+          "status": 200,
+          "content_type": "text/markdown; charset=utf-8",
+          "vary": "Accept",
+          "bytes": 7461,
+          "served_markdown": true,
+          "head": "--- title: Vercel Functions product: vercel url: /docs/functions canon"
+        },
+        "trafilatura": {
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+          "bytes": 979016,
+          "served_markdown": false,
+          "head": "<!DOCTYPE html><html data-dpl-id=\"dpl_GKXEApqJUbzSbxTfssFLYa1kLGMZ\" cl"
+        },
+        "requests-default": {
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+          "bytes": 979016,
+          "served_markdown": false,
+          "head": "<!DOCTYPE html><html data-dpl-id=\"dpl_GKXEApqJUbzSbxTfssFLYa1kLGMZ\" cl"
+        },
+        "curl-default": {
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+          "bytes": 979016,
+          "served_markdown": false,
+          "head": "<!DOCTYPE html><html data-dpl-id=\"dpl_GKXEApqJUbzSbxTfssFLYa1kLGMZ\" cl"
+        },
+        "node-fetch": {
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+          "bytes": 979016,
+          "served_markdown": false,
+          "head": "<!DOCTYPE html><html data-dpl-id=\"dpl_GKXEApqJUbzSbxTfssFLYa1kLGMZ\" cl"
+        },
+        "chromium-browser": {
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+          "bytes": 979016,
+          "served_markdown": false,
+          "head": "<!DOCTYPE html><html data-dpl-id=\"dpl_GKXEApqJUbzSbxTfssFLYa1kLGMZ\" cl"
+        }
+      },
+      "profiles_receiving_markdown": [
+        "markitdown",
+        "page2ai-core"
+      ]
+    },
+    {
+      "slug": "supabase",
+      "framework": "custom",
+      "url": "https://supabase.com/docs/guides/auth",
+      "by_profile": {
+        "markitdown": {
+          "status": 200,
+          "content_type": "text/markdown; charset=utf-8",
+          "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept",
+          "bytes": 6226,
+          "served_markdown": true,
+          "head": "# Auth Use Supabase to authenticate and authorize your users. Supaba"
+        },
+        "page2ai-core": {
+          "status": 200,
+          "content_type": "text/markdown; charset=utf-8",
+          "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept",
+          "bytes": 6226,
+          "served_markdown": true,
+          "head": "# Auth Use Supabase to authenticate and authorize your users. Supaba"
+        },
+        "trafilatura": {
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+          "bytes": 184572,
+          "served_markdown": false,
+          "head": "<!DOCTYPE html><!--qMf2yu_1kaX6uwPC8eOJm--><html lang=\"en\" class=\"__va"
+        },
+        "requests-default": {
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+          "bytes": 184572,
+          "served_markdown": false,
+          "head": "<!DOCTYPE html><!--qMf2yu_1kaX6uwPC8eOJm--><html lang=\"en\" class=\"__va"
+        },
+        "curl-default": {
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+          "bytes": 184572,
+          "served_markdown": false,
+          "head": "<!DOCTYPE html><!--qMf2yu_1kaX6uwPC8eOJm--><html lang=\"en\" class=\"__va"
+        },
+        "node-fetch": {
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+          "bytes": 184572,
+          "served_markdown": false,
+          "head": "<!DOCTYPE html><!--qMf2yu_1kaX6uwPC8eOJm--><html lang=\"en\" class=\"__va"
+        },
+        "chromium-browser": {
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+          "bytes": 184572,
+          "served_markdown": false,
+          "head": "<!DOCTYPE html><!--qMf2yu_1kaX6uwPC8eOJm--><html lang=\"en\" class=\"__va"
+        }
+      },
+      "profiles_receiving_markdown": [
+        "markitdown",
+        "page2ai-core"
+      ]
+    },
+    {
+      "slug": "hono",
+      "framework": "VitePress",
+      "url": "https://hono.dev/docs/getting-started/basic",
+      "by_profile": {
+        "markitdown": {
+          "status": 200,
+          "content_type": "text/markdown; charset=utf-8",
+          "vary": "accept",
+          "bytes": 5137,
+          "served_markdown": true,
+          "head": "--- description: Web framework built on Web Standards for Cloudflare W"
+        },
+        "page2ai-core": {
+          "status": 200,
+          "content_type": "text/markdown; charset=utf-8",
+          "vary": null,
+          "bytes": 4722,
+          "served_markdown": true,
+          "head": "# Getting Started Using Hono is super easy. We can set up the project"
+        },
+        "trafilatura": {
+          "status": 200,
+          "content_type": "text/html",
+          "vary": null,
+          "bytes": 96479,
+          "served_markdown": false,
+          "head": "<!DOCTYPE html> <html lang=\"en-US\" dir=\"ltr\"> <head> <meta chars"
+        },
+        "requests-default": {
+          "status": 200,
+          "content_type": "text/html",
+          "vary": null,
+          "bytes": 96479,
+          "served_markdown": false,
+          "head": "<!DOCTYPE html> <html lang=\"en-US\" dir=\"ltr\"> <head> <meta chars"
+        },
+        "curl-default": {
+          "status": 200,
+          "content_type": "text/html",
+          "vary": null,
+          "bytes": 96479,
+          "served_markdown": false,
+          "head": "<!DOCTYPE html> <html lang=\"en-US\" dir=\"ltr\"> <head> <meta chars"
+        },
+        "node-fetch": {
+          "status": 200,
+          "content_type": "text/html",
+          "vary": null,
+          "bytes": 96479,
+          "served_markdown": false,
+          "head": "<!DOCTYPE html> <html lang=\"en-US\" dir=\"ltr\"> <head> <meta chars"
+        },
+        "chromium-browser": {
+          "status": 200,
+          "content_type": "text/html",
+          "vary": null,
+          "bytes": 98738,
+          "served_markdown": false,
+          "head": "<!DOCTYPE html> <html lang=\"en-US\" dir=\"ltr\"> <head> <meta chars"
+        }
+      },
+      "profiles_receiving_markdown": [
+        "markitdown",
+        "page2ai-core"
+      ]
+    },
+    {
+      "slug": "biome",
+      "framework": "Starlight",
+      "url": "https://biomejs.dev/guides/getting-started/",
+      "by_profile": {
+        "markitdown": {
+          "status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "vary": "Accept-Encoding",
+          "bytes": 141461,
+          "served_markdown": false,
+          "head": "<!DOCTYPE html><html lang=\"en\" dir=\"ltr\" data-theme=\"dark\" data-has-to"
+        },
+        "page2ai-core": {
+          "status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "vary": "Accept-Encoding",
+          "bytes": 141461,
+          "served_markdown": false,
+          "head": "<!DOCTYPE html><html lang=\"en\" dir=\"ltr\" data-theme=\"dark\" data-has-to"
+        },
+        "trafilatura": {
+          "status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "vary": "Accept-Encoding",
+          "bytes": 141461,
+          "served_markdown": false,
+          "head": "<!DOCTYPE html><html lang=\"en\" dir=\"ltr\" data-theme=\"dark\" data-has-to"
+        },
+        "requests-default": {
+          "status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "vary": "Accept-Encoding",
+          "bytes": 141461,
+          "served_markdown": false,
+          "head": "<!DOCTYPE html><html lang=\"en\" dir=\"ltr\" data-theme=\"dark\" data-has-to"
+        },
+        "curl-default": {
+          "status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "vary": "Accept-Encoding",
+          "bytes": 141461,
+          "served_markdown": false,
+          "head": "<!DOCTYPE html><html lang=\"en\" dir=\"ltr\" data-theme=\"dark\" data-has-to"
+        },
+        "node-fetch": {
+          "status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "vary": "Accept-Encoding",
+          "bytes": 141461,
+          "served_markdown": false,
+          "head": "<!DOCTYPE html><html lang=\"en\" dir=\"ltr\" data-theme=\"dark\" data-has-to"
+        },
+        "chromium-browser": {
+          "status": 200,
+          "content_type": "text/html; charset=UTF-8",
+          "vary": "Accept-Encoding",
+          "bytes": 141461,
+          "served_markdown": false,
+          "head": "<!DOCTYPE html><html lang=\"en\" dir=\"ltr\" data-theme=\"dark\" data-has-to"
+        }
+      },
+      "profiles_receiving_markdown": []
+    }
+  ]
+}

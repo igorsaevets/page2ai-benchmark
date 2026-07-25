@@ -1,0 +1,102 @@
+{
+  "run_date": "2026-07-25T14:53:39.638Z",
+  "input": "WebMainBench_545.jsonl",
+  "samples": 545,
+  "field_availability": {
+    "note": "The repository README documents main_html and convert_main_content as 'available for all 7,809 samples'. In the published 545-sample file they are measured here.",
+    "main_html_empty": 445,
+    "convert_main_content_empty": 200,
+    "groundtruth_content_empty": 0
+  },
+  "reference_length_chars": {
+    "min": 27,
+    "p25": 1405,
+    "median": 3467,
+    "p75": 10923,
+    "max": 782727
+  },
+  "constructs_present_in_reference": {
+    "markdown_link": {
+      "n": 3,
+      "pct": 0.6
+    },
+    "markdown_image": {
+      "n": 4,
+      "pct": 0.7
+    },
+    "bare_url_text": {
+      "n": 102,
+      "pct": 18.7
+    },
+    "markdown_table_row": {
+      "n": 39,
+      "pct": 7.2
+    },
+    "math_delimiter": {
+      "n": 253,
+      "pct": 46.4
+    },
+    "heading": {
+      "n": 443,
+      "pct": 81.3
+    },
+    "fenced_block": {
+      "n": 88,
+      "pct": 16.1
+    },
+    "fenced_block_that_looks_like_prose": {
+      "n": 20,
+      "pct": 3.7,
+      "note": "heuristic, see fenceLooksLikeProse() in the script"
+    }
+  },
+  "label_vs_reference": {
+    "note": "Denominator is the dataset's own meta label for that page. meta.table, meta.equation and meta.code are arrays of kinds, not booleans.",
+    "pages_labelled_table": 179,
+    "of_which_reference_contains_a_table": 39,
+    "pages_labelled_layout_table": 28,
+    "of_which_layout_reference_contains_a_table": 1,
+    "pages_labelled_equation": 257,
+    "of_which_reference_contains_math": 230,
+    "pages_labelled_code": 127,
+    "of_which_reference_contains_a_fence": 87
+  },
+  "languages_top10": [
+    [
+      "en",
+      416
+    ],
+    [
+      "unknown",
+      94
+    ],
+    [
+      "zh",
+      27
+    ],
+    [
+      "de",
+      2
+    ],
+    [
+      "sw",
+      2
+    ],
+    [
+      "ru",
+      1
+    ],
+    [
+      "fr",
+      1
+    ],
+    [
+      "pt",
+      1
+    ],
+    [
+      "pl",
+      1
+    ]
+  ]
+}
