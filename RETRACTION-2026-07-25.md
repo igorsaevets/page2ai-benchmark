@@ -164,6 +164,33 @@ Note that this is not an argument against fetching publisher Markdown. It is usu
 thing a tool can do: on docs.anthropic.com it replaces 954900 bytes of HTML with 20535 bytes
 of clean Markdown. It is an argument for scoring it as a different thing.
 
+### How far this generalises, and how far it does not
+
+The 15 sites above were chosen because this benchmark targets documentation frameworks. They
+are among the most likely places on the web to find this behaviour, so **6 of 15 is not a web
+scale figure and must not be quoted as one.** Cloudflare's Agent Readiness scan of a filtered
+set of the top 200,000 domains found Markdown content negotiation supported on **3.9%**
+(blog.cloudflare.com/agent-readiness/, 2026-04-17). The honest statement is that this is
+already common in modern developer documentation, uncommon across prominent domains
+generally, and likely rarer still in the long tail. It is plausibly growing, since Cloudflare
+can enable conversion at the CDN and Mintlify, Fumadocs and Vercel all document the feature.
+
+### Publisher Markdown is not automatically an authored source
+
+A `content-type: text/markdown` response proves that a representation was served. It does not
+prove a human wrote it, and it does not make it a neutral reference. Vercel documents that
+its content is stored as CMS rich text and converted to Markdown on request, and Cloudflare's
+feature converts origin HTML to Markdown at the edge. In those cases the "publisher Markdown"
+is another converter's output. Scoring a tool against it would measure agreement with that
+converter, not correctness.
+
+Any future use of these responses as references has to carry a provenance label, at minimum
+distinguishing: Markdown pinned from the publisher's own source repository; a representation
+generated from the publisher's source or CMS; a runtime conversion of rich text; and a CDN
+edge conversion. Only the first is a plausible gold standard, and even that measures how
+reversibly a tool reconstructs one serialisation of the same source. The v0.2 protocol below
+treats publisher Markdown as a weak reference for this reason.
+
 ## What v0.2 changes
 
 1. Every request logs the Accept header sent, the `content-type` received, and the `Vary`

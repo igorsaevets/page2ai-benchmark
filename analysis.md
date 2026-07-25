@@ -87,9 +87,20 @@ comparative statement in earlier versions of this file was unsupported and has b
 3. **Do not treat publisher Markdown as neutral ground truth for conversion.** It is
    generated from the same source as the HTML rather than independently; it can omit content
    the HTML contains, as with Fumadocs at 9429 bytes of Markdown against 386089 bytes of
-   HTML; and it can include material addressed to agents that is not part of the article.
-   Where it is used at all, label it a weak reference and record retrieval URL, timestamp and
-   content hash rather than redistributing the text.
+   HTML; it can include material addressed to agents that is not part of the article; and it
+   is frequently not authored at all. Vercel documents converting CMS rich text to Markdown
+   on request, and Cloudflare converts origin HTML at the edge, so in those cases it is
+   another converter's output and scoring against it would measure agreement rather than
+   correctness. Where it is used at all, label it a weak reference, attach a provenance class
+   (pinned source repository / publisher-generated / runtime rich-text conversion / CDN edge
+   conversion), and record retrieval URL, timestamp and content hash rather than
+   redistributing the text.
+7. **Do not merge unlike tools into one ranking.** trafilatura and readability select main
+   content, turndown serialises a DOM, markitdown and docling convert whole documents. A
+   single flat leaderboard over those is not meaningful.
+8. **Scope claims honestly.** The 6-of-15 figure is a documentation-site sample and is not a
+   web-scale rate. Cloudflare's scan of a filtered top-200,000-domain set found Markdown
+   negotiation on 3.9% (2026-04-17).
 4. **Only locally runnable, no-API-key tools**, so that every number can be reproduced by a
    stranger without credentials. Candidates: trafilatura, readability with turndown,
    markitdown, docling, markdownify, alongside Page2AI.
