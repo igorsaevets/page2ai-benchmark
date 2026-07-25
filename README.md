@@ -5,17 +5,18 @@
 > **The v0.1.0 results are withdrawn. See [RETRACTION-2026-07-25.md](RETRACTION-2026-07-25.md).**
 >
 > Four of the five v0.1.0 rows were wrong. The one positive result was measuring the
-> publisher's own Markdown rather than any conversion: `docs.anthropic.com` serves
-> `content-type: text/markdown` in response to the Accept header this project sends, and the
-> recorded output was a 100% verbatim copy of it. Two "SPA limitation" verdicts were
-> misdiagnoses of a redirect stub and of a wrong metrics row.
+> publisher's own Markdown rather than any conversion: the library fetched
+> `docs.anthropic.com/...extended-thinking.md` and labelled it `extractor_source: "md-suffix"`
+> in its own output, and the benchmark scored that 100% verbatim copy as conversion quality.
+> Two "SPA limitation" verdicts were misdiagnoses of a redirect stub and of a wrong metrics
+> row. A separate genuine library bug turned up on Fumadocs.
 >
-> The general point is larger than this repo. **5 of 15 major documentation sites return
-> Markdown when a client asks for it** (`node content-negotiation-survey.mjs`). Any
-> comparison of extraction tools that does not record the Accept header sent and the
-> content type received cannot be interpreted on those sites, because it is partly measuring
-> header choice rather than conversion quality. No benchmark known to this project currently
-> controls for it.
+> The general point is larger than this repo. **6 of 15 major documentation sites hand over
+> the publisher's own Markdown**, through `Accept: text/markdown` negotiation, through the
+> `<url>.md` suffix convention, or both (`node content-negotiation-survey.mjs`). Any
+> comparison of extraction tools that does not record, per result, what was requested and
+> what came back cannot be interpreted on those sites, because it is ranking fetch strategy
+> rather than conversion quality. No benchmark known to this project currently records it.
 
 Open comparison of web-to-Markdown extractors on documentation frameworks. Focus on
 documentation-site extraction quality, not general web crawling.

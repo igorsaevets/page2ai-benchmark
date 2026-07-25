@@ -77,11 +77,32 @@ async function probe(url, accept) {
   }
 }
 
+// A publisher can expose Markdown through more than one channel. Besides Accept
+// negotiation there is the `.md` URL-suffix convention popularised by Mintlify.
+// A tool can obtain the publisher's Markdown through either, so a benchmark has
+// to record which channel produced a given output.
+async function probeMdSuffix(url) {
+  const clean = url.replace(/[#?].*$/, "");
+  if (clean.endsWith(".md") || clean.endsWith(".txt")) return { applicable: false };
+  const candidate = clean.endsWith("/") ? `${clean}index.md` : `${clean}.md`;
+  try {
+    const resp = await fetch(candidate, { headers: { accept: HTML_ACCEPT }, redirect: "follow" });
+    const body = await resp.text();
+    const ct = resp.headers.get("content-type") || "";
+    const isMarkdown = /markdown|text\/plain/i.test(ct) && !/^\s*<(!doctype|html)/i.test(body);
+    return { applicable: true, candidate, status: resp.status, content_type: ct, bytes: body.length, serves_markdown: isMarkdown };
+  } catch (e) {
+    return { applicable: true, candidate, status: null, error: e.message, serves_markdown: false };
+  }
+}
+
 const rows = [];
 for (const t of TARGETS) {
   const asHtml = await probe(t.url, HTML_ACCEPT);
   await sleep(800);
   const asMd = await probe(t.url, MD_ACCEPT);
+  await sleep(800);
+  const mdSuffix = await probeMdSuffix(t.url);
   await sleep(800);
 
   const negotiates =
@@ -89,16 +110,25 @@ for (const t of TARGETS) {
     /markdown|text\/plain/i.test(asMd.content_type) &&
     !/markdown|text\/plain/i.test(asHtml.content_type || "");
 
-  rows.push({ ...t, as_html: asHtml, as_markdown: asMd, serves_markdown_on_negotiation: negotiates });
+  rows.push({
+    ...t,
+    as_html: asHtml,
+    as_markdown: asMd,
+    md_suffix: mdSuffix,
+    serves_markdown_on_negotiation: negotiates,
+    serves_markdown_on_suffix: !!mdSuffix.serves_markdown,
+    publisher_markdown_available: negotiates || !!mdSuffix.serves_markdown,
+  });
   console.log(
     `${t.slug.padEnd(12)} ${t.framework.padEnd(11)} ` +
-      `html:${String(asHtml.bytes ?? 0).padEnd(8)}${(asHtml.content_type || "-").split(";")[0].padEnd(12)} ` +
-      `md:${String(asMd.bytes ?? 0).padEnd(8)}${(asMd.content_type || "-").split(";")[0].padEnd(16)} ` +
-      `${negotiates ? "<-- SERVES MARKDOWN" : ""}`,
+      `html:${String(asHtml.bytes ?? 0).padEnd(8)} ` +
+      `negotiation:${negotiates ? "YES" : "no "} ` +
+      `.md-suffix:${mdSuffix.serves_markdown ? "YES" : "no "} ` +
+      `${negotiates || mdSuffix.serves_markdown ? "<-- PUBLISHER MARKDOWN AVAILABLE" : ""}`,
   );
 }
 
-const yes = rows.filter((r) => r.serves_markdown_on_negotiation);
+const yes = rows.filter((r) => r.publisher_markdown_available);
 await mkdir(join(ROOT, "results"), { recursive: true });
 await writeFile(
   join(ROOT, "results", "content-negotiation.json"),
@@ -108,7 +138,9 @@ await writeFile(
       html_accept: HTML_ACCEPT,
       markdown_accept: MD_ACCEPT,
       total: rows.length,
-      serving_markdown: yes.length,
+      serving_markdown_any_channel: yes.length,
+      serving_markdown_via_negotiation: rows.filter((r) => r.serves_markdown_on_negotiation).length,
+      serving_markdown_via_md_suffix: rows.filter((r) => r.serves_markdown_on_suffix).length,
       rows,
     },
     null,
@@ -117,6 +149,14 @@ await writeFile(
   "utf8",
 );
 
-console.log(`\n${yes.length} of ${rows.length} sites return Markdown when the client asks for it:`);
-for (const r of yes) console.log(`  - ${r.slug} (${r.framework}) ${r.as_markdown.bytes} bytes`);
+console.log(`\n${yes.length} of ${rows.length} sites expose publisher Markdown through at least one channel:`);
+for (const r of yes) {
+  const via = [
+    r.serves_markdown_on_negotiation ? `Accept (${r.as_markdown.bytes}B)` : null,
+    r.serves_markdown_on_suffix ? `.md suffix (${r.md_suffix.bytes}B)` : null,
+  ]
+    .filter(Boolean)
+    .join(" + ");
+  console.log(`  - ${r.slug} (${r.framework}): ${via}`);
+}
 console.log("\nWrote results/content-negotiation.json");

@@ -1,9 +1,11 @@
 {
-  "run_date": "2026-07-25T13:52:18.563Z",
+  "run_date": "2026-07-25T14:06:47.879Z",
   "html_accept": "text/html,application/xhtml+xml",
   "markdown_accept": "text/html,text/markdown,text/plain,application/xhtml+xml,*/*;q=0.5",
   "total": 15,
-  "serving_markdown": 5,
+  "serving_markdown_any_channel": 6,
+  "serving_markdown_via_negotiation": 4,
+  "serving_markdown_via_md_suffix": 5,
   "rows": [
     {
       "slug": "fumadocs",
@@ -23,7 +25,17 @@
         "looks_markdown": true,
         "head": "# Fumadocs (Framework Mode): Next.js URL: /docs/manual-insta"
       },
-      "serves_markdown_on_negotiation": true
+      "md_suffix": {
+        "applicable": true,
+        "candidate": "https://www.fumadocs.dev/docs/manual-installation/next.md",
+        "status": 200,
+        "content_type": "text/html; charset=utf-8",
+        "bytes": 122343,
+        "serves_markdown": false
+      },
+      "serves_markdown_on_negotiation": true,
+      "serves_markdown_on_suffix": false,
+      "publisher_markdown_available": true
     },
     {
       "slug": "anthropic",
@@ -43,7 +55,17 @@
         "looks_markdown": true,
         "head": "# Extended thinking Configure manual extended thinking with"
       },
-      "serves_markdown_on_negotiation": true
+      "md_suffix": {
+        "applicable": true,
+        "candidate": "https://docs.anthropic.com/en/docs/build-with-claude/extended-thinking.md",
+        "status": 200,
+        "content_type": "text/markdown; charset=utf-8",
+        "bytes": 20535,
+        "serves_markdown": true
+      },
+      "serves_markdown_on_negotiation": true,
+      "serves_markdown_on_suffix": true,
+      "publisher_markdown_available": true
     },
     {
       "slug": "docusaurus",
@@ -63,7 +85,17 @@
         "looks_markdown": false,
         "head": "<!doctype html><html lang=en dir=ltr class=\"docs-wrapper plu"
       },
-      "serves_markdown_on_negotiation": false
+      "md_suffix": {
+        "applicable": true,
+        "candidate": "https://docusaurus.io/docs.md",
+        "status": 404,
+        "content_type": "text/html; charset=utf-8",
+        "bytes": 19488,
+        "serves_markdown": false
+      },
+      "serves_markdown_on_negotiation": false,
+      "serves_markdown_on_suffix": false,
+      "publisher_markdown_available": false
     },
     {
       "slug": "starlight",
@@ -83,7 +115,17 @@
         "looks_markdown": false,
         "head": "<!DOCTYPE html><html lang=\"en\" dir=\"ltr\" data-theme=\"dark\" d"
       },
-      "serves_markdown_on_negotiation": false
+      "md_suffix": {
+        "applicable": true,
+        "candidate": "https://starlight.astro.build/getting-started/index.md",
+        "status": 404,
+        "content_type": "text/html; charset=utf-8",
+        "bytes": 31415,
+        "serves_markdown": false
+      },
+      "serves_markdown_on_negotiation": false,
+      "serves_markdown_on_suffix": false,
+      "publisher_markdown_available": false
     },
     {
       "slug": "nextra",
@@ -103,7 +145,17 @@
         "looks_markdown": false,
         "head": "<!DOCTYPE html><!--g4CUMIGXcym8ezi18iIfd--><html lang=\"en\" d"
       },
-      "serves_markdown_on_negotiation": false
+      "md_suffix": {
+        "applicable": true,
+        "candidate": "https://nextra.site/docs.md",
+        "status": 404,
+        "content_type": "text/html; charset=utf-8",
+        "bytes": 145034,
+        "serves_markdown": false
+      },
+      "serves_markdown_on_negotiation": false,
+      "serves_markdown_on_suffix": false,
+      "publisher_markdown_available": false
     },
     {
       "slug": "vitepress",
@@ -123,7 +175,17 @@
         "looks_markdown": false,
         "head": "<!DOCTYPE html> <html lang=\"en-US\" dir=\"ltr\"> <head> <"
       },
-      "serves_markdown_on_negotiation": false
+      "md_suffix": {
+        "applicable": true,
+        "candidate": "https://vitepress.dev/guide/getting-started.md",
+        "status": 200,
+        "content_type": "text/markdown; charset=UTF-8",
+        "bytes": 6235,
+        "serves_markdown": true
+      },
+      "serves_markdown_on_negotiation": false,
+      "serves_markdown_on_suffix": true,
+      "publisher_markdown_available": true
     },
     {
       "slug": "mdn",
@@ -143,7 +205,17 @@
         "looks_markdown": false,
         "head": " <!doctype html> <html lang=\"en-US\" "
       },
-      "serves_markdown_on_negotiation": false
+      "md_suffix": {
+        "applicable": true,
+        "candidate": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept.md",
+        "status": 404,
+        "content_type": "text/html",
+        "bytes": 88082,
+        "serves_markdown": false
+      },
+      "serves_markdown_on_negotiation": false,
+      "serves_markdown_on_suffix": false,
+      "publisher_markdown_available": false
     },
     {
       "slug": "svelte",
@@ -163,7 +235,17 @@
         "looks_markdown": false,
         "head": "<!doctype html> <html lang=\"en\" class=\"theme-default typo-de"
       },
-      "serves_markdown_on_negotiation": false
+      "md_suffix": {
+        "applicable": true,
+        "candidate": "https://svelte.dev/docs/svelte/what-are-runes.md",
+        "status": 404,
+        "content_type": "text/html",
+        "bytes": 39771,
+        "serves_markdown": false
+      },
+      "serves_markdown_on_negotiation": false,
+      "serves_markdown_on_suffix": false,
+      "publisher_markdown_available": false
     },
     {
       "slug": "astro",
@@ -183,7 +265,17 @@
         "looks_markdown": false,
         "head": "<!DOCTYPE html> <html lang=\"en\" dir=\"ltr\" data-theme=\"dark\" "
       },
-      "serves_markdown_on_negotiation": false
+      "md_suffix": {
+        "applicable": true,
+        "candidate": "https://docs.astro.build/en/getting-started/index.md",
+        "status": 404,
+        "content_type": "text/html",
+        "bytes": 38410,
+        "serves_markdown": false
+      },
+      "serves_markdown_on_negotiation": false,
+      "serves_markdown_on_suffix": false,
+      "publisher_markdown_available": false
     },
     {
       "slug": "tailwind",
@@ -203,7 +295,17 @@
         "looks_markdown": false,
         "head": "<!DOCTYPE html><html lang=\"en\" class=\"inter_6a166f28-module_"
       },
-      "serves_markdown_on_negotiation": false
+      "md_suffix": {
+        "applicable": true,
+        "candidate": "https://tailwindcss.com/docs/installation/using-vite.md",
+        "status": 404,
+        "content_type": "text/html; charset=utf-8",
+        "bytes": 158917,
+        "serves_markdown": false
+      },
+      "serves_markdown_on_negotiation": false,
+      "serves_markdown_on_suffix": false,
+      "publisher_markdown_available": false
     },
     {
       "slug": "stripe",
@@ -219,11 +321,21 @@
       "as_markdown": {
         "status": 200,
         "content_type": "text/html; charset=utf-8",
-        "bytes": 1205702,
+        "bytes": 1205703,
         "looks_markdown": false,
         "head": "<!doctype html> <html id=\"​\" lang=\"en-US\"> <h"
       },
-      "serves_markdown_on_negotiation": false
+      "md_suffix": {
+        "applicable": true,
+        "candidate": "https://docs.stripe.com/api.md",
+        "status": 200,
+        "content_type": "text/plain; charset=utf-8",
+        "bytes": 1562,
+        "serves_markdown": true
+      },
+      "serves_markdown_on_negotiation": false,
+      "serves_markdown_on_suffix": true,
+      "publisher_markdown_available": true
     },
     {
       "slug": "vercel",
@@ -243,7 +355,17 @@
         "looks_markdown": true,
         "head": "--- title: Vercel Functions product: vercel url: /docs/funct"
       },
-      "serves_markdown_on_negotiation": true
+      "md_suffix": {
+        "applicable": true,
+        "candidate": "https://vercel.com/docs/functions.md",
+        "status": 200,
+        "content_type": "text/markdown; charset=utf-8",
+        "bytes": 7461,
+        "serves_markdown": true
+      },
+      "serves_markdown_on_negotiation": true,
+      "serves_markdown_on_suffix": true,
+      "publisher_markdown_available": true
     },
     {
       "slug": "supabase",
@@ -263,7 +385,17 @@
         "looks_markdown": true,
         "head": "# Auth Use Supabase to authenticate and authorize your user"
       },
-      "serves_markdown_on_negotiation": true
+      "md_suffix": {
+        "applicable": true,
+        "candidate": "https://supabase.com/docs/guides/auth.md",
+        "status": 200,
+        "content_type": "text/markdown; charset=utf-8",
+        "bytes": 6226,
+        "serves_markdown": true
+      },
+      "serves_markdown_on_negotiation": true,
+      "serves_markdown_on_suffix": true,
+      "publisher_markdown_available": true
     },
     {
       "slug": "hono",
@@ -278,12 +410,22 @@
       },
       "as_markdown": {
         "status": 200,
-        "content_type": "text/markdown; charset=utf-8",
-        "bytes": 4722,
-        "looks_markdown": true,
-        "head": "# Getting Started Using Hono is super easy. We can set up t"
+        "content_type": "text/html",
+        "bytes": 98738,
+        "looks_markdown": false,
+        "head": "<!DOCTYPE html> <html lang=\"en-US\" dir=\"ltr\"> <head> <"
       },
-      "serves_markdown_on_negotiation": true
+      "md_suffix": {
+        "applicable": true,
+        "candidate": "https://hono.dev/docs/getting-started/basic.md",
+        "status": 404,
+        "content_type": "text/html",
+        "bytes": 18593,
+        "serves_markdown": false
+      },
+      "serves_markdown_on_negotiation": false,
+      "serves_markdown_on_suffix": false,
+      "publisher_markdown_available": false
     },
     {
       "slug": "biome",
@@ -303,7 +445,17 @@
         "looks_markdown": false,
         "head": "<!DOCTYPE html><html lang=\"en\" dir=\"ltr\" data-theme=\"dark\" d"
       },
-      "serves_markdown_on_negotiation": false
+      "md_suffix": {
+        "applicable": true,
+        "candidate": "https://biomejs.dev/guides/getting-started/index.md",
+        "status": 404,
+        "content_type": "text/html; charset=utf-8",
+        "bytes": 29076,
+        "serves_markdown": false
+      },
+      "serves_markdown_on_negotiation": false,
+      "serves_markdown_on_suffix": false,
+      "publisher_markdown_available": false
     }
   ]
 }

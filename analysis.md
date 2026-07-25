@@ -14,16 +14,23 @@ file now holds the corrected measurements and the protocol change they forced.
 
 ## The confound that invalidated v0.1.0
 
-`@page2ai/core` sends `accept: text/html,text/markdown,text/plain,application/xhtml+xml,*/*;q=0.5`.
-Several documentation platforms honour that header and return their own Markdown instead of
-HTML. When they do, no conversion happens and the recorded output is the publisher's text.
+A tool can obtain a page's Markdown without converting anything, through two independent
+channels. `@page2ai/core` uses both: it tries `<url>.md` first (`tryMdSuffixFirst`, default
+on), and its HTML fetch sends
+`accept: text/html,text/markdown,text/plain,application/xhtml+xml,*/*;q=0.5`. Where a
+publisher honours either, the recorded output is the publisher's text, not a conversion.
 
-Measured on 2026-07-25 across 15 widely used documentation sites, two requests each:
+Measured on 2026-07-25 across 15 widely used documentation sites:
 
-| Behaviour | Sites | Count |
+| Channel | Sites | Count |
 |---|---|---:|
-| Returns `text/markdown` when asked | Fumadocs, docs.anthropic.com (Mintlify), Vercel, Supabase, Hono | **5 / 15** |
-| Ignores the Accept header, always HTML | Docusaurus, Starlight, Nextra, VitePress, MDN, Svelte, Astro, Tailwind, Stripe, Biome | 10 / 15 |
+| `Accept: text/markdown` negotiation | Fumadocs, docs.anthropic.com, Vercel, Supabase | 4 / 15 |
+| `<url>.md` suffix | docs.anthropic.com, Vercel, Supabase, VitePress, Stripe | 5 / 15 |
+| **Either channel** | the six above | **6 / 15** |
+| Neither, HTML only | Docusaurus, Starlight, Nextra, MDN, Svelte, Astro, Tailwind, Biome | 8 / 15 |
+
+`hono.dev` returned Markdown on one run and HTML on two others under the same request, with
+`Vary: accept` set. Treated as an unstable cache result and excluded from the counts.
 
 Raw data: `results/content-negotiation.json`. Reproduce: `node content-negotiation-survey.mjs`.
 
@@ -53,14 +60,15 @@ property a conversion benchmark should be measuring.
 
 These numbers do **not** measure conversion. They measure what the publisher chose to send.
 
-| Site | Chars returned | What actually happened |
-|---|---:|---|
-| Mintlify (docs.anthropic.com) | 20534 | Server returned its own Markdown. Recorded output is a 100% verbatim copy (481/481 shingles). v0.1.0 scored this as "publication-quality Markdown" produced by the tool |
-| Fumadocs (www.fumadocs.dev) | 0 | Server returned its own Markdown; the library passed it to an HTML parser, found no `<article>`, and emitted an empty body |
+| Site | Chars returned | Channel | What actually happened |
+|---|---:|---|---|
+| Mintlify (docs.anthropic.com) | 20534 | `.md` suffix | The library fetched `<url>.md` via its `tryMdSuffixFirst` option and recorded `extractor_source: "md-suffix"` in the output's own frontmatter. The output is a 100% verbatim copy of the publisher's Markdown (481/481 shingles). v0.1.0 read the character count, ignored the label, and generalised it into "publication-quality Markdown" produced by the tool |
+| Fumadocs (www.fumadocs.dev) | 0 | Accept header | `.md` returned HTML so the suffix path correctly declined. The HTML path then sent a Markdown-accepting header, received `text/markdown`, passed it to an HTML parser, found no `<article>`, and emitted an empty body |
 
-The Fumadocs row is a bug in `@page2ai/core`, not a property of the site. A tool that asks for
-Markdown and receives Markdown should return it, not parse it as HTML. Reproduce with
-`node repro-accept.mjs`.
+The two rows have different owners. The Mintlify row is this benchmark's fault: the library
+reported exactly what it had done and the scoring ignored it. The Fumadocs row is a bug in
+`@page2ai/core`: a tool that receives `content-type: text/markdown` should return that body
+rather than parse it as HTML. Reproduce with `node repro-accept.mjs`.
 
 ## What is not claimed
 
