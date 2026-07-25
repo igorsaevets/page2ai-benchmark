@@ -30,6 +30,9 @@ keywords:
   - mcp
   - reproducibility
 identifiers:
+  - type: doi
+    value: "10.5281/zenodo.21539768"
+    description: Zenodo archival DOI (v0.1.0)
   - type: url
     value: "https://github.com/igorsaevets/page2ai-benchmark"
     description: GitHub repository
