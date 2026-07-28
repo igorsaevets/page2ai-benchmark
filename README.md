@@ -2,21 +2,22 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21539768.svg)](https://doi.org/10.5281/zenodo.21539768)
 
-> **The v0.1.0 results are withdrawn. See [RETRACTION-2026-07-25.md](RETRACTION-2026-07-25.md).**
+> **v0.2 is the live protocol. The v0.1.0 results remain withdrawn.**
 >
-> Four of the five v0.1.0 rows were wrong. The one positive result was measuring the
-> publisher's own Markdown rather than any conversion: the library fetched
-> `docs.anthropic.com/...extended-thinking.md` and labelled it `extractor_source: "md-suffix"`
-> in its own output, and the benchmark scored that 100% verbatim copy as conversion quality.
-> Two "SPA limitation" verdicts were misdiagnoses of a redirect stub and of a wrong metrics
-> row. A separate genuine library bug turned up on Fumadocs.
+> Current results: **[RESULTS-v2.md](RESULTS-v2.md)**. Protocol and metric definitions:
+> **[protocol-v2/PROTOCOL.md](protocol-v2/PROTOCOL.md)**. Why v0.1.0 was withdrawn:
+> [RETRACTION-2026-07-25.md](RETRACTION-2026-07-25.md).
 >
-> The general point is larger than this repo. **6 of 15 major documentation sites hand over
-> the publisher's own Markdown**, through `Accept: text/markdown` negotiation, through the
-> `<url>.md` suffix convention, or both (`node content-negotiation-survey.mjs`). Any
-> comparison of extraction tools that does not record, per result, what was requested and
-> what came back cannot be interpreted on those sites, because it is ranking fetch strategy
-> rather than conversion quality. No benchmark known to this project currently records it.
+> v0.2 splits the thing v0.1.0 got wrong into two tracks. **Conversion**: every tool receives the
+> same cached HTML bytes, fetched once by the harness, so no tool's fetch strategy can influence
+> the score. **Negotiation**: a separate, unscored table of which tools discover a publisher's own
+> Markdown when one exists. Six tools, all runnable locally with no API key, on 14 documentation
+> pages committed verbatim to this repository. Scoring runs with no network access:
+>
+> ```bash
+> npm install && python -m pip install -r protocol-v2/requirements.txt
+> npm run v2      # groundtruth, extract, score, report. Offline.
+> ```
 
 Open comparison of web-to-Markdown extractors on documentation frameworks. Focus on
 documentation-site extraction quality, not general web crawling.
