@@ -1,0 +1,681 @@
+{
+  "audited_at": "2026-07-28T13:00:56.673Z",
+  "question": "Does duplicated TOC/sidebar heading text let a tool score heading recall without extracting the article?",
+  "corpus_headings": 170,
+  "corpus_headings_also_in_chrome": 52,
+  "ambiguous_share": 0.3059,
+  "pages_total": 14,
+  "pages_with_any_unambiguous_heading": 10,
+  "pages_fully_ambiguous": [
+    "starlight",
+    "fumadocs",
+    "biome",
+    "python-docs"
+  ],
+  "summary": [
+    {
+      "tool": "turndown-raw",
+      "heading_recall_all_pages": 1,
+      "heading_recall_same_pages": 1,
+      "heading_recall_strict": 1,
+      "delta_like_for_like": 0
+    },
+    {
+      "tool": "markitdown",
+      "heading_recall_all_pages": 1,
+      "heading_recall_same_pages": 1,
+      "heading_recall_strict": 1,
+      "delta_like_for_like": 0
+    },
+    {
+      "tool": "page2ai",
+      "heading_recall_all_pages": 0.9286,
+      "heading_recall_same_pages": 0.9,
+      "heading_recall_strict": 0.9,
+      "delta_like_for_like": 0
+    },
+    {
+      "tool": "defuddle-turndown",
+      "heading_recall_all_pages": 0.7498,
+      "heading_recall_same_pages": 0.6765,
+      "heading_recall_strict": 0.7017,
+      "delta_like_for_like": 0.0253
+    },
+    {
+      "tool": "trafilatura",
+      "heading_recall_all_pages": 0.7859,
+      "heading_recall_same_pages": 0.7146,
+      "heading_recall_strict": 0.6979,
+      "delta_like_for_like": -0.0167
+    },
+    {
+      "tool": "readability-turndown",
+      "heading_recall_all_pages": 0.6209,
+      "heading_recall_same_pages": 0.5821,
+      "heading_recall_strict": 0.5874,
+      "delta_like_for_like": 0.0053
+    }
+  ],
+  "pages": [
+    {
+      "slug": "mintlify-anthropic",
+      "framework": "Mintlify",
+      "article_in_server_html": false,
+      "n_headings": 6,
+      "n_article_only": 5,
+      "n_also_in_chrome": 1,
+      "ambiguous_share": 0.1667,
+      "examples_ambiguous": [
+        "learn"
+      ],
+      "tools": {
+        "page2ai": {
+          "heading_recall": 0,
+          "heading_recall_strict": 0,
+          "n_hit_ambiguous": 0
+        },
+        "readability-turndown": {
+          "heading_recall": 0,
+          "heading_recall_strict": 0,
+          "n_hit_ambiguous": 0
+        },
+        "defuddle-turndown": {
+          "heading_recall": 0.1667,
+          "heading_recall_strict": 0,
+          "n_hit_ambiguous": 1
+        },
+        "turndown-raw": {
+          "heading_recall": 1,
+          "heading_recall_strict": 1,
+          "n_hit_ambiguous": 1
+        },
+        "trafilatura": {
+          "heading_recall": 0.1667,
+          "heading_recall_strict": 0,
+          "n_hit_ambiguous": 1
+        },
+        "markitdown": {
+          "heading_recall": 1,
+          "heading_recall_strict": 1,
+          "n_hit_ambiguous": 1
+        }
+      }
+    },
+    {
+      "slug": "docusaurus",
+      "framework": "Docusaurus",
+      "article_in_server_html": true,
+      "n_headings": 17,
+      "n_article_only": 16,
+      "n_also_in_chrome": 1,
+      "ambiguous_share": 0.0588,
+      "examples_ambiguous": [
+        "introduction"
+      ],
+      "tools": {
+        "page2ai": {
+          "heading_recall": 1,
+          "heading_recall_strict": 1,
+          "n_hit_ambiguous": 1
+        },
+        "readability-turndown": {
+          "heading_recall": 0.5294,
+          "heading_recall_strict": 0.5625,
+          "n_hit_ambiguous": 0
+        },
+        "defuddle-turndown": {
+          "heading_recall": 0.9412,
+          "heading_recall_strict": 1,
+          "n_hit_ambiguous": 0
+        },
+        "turndown-raw": {
+          "heading_recall": 1,
+          "heading_recall_strict": 1,
+          "n_hit_ambiguous": 1
+        },
+        "trafilatura": {
+          "heading_recall": 1,
+          "heading_recall_strict": 1,
+          "n_hit_ambiguous": 1
+        },
+        "markitdown": {
+          "heading_recall": 1,
+          "heading_recall_strict": 1,
+          "n_hit_ambiguous": 1
+        }
+      }
+    },
+    {
+      "slug": "starlight",
+      "framework": "Starlight (Astro)",
+      "article_in_server_html": true,
+      "n_headings": 8,
+      "n_article_only": 0,
+      "n_also_in_chrome": 8,
+      "ambiguous_share": 1,
+      "examples_ambiguous": [
+        "getting started",
+        "quick start",
+        "create a new project"
+      ],
+      "tools": {
+        "page2ai": {
+          "heading_recall": 1,
+          "heading_recall_strict": null,
+          "n_hit_ambiguous": 8
+        },
+        "readability-turndown": {
+          "heading_recall": 0.5,
+          "heading_recall_strict": null,
+          "n_hit_ambiguous": 4
+        },
+        "defuddle-turndown": {
+          "heading_recall": 0.875,
+          "heading_recall_strict": null,
+          "n_hit_ambiguous": 7
+        },
+        "turndown-raw": {
+          "heading_recall": 1,
+          "heading_recall_strict": null,
+          "n_hit_ambiguous": 8
+        },
+        "trafilatura": {
+          "heading_recall": 1,
+          "heading_recall_strict": null,
+          "n_hit_ambiguous": 8
+        },
+        "markitdown": {
+          "heading_recall": 1,
+          "heading_recall_strict": null,
+          "n_hit_ambiguous": 8
+        }
+      }
+    },
+    {
+      "slug": "nextra",
+      "framework": "Nextra",
+      "article_in_server_html": true,
+      "n_headings": 6,
+      "n_article_only": 3,
+      "n_also_in_chrome": 3,
+      "ambiguous_share": 0.5,
+      "examples_ambiguous": [
+        "introduction",
+        "quick start",
+        "faq"
+      ],
+      "tools": {
+        "page2ai": {
+          "heading_recall": 1,
+          "heading_recall_strict": 1,
+          "n_hit_ambiguous": 3
+        },
+        "readability-turndown": {
+          "heading_recall": 1,
+          "heading_recall_strict": 1,
+          "n_hit_ambiguous": 3
+        },
+        "defuddle-turndown": {
+          "heading_recall": 0.8333,
+          "heading_recall_strict": 1,
+          "n_hit_ambiguous": 2
+        },
+        "turndown-raw": {
+          "heading_recall": 1,
+          "heading_recall_strict": 1,
+          "n_hit_ambiguous": 3
+        },
+        "trafilatura": {
+          "heading_recall": 1,
+          "heading_recall_strict": 1,
+          "n_hit_ambiguous": 3
+        },
+        "markitdown": {
+          "heading_recall": 1,
+          "heading_recall_strict": 1,
+          "n_hit_ambiguous": 3
+        }
+      }
+    },
+    {
+      "slug": "fumadocs",
+      "framework": "Fumadocs",
+      "article_in_server_html": true,
+      "n_headings": 10,
+      "n_article_only": 0,
+      "n_also_in_chrome": 10,
+      "ambiguous_share": 1,
+      "examples_ambiguous": [
+        "next js",
+        "prerequisite",
+        "installation"
+      ],
+      "tools": {
+        "page2ai": {
+          "heading_recall": 1,
+          "heading_recall_strict": null,
+          "n_hit_ambiguous": 10
+        },
+        "readability-turndown": {
+          "heading_recall": 0.8,
+          "heading_recall_strict": null,
+          "n_hit_ambiguous": 8
+        },
+        "defuddle-turndown": {
+          "heading_recall": 1,
+          "heading_recall_strict": null,
+          "n_hit_ambiguous": 10
+        },
+        "turndown-raw": {
+          "heading_recall": 1,
+          "heading_recall_strict": null,
+          "n_hit_ambiguous": 10
+        },
+        "trafilatura": {
+          "heading_recall": 1,
+          "heading_recall_strict": null,
+          "n_hit_ambiguous": 10
+        },
+        "markitdown": {
+          "heading_recall": 1,
+          "heading_recall_strict": null,
+          "n_hit_ambiguous": 10
+        }
+      }
+    },
+    {
+      "slug": "vitepress",
+      "framework": "VitePress",
+      "article_in_server_html": true,
+      "n_headings": 10,
+      "n_article_only": 9,
+      "n_also_in_chrome": 1,
+      "ambiguous_share": 0.1,
+      "examples_ambiguous": [
+        "getting started"
+      ],
+      "tools": {
+        "page2ai": {
+          "heading_recall": 1,
+          "heading_recall_strict": 1,
+          "n_hit_ambiguous": 1
+        },
+        "readability-turndown": {
+          "heading_recall": 0.9,
+          "heading_recall_strict": 1,
+          "n_hit_ambiguous": 0
+        },
+        "defuddle-turndown": {
+          "heading_recall": 0.9,
+          "heading_recall_strict": 1,
+          "n_hit_ambiguous": 0
+        },
+        "turndown-raw": {
+          "heading_recall": 1,
+          "heading_recall_strict": 1,
+          "n_hit_ambiguous": 1
+        },
+        "trafilatura": {
+          "heading_recall": 1,
+          "heading_recall_strict": 1,
+          "n_hit_ambiguous": 1
+        },
+        "markitdown": {
+          "heading_recall": 1,
+          "heading_recall_strict": 1,
+          "n_hit_ambiguous": 1
+        }
+      }
+    },
+    {
+      "slug": "mdn",
+      "framework": "Yari (MDN)",
+      "article_in_server_html": true,
+      "n_headings": 11,
+      "n_article_only": 11,
+      "n_also_in_chrome": 0,
+      "ambiguous_share": 0,
+      "examples_ambiguous": [],
+      "tools": {
+        "page2ai": {
+          "heading_recall": 1,
+          "heading_recall_strict": 1,
+          "n_hit_ambiguous": 0
+        },
+        "readability-turndown": {
+          "heading_recall": 0.7273,
+          "heading_recall_strict": 0.7273,
+          "n_hit_ambiguous": 0
+        },
+        "defuddle-turndown": {
+          "heading_recall": 0.6364,
+          "heading_recall_strict": 0.6364,
+          "n_hit_ambiguous": 0
+        },
+        "turndown-raw": {
+          "heading_recall": 1,
+          "heading_recall_strict": 1,
+          "n_hit_ambiguous": 0
+        },
+        "trafilatura": {
+          "heading_recall": 0.6364,
+          "heading_recall_strict": 0.6364,
+          "n_hit_ambiguous": 0
+        },
+        "markitdown": {
+          "heading_recall": 1,
+          "heading_recall_strict": 1,
+          "n_hit_ambiguous": 0
+        }
+      }
+    },
+    {
+      "slug": "tailwind",
+      "framework": "Next.js (Tailwind docs)",
+      "article_in_server_html": true,
+      "n_headings": 31,
+      "n_article_only": 31,
+      "n_also_in_chrome": 0,
+      "ambiguous_share": 0,
+      "examples_ambiguous": [],
+      "tools": {
+        "page2ai": {
+          "heading_recall": 1,
+          "heading_recall_strict": 1,
+          "n_hit_ambiguous": 0
+        },
+        "readability-turndown": {
+          "heading_recall": 0.2581,
+          "heading_recall_strict": 0.2581,
+          "n_hit_ambiguous": 0
+        },
+        "defuddle-turndown": {
+          "heading_recall": 0.2581,
+          "heading_recall_strict": 0.2581,
+          "n_hit_ambiguous": 0
+        },
+        "turndown-raw": {
+          "heading_recall": 1,
+          "heading_recall_strict": 1,
+          "n_hit_ambiguous": 0
+        },
+        "trafilatura": {
+          "heading_recall": 0.1613,
+          "heading_recall_strict": 0.1613,
+          "n_hit_ambiguous": 0
+        },
+        "markitdown": {
+          "heading_recall": 1,
+          "heading_recall_strict": 1,
+          "n_hit_ambiguous": 0
+        }
+      }
+    },
+    {
+      "slug": "svelte",
+      "framework": "SvelteKit (Svelte docs)",
+      "article_in_server_html": true,
+      "n_headings": 11,
+      "n_article_only": 11,
+      "n_also_in_chrome": 0,
+      "ambiguous_share": 0,
+      "examples_ambiguous": [],
+      "tools": {
+        "page2ai": {
+          "heading_recall": 1,
+          "heading_recall_strict": 1,
+          "n_hit_ambiguous": 0
+        },
+        "readability-turndown": {
+          "heading_recall": 0.0909,
+          "heading_recall_strict": 0.0909,
+          "n_hit_ambiguous": 0
+        },
+        "defuddle-turndown": {
+          "heading_recall": 0.1818,
+          "heading_recall_strict": 0.1818,
+          "n_hit_ambiguous": 0
+        },
+        "turndown-raw": {
+          "heading_recall": 1,
+          "heading_recall_strict": 1,
+          "n_hit_ambiguous": 0
+        },
+        "trafilatura": {
+          "heading_recall": 0.1818,
+          "heading_recall_strict": 0.1818,
+          "n_hit_ambiguous": 0
+        },
+        "markitdown": {
+          "heading_recall": 1,
+          "heading_recall_strict": 1,
+          "n_hit_ambiguous": 0
+        }
+      }
+    },
+    {
+      "slug": "biome",
+      "framework": "Astro (Biome docs)",
+      "article_in_server_html": true,
+      "n_headings": 7,
+      "n_article_only": 0,
+      "n_also_in_chrome": 7,
+      "ambiguous_share": 1,
+      "examples_ambiguous": [
+        "getting started",
+        "configuration",
+        "usage"
+      ],
+      "tools": {
+        "page2ai": {
+          "heading_recall": 1,
+          "heading_recall_strict": null,
+          "n_hit_ambiguous": 7
+        },
+        "readability-turndown": {
+          "heading_recall": 0.5714,
+          "heading_recall_strict": null,
+          "n_hit_ambiguous": 4
+        },
+        "defuddle-turndown": {
+          "heading_recall": 0.8571,
+          "heading_recall_strict": null,
+          "n_hit_ambiguous": 6
+        },
+        "turndown-raw": {
+          "heading_recall": 1,
+          "heading_recall_strict": null,
+          "n_hit_ambiguous": 7
+        },
+        "trafilatura": {
+          "heading_recall": 0.8571,
+          "heading_recall_strict": null,
+          "n_hit_ambiguous": 6
+        },
+        "markitdown": {
+          "heading_recall": 1,
+          "heading_recall_strict": null,
+          "n_hit_ambiguous": 7
+        }
+      }
+    },
+    {
+      "slug": "python-docs",
+      "framework": "Sphinx",
+      "article_in_server_html": true,
+      "n_headings": 17,
+      "n_article_only": 0,
+      "n_also_in_chrome": 17,
+      "ambiguous_share": 1,
+      "examples_ambiguous": [
+        "coroutines and tasks",
+        "coroutines",
+        "awaitables"
+      ],
+      "tools": {
+        "page2ai": {
+          "heading_recall": 1,
+          "heading_recall_strict": null,
+          "n_hit_ambiguous": 17
+        },
+        "readability-turndown": {
+          "heading_recall": 1,
+          "heading_recall_strict": null,
+          "n_hit_ambiguous": 17
+        },
+        "defuddle-turndown": {
+          "heading_recall": 1,
+          "heading_recall_strict": null,
+          "n_hit_ambiguous": 17
+        },
+        "turndown-raw": {
+          "heading_recall": 1,
+          "heading_recall_strict": null,
+          "n_hit_ambiguous": 17
+        },
+        "trafilatura": {
+          "heading_recall": 1,
+          "heading_recall_strict": null,
+          "n_hit_ambiguous": 17
+        },
+        "markitdown": {
+          "heading_recall": 1,
+          "heading_recall_strict": null,
+          "n_hit_ambiguous": 17
+        }
+      }
+    },
+    {
+      "slug": "rust-book",
+      "framework": "mdBook",
+      "article_in_server_html": true,
+      "n_headings": 7,
+      "n_article_only": 7,
+      "n_also_in_chrome": 0,
+      "ambiguous_share": 0,
+      "examples_ambiguous": [],
+      "tools": {
+        "page2ai": {
+          "heading_recall": 1,
+          "heading_recall_strict": 1,
+          "n_hit_ambiguous": 0
+        },
+        "readability-turndown": {
+          "heading_recall": 1,
+          "heading_recall_strict": 1,
+          "n_hit_ambiguous": 0
+        },
+        "defuddle-turndown": {
+          "heading_recall": 1,
+          "heading_recall_strict": 1,
+          "n_hit_ambiguous": 0
+        },
+        "turndown-raw": {
+          "heading_recall": 1,
+          "heading_recall_strict": 1,
+          "n_hit_ambiguous": 0
+        },
+        "trafilatura": {
+          "heading_recall": 1,
+          "heading_recall_strict": 1,
+          "n_hit_ambiguous": 0
+        },
+        "markitdown": {
+          "heading_recall": 1,
+          "heading_recall_strict": 1,
+          "n_hit_ambiguous": 0
+        }
+      }
+    },
+    {
+      "slug": "hono",
+      "framework": "VitePress (Hono docs)",
+      "article_in_server_html": true,
+      "n_headings": 10,
+      "n_article_only": 8,
+      "n_also_in_chrome": 2,
+      "ambiguous_share": 0.2,
+      "examples_ambiguous": [
+        "getting started",
+        "adapter"
+      ],
+      "tools": {
+        "page2ai": {
+          "heading_recall": 1,
+          "heading_recall_strict": 1,
+          "n_hit_ambiguous": 2
+        },
+        "readability-turndown": {
+          "heading_recall": 1,
+          "heading_recall_strict": 1,
+          "n_hit_ambiguous": 2
+        },
+        "defuddle-turndown": {
+          "heading_recall": 0.9,
+          "heading_recall_strict": 1,
+          "n_hit_ambiguous": 1
+        },
+        "turndown-raw": {
+          "heading_recall": 1,
+          "heading_recall_strict": 1,
+          "n_hit_ambiguous": 2
+        },
+        "trafilatura": {
+          "heading_recall": 1,
+          "heading_recall_strict": 1,
+          "n_hit_ambiguous": 2
+        },
+        "markitdown": {
+          "heading_recall": 1,
+          "heading_recall_strict": 1,
+          "n_hit_ambiguous": 2
+        }
+      }
+    },
+    {
+      "slug": "gitbook-sentry",
+      "framework": "Docusaurus (Sentry docs)",
+      "article_in_server_html": true,
+      "n_headings": 19,
+      "n_article_only": 17,
+      "n_also_in_chrome": 2,
+      "ambiguous_share": 0.1053,
+      "examples_ambiguous": [
+        "install",
+        "tracing"
+      ],
+      "tools": {
+        "page2ai": {
+          "heading_recall": 1,
+          "heading_recall_strict": 1,
+          "n_hit_ambiguous": 2
+        },
+        "readability-turndown": {
+          "heading_recall": 0.3158,
+          "heading_recall_strict": 0.2353,
+          "n_hit_ambiguous": 2
+        },
+        "defuddle-turndown": {
+          "heading_recall": 0.9474,
+          "heading_recall_strict": 0.9412,
+          "n_hit_ambiguous": 2
+        },
+        "turndown-raw": {
+          "heading_recall": 1,
+          "heading_recall_strict": 1,
+          "n_hit_ambiguous": 2
+        },
+        "trafilatura": {
+          "heading_recall": 1,
+          "heading_recall_strict": 1,
+          "n_hit_ambiguous": 2
+        },
+        "markitdown": {
+          "heading_recall": 1,
+          "heading_recall_strict": 1,
+          "n_hit_ambiguous": 2
+        }
+      }
+    }
+  ]
+}

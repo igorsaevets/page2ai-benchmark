@@ -1,7 +1,7 @@
 ---
 title: "Introduction | Docusaurus"
 source: "https://docusaurus.io/docs"
-captured_at: "2026-07-28T12:27:16.753Z"
+captured_at: "2026-07-28T13:00:19.570Z"
 language: "en"
 description: "Docusaurus was designed from the ground up to be easily installed and used to get your website up and running quickly."
 canonical: "https://docusaurus.io/docs"

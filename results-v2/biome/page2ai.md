@@ -1,7 +1,7 @@
 ---
 title: "Getting Started | Biome"
 source: "https://biomejs.dev/guides/getting-started/"
-captured_at: "2026-07-28T12:27:42.311Z"
+captured_at: "2026-07-28T13:00:38.987Z"
 language: "en"
 description: "Learn how to set up a new project with Biome."
 canonical: "https://biomejs.dev/guides/getting-started/"

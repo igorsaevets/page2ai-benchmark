@@ -1,7 +1,7 @@
 ---
 title: "Introduction | Nextra"
 source: "https://nextra.site/docs"
-captured_at: "2026-07-28T12:27:22.692Z"
+captured_at: "2026-07-28T13:00:24.141Z"
 language: "en"
 description: "Nextra is a framework built on top of Next.js that enables the creation of content-focused websites. It combines the robust features of Next.js with enhanced capabilities for crafting Markdown-based content."
 canonical: "https://nextra.site/docs"

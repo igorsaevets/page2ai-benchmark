@@ -68,17 +68,37 @@ numbers, and anyone can check what we scored rather than taking our word for wha
 
 ### Tools
 
-Only tools that run locally and need no API key or account. This is a hard constraint, not a
-preference: a number a third party cannot reproduce without a credential is not evidence.
+Only tools that can convert **bytes already on disk**, offline. That is the inclusion rule, and it
+follows from the corpus design rather than from any judgement about hosted products: the conversion
+track is defined by every tool receiving the identical cached response, so a tool that can only be
+handed a URL cannot be in it at all. It would be scored on someone else's fetch, which is the error
+v0.1.0 was retracted for.
 
-| id | package | version pinned in | invocation |
+> **Corrected 2026-07-28**, after a reviewer pointed out that the earlier wording, "needs no API key
+> or account", lumped together two different cases. Firecrawl's hosted API does require a key
+> (`https://docs.firecrawl.dev/api-reference/v2-introduction`); Jina Reader can be called at
+> `r.jina.ai` without one, a key only raising the rate limit (`https://jina.ai/reader/`). The
+> objection is correct and the old rule was sloppy. The rule above is the one that was actually
+> doing the work, and it excludes both for the same real reason: neither converts local bytes.
+
+| id | package | version pinned in | exact invocation |
 |---|---|---|---|
-| `page2ai` | `@page2ai/core` | `package.json` | `htmlToMarkdown(html, {baseUrl})`, shipping defaults |
-| `trafilatura` | `trafilatura` (PyPI) | `protocol-v2/requirements.txt` | `extract(html, output_format='markdown', include_tables=True, include_links=True, include_formatting=True)` |
-| `markitdown` | `markitdown` (PyPI) | `protocol-v2/requirements.txt` | `MarkItDown().convert_stream(BytesIO(html))` |
-| `readability-turndown` | `@mozilla/readability` + `turndown` | `package.json` | Readability on a jsdom document, then Turndown on the article HTML |
-| `defuddle-turndown` | `defuddle` + `turndown` | `package.json` | Defuddle on a jsdom document, then Turndown |
+| `page2ai` | `@page2ai/core` | `package.json` | `htmlToMarkdown(html, { baseUrl: url })` |
+| `trafilatura` | `trafilatura` (PyPI) | `protocol-v2/requirements.txt` | `extract(html, url=url, output_format="markdown", include_tables=True, include_links=True, include_formatting=True, include_images=True)` |
+| `markitdown` | `markitdown` (PyPI) | `protocol-v2/requirements.txt` | `MarkItDown(enable_plugins=False).convert_stream(BytesIO(html), stream_info=StreamInfo(extension=".html", mimetype="text/html", charset="utf-8", url=url))` |
+| `readability-turndown` | `@mozilla/readability` + `turndown` | `package.json` | `new Readability(jsdomDoc).parse()`, then Turndown on `article.content` |
+| `defuddle-turndown` | `defuddle` + `turndown` | `package.json` | `Defuddle` on a jsdom document, then Turndown on the returned HTML |
 | `turndown-raw` | `turndown` | `package.json` | Turndown on the whole `<body>`, no content extraction |
+
+Turndown is constructed identically everywhere it is used:
+`new TurndownService({ codeBlockStyle: "fenced", headingStyle: "atx", fence: "```" })`.
+
+**Every tool runs at its defaults apart from the arguments shown, and none is tuned.** That cuts
+against the tools that expose tuning: trafilatura documents `favor_recall` / `favor_precision`
+tradeoffs and Readability exposes density thresholds, and a maintainer who tuned for this corpus
+would very likely beat these numbers. Read the table as "defaults out of the box", not "the best
+this tool can do". The wrapper choices above are part of what is being measured, which is why they
+are printed in full rather than described as "defaults".
 
 `turndown-raw` is the floor. It performs no boilerplate removal, so it should score near-perfect
 recall and near-worst cleanliness. If it does not, the metrics are broken and the run is void.
@@ -225,6 +245,49 @@ separate table headed as whole-document converters rather than ranked beside ext
 selection is acknowledged as the remaining unprotected flank, since the 14 URLs were chosen by the
 author. A published selection rule is open work for v0.3.
 
+**Amendment 5, 2026-07-28, AFTER the scores existed. A second external reviewer, independently of
+the first, named a defect in `heading_recall`. It is real, it was measured, and no score moved.**
+
+The objection: docs platforms render the page's headings a second time in a sidebar or table of
+contents, outside the article. `score.mjs` asks only `output.includes(heading)`, with no constraint
+on *where* the string landed. So a tool that leaks the TOC and never extracts the article correctly
+can still be credited with recalling its headings.
+
+The mechanism is real and the code does exactly that. Note also the asymmetry that made it easy to
+miss: ground-truth boilerplate already **discards** any chrome string that also occurs in the article
+(step 6 above), so duplicated TOC text is correctly not charged as leakage, while still being
+credited as recall. The hole is one-sided in the tools' favour.
+
+Whether it was *material* is an empirical question, so it was measured rather than argued, by
+`protocol-v2/toc_audit.mjs`, which writes `results-v2/toc-audit.json`. Every ground-truth heading is
+split by whether the same normalised string also occurs anywhere outside the content root, and
+heading recall is recomputed over the unambiguous ones alone.
+
+- **52 of 170 headings in this corpus (30.6%) also appear outside the article.** The exposure is
+  large.
+- On **4 of 14 pages** — `starlight`, `fumadocs`, `biome`, `python-docs` — *every* heading is
+  duplicated outside the content root. On those pages `heading_recall` cannot distinguish extraction
+  from leakage **at all**, for any tool. That is a property of those page layouts and it is now
+  stated rather than left implicit.
+- Like for like over the 10 pages where both figures are defined: `page2ai` **0.900 → 0.900, delta
+  exactly zero**; `trafilatura` 0.715 → 0.698; `defuddle` 0.677 → **0.702, which goes up**;
+  `readability` 0.582 → 0.587. Both whole-document baselines stay at 1.000, which is precisely the
+  behaviour the reviewer predicted — they recall every heading by dumping the whole document — and
+  is also why they remain the floor on `f_score` regardless.
+
+So the general objection is confirmed and the specific suspicion is refuted by measurement: the hole
+exists, and it inflated this benchmark author's own tool by **0.000**. It flattered two competitors
+slightly instead.
+
+⚠️ One methodological note on the above, because the first version of this audit got it wrong. The
+four fully-ambiguous pages have *no* unambiguous headings, so they drop out of the strict mean.
+Comparing a 14-page loose average against a 10-page strict average showed trafilatura losing 0.088,
+five-sixths of which was the change of population, not the effect being measured. The figures quoted
+here are computed over the pages where both are defined. Both are in the JSON, labelled.
+
+`f_score` is again unchanged. `heading_recall_strict` is published beside `heading_recall` rather
+than replacing it, for the same reason as Amendment 4.
+
 ## Reproduction
 
 ```bash
@@ -233,13 +296,20 @@ cd page2ai-benchmark
 npm install
 python -m pip install -r protocol-v2/requirements.txt
 
-# offline, against the committed corpus:
+# offline, against the committed corpus. Equivalent to `npm run v2`:
 node protocol-v2/groundtruth.mjs
 node protocol-v2/extract.mjs
 node protocol-v2/score.mjs
+node protocol-v2/toc_audit.mjs
 node protocol-v2/report.mjs
 
 # optional, requires network, rewrites the corpus with today's pages:
 node protocol-v2/fetch.mjs
 node protocol-v2/negotiation.mjs
 ```
+
+Every metric in `scores.json` is deterministic and a rerun reproduces the published numbers exactly.
+The output *files* are not byte-identical, because `@page2ai/core` writes a `captured_at` timestamp
+into its front matter and the harness records per-tool wall-clock milliseconds in
+`extract-manifest.json`. So `git diff` after a rerun shows one changed line per `page2ai.md` plus the
+timings, and nothing else. If it shows more than that, something has actually changed.

@@ -1,7 +1,7 @@
 ---
 title: "Getting Started - Hono"
 source: "https://hono.dev/docs/getting-started/basic"
-captured_at: "2026-07-28T12:27:58.838Z"
+captured_at: "2026-07-28T13:00:48.156Z"
 language: "en-US"
 description: "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
 canonical: "https://hono.dev/docs/getting-started/basic"

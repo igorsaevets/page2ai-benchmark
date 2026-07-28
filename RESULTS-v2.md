@@ -2,7 +2,7 @@
 
 # Results, protocol v0.2
 
-Scored 2026-07-28T12:42:59.774Z. Protocol and metric definitions: [PROTOCOL.md](PROTOCOL.md), including every
+Scored 2026-07-28T13:00:55.265Z. Protocol and metric definitions: [PROTOCOL.md](PROTOCOL.md), including every
 amendment and when it was made. Raw per-page rows: [../results-v2/scores.json](../results-v2/scores.json).
 
 ## Conversion track
@@ -77,12 +77,32 @@ on every page. Their aggregate rows above are the floor the metric is validated 
 
 | tool | median output bytes | total ms for 14 pages | code fences carrying a language |
 |---|---:|---:|---:|
-| `page2ai` | 8869 | 275 | 41.7% |
-| `trafilatura` | 6614 | 7928 | 0.0% |
-| `defuddle-turndown` | 6661 | 22766 | 67.8% |
-| `readability-turndown` | 4895 | 3083 | 0.0% |
-| `turndown-raw` | 13029 | 1520 | 16.2% |
-| `markitdown` | 12492 | 25825 | 0.0% |
+| `page2ai` | 8869 | 146 | 41.7% |
+| `trafilatura` | 6614 | 7883 | 0.0% |
+| `defuddle-turndown` | 6661 | 8041 | 67.8% |
+| `readability-turndown` | 4895 | 1498 | 0.0% |
+| `turndown-raw` | 13029 | 654 | 16.2% |
+| `markitdown` | 12492 | 19554 | 0.0% |
+
+### Is heading recall fakeable by leaking the table of contents?
+
+Audited 2026-07-28T13:00:56.673Z by `protocol-v2/toc_audit.mjs`. Raw: [../results-v2/toc-audit.json](../results-v2/toc-audit.json).
+
+**52 of 170 ground-truth headings (30.6%) also appear outside the article.** On **4 of 14** pages (starlight, fumadocs, biome, python-docs) *every* heading is duplicated outside the content root, so on those pages `heading_recall` cannot tell extraction from leakage for any tool.
+
+Recomputed over the 10 pages where both figures are defined, so that the comparison is like for like:
+
+| tool | heading recall | strict (article-only headings) | delta |
+|---|---:|---:|---:|
+| `turndown-raw` *(baseline)* | 100.0% | 100.0% | 0.0pp |
+| `markitdown` *(baseline)* | 100.0% | 100.0% | 0.0pp |
+| `page2ai` | 90.0% | 90.0% | 0.0pp |
+| `defuddle-turndown` | 67.7% | 70.2% | +2.5pp |
+| `trafilatura` | 71.5% | 69.8% | -1.7pp |
+| `readability-turndown` | 58.2% | 58.7% | +0.5pp |
+
+No tool moves by more than 3 points and `page2ai` moves by **zero**: the duplication did not inflate this benchmark author's own tool. Both whole-document baselines stay at 100%, which is exactly the predicted behaviour, since they recall every heading by reproducing the entire page.
+
 
 ## Negotiation track
 
@@ -158,6 +178,12 @@ one that drops the link entirely does not. So the metric penalises link preserva
 feature, not a defect. Treat these numbers as "at least this much prose survived", not as a ranking,
 until v0.3 replaces the exact-substring probe with an alignment measure. This is written here rather
 than fixed today because changing a metric in the same pass that reports it is how v0.1.0 happened.
+
+**Heading recall is the weakest metric here, and a second reviewer is why that is now written down.**
+It asks whether a heading's text appears in the output, not whether it appears in the right place, so
+on a docs site that repeats its headings in a sidebar the metric is partly blind. The section above
+measures how blind: badly on four pages, negligibly in aggregate, and not at all in this author's
+favour. Reported rather than repaired, for the same reason as prose recall.
 
 **JavaScript.** Every tool sees the server-rendered HTML the harness received. One page in fourteen
 carries no article there at all. No tool in this table executes JavaScript, so that page is a fair

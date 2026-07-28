@@ -1,7 +1,7 @@
 ---
 title: "Browser JavaScript | Sentry for JavaScript"
 source: "https://docs.sentry.io/platforms/javascript/"
-captured_at: "2026-07-28T12:28:02.521Z"
+captured_at: "2026-07-28T13:00:51.267Z"
 language: "en"
 description: "Learn how to manually set up Sentry in your JavaScript app and capture your first errors."
 canonical: "https://docs.sentry.io/platforms/javascript/"
