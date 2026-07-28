@@ -1,0 +1,108 @@
+{
+  "slug": "gitbook-sentry",
+  "framework": "Docusaurus (Sentry docs)",
+  "final_url": "https://docs.sentry.io/platforms/javascript/",
+  "html_bytes": 589563,
+  "content_root": "main",
+  "thresholds": {
+    "MIN_CODE_CHARS": 24,
+    "MIN_HEADING_CHARS": 3,
+    "BOILERPLATE_MIN": 12,
+    "BOILERPLATE_MAX": 100,
+    "BOILERPLATE_CAP": 80,
+    "USABLE_MIN_CODE": 3,
+    "USABLE_MIN_HEADINGS": 5
+  },
+  "usable": true,
+  "unusable_reason": null,
+  "content_chars": 14996,
+  "body_chars": 15518,
+  "content_ratio": 0.9664,
+  "article_in_server_html": true,
+  "server_html_note": null,
+  "counts": {
+    "code_blocks": 9,
+    "headings": 19,
+    "boilerplate": 16,
+    "boilerplate_dropped_by_cap": 0,
+    "tables": 0
+  },
+  "code_blocks": [
+    {
+      "probe": "npminstall@sentry/browser--save",
+      "length": 31
+    },
+    {
+      "probe": "import*asSentryfrom\"___SDK_PACKAGE___\";S",
+      "length": 1744
+    },
+    {
+      "probe": "<scriptsrc=\"https://js.sentry-cdn.com/__",
+      "length": 1851
+    },
+    {
+      "probe": "<scriptsrc=\"https://browser.sentry-cdn.c",
+      "length": 1911
+    },
+    {
+      "probe": "npx@sentry/wizard@latest-isourcemaps",
+      "length": 36
+    },
+    {
+      "probe": "Sentry.init({dsn:\"___PUBLIC_DSN___\",tunn",
+      "length": 56
+    },
+    {
+      "probe": "<script>functiontriggerError(){thrownewE",
+      "length": 128
+    },
+    {
+      "probe": "<script>functiontriggerError(){awaitSent",
+      "length": 253
+    },
+    {
+      "probe": "Sentry.logger.info(\"Userexampleactioncom",
+      "length": 212
+    }
+  ],
+  "headings": [
+    "browser javascript",
+    "learn how to manually set up sentry in your javascript app and capture your first errors",
+    "using a framework",
+    "prerequisites",
+    "install",
+    "option 1 package manager recommended",
+    "option 2 loader script",
+    "option 3 cdn bundle",
+    "configure",
+    "initialize the sentry sdk",
+    "add readable stack traces with source maps optional",
+    "avoid ad blockers with tunneling optional",
+    "verify your setup",
+    "issues",
+    "important",
+    "tracing",
+    "logs new",
+    "view captured data in sentry",
+    "next steps"
+  ],
+  "boilerplate": [
+    "security policy reporting",
+    "extended configuration",
+    "latest version 10 68 0",
+    "sentry for javascript",
+    "application metrics",
+    "special use cases",
+    "product changelog",
+    "capturing errors",
+    "enriching events",
+    "skip to content",
+    "data management",
+    "package details",
+    "open main menu",
+    "agent tracing",
+    "feature flags",
+    "go to sentry"
+  ],
+  "tables": 0
+}

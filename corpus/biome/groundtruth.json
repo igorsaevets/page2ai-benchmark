@@ -1,0 +1,131 @@
+{
+  "slug": "biome",
+  "framework": "Astro (Biome docs)",
+  "final_url": "https://biomejs.dev/guides/getting-started/",
+  "html_bytes": 141534,
+  "content_root": "main",
+  "thresholds": {
+    "MIN_CODE_CHARS": 24,
+    "MIN_HEADING_CHARS": 3,
+    "BOILERPLATE_MIN": 12,
+    "BOILERPLATE_MAX": 100,
+    "BOILERPLATE_CAP": 80,
+    "USABLE_MIN_CODE": 3,
+    "USABLE_MIN_HEADINGS": 5
+  },
+  "usable": true,
+  "unusable_reason": null,
+  "content_chars": 4559,
+  "body_chars": 6323,
+  "content_ratio": 0.721,
+  "article_in_server_html": true,
+  "server_html_note": null,
+  "counts": {
+    "code_blocks": 11,
+    "headings": 7,
+    "boilerplate": 43,
+    "boilerplate_dropped_by_cap": 0,
+    "tables": 0
+  },
+  "code_blocks": [
+    {
+      "probe": "1pnpmadd-D-E@biomejs/biome",
+      "length": 26
+    },
+    {
+      "probe": "1bunadd-D-E@biomejs/biome",
+      "length": 25
+    },
+    {
+      "probe": "1denoadd-Dnpm:@biomejs/biome",
+      "length": 28
+    },
+    {
+      "probe": "1yarnadd-D-E@biomejs/biome",
+      "length": 26
+    },
+    {
+      "probe": "1bunx--bun@biomejs/biomeinit",
+      "length": 28
+    },
+    {
+      "probe": "1denorun-Anpm:@biomejs/biomeinit",
+      "length": 32
+    },
+    {
+      "probe": "1#Formatallfiles2npx@biomejs/biomeformat",
+      "length": 421
+    },
+    {
+      "probe": "1#Formatallfiles2pnpx@biomejs/biomeforma",
+      "length": 422
+    },
+    {
+      "probe": "1#Formatallfiles2bunx--bun@biomejs/biome",
+      "length": 452
+    },
+    {
+      "probe": "1#Formatspecificfiles2denorun-Anpm:@biom",
+      "length": 481
+    },
+    {
+      "probe": "1#Formatallfiles2yarnexecbiomeformat--wr",
+      "length": 397
+    }
+  ],
+  "headings": [
+    "getting started",
+    "configuration",
+    "usage",
+    "command line interface",
+    "editor integrations",
+    "continuous integration",
+    "next steps"
+  ],
+  "boilerplate": [
+    "integrate biome with your vcs",
+    "migrate from eslint prettier",
+    "formatter option philosophy",
+    "javascript actions sources",
+    "use biome in big projects",
+    "differences with prettier",
+    "javascript rules sources",
+    "graphql actions sources",
+    "first party extensions",
+    "third party extensions",
+    "graphql rules sources",
+    "biome language server",
+    "environment variables",
+    "gritql plugin recipes",
+    "investigate slowness",
+    "json actions sources",
+    "html actions sources",
+    "upgrade to biome v2",
+    "css actions sources",
+    "json rules sources",
+    "html rules sources",
+    "javascript actions",
+    "people and credits",
+    "css rules sources",
+    "vs code extension",
+    "javascript rules",
+    "language support",
+    "skip to content",
+    "open collective",
+    "select language",
+    "graphql actions",
+    "daemon requests",
+    "graphql rules",
+    "zed extension",
+    "social badges",
+    "select theme",
+    "introduction",
+    "suppressions",
+    "json actions",
+    "html actions",
+    "architecture",
+    "changelog v1",
+    "on this page"
+  ],
+  "tables": 0
+}

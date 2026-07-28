@@ -1,0 +1,3 @@
+# Python extractors for protocol v0.2. Pinned to the versions used in the committed run.
+trafilatura==2.1.0
+markitdown==0.1.6

@@ -1,0 +1,102 @@
+{
+  "slug": "fumadocs",
+  "framework": "Fumadocs",
+  "final_url": "https://www.fumadocs.dev/docs/manual-installation/next",
+  "html_bytes": 386398,
+  "content_root": "article",
+  "thresholds": {
+    "MIN_CODE_CHARS": 24,
+    "MIN_HEADING_CHARS": 3,
+    "BOILERPLATE_MIN": 12,
+    "BOILERPLATE_MAX": 100,
+    "BOILERPLATE_CAP": 80,
+    "USABLE_MIN_CODE": 3,
+    "USABLE_MIN_HEADINGS": 5
+  },
+  "usable": true,
+  "unusable_reason": null,
+  "content_chars": 3233,
+  "body_chars": 3728,
+  "content_ratio": 0.8672,
+  "article_in_server_html": true,
+  "server_html_note": null,
+  "counts": {
+    "code_blocks": 11,
+    "headings": 10,
+    "boilerplate": 11,
+    "boilerplate_dropped_by_cap": 0,
+    "tables": 0
+  },
+  "code_blocks": [
+    {
+      "probe": "npmifumadocs-mdxfumadocs-core@types/mdx",
+      "length": 39
+    },
+    {
+      "probe": "import{defineDocs,defineConfig}from'fuma",
+      "length": 135
+    },
+    {
+      "probe": "import{createMDX}from'fumadocs-mdx/next'",
+      "length": 229
+    },
+    {
+      "probe": "{\"compilerOptions\":{\"paths\":{\"collection",
+      "length": 63
+    },
+    {
+      "probe": "import{docs}from'collections/server';imp",
+      "length": 154
+    },
+    {
+      "probe": "npmifumadocs-uifumadocs-core",
+      "length": 28
+    },
+    {
+      "probe": "import{RootProvider}from'fumadocs-ui/pro",
+      "length": 306
+    },
+    {
+      "probe": "@import'tailwindcss';@import'fumadocs-ui",
+      "length": 94
+    },
+    {
+      "probe": "importtype{BaseLayoutProps}from'fumadocs",
+      "length": 135
+    },
+    {
+      "probe": "importdefaultMdxComponentsfrom'fumadocs-",
+      "length": 338
+    },
+    {
+      "probe": "---title:HelloWorld---##IntroductionIlov",
+      "length": 47
+    }
+  ],
+  "headings": [
+    "next js",
+    "prerequisite",
+    "installation",
+    "integrate with fumadocs",
+    "done",
+    "getting started",
+    "root layout",
+    "styles",
+    "routes",
+    "finish"
+  ],
+  "boilerplate": [
+    "page slugs page tree",
+    "internationalization",
+    "og image generation",
+    "the docs framework",
+    "content generators",
+    "what is fumadocs",
+    "tanstack start",
+    "configurations",
+    "validate links",
+    "integrations",
+    "on this page"
+  ],
+  "tables": 0
+}

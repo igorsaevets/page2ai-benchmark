@@ -1,0 +1,90 @@
+{
+  "slug": "rust-book",
+  "framework": "mdBook",
+  "final_url": "https://doc.rust-lang.org/book/ch08-01-vectors.html",
+  "html_bytes": 38648,
+  "content_root": "main",
+  "thresholds": {
+    "MIN_CODE_CHARS": 24,
+    "MIN_HEADING_CHARS": 3,
+    "BOILERPLATE_MIN": 12,
+    "BOILERPLATE_MAX": 100,
+    "BOILERPLATE_CAP": 80,
+    "USABLE_MIN_CODE": 3,
+    "USABLE_MIN_HEADINGS": 5
+  },
+  "usable": true,
+  "unusable_reason": null,
+  "content_chars": 10717,
+  "body_chars": 10919,
+  "content_ratio": 0.9815,
+  "article_in_server_html": true,
+  "server_html_note": null,
+  "counts": {
+    "code_blocks": 11,
+    "headings": 7,
+    "boilerplate": 2,
+    "boilerplate_dropped_by_cap": 0,
+    "tables": 0
+  },
+  "code_blocks": [
+    {
+      "probe": "fnmain(){letv:Vec<i32>=Vec::new();}",
+      "length": 35
+    },
+    {
+      "probe": "fnmain(){letv=vec![1,2,3];}",
+      "length": 27
+    },
+    {
+      "probe": "fnmain(){letmutv=Vec::new();v.push(5);v.",
+      "length": 69
+    },
+    {
+      "probe": "fnmain(){letv=vec![1,2,3,4,5];letthird:&",
+      "length": 222
+    },
+    {
+      "probe": "fnmain(){letv=vec![1,2,3,4,5];letdoes_no",
+      "length": 86
+    },
+    {
+      "probe": "fnmain(){letmutv=vec![1,2,3,4,5];letfirs",
+      "length": 97
+    },
+    {
+      "probe": "$cargorunCompilingcollectionsv0.1.0(file",
+      "length": 451
+    },
+    {
+      "probe": "fnmain(){letv=vec![100,32,57];foriin&v{p",
+      "length": 57
+    },
+    {
+      "probe": "fnmain(){letmutv=vec![100,32,57];foriin&",
+      "length": 54
+    },
+    {
+      "probe": "fnmain(){enumSpreadsheetCell{Int(i32),Fl",
+      "length": 176
+    },
+    {
+      "probe": "fnmain(){{letv=vec![1,2,3,4];//dostuffwi",
+      "length": 78
+    }
+  ],
+  "headings": [
+    "storing lists of values with vectors",
+    "creating a new vector",
+    "updating a vector",
+    "reading elements of vectors",
+    "iterating over the values in a vector",
+    "using an enum to store multiple types",
+    "dropping a vector drops its elements"
+  ],
+  "boilerplate": [
+    "the rust programming language",
+    "keyboard shortcuts"
+  ],
+  "tables": 0
+}

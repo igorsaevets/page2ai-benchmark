@@ -1,0 +1,75 @@
+{
+  "slug": "docusaurus",
+  "framework": "Docusaurus",
+  "final_url": "https://docusaurus.io/docs",
+  "html_bytes": 49664,
+  "content_root": "main",
+  "thresholds": {
+    "MIN_CODE_CHARS": 24,
+    "MIN_HEADING_CHARS": 3,
+    "BOILERPLATE_MIN": 12,
+    "BOILERPLATE_MAX": 100,
+    "BOILERPLATE_CAP": 80,
+    "USABLE_MIN_CODE": 3,
+    "USABLE_MIN_HEADINGS": 5
+  },
+  "usable": true,
+  "unusable_reason": null,
+  "content_chars": 10433,
+  "body_chars": 11037,
+  "content_ratio": 0.9453,
+  "article_in_server_html": true,
+  "server_html_note": null,
+  "counts": {
+    "code_blocks": 2,
+    "headings": 17,
+    "boilerplate": 13,
+    "boilerplate_dropped_by_cap": 0,
+    "tables": 0
+  },
+  "code_blocks": [
+    {
+      "probe": "npxcreate-docusaurus@latestmy-websitecla",
+      "length": 44
+    },
+    {
+      "probe": "cdmy-websitenpxdocusaurusstart",
+      "length": 30
+    }
+  ],
+  "headings": [
+    "introduction",
+    "fast track",
+    "docusaurus documentation made easy",
+    "migrating from v1",
+    "features",
+    "design principles",
+    "comparison with other tools",
+    "gatsby",
+    "next js",
+    "vitepress",
+    "mkdocs",
+    "docsify",
+    "gitbook",
+    "jekyll",
+    "rspress",
+    "staying informed",
+    "something missing"
+  ],
+  "boilerplate": [
+    "copyright 2026 meta platforms inc built with docusaurus",
+    "migration from v1 to v2",
+    "skip to main content",
+    "typescript support",
+    "archived versions",
+    "help us translate",
+    "docusaurus v3 10",
+    "portugu s brasil",
+    "advanced guides",
+    "stack overflow",
+    "cookie policy",
+    "all versions",
+    "installation"
+  ],
+  "tables": 0
+}

@@ -1,0 +1,147 @@
+{
+  "run_started_at": "2026-07-28T12:24:25.221Z",
+  "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
+  "sites": [
+    {
+      "slug": "mintlify-anthropic",
+      "framework": "Mintlify",
+      "ok": true,
+      "status": 200,
+      "bytes": 956931,
+      "content_type": "text/html; charset=utf-8",
+      "final_url": "https://platform.claude.com/docs/en/build-with-claude/extended-thinking",
+      "reason": null
+    },
+    {
+      "slug": "docusaurus",
+      "framework": "Docusaurus",
+      "ok": true,
+      "status": 200,
+      "bytes": 49664,
+      "content_type": "text/html; charset=UTF-8",
+      "final_url": "https://docusaurus.io/docs",
+      "reason": null
+    },
+    {
+      "slug": "starlight",
+      "framework": "Starlight (Astro)",
+      "ok": true,
+      "status": 200,
+      "bytes": 80358,
+      "content_type": "text/html; charset=UTF-8",
+      "final_url": "https://starlight.astro.build/getting-started/",
+      "reason": null
+    },
+    {
+      "slug": "nextra",
+      "framework": "Nextra",
+      "ok": true,
+      "status": 200,
+      "bytes": 235336,
+      "content_type": "text/html; charset=utf-8",
+      "final_url": "https://nextra.site/docs",
+      "reason": null
+    },
+    {
+      "slug": "fumadocs",
+      "framework": "Fumadocs",
+      "ok": true,
+      "status": 200,
+      "bytes": 386398,
+      "content_type": "text/html; charset=utf-8",
+      "final_url": "https://www.fumadocs.dev/docs/manual-installation/next",
+      "reason": null
+    },
+    {
+      "slug": "vitepress",
+      "framework": "VitePress",
+      "ok": true,
+      "status": 200,
+      "bytes": 58204,
+      "content_type": "text/html; charset=UTF-8",
+      "final_url": "https://vitepress.dev/guide/getting-started",
+      "reason": null
+    },
+    {
+      "slug": "mdn",
+      "framework": "Yari (MDN)",
+      "ok": true,
+      "status": 200,
+      "bytes": 180372,
+      "content_type": "text/html",
+      "final_url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/fetch",
+      "reason": null
+    },
+    {
+      "slug": "tailwind",
+      "framework": "Next.js (Tailwind docs)",
+      "ok": true,
+      "status": 200,
+      "bytes": 389114,
+      "content_type": "text/html; charset=utf-8",
+      "final_url": "https://tailwindcss.com/docs/flex",
+      "reason": null
+    },
+    {
+      "slug": "svelte",
+      "framework": "SvelteKit (Svelte docs)",
+      "ok": true,
+      "status": 200,
+      "bytes": 80913,
+      "content_type": "text/html; charset=utf-8",
+      "final_url": "https://svelte.dev/docs/svelte/what-are-runes",
+      "reason": null
+    },
+    {
+      "slug": "biome",
+      "framework": "Astro (Biome docs)",
+      "ok": true,
+      "status": 200,
+      "bytes": 141534,
+      "content_type": "text/html; charset=UTF-8",
+      "final_url": "https://biomejs.dev/guides/getting-started/",
+      "reason": null
+    },
+    {
+      "slug": "python-docs",
+      "framework": "Sphinx",
+      "ok": true,
+      "status": 200,
+      "bytes": 176093,
+      "content_type": "text/html",
+      "final_url": "https://docs.python.org/3/library/asyncio-task.html",
+      "reason": null
+    },
+    {
+      "slug": "rust-book",
+      "framework": "mdBook",
+      "ok": true,
+      "status": 200,
+      "bytes": 38648,
+      "content_type": "text/html",
+      "final_url": "https://doc.rust-lang.org/book/ch08-01-vectors.html",
+      "reason": null
+    },
+    {
+      "slug": "hono",
+      "framework": "VitePress (Hono docs)",
+      "ok": true,
+      "status": 200,
+      "bytes": 98762,
+      "content_type": "text/html",
+      "final_url": "https://hono.dev/docs/getting-started/basic",
+      "reason": null
+    },
+    {
+      "slug": "gitbook-sentry",
+      "framework": "Docusaurus (Sentry docs)",
+      "ok": true,
+      "status": 200,
+      "bytes": 589563,
+      "content_type": "text/html; charset=utf-8",
+      "final_url": "https://docs.sentry.io/platforms/javascript/",
+      "reason": null
+    }
+  ]
+}

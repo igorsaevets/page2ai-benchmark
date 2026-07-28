@@ -1,0 +1,32 @@
+{
+  "slug": "svelte",
+  "framework": "SvelteKit (Svelte docs)",
+  "requested_url": "https://svelte.dev/docs/svelte/what-are-runes",
+  "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
+  "fetched_at": "2026-07-28T12:24:27.234Z",
+  "status": 200,
+  "final_url": "https://svelte.dev/docs/svelte/what-are-runes",
+  "headers": {
+    "access-control-allow-origin": "*",
+    "age": "72709",
+    "cache-control": "public, max-age=0, must-revalidate",
+    "content-disposition": "inline; filename=\"what-are-runes\"",
+    "content-encoding": "br",
+    "content-type": "text/html; charset=utf-8",
+    "date": "Tue, 28 Jul 2026 12:24:27 GMT",
+    "etag": "W/\"7dcb45f1d34912a1c1e89d6b859f0aed\"",
+    "last-modified": "Mon, 27 Jul 2026 16:12:37 GMT",
+    "server": "Vercel",
+    "strict-transport-security": "max-age=63072000",
+    "transfer-encoding": "chunked",
+    "x-vercel-cache": "HIT",
+    "x-vercel-id": "sfo1::2qgcp-1785241467710-137c13394c85"
+  },
+  "content_type": "text/html; charset=utf-8",
+  "vary": null,
+  "bytes": 80913,
+  "sha256": "73127df637ca9a700e9992f94acf4895b9fcf48e4a5cfddf520db1ee0d7ce6aa",
+  "elapsed_ms": 312,
+  "ok": true
+}

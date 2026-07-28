@@ -1,0 +1,21 @@
+{
+  "note": "Documentation pages chosen for framework diversity. Selected 2026-07-28, before any v0.2 extraction was run. A site that fails to fetch stays in this list with its failure recorded, rather than being removed to make the table look complete.",
+  "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
+  "sites": [
+    { "slug": "mintlify-anthropic", "framework": "Mintlify", "url": "https://docs.anthropic.com/en/docs/build-with-claude/extended-thinking" },
+    { "slug": "docusaurus", "framework": "Docusaurus", "url": "https://docusaurus.io/docs" },
+    { "slug": "starlight", "framework": "Starlight (Astro)", "url": "https://starlight.astro.build/getting-started/" },
+    { "slug": "nextra", "framework": "Nextra", "url": "https://nextra.site/docs" },
+    { "slug": "fumadocs", "framework": "Fumadocs", "url": "https://www.fumadocs.dev/docs/manual-installation/next" },
+    { "slug": "vitepress", "framework": "VitePress", "url": "https://vitepress.dev/guide/getting-started" },
+    { "slug": "mdn", "framework": "Yari (MDN)", "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/fetch" },
+    { "slug": "tailwind", "framework": "Next.js (Tailwind docs)", "url": "https://tailwindcss.com/docs/flex" },
+    { "slug": "svelte", "framework": "SvelteKit (Svelte docs)", "url": "https://svelte.dev/docs/svelte/what-are-runes" },
+    { "slug": "biome", "framework": "Astro (Biome docs)", "url": "https://biomejs.dev/guides/getting-started/" },
+    { "slug": "python-docs", "framework": "Sphinx", "url": "https://docs.python.org/3/library/asyncio-task.html" },
+    { "slug": "rust-book", "framework": "mdBook", "url": "https://doc.rust-lang.org/book/ch08-01-vectors.html" },
+    { "slug": "hono", "framework": "VitePress (Hono docs)", "url": "https://hono.dev/docs/getting-started/basic" },
+    { "slug": "gitbook-sentry", "framework": "Docusaurus (Sentry docs)", "url": "https://docs.sentry.io/platforms/javascript/" }
+  ]
+}

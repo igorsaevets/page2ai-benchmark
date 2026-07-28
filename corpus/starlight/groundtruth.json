@@ -1,0 +1,78 @@
+{
+  "slug": "starlight",
+  "framework": "Starlight (Astro)",
+  "final_url": "https://starlight.astro.build/getting-started/",
+  "html_bytes": 80358,
+  "content_root": "main",
+  "thresholds": {
+    "MIN_CODE_CHARS": 24,
+    "MIN_HEADING_CHARS": 3,
+    "BOILERPLATE_MIN": 12,
+    "BOILERPLATE_MAX": 100,
+    "BOILERPLATE_CAP": 80,
+    "USABLE_MIN_CODE": 3,
+    "USABLE_MIN_HEADINGS": 5
+  },
+  "usable": true,
+  "unusable_reason": null,
+  "content_chars": 3313,
+  "body_chars": 4477,
+  "content_ratio": 0.74,
+  "article_in_server_html": true,
+  "server_html_note": null,
+  "counts": {
+    "code_blocks": 3,
+    "headings": 8,
+    "boilerplate": 21,
+    "boilerplate_dropped_by_cap": 0,
+    "tables": 0
+  },
+  "code_blocks": [
+    {
+      "probe": "npmcreateastro@latest----templatestarlig",
+      "length": 42
+    },
+    {
+      "probe": "pnpmcreateastro--templatestarlight",
+      "length": 34
+    },
+    {
+      "probe": "yarncreateastro--templatestarlight",
+      "length": 34
+    }
+  ],
+  "headings": [
+    "getting started",
+    "quick start",
+    "create a new project",
+    "start the development server",
+    "add content",
+    "next steps",
+    "updating starlight",
+    "troubleshooting starlight"
+  ],
+  "boilerplate": [
+    "authoring content in markdown",
+    "internationalization i18n",
+    "plugins and integrations",
+    "overriding components",
+    "frontmatter reference",
+    "environmental impact",
+    "route data reference",
+    "portugu s do brasil",
+    "overrides reference",
+    "project structure",
+    "plugins reference",
+    "community content",
+    "bahasa indonesia",
+    "using components",
+    "skip to content",
+    "select language",
+    "icons reference",
+    "site showcase",
+    "select theme",
+    "link buttons",
+    "on this page"
+  ],
+  "tables": 0
+}

@@ -1,0 +1,114 @@
+[
+  {
+    "slug": "mintlify-anthropic",
+    "usable": true,
+    "code": 0,
+    "headings": 6,
+    "boilerplate": 80,
+    "dropped_by_cap": 56
+  },
+  {
+    "slug": "docusaurus",
+    "usable": true,
+    "code": 2,
+    "headings": 17,
+    "boilerplate": 13,
+    "dropped_by_cap": 0
+  },
+  {
+    "slug": "starlight",
+    "usable": true,
+    "code": 3,
+    "headings": 8,
+    "boilerplate": 21,
+    "dropped_by_cap": 0
+  },
+  {
+    "slug": "nextra",
+    "usable": true,
+    "code": 0,
+    "headings": 6,
+    "boilerplate": 42,
+    "dropped_by_cap": 0
+  },
+  {
+    "slug": "fumadocs",
+    "usable": true,
+    "code": 11,
+    "headings": 10,
+    "boilerplate": 11,
+    "dropped_by_cap": 0
+  },
+  {
+    "slug": "vitepress",
+    "usable": true,
+    "code": 7,
+    "headings": 10,
+    "boilerplate": 23,
+    "dropped_by_cap": 0
+  },
+  {
+    "slug": "mdn",
+    "usable": true,
+    "code": 5,
+    "headings": 11,
+    "boilerplate": 80,
+    "dropped_by_cap": 64
+  },
+  {
+    "slug": "tailwind",
+    "usable": true,
+    "code": 7,
+    "headings": 31,
+    "boilerplate": 0,
+    "dropped_by_cap": 0
+  },
+  {
+    "slug": "svelte",
+    "usable": true,
+    "code": 2,
+    "headings": 11,
+    "boilerplate": 1,
+    "dropped_by_cap": 0
+  },
+  {
+    "slug": "biome",
+    "usable": true,
+    "code": 11,
+    "headings": 7,
+    "boilerplate": 43,
+    "dropped_by_cap": 0
+  },
+  {
+    "slug": "python-docs",
+    "usable": true,
+    "code": 32,
+    "headings": 17,
+    "boilerplate": 9,
+    "dropped_by_cap": 0
+  },
+  {
+    "slug": "rust-book",
+    "usable": true,
+    "code": 11,
+    "headings": 7,
+    "boilerplate": 2,
+    "dropped_by_cap": 0
+  },
+  {
+    "slug": "hono",
+    "usable": true,
+    "code": 13,
+    "headings": 10,
+    "boilerplate": 29,
+    "dropped_by_cap": 0
+  },
+  {
+    "slug": "gitbook-sentry",
+    "usable": true,
+    "code": 9,
+    "headings": 19,
+    "boilerplate": 16,
+    "dropped_by_cap": 0
+  }
+]

@@ -1,0 +1,191 @@
+{
+  "slug": "python-docs",
+  "framework": "Sphinx",
+  "final_url": "https://docs.python.org/3/library/asyncio-task.html",
+  "html_bytes": 176093,
+  "content_root": "div",
+  "thresholds": {
+    "MIN_CODE_CHARS": 24,
+    "MIN_HEADING_CHARS": 3,
+    "BOILERPLATE_MIN": 12,
+    "BOILERPLATE_MAX": 100,
+    "BOILERPLATE_CAP": 80,
+    "USABLE_MIN_CODE": 3,
+    "USABLE_MIN_HEADINGS": 5
+  },
+  "usable": true,
+  "unusable_reason": null,
+  "content_chars": 39724,
+  "body_chars": 41407,
+  "content_ratio": 0.9594,
+  "article_in_server_html": true,
+  "server_html_note": null,
+  "counts": {
+    "code_blocks": 32,
+    "headings": 17,
+    "boilerplate": 9,
+    "boilerplate_dropped_by_cap": 0,
+    "tables": 1
+  },
+  "code_blocks": [
+    {
+      "probe": ">>>importasyncio>>>asyncdefmain():...pri",
+      "length": 124
+    },
+    {
+      "probe": ">>>main()<coroutineobjectmainat0x1053bb7",
+      "length": 43
+    },
+    {
+      "probe": "importasyncioimporttimeasyncdefsay_after",
+      "length": 254
+    },
+    {
+      "probe": "startedat17:13:52helloworldfinishedat17:",
+      "length": 45
+    },
+    {
+      "probe": "asyncdefmain():task1=asyncio.create_task",
+      "length": 269
+    },
+    {
+      "probe": "startedat17:14:32helloworldfinishedat17:",
+      "length": 45
+    },
+    {
+      "probe": "asyncdefmain():asyncwithasyncio.TaskGrou",
+      "length": 259
+    },
+    {
+      "probe": "importasyncioasyncdefnested():return42as",
+      "length": 277
+    },
+    {
+      "probe": "importasyncioasyncdefnested():return42as",
+      "length": 250
+    },
+    {
+      "probe": "asyncdefmain():awaitfunction_that_return",
+      "length": 160
+    },
+    {
+      "probe": "background_tasks=set()foriinrange(10):ta",
+      "length": 312
+    },
+    {
+      "probe": "asyncdefmain():asyncwithasyncio.TaskGrou",
+      "length": 192
+    },
+    {
+      "probe": "importasynciofromasyncioimportTaskGroupc",
+      "length": 645
+    },
+    {
+      "probe": "Task1:startTask2:startTask1:done",
+      "length": 32
+    },
+    {
+      "probe": "importasyncioimportdatetimeasdtasyncdefd",
+      "length": 226
+    },
+    {
+      "probe": "importasyncioasyncdeffactorial(name,numb",
+      "length": 704
+    },
+    {
+      "probe": "task=asyncio.create_task(something())res",
+      "length": 58
+    },
+    {
+      "probe": "task=asyncio.create_task(something())try",
+      "length": 91
+    },
+    {
+      "probe": "asyncdefmain():asyncwithasyncio.timeout(",
+      "length": 68
+    },
+    {
+      "probe": "asyncdefmain():try:asyncwithasyncio.time",
+      "length": 183
+    },
+    {
+      "probe": "asyncdefmain():try:#Wedonotknowthetimeou",
+      "length": 316
+    },
+    {
+      "probe": "asyncdefmain():loop=get_running_loop()de",
+      "length": 238
+    },
+    {
+      "probe": "asyncdefeternity():#Sleepforonehourawait",
+      "length": 238
+    },
+    {
+      "probe": "done,pending=awaitasyncio.wait(aws)",
+      "length": 35
+    },
+    {
+      "probe": "ipv4_connect=create_task(open_connection",
+      "length": 423
+    },
+    {
+      "probe": "ipv4_connect=create_task(open_connection",
+      "length": 344
+    },
+    {
+      "probe": "defblocking_io():print(f\"startblocking_i",
+      "length": 530
+    },
+    {
+      "probe": "defin_thread(loop:asyncio.AbstractEventL",
+      "length": 475
+    },
+    {
+      "probe": "@contextlib.contextmanagerdefloop_in_thr",
+      "length": 799
+    },
+    {
+      "probe": "try:result=future.result(timeout)exceptT",
+      "length": 234
+    },
+    {
+      "probe": "asyncdefcancel_me():print('cancel_me():b",
+      "length": 541
+    },
+    {
+      "probe": "asyncdefmake_request_with_timeout():try:",
+      "length": 248
+    }
+  ],
+  "headings": [
+    "coroutines and tasks",
+    "coroutines",
+    "awaitables",
+    "creating tasks",
+    "task cancellation",
+    "task groups",
+    "terminating a task group",
+    "sleeping",
+    "running tasks concurrently",
+    "eager task factory",
+    "shielding from cancellation",
+    "timeouts",
+    "waiting primitives",
+    "running in threads",
+    "scheduling from other threads",
+    "introspection",
+    "task object"
+  ],
+  "boilerplate": [
+    "networking and interprocess communication",
+    "the python standard library",
+    "3 14 6 documentation",
+    "history and license",
+    "table of contents",
+    "improve this page",
+    "previous topic",
+    "please donate",
+    "report a bug"
+  ],
+  "tables": 1
+}

@@ -1,0 +1,57 @@
+{
+  "slug": "svelte",
+  "framework": "SvelteKit (Svelte docs)",
+  "final_url": "https://svelte.dev/docs/svelte/what-are-runes",
+  "html_bytes": 80913,
+  "content_root": "main",
+  "thresholds": {
+    "MIN_CODE_CHARS": 24,
+    "MIN_HEADING_CHARS": 3,
+    "BOILERPLATE_MIN": 12,
+    "BOILERPLATE_MAX": 100,
+    "BOILERPLATE_CAP": 80,
+    "USABLE_MIN_CODE": 3,
+    "USABLE_MIN_HEADINGS": 5
+  },
+  "usable": true,
+  "unusable_reason": null,
+  "content_chars": 2249,
+  "body_chars": 2331,
+  "content_ratio": 0.9648,
+  "article_in_server_html": true,
+  "server_html_note": null,
+  "counts": {
+    "code_blocks": 2,
+    "headings": 11,
+    "boilerplate": 1,
+    "boilerplate_dropped_by_cap": 0,
+    "tables": 0
+  },
+  "code_blocks": [
+    {
+      "probe": "letletmessage:stringmessage=function$sta",
+      "length": 257
+    },
+    {
+      "probe": "function$state<\"hello\">(initial:\"hello\")",
+      "length": 75
+    }
+  ],
+  "headings": [
+    "introduction",
+    "runes",
+    "template syntax",
+    "styling",
+    "special elements",
+    "runtime",
+    "misc",
+    "reference",
+    "legacy apis",
+    "what are runes",
+    "on this page"
+  ],
+  "boilerplate": [
+    "skip to main content"
+  ],
+  "tables": 0
+}

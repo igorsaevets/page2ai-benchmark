@@ -1,7 +1,7 @@
 {
   "name": "page2ai-benchmark",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Open comparison of web-to-Markdown extractors on documentation frameworks. By Igor Saevets.",
   "type": "module",
   "author": {
@@ -28,10 +28,21 @@
     "probe:vary": "node vary-check.mjs",
     "probe:ua": "node ua-sensitivity.mjs",
     "probe:tool-headers": "node tool-accept-matrix.mjs",
-    "audit:webmainbench": "node webmainbench-groundtruth-audit.mjs"
+    "audit:webmainbench": "node webmainbench-groundtruth-audit.mjs",
+    "v2:fetch": "node protocol-v2/fetch.mjs",
+    "v2:groundtruth": "node protocol-v2/groundtruth.mjs",
+    "v2:extract": "node protocol-v2/extract.mjs",
+    "v2:score": "node protocol-v2/score.mjs",
+    "v2:report": "node protocol-v2/report.mjs",
+    "v2:negotiation": "node protocol-v2/negotiation.mjs",
+    "v2": "node protocol-v2/groundtruth.mjs && node protocol-v2/extract.mjs && node protocol-v2/score.mjs && node protocol-v2/report.mjs"
   },
   "dependencies": {
-    "@page2ai/core": "^0.1.0",
-    "linkedom": "^0.18.0"
+    "@mozilla/readability": "^0.6.0",
+    "@page2ai/core": "^0.1.1",
+    "defuddle": "^0.19.2",
+    "jsdom": "^30.0.0",
+    "linkedom": "^0.18.0",
+    "turndown": "^7.2.4"
   }
 }

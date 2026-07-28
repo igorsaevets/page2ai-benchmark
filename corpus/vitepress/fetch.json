@@ -1,0 +1,31 @@
+{
+  "slug": "vitepress",
+  "framework": "VitePress",
+  "requested_url": "https://vitepress.dev/guide/getting-started",
+  "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
+  "fetched_at": "2026-07-28T12:24:26.990Z",
+  "status": 200,
+  "final_url": "https://vitepress.dev/guide/getting-started",
+  "headers": {
+    "accept-ranges": "bytes",
+    "age": "47828",
+    "cache-control": "public,max-age=0,must-revalidate",
+    "cache-status": "\"Netlify Edge\"; hit",
+    "content-encoding": "br",
+    "content-length": "7831",
+    "content-type": "text/html; charset=UTF-8",
+    "date": "Tue, 28 Jul 2026 12:24:27 GMT",
+    "etag": "\"d98f783e361c4d4511fc54f57972cdd1-ssl-df\"",
+    "server": "Netlify",
+    "strict-transport-security": "max-age=31536000",
+    "vary": "Accept-Encoding",
+    "x-nf-request-id": "01KYMAXYHAF0MTPNHZS1Q95PH1"
+  },
+  "content_type": "text/html; charset=UTF-8",
+  "vary": "Accept-Encoding",
+  "bytes": 58204,
+  "sha256": "6ae2e338433ee495d0e8620e2dd35b30e91f10404e1f29c5f162c2d16ca0fe4b",
+  "elapsed_ms": 80,
+  "ok": true
+}

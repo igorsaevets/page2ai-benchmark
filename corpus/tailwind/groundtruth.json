@@ -1,0 +1,95 @@
+{
+  "slug": "tailwind",
+  "framework": "Next.js (Tailwind docs)",
+  "final_url": "https://tailwindcss.com/docs/flex",
+  "html_bytes": 389114,
+  "content_root": "body",
+  "thresholds": {
+    "MIN_CODE_CHARS": 24,
+    "MIN_HEADING_CHARS": 3,
+    "BOILERPLATE_MIN": 12,
+    "BOILERPLATE_MAX": 100,
+    "BOILERPLATE_CAP": 80,
+    "USABLE_MIN_CODE": 3,
+    "USABLE_MIN_HEADINGS": 5
+  },
+  "usable": true,
+  "unusable_reason": null,
+  "content_chars": 4969,
+  "body_chars": 4969,
+  "content_ratio": 1,
+  "article_in_server_html": true,
+  "server_html_note": null,
+  "counts": {
+    "code_blocks": 7,
+    "headings": 31,
+    "boilerplate": 0,
+    "boilerplate_dropped_by_cap": 0,
+    "tables": 1
+  },
+  "code_blocks": [
+    {
+      "probe": "<divclass=\"flex\"><divclass=\"w-14flex-non",
+      "length": 128
+    },
+    {
+      "probe": "<divclass=\"flex\"><divclass=\"w-14flex-non",
+      "length": 140
+    },
+    {
+      "probe": "<divclass=\"flex...\"><divclass=\"w-14flex-",
+      "length": 137
+    },
+    {
+      "probe": "<divclass=\"flex...\"><divclass=\"w-14flex-",
+      "length": 130
+    },
+    {
+      "probe": "<divclass=\"flex-[3_1_auto]...\"><!--...--",
+      "length": 47
+    },
+    {
+      "probe": "<divclass=\"flex-(--my-flex)...\"><!--...-",
+      "length": 48
+    },
+    {
+      "probe": "<divclass=\"flex-nonemd:flex-1...\"><!--..",
+      "length": 50
+    }
+  ],
+  "headings": [
+    "getting started",
+    "core concepts",
+    "base styles",
+    "layout",
+    "flexbox grid",
+    "spacing",
+    "sizing",
+    "typography",
+    "backgrounds",
+    "borders",
+    "effects",
+    "filters",
+    "tables",
+    "transitions animation",
+    "transforms",
+    "interactivity",
+    "svg",
+    "accessibility",
+    "flex",
+    "examples",
+    "basic example",
+    "initial",
+    "auto",
+    "none",
+    "using a custom value",
+    "responsive design",
+    "on this page",
+    "tailwind css",
+    "resources",
+    "tailwind plus",
+    "community"
+  ],
+  "boilerplate": [],
+  "tables": 1
+}

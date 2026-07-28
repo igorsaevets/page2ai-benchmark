@@ -1,0 +1,30 @@
+{
+  "slug": "hono",
+  "framework": "VitePress (Hono docs)",
+  "requested_url": "https://hono.dev/docs/getting-started/basic",
+  "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
+  "fetched_at": "2026-07-28T12:24:27.995Z",
+  "status": 200,
+  "final_url": "https://hono.dev/docs/getting-started/basic",
+  "headers": {
+    "cache-control": "public, max-age=0, must-revalidate",
+    "cf-cache-status": "HIT",
+    "cf-ray": "a223dc69bf726d20-LAX",
+    "connection": "keep-alive",
+    "content-encoding": "br",
+    "content-type": "text/html",
+    "date": "Tue, 28 Jul 2026 12:24:28 GMT",
+    "etag": "W/\"e48f2c9b7cdf0a5d73556bed42fc2b0f\"",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=p7lGRbpv8K3awwxaulqoCWKmw4ONqoJvsMiPhokKf0xFJjJlSudlLo4vKOuO8RV38MJ7l7UKbX46nCA1BV1hSAX2%2BMTFgbTPy6SXXmpexPBs8mXhcv0XKJs8\"}]}",
+    "server": "cloudflare",
+    "transfer-encoding": "chunked"
+  },
+  "content_type": "text/html",
+  "vary": null,
+  "bytes": 98762,
+  "sha256": "bd2e9e3ea438831e3cafd49200b477a52a9047e7c6a09a4227ac98ff6e78b896",
+  "elapsed_ms": 189,
+  "ok": true
+}

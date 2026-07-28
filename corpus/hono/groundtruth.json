@@ -1,0 +1,128 @@
+{
+  "slug": "hono",
+  "framework": "VitePress (Hono docs)",
+  "final_url": "https://hono.dev/docs/getting-started/basic",
+  "html_bytes": 98762,
+  "content_root": "main",
+  "thresholds": {
+    "MIN_CODE_CHARS": 24,
+    "MIN_HEADING_CHARS": 3,
+    "BOILERPLATE_MIN": 12,
+    "BOILERPLATE_MAX": 100,
+    "BOILERPLATE_CAP": 80,
+    "USABLE_MIN_CODE": 3,
+    "USABLE_MIN_HEADINGS": 5
+  },
+  "usable": true,
+  "unusable_reason": null,
+  "content_chars": 3669,
+  "body_chars": 4858,
+  "content_ratio": 0.7552,
+  "article_in_server_html": true,
+  "server_html_note": null,
+  "counts": {
+    "code_blocks": 13,
+    "headings": 10,
+    "boilerplate": 29,
+    "boilerplate_dropped_by_cap": 0,
+    "tables": 0
+  },
+  "code_blocks": [
+    {
+      "probe": "npmcreatehono@latestmy-app",
+      "length": 26
+    },
+    {
+      "probe": "pnpmcreatehono@latestmy-app",
+      "length": 27
+    },
+    {
+      "probe": "buncreatehono@latestmy-app",
+      "length": 26
+    },
+    {
+      "probe": "denoinit--npmhono@latestmy-app",
+      "length": 30
+    },
+    {
+      "probe": "?Whichtemplatedoyouwanttouse?aws-lambdab",
+      "length": 105
+    },
+    {
+      "probe": "import{Hono}from'hono'constapp=newHono()",
+      "length": 102
+    },
+    {
+      "probe": "app.get('/api/hello',(c)=>{returnc.json(",
+      "length": 74
+    },
+    {
+      "probe": "app.get('/posts/:id',(c)=>{constpage=c.r",
+      "length": 152
+    },
+    {
+      "probe": "app.post('/posts',(c)=>c.text('Created!'",
+      "length": 116
+    },
+    {
+      "probe": "constView=()=>{return(<html><body><h1>He",
+      "length": 114
+    },
+    {
+      "probe": "app.get('/',()=>{returnnewResponse('Good",
+      "length": 52
+    },
+    {
+      "probe": "import{basicAuth}from'hono/basic-auth'//",
+      "length": 169
+    },
+    {
+      "probe": "import{upgradeWebSocket}from'hono/cloudf",
+      "length": 98
+    }
+  ],
+  "headings": [
+    "getting started",
+    "starter",
+    "hello world",
+    "return json",
+    "request and response",
+    "return html",
+    "return raw response",
+    "using middleware",
+    "adapter",
+    "next step"
+  ],
+  "boilerplate": [
+    "copyright 2022 present yusuke wada hono contributors kawaii logo is created by sawaratsuki",
+    "released under the mit license",
+    "cloudflare workers vite",
+    "bearer authentication",
+    "developer experience",
+    "ali function compute",
+    "3rd party middleware",
+    "sidebar navigation",
+    "supabase functions",
+    "client components",
+    "google cloud run",
+    "skip to content",
+    "main navigation",
+    "azure functions",
+    "context storage",
+    "csrf protection",
+    "method override",
+    "fastly compute",
+    "service worker",
+    "best practices",
+    "ip restriction",
+    "secure headers",
+    "trailing slash",
+    "return to top",
+    "miscellaneous",
+    "previous page",
+    "web standard",
+    "jsx renderer",
+    "on this page"
+  ],
+  "tables": 0
+}

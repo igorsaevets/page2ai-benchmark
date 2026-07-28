@@ -1,0 +1,98 @@
+{
+  "slug": "vitepress",
+  "framework": "VitePress",
+  "final_url": "https://vitepress.dev/guide/getting-started",
+  "html_bytes": 58204,
+  "content_root": "main",
+  "thresholds": {
+    "MIN_CODE_CHARS": 24,
+    "MIN_HEADING_CHARS": 3,
+    "BOILERPLATE_MIN": 12,
+    "BOILERPLATE_MAX": 100,
+    "BOILERPLATE_CAP": 80,
+    "USABLE_MIN_CODE": 3,
+    "USABLE_MIN_HEADINGS": 5
+  },
+  "usable": true,
+  "unusable_reason": null,
+  "content_chars": 5298,
+  "body_chars": 5995,
+  "content_ratio": 0.8837,
+  "article_in_server_html": true,
+  "server_html_note": null,
+  "counts": {
+    "code_blocks": 7,
+    "headings": 10,
+    "boilerplate": 23,
+    "boilerplate_dropped_by_cap": 0,
+    "tables": 0
+  },
+  "code_blocks": [
+    {
+      "probe": "$pnpmadd-Dvitepress@next",
+      "length": 24
+    },
+    {
+      "probe": "$yarnadd-Dvitepress@nextvue",
+      "length": 27
+    },
+    {
+      "probe": "$denoadd-Dvitepress@next",
+      "length": 24
+    },
+    {
+      "probe": "┌WelcometoVitePress!│◇WhereshouldVitePre",
+      "length": 410
+    },
+    {
+      "probe": ".├─docs│├─.vitepress││└─config.js│├─api-",
+      "length": 99
+    },
+    {
+      "probe": "exportdefault{//site-leveloptionstitle:'",
+      "length": 119
+    },
+    {
+      "probe": "{...\"scripts\":{\"docs:dev\":\"vitepressdevd",
+      "length": 122
+    }
+  ],
+  "headings": [
+    "getting started",
+    "try it online",
+    "installation",
+    "prerequisites",
+    "setup wizard",
+    "file structure",
+    "the config file",
+    "source files",
+    "up and running",
+    "what s next"
+  ],
+  "boilerplate": [
+    "copyright 2019 present evan you",
+    "released under the mit license",
+    "extending the default theme",
+    "build time data loading",
+    "using vue in markdown",
+    "internationalization",
+    "using a custom theme",
+    "config api reference",
+    "connecting to a cms",
+    "sidebar navigation",
+    "sitemap generation",
+    "what is vitepress",
+    "ssr compatibility",
+    "skip to content",
+    "main navigation",
+    "2 0 0 alpha 18",
+    "asset handling",
+    "return to top",
+    "previous page",
+    "contributing",
+    "introduction",
+    "experimental",
+    "on this page"
+  ],
+  "tables": 0
+}

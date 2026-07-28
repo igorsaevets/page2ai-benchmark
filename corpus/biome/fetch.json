@@ -1,0 +1,31 @@
+{
+  "slug": "biome",
+  "framework": "Astro (Biome docs)",
+  "requested_url": "https://biomejs.dev/guides/getting-started/",
+  "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
+  "fetched_at": "2026-07-28T12:24:27.547Z",
+  "status": 200,
+  "final_url": "https://biomejs.dev/guides/getting-started/",
+  "headers": {
+    "accept-ranges": "bytes",
+    "age": "0",
+    "cache-control": "public,max-age=0,must-revalidate",
+    "cache-status": "\"Netlify Edge\"; fwd=stale",
+    "content-encoding": "br",
+    "content-type": "text/html; charset=UTF-8",
+    "date": "Tue, 28 Jul 2026 12:24:28 GMT",
+    "etag": "\"1ab5c91f3fc3d4b9d68ea72fda00c3c7-ssl-df\"",
+    "server": "Netlify",
+    "strict-transport-security": "max-age=31536000",
+    "transfer-encoding": "chunked",
+    "vary": "Accept-Encoding",
+    "x-nf-request-id": "01KYMAXZ2TH7GP9H50H8AYP2MS"
+  },
+  "content_type": "text/html; charset=UTF-8",
+  "vary": "Accept-Encoding",
+  "bytes": 141534,
+  "sha256": "c8ea567e7b0252d12149b78ddb5706b6d1780f7852a7311e0e397474fae0276e",
+  "elapsed_ms": 289,
+  "ok": true
+}
