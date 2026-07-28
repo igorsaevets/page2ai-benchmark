@@ -23,6 +23,7 @@
   "counts": {
     "code_blocks": 11,
     "headings": 10,
+    "paragraphs": 15,
     "boilerplate": 11,
     "boilerplate_dropped_by_cap": 0,
     "tables": 0
@@ -84,6 +85,23 @@
     "styles",
     "routes",
     "finish"
+  ],
+  "paragraphs": [
+    "before continuing make sure you have configured",
+    "we will use fumadocs mdx as a content source you can configure it first",
+    "fumadocs mdx is esm only it s recommended to use next config mjs for accurate esm resolution",
+    "for typescript config file it requires native node js typescript resolver you can see next js docs for details",
+    "you can create a lib source ts file and obtain fumadocs source from the docs collection output",
+    "the source folder will be generated when you run next dev or next build",
+    "you can now write content in content docs folder",
+    "fumadocs also supports other content sources including content collections and headless cms",
+    "wrap the entire application inside root provider and add required styles to body",
+    "add the following tailwind css styles to global css",
+    "it doesn t come with a default font you may choose one from next font",
+    "create a lib layout shared tsx file to put the shared options for our layouts",
+    "the search is powered by orama learn more about document search",
+    "you can start the dev server and create mdx files",
+    "setup fumadocs on astro with react islands"
   ],
   "boilerplate": [
     "page slugs page tree",

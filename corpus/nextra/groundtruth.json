@@ -23,6 +23,7 @@
   "counts": {
     "code_blocks": 0,
     "headings": 6,
+    "paragraphs": 4,
     "boilerplate": 42,
     "boilerplate_dropped_by_cap": 0,
     "tables": 0
@@ -35,6 +36,12 @@
     "can i use nextra with next js pages router",
     "can i use x with nextra",
     "how can i add a live coding component in nextra"
+  ],
+  "paragraphs": [
+    "nextra is a framework on top of next js that lets you build content focused websites it has all the great features from ",
+    "to start using nextra you need to select a theme first",
+    "if you want to use nextra without using these built in themes you can follow the custom theme docs",
+    "the nextra faq is a collection of useful questions and answers about the project if you have a question that isn t answe"
   ],
   "boilerplate": [
     "question give us feedback",

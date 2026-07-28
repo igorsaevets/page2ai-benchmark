@@ -23,6 +23,7 @@
   "counts": {
     "code_blocks": 5,
     "headings": 11,
+    "paragraphs": 25,
     "boilerplate": 80,
     "boilerplate_dropped_by_cap": 64,
     "tables": 1
@@ -61,6 +62,33 @@
     "browser compatibility",
     "see also",
     "help improve mdn"
+  ],
+  "paragraphs": [
+    "this feature is well established and works across many devices and browser versions it s been available across browsers ",
+    "some parts of this feature may have varying levels of support",
+    "the fetch method of the window interface starts the process of fetching a resource from the network returning a promise ",
+    "the promise resolves to the response object representing the response to your request",
+    "a fetch promise only rejects when the request fails for example because of a badly formed request url or a network error",
+    "the fetch method is controlled by the connect src directive of content security policy rather than the directive of the ",
+    "note the fetch method s parameters are identical to those of the request constructor",
+    "this defines the resource that you wish to fetch this can either be",
+    "a string or any other object with a stringifier including a url object that provides the url of the resource you want to",
+    "a requestinit object containing any custom settings that you want to apply to the request",
+    "a promise that resolves to a response object",
+    "the request was aborted due to a call to the abortcontroller abort method",
+    "use of the topics api is specifically disallowed by a browsing topics permissions policy and browsingtopics is set to tr",
+    "use of private state token api operations is specifically disallowed by a private state token issuance or private state ",
+    "the requested url includes credentials username and password",
+    "the requestinit object passed as the value of options included properties with invalid values",
+    "the request is blocked by a permissions policy",
+    "there is a network error for example because the device does not have connectivity",
+    "the privatetoken init option is specified including a privatetoken operation type of send redemption record and the priv",
+    "in our fetch request example see fetch request live we create a new request object using the relevant constructor then f",
+    "in our fetch request with init example see fetch request init live we do the same thing except that we pass in an option",
+    "you could also pass the init object in with the request constructor to get the same effect",
+    "you can also use an object literal as headers in init",
+    "the using fetch article provides more examples of using fetch",
+    "this page was last modified on dec 16 2025 by mdn contributors"
   ],
   "boilerplate": [
     "check out the video course from scrimba our partner",

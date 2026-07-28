@@ -112,6 +112,22 @@ for (const site of index.sites) {
   const boilerplate = boilerplateCandidates.slice(0, BOILERPLATE_CAP);
   const boilerplate_dropped_by_cap = Math.max(0, boilerplateCandidates.length - boilerplate.length);
 
+  // Amendment 4, 2026-07-28, prompted by an external reviewer AFTER the first scores existed.
+  // The reviewer's objection: content_recall counted code and headings only, so a tool could drop
+  // 90% of the article's prose and still score 1.0. Correct, and not arguable. Body prose is
+  // therefore measured too. The pre-existing f_score is NOT redefined; a second, clearly labelled
+  // figure is reported beside it. See PROTOCOL.md Amendment 4.
+  const proseSeen = new Set();
+  const paragraphs = [];
+  for (const el of contentRoot.querySelectorAll("p, li, blockquote, dd, td")) {
+    if (el.querySelector("p, li, blockquote, pre")) continue; // keep leaf-ish blocks only
+    const sq = squeeze(el.textContent || "");
+    if (sq.length < 40) continue;
+    if (proseSeen.has(sq)) continue;
+    proseSeen.add(sq);
+    paragraphs.push(sq.slice(0, 120));
+  }
+
   let tables = 0;
   for (const t of contentRoot.querySelectorAll("table")) {
     if (t.querySelectorAll("tr").length >= 2) tables += 1;
@@ -158,12 +174,14 @@ for (const site of index.sites) {
     counts: {
       code_blocks: code_blocks.length,
       headings: headings.length,
+      paragraphs: paragraphs.length,
       boilerplate: boilerplate.length,
       boilerplate_dropped_by_cap,
       tables
     },
     code_blocks,
     headings,
+    paragraphs,
     boilerplate,
     tables
   };
@@ -179,7 +197,7 @@ for (const site of index.sites) {
   });
   console.log(
     `[gt] ${usable ? "ok  " : "THIN"} ${site.slug.padEnd(18)} code=${String(code_blocks.length).padStart(3)} ` +
-      `head=${String(headings.length).padStart(3)} boiler=${String(boilerplate.length).padStart(3)} ` +
+      `head=${String(headings.length).padStart(3)} prose=${String(paragraphs.length).padStart(3)} boiler=${String(boilerplate.length).padStart(3)} ` +
       `(cap dropped ${boilerplate_dropped_by_cap})`
   );
 }

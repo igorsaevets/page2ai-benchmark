@@ -23,6 +23,7 @@
   "counts": {
     "code_blocks": 13,
     "headings": 10,
+    "paragraphs": 17,
     "boilerplate": 29,
     "boilerplate_dropped_by_cap": 0,
     "tables": 0
@@ -92,6 +93,25 @@
     "using middleware",
     "adapter",
     "next step"
+  ],
+  "paragraphs": [
+    "using hono is super easy we can set up the project write code develop with a local server and deploy quickly the same co",
+    "starter templates are available for each platform use the following create hono command",
+    "then you will be asked which template you would like to use let s select cloudflare workers for this example",
+    "the template will be pulled into my app so go to it and install the dependencies",
+    "once the package installation is complete run the following command to start up a local server",
+    "you can write code in typescript with the cloudflare workers development tool wrangler deno bun or others without being ",
+    "write your first application with hono in src index ts the example below is a starter hono application",
+    "the import and the final export default parts may vary from runtime to runtime but all of the application code will run ",
+    "start the development server and access http localhost 8787 with your browser",
+    "returning json is also easy the following is an example of handling a get request to api hello and returning an applicat",
+    "getting a path parameter url query value and appending a response header is written as follows",
+    "we can easily handle post put and delete not only get",
+    "you can write html with the html helper or using jsx syntax if you want to use jsx rename the file to src index tsx and ",
+    "middleware can do the hard work for you for example add in basic authentication",
+    "there are useful built in middleware including bearer and authentication using jwt cors and etag hono also provides thir",
+    "there are adapters for platform dependent functions e g handling static files or websocket for example to handle websock",
+    "most code will work on any platform but there are guides for each for instance how to set up projects or how to deploy p"
   ],
   "boilerplate": [
     "copyright 2022 present yusuke wada hono contributors kawaii logo is created by sawaratsuki",

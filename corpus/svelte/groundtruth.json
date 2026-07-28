@@ -23,6 +23,7 @@
   "counts": {
     "code_blocks": 2,
     "headings": 11,
+    "paragraphs": 7,
     "boilerplate": 1,
     "boilerplate_dropped_by_cap": 0,
     "tables": 0
@@ -49,6 +50,15 @@
     "legacy apis",
     "what are runes",
     "on this page"
+  ],
+  "paragraphs": [
+    "a letter or mark used as a mystical or magic symbol",
+    "runes are symbols that you use in svelte and svelte js svelte ts files to control the svelte compiler if you think of sv",
+    "runes have a prefix and look like functions",
+    "they differ from normal javascript functions in important ways however",
+    "you don t need to import them they are part of the language",
+    "they re not values you can t assign them to a variable or pass them as arguments to a function",
+    "just like javascript keywords they are only valid in certain positions the compiler will help you if you put them in the"
   ],
   "boilerplate": [
     "skip to main content"

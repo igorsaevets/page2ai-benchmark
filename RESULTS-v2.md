@@ -2,35 +2,47 @@
 
 # Results, protocol v0.2
 
-Scored 2026-07-28T12:30:14.741Z. Protocol and metric definitions: [PROTOCOL.md](PROTOCOL.md), committed before
-any of these numbers existed. Raw per-page rows: [../results-v2/scores.json](../results-v2/scores.json).
+Scored 2026-07-28T12:42:59.774Z. Protocol and metric definitions: [PROTOCOL.md](PROTOCOL.md), including every
+amendment and when it was made. Raw per-page rows: [../results-v2/scores.json](../results-v2/scores.json).
 
 ## Conversion track
 
 Every tool received the same cached HTML bytes. No tool fetched anything.
 
-**All 14 pages (pre-registered population)**
+**All 14 pages**
 
-| tool | pages | code recall | heading recall | nav leak | content recall | cleanliness | **f_score** |
+| tool | pages | code recall | heading recall | prose recall | nav leak | **f_score** | f_score_prose |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| `page2ai` | 14 | 100.0% | 92.9% | 6.9% | 92.9% | 93.1% | **0.8872** |
-| `trafilatura` | 14 | 87.5% | 78.6% | 4.5% | 77.1% | 95.5% | **0.8133** |
-| `defuddle-turndown` | 14 | 75.9% | 75.0% | 5.7% | 72.1% | 94.3% | **0.7841** |
-| `readability-turndown` | 14 | 71.0% | 62.1% | 5.4% | 60.4% | 94.6% | **0.6603** |
-| `turndown-raw` | 14 | 95.0% | 100.0% | 92.9% | 97.2% | 7.1% | **0.0714** |
-| `markitdown` | 14 | 95.8% | 100.0% | 92.9% | 99.5% | 7.1% | **0.0714** |
+| `page2ai` | 14 | 100.0% | 92.9% | 76.6% | 6.9% | **0.8872** | 0.8177 |
+| `trafilatura` | 14 | 87.5% | 78.6% | 70.3% | 4.5% | **0.8133** | 0.7761 |
+| `defuddle-turndown` | 14 | 75.9% | 75.0% | 71.4% | 5.7% | **0.7841** | 0.7615 |
+| `readability-turndown` | 14 | 71.0% | 62.1% | 73.2% | 5.4% | **0.6603** | 0.6975 |
+
+Whole-document converters, shown separately because they perform no content extraction and are
+here as the floor the metric is validated against, not as competitors:
+
+| tool | pages | code recall | heading recall | prose recall | nav leak | **f_score** | f_score_prose |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| `turndown-raw` | 14 | 95.0% | 100.0% | 78.3% | 92.9% | **0.0714** | 0.0714 |
+| `markitdown` | 14 | 95.8% | 100.0% | 78.3% | 92.9% | **0.0714** | 0.0714 |
 
 
 **Article pages only (13 pages; mintlify-anthropic excluded)**
 
-| tool | pages | code recall | heading recall | nav leak | content recall | cleanliness | **f_score** |
+| tool | pages | code recall | heading recall | prose recall | nav leak | **f_score** | f_score_prose |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| `page2ai` | 13 | 100.0% | 100.0% | 7.4% | 100.0% | 92.5% | **0.9555** |
-| `trafilatura` | 13 | 87.5% | 83.4% | 1.3% | 81.8% | 98.7% | **0.8563** |
-| `defuddle-turndown` | 13 | 75.9% | 79.5% | 1.5% | 76.4% | 98.5% | **0.8264** |
-| `readability-turndown` | 13 | 71.0% | 66.9% | 5.8% | 65.1% | 94.2% | **0.7111** |
-| `turndown-raw` | 13 | 95.0% | 100.0% | 92.3% | 97.0% | 7.7% | **0.0769** |
-| `markitdown` | 13 | 95.8% | 100.0% | 92.3% | 99.4% | 7.7% | **0.0769** |
+| `page2ai` | 13 | 100.0% | 100.0% | 76.6% | 7.4% | **0.9555** | 0.8806 |
+| `trafilatura` | 13 | 87.5% | 83.4% | 70.3% | 1.3% | **0.8563** | 0.8163 |
+| `defuddle-turndown` | 13 | 75.9% | 79.5% | 71.4% | 1.5% | **0.8264** | 0.8022 |
+| `readability-turndown` | 13 | 71.0% | 66.9% | 73.2% | 5.8% | **0.7111** | 0.7511 |
+
+Whole-document converters, shown separately because they perform no content extraction and are
+here as the floor the metric is validated against, not as competitors:
+
+| tool | pages | code recall | heading recall | prose recall | nav leak | **f_score** | f_score_prose |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| `turndown-raw` | 13 | 95.0% | 100.0% | 78.3% | 92.3% | **0.0769** | 0.0769 |
+| `markitdown` | 13 | 95.8% | 100.0% | 78.3% | 92.3% | **0.0769** | 0.0769 |
 
 
 Both tables are shown because the second one is more favourable to the tool this benchmark's author
@@ -105,7 +117,7 @@ Also visible, and reported upstream rather than scored: of the sites serving Mar
 ## How to read this
 
 **`turndown-raw` and `markitdown` are the floor, and they validate the metric.** Both convert the
-whole document, so both recall nearly everything and leak nearly all the navigation. The pre-registered
+whole document, so both recall nearly everything and leak nearly all the navigation. The stated
 prediction was that a tool doing no content extraction must score near zero on a harmonic mean of
 recall and cleanliness, and both land at 0.07. If they had scored around 0.5 the metric would have
 been broken and this run void. This is not a criticism of MarkItDown: it is a format converter,
@@ -130,6 +142,22 @@ and dropping the page furniture, on documentation pages. That is what doc-site e
 and it is also what page2ai was built for, so the metric is aligned with one entrant's design goal.
 A tool tuned for news articles, forum threads or paywalled pages is not being measured on its own
 terms here. Nothing in these numbers transfers to those page types.
+
+**Prose recall is the number to look at, and it was added because a reviewer was right.** The first
+version of this table scored only code blocks and headings. An external reviewer pointed out that a
+tool could therefore drop 90% of the article's paragraphs and still score 100% content recall. That
+is correct, so prose is now measured: `prose recall` and `f_score_prose` above. **No extractor here
+recalls more than 77% of the article body.** Every one of them loses roughly a quarter of the prose,
+and the gaps between them narrow considerably once body text counts. The original `f_score` is kept
+unchanged beside it rather than quietly replaced.
+
+⚠️ **`prose recall` is a lower bound and is biased.** A ground-truth paragraph counts as recalled
+only if its normalised text occurs in the output, and normalisation collapses punctuation. A
+converter that turns an inline link into `[text](https://...)` breaks the match for that paragraph;
+one that drops the link entirely does not. So the metric penalises link preservation, which is a
+feature, not a defect. Treat these numbers as "at least this much prose survived", not as a ranking,
+until v0.3 replaces the exact-substring probe with an alignment measure. This is written here rather
+than fixed today because changing a metric in the same pass that reports it is how v0.1.0 happened.
 
 **JavaScript.** Every tool sees the server-rendered HTML the harness received. One page in fourteen
 carries no article there at all. No tool in this table executes JavaScript, so that page is a fair

@@ -23,6 +23,7 @@
   "counts": {
     "code_blocks": 11,
     "headings": 7,
+    "paragraphs": 14,
     "boilerplate": 43,
     "boilerplate_dropped_by_cap": 0,
     "tables": 0
@@ -81,6 +82,22 @@
     "editor integrations",
     "continuous integration",
     "next steps"
+  ],
+  "paragraphs": [
+    "biome is best installed as a development dependency of your projects but it is also available as a standalone executable",
+    "e ensures that the package manager pins the version of biome see the versioning page for more information about why pinn",
+    "although biome can run with zero configuration you ll likely want to tweak some settings to suit your project s needs in",
+    "lets get a quick overview of how to use biome in your project",
+    "biome provides a command line interface to format lint and check your code",
+    "biome is available as a first party extension in your favorite editors",
+    "there are also community extensions for other editors such as vim neovim and sublime text to name a few",
+    "run biome ci as part of your ci pipeline to enforce code quality and consistency across your team it works just like the",
+    "see the continuous integration recipes for more examples",
+    "learn more about how to use and configure the formatter",
+    "learn more about how to use and configure the linter",
+    "get familiar with the cli commands and options",
+    "get familiar with the configuration options",
+    "copyright c 2023 present biome developers and contributors"
   ],
   "boilerplate": [
     "integrate biome with your vcs",

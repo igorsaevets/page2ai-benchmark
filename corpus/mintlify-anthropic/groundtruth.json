@@ -23,6 +23,7 @@
   "counts": {
     "code_blocks": 0,
     "headings": 6,
+    "paragraphs": 0,
     "boilerplate": 80,
     "boilerplate_dropped_by_cap": 56,
     "tables": 0
@@ -36,6 +37,7 @@
     "help and security",
     "terms and policies"
   ],
+  "paragraphs": [],
   "boilerplate": [
     "preserve thinking blocks and manage thinking across tool calls and turns",
     "here is an example of using extended thinking in the messages api",

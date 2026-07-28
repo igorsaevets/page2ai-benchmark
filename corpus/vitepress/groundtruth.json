@@ -23,6 +23,7 @@
   "counts": {
     "code_blocks": 7,
     "headings": 10,
+    "paragraphs": 27,
     "boilerplate": 23,
     "boilerplate_dropped_by_cap": 0,
     "tables": 0
@@ -68,6 +69,35 @@
     "source files",
     "up and running",
     "what s next"
+  ],
+  "paragraphs": [
+    "you can try vitepress directly in your browser on stackblitz",
+    "terminal for accessing vitepress via its command line interface cli",
+    "vscode is recommended along with the official vue extension",
+    "vitepress can be used on its own or be installed into an existing project in both cases you can install it with",
+    "vitepress is an esm only package don t use require to import it and make sure your nearest package json contains type mo",
+    "vitepress ships with a command line setup wizard that will help you scaffold a basic project after installation start th",
+    "you will be greeted with a few simple questions",
+    "if you intend to perform customization that uses vue components or apis you should also explicitly install vue as a depe",
+    "if you are building a standalone vitepress site you can scaffold the site in your current directory however if you are i",
+    "assuming you chose to scaffold the vitepress project in docs the generated file structure should look like this",
+    "the docs directory is considered the project root of the vitepress site the vitepress directory is a reserved location f",
+    "by default vitepress stores its dev server cache in vitepress cache and the production build output in vitepress dist if",
+    "the config file vitepress config js allows you to customize various aspects of your vitepress site with the most basic o",
+    "you can also configure the behavior of the theme via the themeconfig option consult the config reference for full detail",
+    "markdown files outside the vitepress directory are considered source files",
+    "vitepress uses file based routing each md file is compiled into a corresponding html file with the same path for example",
+    "vitepress also provides the ability to generate clean urls rewrite paths and dynamically generate pages these will be co",
+    "the tool should have also injected the following npm scripts to your package json if you allowed it to do so during the ",
+    "the docs dev script will start a local dev server with instant hot updates run it with the following command",
+    "instead of npm scripts you can also invoke vitepress directly with",
+    "more command line usage is documented in the cli reference",
+    "the dev server should be running at http localhost 5173 visit the url in your browser to see your new site in action",
+    "to better understand how markdown files are mapped to generated html proceed to the routing guide",
+    "to discover more about what you can do on the page such as writing markdown content or using vue components refer to the",
+    "to explore the features provided by the default documentation theme check out the default theme config reference",
+    "if you want to further customize the appearance of your site explore how to either extend the default theme or build a c",
+    "once your documentation site takes shape make sure to read the deployment guide"
   ],
   "boilerplate": [
     "copyright 2019 present evan you",

@@ -1,7 +1,7 @@
 ---
 title: page2ai-benchmark v0.2 protocol
 date: 2026-07-28
-status: pre-registered. Metric definitions fixed before the scoring code was written or run.
+status: live. Metric definitions were fixed before the scoring code was written. Every later change is in Amendments.
 author: Igor Saevets
 ---
 
@@ -11,8 +11,15 @@ The v0.1.0 results were withdrawn ([RETRACTION-2026-07-25.md](../RETRACTION-2026
 Four of five rows were wrong and the one positive row was scoring a file the publisher had
 written, not a conversion any tool performed. This document is the replacement protocol.
 
-The claim it makes, stated narrowly enough to be checked: **the metric definitions below were fixed
-before `score.mjs` was written, and no tool's score had been computed when they were fixed.** The
+**The word "pre-registered" has been dropped from this document.** An external reviewer argued on
+2026-07-28 that in software benchmarking the term is understood to require a protocol frozen on an
+immutable third-party registry before any experiment runs, and that amending ground-truth extraction
+after looking at output counts forfeits the term whatever the amendments were. That is a fair reading
+and arguing with it would be cheaper than earning the word, so the word is gone and the narrower,
+checkable claim stays:
+
+**The metric definitions below were fixed before `score.mjs` was written, and no tool's score had
+been computed when they were fixed.** The
 commit that introduces this file carries the protocol, the harness and the corpus but no scores; the
 commit that adds the scores changes nothing in the Metrics section. Verify with
 `git log --follow -p protocol-v2/PROTOCOL.md`. Everything that *was* changed after the first draft
@@ -122,6 +129,8 @@ All computed by `protocol-v2/score.mjs` from the stored outputs. Definitions fix
 - **`f_score`** — harmonic mean of `content_recall` and `cleanliness`. The single headline number.
   Harmonic, not arithmetic, so that a tool cannot win by maximising one and abandoning the other:
   `turndown-raw` will have recall near 1 and cleanliness near 0, and must not score 0.5.
+- `f_score_prose` — the same formula with prose folded into the recall term. Reported beside
+  `f_score`, which is left unchanged. Amendment 4.
 
 Also recorded, not scored: output bytes, `bytes_out / bytes_html`, wall-clock milliseconds, table
 count in output, and any error text.
@@ -193,6 +202,28 @@ of the page and is stated as one.
 Both amendments were made while looking at counts of headings, code blocks and nav strings. Neither
 was made while looking at a tool's score, because `score.mjs` had not been run. The `f_score`
 definition has not been touched since it was first written.
+
+**Amendment 4, 2026-07-28, AFTER the first scores existed, prompted by an external reviewer.** The
+reviewer's objection, accepted in full: `content_recall` counted code blocks and headings only, so a
+tool could discard 90% of an article's paragraphs and still score 100%. Body prose is now measured
+(`text_recall`), and `f_score_prose` folds it into the recall term. **`f_score` itself is unchanged**
+and both are reported, because silently redefining the headline number after seeing the results is
+the failure mode this whole document exists to avoid.
+
+The result matters: no extractor in the table recalls more than 77% of article prose, and the gaps
+between them narrow. The reviewer was right that the omission mattered.
+
+⚠️ Two limitations of `text_recall`, recorded rather than smoothed over. It is an exact substring
+test after normalisation, so a converter that renders an inline link as `[text](url)` fails the match
+for that paragraph while one that drops the link passes: **the metric penalises link preservation.**
+And it therefore reports a lower bound, not a ranking. v0.3 should replace the substring probe with
+an alignment measure. It is not being fixed in the same pass that first reports it, because
+"adjust the metric, then publish the number it produces" is exactly how v0.1.0 went wrong.
+
+The same reviewer's other two accepted points: `markitdown` and `turndown-raw` are now shown in a
+separate table headed as whole-document converters rather than ranked beside extractors, and corpus
+selection is acknowledged as the remaining unprotected flank, since the 14 URLs were chosen by the
+author. A published selection rule is open work for v0.3.
 
 ## Reproduction
 

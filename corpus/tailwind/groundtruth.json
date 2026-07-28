@@ -23,6 +23,7 @@
   "counts": {
     "code_blocks": 7,
     "headings": 31,
+    "paragraphs": 10,
     "boilerplate": 0,
     "boilerplate_dropped_by_cap": 0,
     "tables": 1
@@ -89,6 +90,18 @@
     "resources",
     "tailwind plus",
     "community"
+  ],
+  "paragraphs": [
+    "utilities for controlling how flex items both grow and shrink",
+    "use flex number utilities like flex 1 to allow a flex item to grow and shrink as needed ignoring its initial size",
+    "use flex initial to allow a flex item to shrink but not grow taking into account its initial size",
+    "use flex auto to allow a flex item to grow and shrink taking into account its initial size",
+    "use flex none to prevent a flex item from growing or shrinking",
+    "use the flex value syntax to set the flex shorthand property based on a completely custom value",
+    "for css variables you can also use the flex custom property syntax",
+    "this is just a shorthand for flex var custom property that adds the var function for you automatically",
+    "prefix a flex utility with a breakpoint variant like md to only apply the utility at medium screen sizes and above",
+    "learn more about using variants in the variants documentation"
   ],
   "boilerplate": [],
   "tables": 1

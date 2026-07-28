@@ -23,6 +23,7 @@
   "counts": {
     "code_blocks": 3,
     "headings": 8,
+    "paragraphs": 21,
     "boilerplate": 21,
     "boilerplate_dropped_by_cap": 0,
     "tables": 0
@@ -50,6 +51,29 @@
     "next steps",
     "updating starlight",
     "troubleshooting starlight"
+  ],
+  "paragraphs": [
+    "starlight is a full featured documentation theme built on top of the astro framework this guide will help you get starte",
+    "create a new astro starlight project by running the following command in your terminal",
+    "this will create a new project directory with all the necessary files and configurations for your site",
+    "try starlight in your browser open the template on stackblitz",
+    "when working locally astro s development server lets you preview your work and automatically refreshes your browser when",
+    "inside your project directory run the following command to start the development server",
+    "this will log a message to your terminal with the url of your local preview open this url to start browsing your site",
+    "starlight is ready for you to add new content or bring your existing files",
+    "add new pages to your site by creating markdown files in the src content docs directory",
+    "read more about file based routing and support for mdx and markdoc files in the pages guide",
+    "configure learn about common options in customizing starlight",
+    "navigate set up your sidebar with the sidebar navigation guide",
+    "components discover built in cards tabs and more in the components guide",
+    "extend explore community add ons in our plugins and themes catalogs",
+    "deploy publish your work with the deploy your site guide in the astro docs",
+    "because starlight is beta software there will be frequent updates and improvements be sure to update starlight regularly",
+    "starlight is an astro integration you can update it and other astro packages by running the following command in your te",
+    "see the starlight changelog for a full list of the changes made in each release",
+    "use the project configuration and individual page frontmatter configuration reference pages to ensure that your starligh",
+    "if your answer cannot be found in these docs please visit the full astro docs for complete astro documentation your ques",
+    "you can also check for any known starlight issues on github and get help in the astro discord from our active friendly c"
   ],
   "boilerplate": [
     "authoring content in markdown",
