@@ -157,6 +157,16 @@ things are meant to make that checkable rather than trusted: the protocol was co
 numbers, the corpus is committed so anyone can rerun the scoring offline and get the same figures,
 and every page where page2ai is not the winner is in the per-page table.
 
+**A second conflict, which did not exist when this was first published.** Since 2026-07-28 the author
+is also a contributor to trafilatura, the tool that places second here: one merged pull request
+(`adbar/trafilatura` [#892](https://github.com/adbar/trafilatura/pull/892), a CI configuration fix)
+and two open ([#891](https://github.com/adbar/trafilatura/pull/891),
+[#893](https://github.com/adbar/trafilatura/pull/893)). None of them touches extraction quality, none
+was informed by these results, and this benchmark has not been mentioned in that repository. The
+figures cannot move because of it, since they are produced by committed code run against a committed
+corpus and anyone can reproduce them. It could colour the prose, which is why it is stated here in
+the prose rather than in a footnote.
+
 **What the metric does and does not measure.** It rewards keeping the article's code and headings
 and dropping the page furniture, on documentation pages. That is what doc-site extraction is for,
 and it is also what page2ai was built for, so the metric is aligned with one entrant's design goal.

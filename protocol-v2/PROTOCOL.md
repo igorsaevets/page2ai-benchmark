@@ -288,6 +288,14 @@ here are computed over the pages where both are defined. Both are in the JSON, l
 `f_score` is again unchanged. `heading_recall_strict` is published beside `heading_recall` rather
 than replacing it, for the same reason as Amendment 4.
 
+**Amendment 6, 2026-07-28, no number changed.** A conflict of interest came into existence after
+publication and is now disclosed in `RESULTS-v2.md`: the author became a contributor to trafilatura,
+which places second here. One pull request merged (`adbar/trafilatura` #892, a CI configuration
+change), two open (#891, #893). None touches extraction, none was informed by these results, and this
+benchmark has not been mentioned in that repository. Recorded here because a conflict that appears
+later is exactly the kind that goes undeclared, and because the scoring is reproducible offline by
+anyone: the disclosure is about the prose, not the figures.
+
 ## Reproduction
 
 ```bash
