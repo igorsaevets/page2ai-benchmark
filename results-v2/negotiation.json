@@ -1,0 +1,851 @@
+{
+  "measured_at": "2026-07-28T12:34:25.030Z",
+  "sites": [
+    {
+      "slug": "mintlify-anthropic",
+      "url": "https://docs.anthropic.com/en/docs/build-with-claude/extended-thinking",
+      "publisher": {
+        "html_accept": {
+          "status": 200,
+          "final_url": "https://platform.claude.com/docs/en/build-with-claude/extended-thinking",
+          "content_type": "text/html; charset=utf-8",
+          "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+          "cache_control": "private, no-cache, no-store, max-age=0, must-revalidate",
+          "bytes": 957007,
+          "sha256": "5cf9a50bd7971db50716d18b69f3a1d9529ed25039a38f1929dc60aa236f2067",
+          "is_markdown": false
+        },
+        "markdown_accept": {
+          "status": 200,
+          "final_url": "https://platform.claude.com/docs/en/build-with-claude/extended-thinking",
+          "content_type": "text/markdown; charset=utf-8",
+          "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch,Cookie, Accept",
+          "cache_control": "private, no-store",
+          "bytes": 20535,
+          "sha256": "715f32be496fe239e2ddd15c2c09fa5751301b14b41c38ee0097956998acf557",
+          "is_markdown": true
+        },
+        "md_suffix": {
+          "status": 200,
+          "final_url": "https://platform.claude.com/docs/en/build-with-claude/extended-thinking.md",
+          "content_type": "text/markdown; charset=utf-8",
+          "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch,Cookie, Accept",
+          "cache_control": "private, no-store",
+          "bytes": 20535,
+          "sha256": "715f32be496fe239e2ddd15c2c09fa5751301b14b41c38ee0097956998acf557",
+          "is_markdown": true
+        },
+        "serves_markdown": true
+      },
+      "tools": {
+        "page2ai": {
+          "ok": true,
+          "source": "md-suffix",
+          "chars": 20535,
+          "title": "Extended thinking"
+        },
+        "trafilatura": {
+          "ok": true,
+          "status": 200,
+          "final_url": "/docs/en/build-with-claude/extended-thinking",
+          "content_type": "text/html; charset=utf-8",
+          "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+          "bytes": 221710,
+          "sha256": "f9ead17764cceafcbfc225b6b8272197757416f36520d361e1248b7ca989a317",
+          "is_markdown": false
+        },
+        "markitdown": {
+          "ok": true,
+          "chars": 20535,
+          "sha256": "715f32be496fe239e2ddd15c2c09fa5751301b14b41c38ee0097956998acf557",
+          "title": null
+        }
+      }
+    },
+    {
+      "slug": "docusaurus",
+      "url": "https://docusaurus.io/docs",
+      "publisher": {
+        "html_accept": {
+          "status": 200,
+          "final_url": "https://docusaurus.io/docs",
+          "content_type": "text/html; charset=UTF-8",
+          "vary": "Accept-Encoding",
+          "cache_control": "public,max-age=0,must-revalidate",
+          "bytes": 49664,
+          "sha256": "62fd44dbf642463d23a8edb347c8fa5ce6be1e27006d35240ea696586d4ac8cd",
+          "is_markdown": false
+        },
+        "markdown_accept": {
+          "status": 200,
+          "final_url": "https://docusaurus.io/docs",
+          "content_type": "text/html; charset=UTF-8",
+          "vary": "Accept-Encoding",
+          "cache_control": "public,max-age=0,must-revalidate",
+          "bytes": 49305,
+          "sha256": "b31c37fd90f1781b44a3255d4ab974835b07e99aef8d59535dca13dcd974ad9e",
+          "is_markdown": false
+        },
+        "md_suffix": {
+          "status": 404,
+          "final_url": "https://docusaurus.io/docs.md",
+          "content_type": "text/html; charset=utf-8",
+          "vary": "Accept-Encoding",
+          "cache_control": "public,max-age=0,must-revalidate",
+          "bytes": 19519,
+          "sha256": "e4e4d7af779d345b3013b26c86d2dd77d86d9b70c17071fddd9aa4409def9d0f",
+          "is_markdown": false
+        },
+        "serves_markdown": false
+      },
+      "tools": {
+        "page2ai": {
+          "ok": true,
+          "source": "html-parse",
+          "chars": 14377,
+          "title": "Introduction | Docusaurus"
+        },
+        "trafilatura": {
+          "ok": true,
+          "status": 200,
+          "final_url": "/docs",
+          "content_type": "text/html; charset=UTF-8",
+          "vary": "Accept-Encoding",
+          "bytes": 14705,
+          "sha256": "7acaece0a24d2b67bad034313d9a69e7424208d397944f6e54c5036ffbedf141",
+          "is_markdown": false
+        },
+        "markitdown": {
+          "ok": true,
+          "chars": 16525,
+          "sha256": "90cbbb4b5a0eaafd8dc32bbe85757f387956ad5ced87cb76e35f62a3d570a185",
+          "title": "Introduction | Docusaurus"
+        }
+      }
+    },
+    {
+      "slug": "starlight",
+      "url": "https://starlight.astro.build/getting-started/",
+      "publisher": {
+        "html_accept": {
+          "status": 200,
+          "final_url": "https://starlight.astro.build/getting-started/",
+          "content_type": "text/html; charset=UTF-8",
+          "vary": "Accept-Encoding",
+          "cache_control": "public,max-age=0,must-revalidate",
+          "bytes": 80358,
+          "sha256": "57a9af15a901aca3f58dc22f5a1ee5770d882ce23a652b3b03b7b3504498bd75",
+          "is_markdown": false
+        },
+        "markdown_accept": {
+          "status": 200,
+          "final_url": "https://starlight.astro.build/getting-started/",
+          "content_type": "text/html; charset=UTF-8",
+          "vary": "Accept-Encoding",
+          "cache_control": "public,max-age=0,must-revalidate",
+          "bytes": 80358,
+          "sha256": "57a9af15a901aca3f58dc22f5a1ee5770d882ce23a652b3b03b7b3504498bd75",
+          "is_markdown": false
+        },
+        "md_suffix": {
+          "status": 404,
+          "final_url": "https://starlight.astro.build/getting-started.md",
+          "content_type": "text/html; charset=utf-8",
+          "vary": "Accept-Encoding",
+          "cache_control": "public,max-age=0,must-revalidate",
+          "bytes": 31477,
+          "sha256": "a0b35dfbdd3d6f599d79331531e8750fe36887e81d2c2dd59b8e7b1ff149beae",
+          "is_markdown": false
+        },
+        "serves_markdown": false
+      },
+      "tools": {
+        "page2ai": {
+          "ok": true,
+          "source": "html-parse",
+          "chars": 6056,
+          "title": "Getting Started | Starlight"
+        },
+        "trafilatura": {
+          "ok": true,
+          "status": 200,
+          "final_url": "/getting-started/",
+          "content_type": "text/html; charset=UTF-8",
+          "vary": "Accept-Encoding",
+          "bytes": 14968,
+          "sha256": "2d43494d24bdb3d10c436a2dc55a171f89af42c67e4ba733538e14f66a74a04b",
+          "is_markdown": false
+        },
+        "markitdown": {
+          "ok": true,
+          "chars": 7656,
+          "sha256": "9b73bb0e1f8f227b5c6408f52b1d5842e3c0d3e50649803f9e1228d09ccc15fa",
+          "title": "Getting Started | Starlight"
+        }
+      }
+    },
+    {
+      "slug": "nextra",
+      "url": "https://nextra.site/docs",
+      "publisher": {
+        "html_accept": {
+          "status": 200,
+          "final_url": "https://nextra.site/docs",
+          "content_type": "text/html; charset=utf-8",
+          "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+          "cache_control": "public, max-age=0, must-revalidate",
+          "bytes": 235336,
+          "sha256": "bb374c36f20f0cb004d97b4ebae9856eaaf45ac82419adff8d7014b349a1de6b",
+          "is_markdown": false
+        },
+        "markdown_accept": {
+          "status": 200,
+          "final_url": "https://nextra.site/docs",
+          "content_type": "text/html; charset=utf-8",
+          "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+          "cache_control": "public, max-age=0, must-revalidate",
+          "bytes": 235336,
+          "sha256": "bb374c36f20f0cb004d97b4ebae9856eaaf45ac82419adff8d7014b349a1de6b",
+          "is_markdown": false
+        },
+        "md_suffix": {
+          "status": 404,
+          "final_url": "https://nextra.site/docs.md",
+          "content_type": "text/html; charset=utf-8",
+          "vary": null,
+          "cache_control": "public, max-age=0, must-revalidate",
+          "bytes": 145086,
+          "sha256": "5f744639225398f9e1578669b270ff9fe18493915743f3ad501619978a261cbc",
+          "is_markdown": false
+        },
+        "serves_markdown": false
+      },
+      "tools": {
+        "page2ai": {
+          "ok": true,
+          "source": "html-parse",
+          "chars": 2024,
+          "title": "Introduction | Nextra"
+        },
+        "trafilatura": {
+          "ok": true,
+          "status": 403,
+          "final_url": "/docs",
+          "content_type": "text/html; charset=utf-8",
+          "vary": null,
+          "bytes": 33820,
+          "sha256": "a91a3c02a0b4cb01e19fcc37e7d27c3e6ccc47431820cc34174f1adb9cff7671",
+          "is_markdown": false
+        },
+        "markitdown": {
+          "ok": false,
+          "error": "HTTPError: 403 Client Error: Forbidden for url: https://nextra.site/docs"
+        }
+      }
+    },
+    {
+      "slug": "fumadocs",
+      "url": "https://www.fumadocs.dev/docs/manual-installation/next",
+      "publisher": {
+        "html_accept": {
+          "status": 200,
+          "final_url": "https://www.fumadocs.dev/docs/manual-installation/next",
+          "content_type": "text/html; charset=utf-8",
+          "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+          "cache_control": "public, max-age=0, must-revalidate",
+          "bytes": 386398,
+          "sha256": "e2fcefaa7481c0a6930a209ae2e4aa768501d68695cf8674c9eca126b6587719",
+          "is_markdown": false
+        },
+        "markdown_accept": {
+          "status": 200,
+          "final_url": "https://www.fumadocs.dev/docs/manual-installation/next",
+          "content_type": "text/markdown",
+          "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+          "cache_control": "public, max-age=0, must-revalidate",
+          "bytes": 9429,
+          "sha256": "3b25099a0eb65fa5210a0f09b194bf49751f1a8d87bd4ece2861bb680f9ea183",
+          "is_markdown": true
+        },
+        "md_suffix": {
+          "status": 200,
+          "final_url": "https://www.fumadocs.dev/docs/manual-installation/next.md",
+          "content_type": "text/html; charset=utf-8",
+          "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+          "cache_control": "public, max-age=0, must-revalidate",
+          "bytes": 122646,
+          "sha256": "e65f6a9d2915c89a8094729eb810e4900dd7a8cf00b2604352989289b6827d78",
+          "is_markdown": false
+        },
+        "serves_markdown": true
+      },
+      "tools": {
+        "page2ai": {
+          "ok": true,
+          "source": "content-negotiation",
+          "chars": 9427,
+          "title": "Fumadocs (Framework Mode): Next.js"
+        },
+        "trafilatura": {
+          "ok": true,
+          "status": 403,
+          "final_url": "/docs/manual-installation/next",
+          "content_type": "text/html; charset=utf-8",
+          "vary": null,
+          "bytes": 33840,
+          "sha256": "135a1aaed17bcc4e4d46c8da0c1744a3effd18eff55d2642c0be8b9982d3b46b",
+          "is_markdown": false
+        },
+        "markitdown": {
+          "ok": false,
+          "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.fumadocs.dev/docs/manual-installation/next"
+        }
+      }
+    },
+    {
+      "slug": "vitepress",
+      "url": "https://vitepress.dev/guide/getting-started",
+      "publisher": {
+        "html_accept": {
+          "status": 200,
+          "final_url": "https://vitepress.dev/guide/getting-started",
+          "content_type": "text/html; charset=UTF-8",
+          "vary": "Accept-Encoding",
+          "cache_control": "public,max-age=0,must-revalidate",
+          "bytes": 58204,
+          "sha256": "6ae2e338433ee495d0e8620e2dd35b30e91f10404e1f29c5f162c2d16ca0fe4b",
+          "is_markdown": false
+        },
+        "markdown_accept": {
+          "status": 200,
+          "final_url": "https://vitepress.dev/guide/getting-started",
+          "content_type": "text/html; charset=UTF-8",
+          "vary": "Accept-Encoding",
+          "cache_control": "public,max-age=0,must-revalidate",
+          "bytes": 58204,
+          "sha256": "6ae2e338433ee495d0e8620e2dd35b30e91f10404e1f29c5f162c2d16ca0fe4b",
+          "is_markdown": false
+        },
+        "md_suffix": {
+          "status": 200,
+          "final_url": "https://vitepress.dev/guide/getting-started.md",
+          "content_type": "text/markdown; charset=UTF-8",
+          "vary": "Accept-Encoding",
+          "cache_control": "public,max-age=0,must-revalidate",
+          "bytes": 6275,
+          "sha256": "94fec0bd2d5e0e454f9808deaddca9e868ddeeedb8811829abde0581e4fa6ecd",
+          "is_markdown": true
+        },
+        "serves_markdown": true
+      },
+      "tools": {
+        "page2ai": {
+          "ok": true,
+          "source": "md-suffix",
+          "chars": 6235,
+          "title": "Getting Started"
+        },
+        "trafilatura": {
+          "ok": true,
+          "status": 200,
+          "final_url": "/guide/getting-started",
+          "content_type": "text/html; charset=UTF-8",
+          "vary": "Accept-Encoding",
+          "bytes": 58204,
+          "sha256": "6ae2e338433ee495d0e8620e2dd35b30e91f10404e1f29c5f162c2d16ca0fe4b",
+          "is_markdown": false
+        },
+        "markitdown": {
+          "ok": true,
+          "chars": 8906,
+          "sha256": "dbea477e2aa26a93756d92dc3d24e10add8199cb7b7ca2855833ea06081b21da",
+          "title": "Getting Started | VitePress"
+        }
+      }
+    },
+    {
+      "slug": "mdn",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/fetch",
+      "publisher": {
+        "html_accept": {
+          "status": 200,
+          "final_url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/fetch",
+          "content_type": "text/html",
+          "vary": "Accept-Encoding",
+          "cache_control": "public, max-age=3600",
+          "bytes": 180372,
+          "sha256": "1e431efe8340b405a98675a6d67c2686ad02c4bef3e58aeae9dcaef8e9679141",
+          "is_markdown": false
+        },
+        "markdown_accept": {
+          "status": 200,
+          "final_url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/fetch",
+          "content_type": "text/html",
+          "vary": "Accept-Encoding",
+          "cache_control": "public, max-age=3600",
+          "bytes": 180372,
+          "sha256": "1e431efe8340b405a98675a6d67c2686ad02c4bef3e58aeae9dcaef8e9679141",
+          "is_markdown": false
+        },
+        "md_suffix": {
+          "status": 404,
+          "final_url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/fetch.md",
+          "content_type": "text/html",
+          "vary": "Accept-Encoding",
+          "cache_control": "no-store",
+          "bytes": 88144,
+          "sha256": "b61ae9cb1335e68931f66b516920efd37536ef1cef5f802efced2321fe7066dd",
+          "is_markdown": false
+        },
+        "serves_markdown": false
+      },
+      "tools": {
+        "page2ai": {
+          "ok": true,
+          "source": "html-parse",
+          "chars": 11215,
+          "title": "Window: fetch() method - Web APIs | MDN"
+        },
+        "trafilatura": {
+          "ok": true,
+          "status": 200,
+          "final_url": "/en-US/docs/Web/API/Window/fetch",
+          "content_type": "text/html",
+          "vary": "Accept-Encoding",
+          "bytes": 180372,
+          "sha256": "1e431efe8340b405a98675a6d67c2686ad02c4bef3e58aeae9dcaef8e9679141",
+          "is_markdown": false
+        },
+        "markitdown": {
+          "ok": true,
+          "chars": 28493,
+          "sha256": "e82ba29a8e3e5bcb69fa3b69550c370474ef1de38c5bd4b4b4b7e07afeeeebc9",
+          "title": "Window: fetch() method - Web APIs | MDN"
+        }
+      }
+    },
+    {
+      "slug": "tailwind",
+      "url": "https://tailwindcss.com/docs/flex",
+      "publisher": {
+        "html_accept": {
+          "status": 200,
+          "final_url": "https://tailwindcss.com/docs/flex",
+          "content_type": "text/html; charset=utf-8",
+          "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, accept-encoding",
+          "cache_control": "public, max-age=0, must-revalidate",
+          "bytes": 389114,
+          "sha256": "7b02989e2fa447340b3632602c8014fccb5bbc3734f38b61b06d99a3899e2837",
+          "is_markdown": false
+        },
+        "markdown_accept": {
+          "status": 200,
+          "final_url": "https://tailwindcss.com/docs/flex",
+          "content_type": "text/html; charset=utf-8",
+          "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, accept-encoding",
+          "cache_control": "public, max-age=0, must-revalidate",
+          "bytes": 389114,
+          "sha256": "7b02989e2fa447340b3632602c8014fccb5bbc3734f38b61b06d99a3899e2837",
+          "is_markdown": false
+        },
+        "md_suffix": {
+          "status": 404,
+          "final_url": "https://tailwindcss.com/docs/flex.md",
+          "content_type": "text/html; charset=utf-8",
+          "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, accept-encoding",
+          "cache_control": "public, max-age=0, must-revalidate",
+          "bytes": 161234,
+          "sha256": "95a27e6864c9b7e7d6ac9fde977a1feac8a5f13ead127bc9e88ec1cda9b50371",
+          "is_markdown": false
+        },
+        "serves_markdown": false
+      },
+      "tools": {
+        "page2ai": {
+          "ok": true,
+          "source": "html-parse",
+          "chars": 18812,
+          "title": "flex - Flexbox & Grid - Tailwind CSS"
+        },
+        "trafilatura": {
+          "ok": true,
+          "status": 200,
+          "final_url": "/docs/flex",
+          "content_type": "text/html; charset=utf-8",
+          "vary": "accept-encoding",
+          "bytes": 26013,
+          "sha256": "12e40332a13aa55c674b7d6722ef44f7ccb1ab22483cbfe1cfa68da56bfde5fc",
+          "is_markdown": false
+        },
+        "markitdown": {
+          "ok": true,
+          "chars": 12485,
+          "sha256": "bd245874a9006aca9ba83050672790aa7c952876aa0a8fb94d3981b14fa92d08",
+          "title": "flex - Flexbox & Grid - Tailwind CSS"
+        }
+      }
+    },
+    {
+      "slug": "svelte",
+      "url": "https://svelte.dev/docs/svelte/what-are-runes",
+      "publisher": {
+        "html_accept": {
+          "status": 200,
+          "final_url": "https://svelte.dev/docs/svelte/what-are-runes",
+          "content_type": "text/html; charset=utf-8",
+          "vary": null,
+          "cache_control": "public, max-age=0, must-revalidate",
+          "bytes": 80913,
+          "sha256": "73127df637ca9a700e9992f94acf4895b9fcf48e4a5cfddf520db1ee0d7ce6aa",
+          "is_markdown": false
+        },
+        "markdown_accept": {
+          "status": 200,
+          "final_url": "https://svelte.dev/docs/svelte/what-are-runes",
+          "content_type": "text/html; charset=utf-8",
+          "vary": null,
+          "cache_control": "public, max-age=0, must-revalidate",
+          "bytes": 80913,
+          "sha256": "73127df637ca9a700e9992f94acf4895b9fcf48e4a5cfddf520db1ee0d7ce6aa",
+          "is_markdown": false
+        },
+        "md_suffix": {
+          "status": 404,
+          "final_url": "https://svelte.dev/docs/svelte/what-are-runes.md",
+          "content_type": "text/html",
+          "vary": null,
+          "cache_control": "public, max-age=0, must-revalidate",
+          "bytes": 39771,
+          "sha256": "5f928e2e35d543029d03c36c8f5c325e09b8ef1de0974a160c2fc2bd545bcb9c",
+          "is_markdown": false
+        },
+        "serves_markdown": false
+      },
+      "tools": {
+        "page2ai": {
+          "ok": true,
+          "source": "html-parse",
+          "chars": 8856,
+          "title": "What are runes? • Svelte Docs"
+        },
+        "trafilatura": {
+          "ok": true,
+          "status": 403,
+          "final_url": "/docs/svelte/what-are-runes",
+          "content_type": "text/html; charset=utf-8",
+          "vary": null,
+          "bytes": 33827,
+          "sha256": "3ce2da0f53c0db1abca8cc33d787c55cfb2ed4adcaab754c92724b0f2b4d5ce2",
+          "is_markdown": false
+        },
+        "markitdown": {
+          "ok": false,
+          "error": "HTTPError: 403 Client Error: Forbidden for url: https://svelte.dev/docs/svelte/what-are-runes"
+        }
+      }
+    },
+    {
+      "slug": "biome",
+      "url": "https://biomejs.dev/guides/getting-started/",
+      "publisher": {
+        "html_accept": {
+          "status": 200,
+          "final_url": "https://biomejs.dev/guides/getting-started/",
+          "content_type": "text/html; charset=UTF-8",
+          "vary": "Accept-Encoding",
+          "cache_control": "public,max-age=0,must-revalidate",
+          "bytes": 141534,
+          "sha256": "94bc59a71a310d4ae2e10788fa9971c4975ad9b742e74fff7c08c6ec07d8c45a",
+          "is_markdown": false
+        },
+        "markdown_accept": {
+          "status": 200,
+          "final_url": "https://biomejs.dev/guides/getting-started/",
+          "content_type": "text/html; charset=UTF-8",
+          "vary": "Accept-Encoding",
+          "cache_control": "public,max-age=0,must-revalidate",
+          "bytes": 141534,
+          "sha256": "94bc59a71a310d4ae2e10788fa9971c4975ad9b742e74fff7c08c6ec07d8c45a",
+          "is_markdown": false
+        },
+        "md_suffix": {
+          "status": 404,
+          "final_url": "https://biomejs.dev/guides/getting-started.md",
+          "content_type": "text/html; charset=utf-8",
+          "vary": "Accept-Encoding",
+          "cache_control": "no-cache",
+          "bytes": 29081,
+          "sha256": "701b3a2057234243e59082d2d725ff118c7e002d47a4bc84dabaa46a6b422be6",
+          "is_markdown": false
+        },
+        "serves_markdown": false
+      },
+      "tools": {
+        "page2ai": {
+          "ok": true,
+          "source": "html-parse",
+          "chars": 8082,
+          "title": "Getting Started | Biome"
+        },
+        "trafilatura": {
+          "ok": true,
+          "status": 200,
+          "final_url": "/guides/getting-started/",
+          "content_type": "text/html; charset=UTF-8",
+          "vary": "Accept-Encoding",
+          "bytes": 141534,
+          "sha256": "94bc59a71a310d4ae2e10788fa9971c4975ad9b742e74fff7c08c6ec07d8c45a",
+          "is_markdown": false
+        },
+        "markitdown": {
+          "ok": true,
+          "chars": 11414,
+          "sha256": "54e33d65f7451d78eb1d9af0775aa9821859ef262fad96b7473b5c20e9cac1f4",
+          "title": "Getting Started | Biome"
+        }
+      }
+    },
+    {
+      "slug": "python-docs",
+      "url": "https://docs.python.org/3/library/asyncio-task.html",
+      "publisher": {
+        "html_accept": {
+          "status": 200,
+          "final_url": "https://docs.python.org/3/library/asyncio-task.html",
+          "content_type": "text/html",
+          "vary": "Accept-Encoding",
+          "cache_control": null,
+          "bytes": 176093,
+          "sha256": "bc93de9c10cc12a356b6f6cc2542ea1da8a00668bbd7d5e4e51bbc603e991018",
+          "is_markdown": false
+        },
+        "markdown_accept": {
+          "status": 200,
+          "final_url": "https://docs.python.org/3/library/asyncio-task.html",
+          "content_type": "text/html",
+          "vary": "Accept-Encoding",
+          "cache_control": null,
+          "bytes": 176093,
+          "sha256": "bc93de9c10cc12a356b6f6cc2542ea1da8a00668bbd7d5e4e51bbc603e991018",
+          "is_markdown": false
+        },
+        "md_suffix": {
+          "status": 404,
+          "final_url": "https://docs.python.org/3/library/asyncio-task.html.md",
+          "content_type": "text/html",
+          "vary": "Accept-Encoding",
+          "cache_control": null,
+          "bytes": 9512,
+          "sha256": "b2ce92c201a28cbea128b2dde8c934eb06647a63872c89c4c50998f3980a668a",
+          "is_markdown": false
+        },
+        "serves_markdown": false
+      },
+      "tools": {
+        "page2ai": {
+          "ok": true,
+          "source": "html-parse",
+          "chars": 60603,
+          "title": "Coroutines and tasks — Python 3.14.6 documentation"
+        },
+        "trafilatura": {
+          "ok": true,
+          "status": 200,
+          "final_url": "/3/library/asyncio-task.html",
+          "content_type": "text/html",
+          "vary": "Accept-Encoding",
+          "bytes": 176093,
+          "sha256": "bc93de9c10cc12a356b6f6cc2542ea1da8a00668bbd7d5e4e51bbc603e991018",
+          "is_markdown": false
+        },
+        "markitdown": {
+          "ok": true,
+          "chars": 64414,
+          "sha256": "5e4bbaaa3695aeafa4b46555f399cbbd08b394774f7147485559b1dc9b4417de",
+          "title": "Coroutines and tasks — Python 3.14.6 documentation"
+        }
+      }
+    },
+    {
+      "slug": "rust-book",
+      "url": "https://doc.rust-lang.org/book/ch08-01-vectors.html",
+      "publisher": {
+        "html_accept": {
+          "status": 200,
+          "final_url": "https://doc.rust-lang.org/book/ch08-01-vectors.html",
+          "content_type": "text/html",
+          "vary": "Accept-Encoding",
+          "cache_control": null,
+          "bytes": 38648,
+          "sha256": "d9c1aced0dc9e8d96d74d0a39d4606438df4726f7efb35b79cfd5fcdc7a9b0ea",
+          "is_markdown": false
+        },
+        "markdown_accept": {
+          "status": 200,
+          "final_url": "https://doc.rust-lang.org/book/ch08-01-vectors.html",
+          "content_type": "text/html",
+          "vary": "Accept-Encoding",
+          "cache_control": null,
+          "bytes": 38648,
+          "sha256": "d9c1aced0dc9e8d96d74d0a39d4606438df4726f7efb35b79cfd5fcdc7a9b0ea",
+          "is_markdown": false
+        },
+        "md_suffix": {
+          "status": 404,
+          "final_url": "https://doc.rust-lang.org/book/ch08-01-vectors.html.md",
+          "content_type": "text/html",
+          "vary": "Accept-Encoding",
+          "cache_control": null,
+          "bytes": 4384,
+          "sha256": "7aeca3ee63d67d4c71edeb48c81d31659c2f7cb8b00326b662c0473864a386ff",
+          "is_markdown": false
+        },
+        "serves_markdown": false
+      },
+      "tools": {
+        "page2ai": {
+          "ok": true,
+          "source": "html-parse",
+          "chars": 13222,
+          "title": "Storing Lists of Values with Vectors - The Rust Programming Language"
+        },
+        "trafilatura": {
+          "ok": true,
+          "status": 200,
+          "final_url": "/book/ch08-01-vectors.html",
+          "content_type": "text/html",
+          "vary": "Accept-Encoding",
+          "bytes": 11012,
+          "sha256": "71913238fdccdd0145a0a273ccfe8caa7579e815c3c3b08915fdcd0e8a061939",
+          "is_markdown": false
+        },
+        "markitdown": {
+          "ok": true,
+          "chars": 12704,
+          "sha256": "80f0cb9e415aa4ffc54315298ac5ab4a05c7b067d08b43c0cffbd2304f54d9ec",
+          "title": "Storing Lists of Values with Vectors - The Rust Programming Language"
+        }
+      }
+    },
+    {
+      "slug": "hono",
+      "url": "https://hono.dev/docs/getting-started/basic",
+      "publisher": {
+        "html_accept": {
+          "status": 200,
+          "final_url": "https://hono.dev/docs/getting-started/basic",
+          "content_type": "text/html",
+          "vary": null,
+          "cache_control": "public, max-age=0, must-revalidate",
+          "bytes": 98762,
+          "sha256": "33c177461d0d705715808d3d5bbff8e3818f7189e183297adbe7a4c4634255fa",
+          "is_markdown": false
+        },
+        "markdown_accept": {
+          "status": 200,
+          "final_url": "https://hono.dev/docs/getting-started/basic",
+          "content_type": "text/markdown; charset=utf-8",
+          "vary": null,
+          "cache_control": null,
+          "bytes": 4724,
+          "sha256": "d9aa915c42cd542f0feadf6e4432392517b4bb5144cc6d0a32c8e90b135f5108",
+          "is_markdown": true
+        },
+        "md_suffix": {
+          "status": 404,
+          "final_url": "https://hono.dev/docs/getting-started/basic.md",
+          "content_type": "text/html",
+          "vary": null,
+          "cache_control": "public, max-age=0, must-revalidate",
+          "bytes": 18594,
+          "sha256": "b17041c8428a591ee1a2d785c99fc1255630a1fc83fd39c6b8269cbc250ab248",
+          "is_markdown": false
+        },
+        "serves_markdown": true
+      },
+      "tools": {
+        "page2ai": {
+          "ok": true,
+          "source": "content-negotiation",
+          "chars": 4721,
+          "title": "Getting Started"
+        },
+        "trafilatura": {
+          "ok": true,
+          "status": 200,
+          "final_url": "/docs/getting-started/basic",
+          "content_type": "text/html",
+          "vary": null,
+          "bytes": 11697,
+          "sha256": "db532e6b2dd01534cd1a9be56bfc3fb5abf9575538fed082fa3ac75227426639",
+          "is_markdown": false
+        },
+        "markitdown": {
+          "ok": true,
+          "chars": 5134,
+          "sha256": "1a6352f5a575c2ed27001bf832ef53ab28b1e6b82c06b0d1f5aabbaa5154766a",
+          "title": null
+        }
+      }
+    },
+    {
+      "slug": "gitbook-sentry",
+      "url": "https://docs.sentry.io/platforms/javascript/",
+      "publisher": {
+        "html_accept": {
+          "status": 200,
+          "final_url": "https://docs.sentry.io/platforms/javascript/",
+          "content_type": "text/html; charset=utf-8",
+          "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+          "cache_control": "public, max-age=0, must-revalidate",
+          "bytes": 589563,
+          "sha256": "6045805fc868b001829fb2ea02b01149ddcc33191e13fbb0a88ba258f9b933b1",
+          "is_markdown": false
+        },
+        "markdown_accept": {
+          "status": 200,
+          "final_url": "https://docs.sentry.io/platforms/javascript/",
+          "content_type": "text/markdown; charset=utf-8",
+          "vary": null,
+          "cache_control": "public, max-age=0, must-revalidate",
+          "bytes": 21557,
+          "sha256": "96d2f05f9ee104e36bf41e79792ef0c44a6e94288672471e4c8fc9d1017e68e0",
+          "is_markdown": true
+        },
+        "md_suffix": {
+          "status": 200,
+          "final_url": "https://docs.sentry.io/platforms/javascript.md",
+          "content_type": "text/markdown; charset=utf-8",
+          "vary": null,
+          "cache_control": "public, max-age=0, must-revalidate",
+          "bytes": 21557,
+          "sha256": "96d2f05f9ee104e36bf41e79792ef0c44a6e94288672471e4c8fc9d1017e68e0",
+          "is_markdown": true
+        },
+        "serves_markdown": true
+      },
+      "tools": {
+        "page2ai": {
+          "ok": true,
+          "source": "md-suffix",
+          "chars": 1649,
+          "title": "Page Not Found"
+        },
+        "trafilatura": {
+          "ok": true,
+          "status": 403,
+          "final_url": "/platforms/javascript/",
+          "content_type": "text/html; charset=utf-8",
+          "vary": null,
+          "bytes": 33827,
+          "sha256": "5ea4e933c667f7358299f5feb5d1906df2c3623b07e54da86d91b7292b05eb64",
+          "is_markdown": false
+        },
+        "markitdown": {
+          "ok": false,
+          "error": "HTTPError: 403 Client Error: Forbidden for url: https://docs.sentry.io/platforms/javascript/"
+        }
+      }
+    }
+  ]
+}
