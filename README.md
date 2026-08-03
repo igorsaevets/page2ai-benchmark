@@ -5,8 +5,9 @@
 > **v0.2 is the live protocol. The v0.1.0 results remain withdrawn.**
 >
 > Current results: **[RESULTS-v2.md](RESULTS-v2.md)**. Protocol and metric definitions:
-> **[protocol-v2/PROTOCOL.md](protocol-v2/PROTOCOL.md)**. Why v0.1.0 was withdrawn:
-> [RETRACTION-2026-07-25.md](RETRACTION-2026-07-25.md).
+> **[protocol-v2/PROTOCOL.md](protocol-v2/PROTOCOL.md)**. How pages will be selected from v0.3
+> on — the rule that closes the author-chosen-corpus flank: **[CORPUS_SELECTION.md](CORPUS_SELECTION.md)**.
+> Why v0.1.0 was withdrawn: [RETRACTION-2026-07-25.md](RETRACTION-2026-07-25.md).
 >
 > v0.2 splits the thing v0.1.0 got wrong into two tracks. **Conversion**: every tool receives the
 > same cached HTML bytes, fetched once by the harness, so no tool's fetch strategy can influence
