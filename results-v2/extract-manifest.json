@@ -2,8 +2,8 @@
   {
     "slug": "mintlify-anthropic",
     "tool": "page2ai",
-    "bytes": 562,
-    "ms": 29,
+    "bytes": 486,
+    "ms": 46,
     "error": null
   },
   {
@@ -44,8 +44,8 @@
   {
     "slug": "docusaurus",
     "tool": "page2ai",
-    "bytes": 14473,
-    "ms": 10,
+    "bytes": 13617,
+    "ms": 14,
     "error": null
   },
   {
@@ -86,8 +86,8 @@
   {
     "slug": "starlight",
     "tool": "page2ai",
-    "bytes": 6118,
-    "ms": 7,
+    "bytes": 6066,
+    "ms": 12,
     "error": null
   },
   {
@@ -128,8 +128,8 @@
   {
     "slug": "nextra",
     "tool": "page2ai",
-    "bytes": 2026,
-    "ms": 6,
+    "bytes": 1980,
+    "ms": 21,
     "error": null
   },
   {
@@ -170,8 +170,8 @@
   {
     "slug": "fumadocs",
     "tool": "page2ai",
-    "bytes": 5115,
-    "ms": 9,
+    "bytes": 5124,
+    "ms": 20,
     "error": null
   },
   {
@@ -212,8 +212,8 @@
   {
     "slug": "vitepress",
     "tool": "page2ai",
-    "bytes": 7497,
-    "ms": 5,
+    "bytes": 7770,
+    "ms": 15,
     "error": null
   },
   {
@@ -254,8 +254,8 @@
   {
     "slug": "mdn",
     "tool": "page2ai",
-    "bytes": 11223,
-    "ms": 11,
+    "bytes": 11199,
+    "ms": 23,
     "error": null
   },
   {
@@ -296,8 +296,8 @@
   {
     "slug": "tailwind",
     "tool": "page2ai",
-    "bytes": 18812,
-    "ms": 12,
+    "bytes": 18606,
+    "ms": 22,
     "error": null
   },
   {
@@ -338,8 +338,8 @@
   {
     "slug": "svelte",
     "tool": "page2ai",
-    "bytes": 8869,
-    "ms": 4,
+    "bytes": 7711,
+    "ms": 5,
     "error": null
   },
   {
@@ -380,8 +380,8 @@
   {
     "slug": "biome",
     "tool": "page2ai",
-    "bytes": 8116,
-    "ms": 10,
+    "bytes": 8072,
+    "ms": 17,
     "error": null
   },
   {
@@ -422,8 +422,8 @@
   {
     "slug": "python-docs",
     "tool": "page2ai",
-    "bytes": 60757,
-    "ms": 20,
+    "bytes": 62701,
+    "ms": 46,
     "error": null
   },
   {
@@ -464,7 +464,7 @@
   {
     "slug": "rust-book",
     "tool": "page2ai",
-    "bytes": 13286,
+    "bytes": 13222,
     "ms": 3,
     "error": null
   },
@@ -506,8 +506,8 @@
   {
     "slug": "hono",
     "tool": "page2ai",
-    "bytes": 5615,
-    "ms": 8,
+    "bytes": 5652,
+    "ms": 11,
     "error": null
   },
   {
@@ -548,8 +548,8 @@
   {
     "slug": "gitbook-sentry",
     "tool": "page2ai",
-    "bytes": 22012,
-    "ms": 12,
+    "bytes": 22021,
+    "ms": 17,
     "error": null
   },
   {

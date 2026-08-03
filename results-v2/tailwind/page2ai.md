@@ -1,13 +1,13 @@
 ---
 title: "flex - Flexbox & Grid - Tailwind CSS"
 source: "https://tailwindcss.com/docs/flex"
-captured_at: "2026-07-28T13:00:34.086Z"
+captured_at: "2026-08-03T10:58:35.423Z"
 language: "en"
 description: "Utilities for controlling how flex items both grow and shrink."
 canonical: "https://tailwindcss.com/docs/flex"
 og_title: "flex - Flexbox & Grid"
 extractor: "page2ai-core"
-extractor_version: "0.1.0"
+extractor_version: "0.1.5"
 ---
 
 # flex - Flexbox & Grid - Tailwind CSS
@@ -195,7 +195,7 @@ extractor_version: "0.1.0"
 
 ### Filters
 
-- [filter](https://tailwindcss.com/docs/filter) blurbrightnesscontrastdrop-shadowgrayscalehue-rotateinvertsaturatesepia
+- [filter](https://tailwindcss.com/docs/filter)
    - [blur](https://tailwindcss.com/docs/filter-blur)
    - [brightness](https://tailwindcss.com/docs/filter-brightness)
    - [contrast](https://tailwindcss.com/docs/filter-contrast)
@@ -205,7 +205,7 @@ extractor_version: "0.1.0"
    - [invert](https://tailwindcss.com/docs/filter-invert)
    - [saturate](https://tailwindcss.com/docs/filter-saturate)
    - [sepia](https://tailwindcss.com/docs/filter-sepia)
-- [backdrop-filter](https://tailwindcss.com/docs/backdrop-filter) blurbrightnesscontrastgrayscalehue-rotateinvertopacitysaturatesepia
+- [backdrop-filter](https://tailwindcss.com/docs/backdrop-filter)
    - [blur](https://tailwindcss.com/docs/backdrop-filter-blur)
    - [brightness](https://tailwindcss.com/docs/backdrop-filter-brightness)
    - [contrast](https://tailwindcss.com/docs/backdrop-filter-contrast)
@@ -361,7 +361,7 @@ Learn more about using variants in the [variants documentation](https://tailwind
 ### On this page
 
 - [Quick reference](https://tailwindcss.com/docs/flex#quick-reference)
-- [Examples](https://tailwindcss.com/docs/flex#examples) Basic exampleInitialAutoNoneUsing a custom valueResponsive design
+- [Examples](https://tailwindcss.com/docs/flex#examples)
    - [Basic example](https://tailwindcss.com/docs/flex#basic-example)
    - [Initial](https://tailwindcss.com/docs/flex#initial)
    - [Auto](https://tailwindcss.com/docs/flex#auto)

@@ -1,15 +1,16 @@
 ---
-title: "Browser JavaScript | Sentry for JavaScript"
+title: "Browser JavaScript"
 source: "https://docs.sentry.io/platforms/javascript/"
-captured_at: "2026-07-28T13:00:51.267Z"
+captured_at: "2026-08-03T10:58:35.538Z"
 language: "en"
 description: "Learn how to manually set up Sentry in your JavaScript app and capture your first errors."
 canonical: "https://docs.sentry.io/platforms/javascript/"
+og_title: "Browser JavaScript | Sentry for JavaScript"
 extractor: "page2ai-core"
-extractor_version: "0.1.0"
+extractor_version: "0.1.5"
 ---
 
-# Browser JavaScript | Sentry for JavaScript
+# Browser JavaScript
 
 - [Home](https://docs.sentry.io/)
 - [Platforms](https://docs.sentry.io/platforms/)
@@ -501,8 +502,8 @@ Now ' s a good time to customize your setup and look into more advanced topics. 
 - Get familiar with [Sentry ' s product features](https://docs.sentry.io/product/) like tracing, insights, and alerts
 - Find various support topics in [troubleshooting](https://docs.sentry.io/platforms/javascript/troubleshooting/)
 - [Get support](https://www.sentry.help/en/)
-[PreviousWelcome to Sentry](https://docs.sentry.io/)
-[NextInstallation Methods](https://docs.sentry.io/platforms/javascript/install/)
+[Previous Welcome to Sentry](https://docs.sentry.io/)
+[Next Installation Methods](https://docs.sentry.io/platforms/javascript/install/)
 
 [How to contribute](https://docs.sentry.io/contributing/)
 [Edit this page](https://github.com/getsentry/sentry-docs/edit/master/docs/platforms/javascript/common/index.mdx)

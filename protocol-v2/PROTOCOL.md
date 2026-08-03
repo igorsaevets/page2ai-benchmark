@@ -296,6 +296,64 @@ benchmark has not been mentioned in that repository. Recorded here because a con
 later is exactly the kind that goes undeclared, and because the scoring is reproducible offline by
 anyone: the disclosure is about the prose, not the figures.
 
+**Amendment 7, 2026-08-03, pre-registered before any v0.3 score exists.** This delivers the fix
+that Amendment 4's warning called for: the substring matchers for prose, headings and boilerplate
+now operate on a copy of the output in which markdown **link and image targets** are stripped —
+`[text](url)` becomes `text` — before `squeeze()`. Two measured defects of matching on raw
+markdown motivate it, and they point in opposite directions, which is why the fix is a
+normalisation and not a tuning:
+
+- *False misses.* A link inside a sentence injects its URL into the squeezed stream, so the
+  ground-truth string `check the best docusaurus sites for inspiration` cannot match
+  `check the [best Docusaurus sites](https://docusaurus.io/showcase) for inspiration` — the URL
+  characters sit in the middle of it. Measured on the committed v0.2 outputs, micro-averaged over
+  all 471 ground-truth paragraphs: text recall rises for **every** tool when targets are
+  stripped — page2ai 0.696→0.992, readability-turndown 0.667→0.966, defuddle-turndown
+  0.652→0.881, trafilatura 0.660→0.777. The published "no extractor recalls more than 77% of
+  article prose" was a property of the probe, not of the tools, and is corrected in RESULTS-v2.md.
+- *False hits.* A URL slug squeezes into words: `.../guides/project-structure/` contains
+  `project structure`, which matched a sidebar string on starlight and counted as boilerplate
+  leakage in output that never rendered that text. Leak drops for every tool under the stripped
+  matcher (page2ai 0.032→0.016, readability 0.027→0.011, defuddle 0.146→0.132, trafilatura
+  0.111→0.100, same micro-average).
+
+What is deliberately NOT stripped: bare URLs in running text and `<autolink>` forms (they are
+visible text a reader sees), and the YAML frontmatter block (only the author's tool emits
+frontmatter, so excluding it from matching would only ever help the author's tool — the title
+suffix leaks it caused were fixed in the tool instead). Code matching via `stripWs` is unchanged.
+
+**The hiding channel this creates, named and closed.** Stripping targets opens an adversarial
+move: a tool could park leaked chrome text inside a link target — `[x](leaked sidebar text)` —
+where the leak matcher would never look. The reviewer panel raised it and the safeguard is in
+`lib.mjs`: a target is stripped only when it is URL-shaped (scheme, path, fragment, query, or a
+host-like token); free text in target position is KEPT in the matched stream. A real URL slug
+still strips, which is the vacuous-match fix; hidden prose does not.
+
+Three more panel objections, answered rather than absorbed silently:
+
+- *"This is still retroactive metric selection — you chose the normalisation after seeing the
+  realized deltas."* Correct, and unavoidable: an artifact is only ever discovered by seeing
+  it. The mitigations are the symmetric four-tool table above (every tool rises), the fact that
+  the RAW matcher's columns continue to be published beside the stripped ones in every future
+  version — the raw column is the standing sentinel a reader can always fall back to — and the
+  ordering: this amendment is committed before any v0.3 score exists.
+- *"The stripping needs a normative spec — nested brackets, image titles, escapes."* The
+  normative definition is the `stripLinkTargets` function in `protocol-v2/lib.mjs`, committed
+  with this amendment — the same code-is-the-spec device the corpus rule uses for its page walk.
+  Where this prose and that function disagree, the function governs.
+- *"Recall saturates near 1.0 under the stripped matcher, making the benchmark less
+  discriminative."* Also true, and it is the honest reading: on THIS corpus, prose recall no
+  longer separates the leading tools; leakage, code fencing, structure and the shell-page
+  behavior do. A metric that separated tools by their link syntax was not discriminating —
+  it was misattributing.
+
+v0.2 figures as published are UNCHANGED; `scores.json` carries the stripped-matcher values beside
+them under a `_lt` suffix. From v0.3 on, the stripped matcher is the primary one. Disclosure: the
+author's tool also shipped extraction fixes the same day this amendment was written; the amendment
+stands on the symmetric four-tool table above, and the tool's changes are reported separately in
+RESULTS-v2.md. The "replace exact-substring probes with an alignment measure" item stays open —
+this removes the measured artifact, not the exact-substring design.
+
 ## Reproduction
 
 ```bash

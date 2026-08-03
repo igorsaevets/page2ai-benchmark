@@ -1,15 +1,16 @@
 ---
-title: "Introduction | Nextra"
+title: "Introduction"
 source: "https://nextra.site/docs"
-captured_at: "2026-07-28T13:00:24.141Z"
+captured_at: "2026-08-03T10:58:35.336Z"
 language: "en"
 description: "Nextra is a framework built on top of Next.js that enables the creation of content-focused websites. It combines the robust features of Next.js with enhanced capabilities for crafting Markdown-based content."
 canonical: "https://nextra.site/docs"
+og_title: "Introduction | Nextra"
 extractor: "page2ai-core"
-extractor_version: "0.1.0"
+extractor_version: "0.1.5"
 ---
 
-# Introduction | Nextra
+# Introduction
 
 # Introduction
 
@@ -40,4 +41,3 @@ The Nextra FAQ is a collection of useful questions and answers about the project
 
 [Sandpack](https://sandpack.codesandbox.io/)
 [react-live](https://github.com/FormidableLabs/react-live)
-[File Conventions](https://nextra.site/docs/file-conventions)

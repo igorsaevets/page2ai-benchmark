@@ -1,0 +1,95 @@
+# CORPUS_SELECTION.md section 1: the candidate-pool capture runs in PUBLIC CI so the
+# authoritative timestamp is this run's, not a local machine's. The rule (commit 1adb4c4,
+# 2026-08-03) binds the capture to the first UTC day after that commit: 2026-08-04 UTC.
+# This workflow file was committed the day after the rule and before any capture ran.
+#
+# The job does NOT commit the pool. Section 2 requires the pool snapshot and the inclusion log
+# to land in one atomic commit, and the inclusion decisions are written against the published
+# F1 taxonomy after the pool exists - so the capture is published here as a run artifact with
+# hashes in the job summary, and the author's next commit adds pool + log together, citing
+# this run's id. Anyone can compare the committed pool bytes against this run's artifact.
+#
+# Anti-cherry-picking covenant (reviewer-raised): search results fluctuate, so re-dispatching
+# the workflow and committing the friendliest pool would be an exploit. The FIRST successful
+# run on 2026-08-04 UTC is the authoritative one; later runs are void for selection. The run
+# list of this workflow is public, so a commit citing anything but the first successful run is
+# itself the evidence of the exploit. Artifacts expire (90-day GitHub cap), but the pool BYTES
+# are committed verbatim per section 1 - the artifact is a verification window, not the record.
+
+name: corpus-pool-capture
+
+on:
+  schedule:
+    - cron: "23 0 4 8 *" # 2026-08-04T00:23 UTC (yearly refire is disarmed by the date guard)
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+# One capture at a time: parallel dispatches would multiply run ids and make cherry-picking
+# easier to hide in the noise (reviewer-raised).
+concurrency:
+  group: corpus-pool-capture
+  cancel-in-progress: false
+
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Guards - not early, default branch only
+        run: |
+          TODAY=$(date -u +%F)
+          echo "UTC today: $TODAY  ref: ${{ github.ref }}"
+          if [[ "$TODAY" < "2026-08-04" ]]; then
+            echo "::error::CORPUS_SELECTION.md section 1 binds the capture to 2026-08-04 UTC or later; refusing to run early."
+            exit 1
+          fi
+          # workflow_dispatch accepts an arbitrary ref, which would let modified capture code on
+          # a side branch produce an official-looking run id (reviewer-raised). Master only.
+          if [[ "${{ github.ref }}" != "refs/heads/master" ]]; then
+            echo "::error::capture must run from refs/heads/master, got ${{ github.ref }}"
+            exit 1
+          fi
+          if [[ "${{ github.event_name }}" == "schedule" && "$TODAY" != "2026-08-04" ]]; then
+            echo "Yearly cron refire on $TODAY - nothing to do."
+            echo "SKIP=1" >> "$GITHUB_ENV"
+          fi
+
+      # Pinned to full commit SHAs: an integrity-sensitive capture path must not depend on
+      # mutable tags (reviewer-raised). SHAs resolved from the v4 tags on 2026-08-03.
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        if: env.SKIP != '1'
+
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        if: env.SKIP != '1'
+        with:
+          node-version: 22
+
+      - name: Capture the four pool sources
+        if: env.SKIP != '1'
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node corpus-selection/capture-pool.mjs
+
+      - name: Hashes into the job summary
+        if: env.SKIP != '1'
+        run: |
+          {
+            echo "## Pool capture $(date -u +%FT%TZ)"
+            echo '```'
+            (cd corpus-selection/capture-out && find . -type f -print0 | xargs -0 sha256sum)
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Publish capture as artifact
+        if: env.SKIP != '1'
+        id: artifact
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: corpus-pool-${{ github.run_id }}
+          path: corpus-selection/capture-out/
+          retention-days: 90
+
+      - name: Record artifact digest (survives the 90-day artifact expiry in this run's log)
+        if: env.SKIP != '1'
+        run: echo "artifact sha256 digest: ${{ steps.artifact.outputs.digest }}" >> "$GITHUB_STEP_SUMMARY"

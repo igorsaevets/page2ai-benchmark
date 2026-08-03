@@ -1,14 +1,14 @@
 ---
-title: "Storing Lists of Values with Vectors - The Rust Programming Language"
+title: "Storing Lists of Values with Vectors"
 source: "https://doc.rust-lang.org/book/ch08-01-vectors.html"
-captured_at: "2026-07-28T13:00:46.180Z"
+captured_at: "2026-08-03T10:58:35.507Z"
 language: "en"
 canonical: "https://doc.rust-lang.org/book/ch08-01-vectors.html"
 extractor: "page2ai-core"
-extractor_version: "0.1.0"
+extractor_version: "0.1.5"
 ---
 
-# Storing Lists of Values with Vectors - The Rust Programming Language
+# Storing Lists of Values with Vectors
 
 ## [Storing Lists of Values with Vectors](https://doc.rust-lang.org/book/ch08-01-vectors.html#storing-lists-of-values-with-vectors)
 

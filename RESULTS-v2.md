@@ -198,3 +198,38 @@ favour. Reported rather than repaired, for the same reason as prose recall.
 **JavaScript.** Every tool sees the server-rendered HTML the harness received. One page in fourteen
 carries no article there at all. No tool in this table executes JavaScript, so that page is a fair
 test of nothing except how each tool fails when there is nothing to extract.
+
+---
+
+## Update, 2026-08-03: Amendment 7, and a page2ai re-run at 0.1.5
+
+Two changes landed together and are reported separately so neither hides behind the other. Both
+were reviewed by a four-arm adversarial model panel before this commit; what the panel changed is
+recorded in PROTOCOL.md Amendment 7 and in the code comments it touched.
+
+**1. The prose-recall warning above is now resolved, and the 77% sentence is corrected.**
+Amendment 7 strips markdown link/image TARGETS (`[text](url)` → `text`) before the substring
+matchers run. Measured on the committed v0.2 outputs, micro-averaged over all 471 ground-truth
+paragraphs, text recall rises for **every** tool: page2ai 0.696→0.992, readability-turndown
+0.667→0.966, defuddle-turndown 0.652→0.881, trafilatura 0.660→0.777. **"No extractor recalls more
+than 77% of the article body" was a property of the probe, not of the tools** — the missing
+quarter was largely URLs interrupting sentences — and the sentence is corrected here rather than
+silently rewritten above. Boilerplate leakage also falls for every tool under the stripped
+matcher, because URL slugs no longer produce vacuous matches against navigation strings.
+`scores.json` now carries both matchers side by side (`_lt` suffix); the v0.2 primary columns are
+UNCHANGED and were verified byte-identical on a re-run before anything else moved. The
+hiding-channel this normalisation could open, and the safeguard that closes it, are named in the
+amendment.
+
+**2. `@page2ai/core` 0.1.5 re-ran on the same corpus; only its rows moved.** The other tools'
+outputs are byte-identical to the original run — their versions are pinned by the committed
+bytes and were not re-executed. Under the ORIGINAL v0.2 matcher: `f_score` 0.887→**0.916**,
+boilerplate leak 0.069→**0.024**, fence language labels 0.417→**0.822**, `rust-book`
+0.667→**1.000** (its 50% "leak" was the site name inside `<title>`, now stripped on evidence),
+python-docs code fencing 0.875→1.0 (Sphinx examples inside `<li>` were flattened unfenced).
+A per-line audit of all fourteen output diffs is clean: the only content line removed anywhere is
+one sidebar link on nextra that both parsers place outside `<main>` (Nextra 4's served HTML
+produces inconsistent trees in linkedom — `<main>` and the article overlap as siblings — recorded
+as a known parser divergence, not repaired blind). trafilatura remains the cleaner extractor on
+the article-only population; the gap narrowed, and that comparison should be re-read under both
+matchers in `scores.json` rather than from the prose above.

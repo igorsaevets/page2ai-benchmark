@@ -1,15 +1,15 @@
 ---
-title: "Getting Started - Hono"
+title: "Getting Started"
 source: "https://hono.dev/docs/getting-started/basic"
-captured_at: "2026-07-28T13:00:48.156Z"
+captured_at: "2026-08-03T10:58:35.519Z"
 language: "en-US"
 description: "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
 canonical: "https://hono.dev/docs/getting-started/basic"
 extractor: "page2ai-core"
-extractor_version: "0.1.0"
+extractor_version: "0.1.5"
 ---
 
-# Getting Started - Hono
+# Getting Started
 
 # Getting Started [​](https://hono.dev/docs/getting-started/basic#getting-started)
 
@@ -19,23 +19,23 @@ Using Hono is super easy. We can set up the project, write code, develop with a 
 
 Starter templates are available for each platform. Use the following " create-hono " command.
 
-```
+```sh
 npm create hono@latest my-app
 ```
 
-```
+```sh
 yarn create hono my-app
 ```
 
-```
+```sh
 pnpm create hono@latest my-app
 ```
 
-```
+```sh
 bun create hono@latest my-app
 ```
 
-```
+```sh
 deno init --npm hono@latest my-app
 ```
 
@@ -56,41 +56,41 @@ Then you will be asked which template you would like to use. Let ' s select Clou
 
 The template will be pulled into `my-app` , so go to it and install the dependencies.
 
-```
+```sh
 cd my-app
 npm i
 ```
 
-```
+```sh
 cd my-app
 yarn
 ```
 
-```
+```sh
 cd my-app
 pnpm i
 ```
 
-```
+```sh
 cd my-app
 bun i
 ```
 
 Once the package installation is complete, run the following command to start up a local server.
 
-```
+```sh
 npm run dev
 ```
 
-```
+```sh
 yarn dev
 ```
 
-```
+```sh
 pnpm dev
 ```
 
-```
+```sh
 bun run dev
 ```
 
@@ -102,7 +102,7 @@ Write your first application with Hono in `src/index.ts` . The example below is 
 
 The `import` and the final `export default` parts may vary from runtime to runtime, but all of the application code will run the same code everywhere.
 
-```
+```ts
 import { Hono } from 'hono'
 
 const app = new Hono()
@@ -116,19 +116,19 @@ export default app
 
 Start the development server and access `http://localhost:8787` with your browser.
 
-```
+```sh
 npm run dev
 ```
 
-```
+```sh
 yarn dev
 ```
 
-```
+```sh
 pnpm dev
 ```
 
-```
+```sh
 bun run dev
 ```
 
@@ -136,7 +136,7 @@ bun run dev
 
 Returning JSON is also easy. The following is an example of handling a GET Request to `/api/hello` and returning an `application/json` Response.
 
-```
+```ts
 app.get('/api/hello', (c) => {
   return c.json({
     ok: true,
@@ -149,7 +149,7 @@ app.get('/api/hello', (c) => {
 
 Getting a path parameter, URL query value, and appending a Response header is written as follows.
 
-```
+```ts
 app.get('/posts/:id', (c) => {
   const page = c.req.query('page')
   const id = c.req.param('id')
@@ -160,7 +160,7 @@ app.get('/posts/:id', (c) => {
 
 We can easily handle POST, PUT, and DELETE not only GET.
 
-```
+```ts
 app.post('/posts', (c) => c.text('Created!', 201))
 app.delete('/posts/:id', (c) =>
   c.text(`${c.req.param('id')} is deleted!`)
@@ -171,7 +171,7 @@ app.delete('/posts/:id', (c) =>
 
 You can write HTML with [the html Helper](https://hono.dev/docs/helpers/html) or using [JSX](https://hono.dev/docs/guides/jsx) syntax. If you want to use JSX, rename the file to `src/index.tsx` and configure it (check with each runtime as it is different). Below is an example using JSX.
 
-```
+```tsx
 const View = () => {
   return (
     <html>
@@ -191,7 +191,7 @@ app.get('/page', (c) => {
 
 You can also return the raw [Response](https://developer.mozilla.org/en-US/docs/Web/API/Response) .
 
-```
+```ts
 app.get('/', () => {
   return new Response('Good morning!')
 })
@@ -201,7 +201,7 @@ app.get('/', () => {
 
 Middleware can do the hard work for you. For example, add in Basic Authentication.
 
-```
+```ts
 import { basicAuth } from 'hono/basic-auth'
 
 // ...
@@ -225,7 +225,7 @@ There are useful built-in middleware including Bearer and authentication using J
 
 There are Adapters for platform-dependent functions, e.g., handling static files or WebSocket. For example, to handle WebSocket in Cloudflare Workers, import `hono/cloudflare-workers` .
 
-```
+```ts
 import { upgradeWebSocket } from 'hono/cloudflare-workers'
 
 app.get(

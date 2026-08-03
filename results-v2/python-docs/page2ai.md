@@ -1,36 +1,35 @@
 ---
-title: "Coroutines and tasks — Python 3.14.6 documentation"
+title: "Coroutines and tasks"
 source: "https://docs.python.org/3/library/asyncio-task.html"
-captured_at: "2026-07-28T13:00:41.551Z"
+captured_at: "2026-08-03T10:58:35.496Z"
 language: "en"
 description: "This section outlines high-level asyncio APIs to work with coroutines and Tasks. Coroutines, Awaitables, Creating tasks, Task cancellation, Task groups, Sleeping, Running tasks concurrently, Eager ..."
 canonical: "https://docs.python.org/3/library/asyncio-task.html"
-og_title: "Coroutines and tasks"
 extractor: "page2ai-core"
-extractor_version: "0.1.0"
+extractor_version: "0.1.5"
 ---
 
-# Coroutines and tasks — Python 3.14.6 documentation
+# Coroutines and tasks
 
 # Coroutines and tasks [¶](https://docs.python.org/3/library/asyncio-task.html#coroutines-and-tasks)
 
 This section outlines high-level asyncio APIs to work with coroutines and Tasks.
 
-- Coroutines
-- Awaitables
-- Creating tasks
-- Task cancellation
-- Task groups
-- Sleeping
-- Running tasks concurrently
-- Eager task factory
-- Shielding from cancellation
-- Timeouts
-- Waiting primitives
-- Running in threads
-- Scheduling from other threads
-- Introspection
-- Task object
+- [Coroutines](https://docs.python.org/3/library/asyncio-task.html#coroutines)
+- [Awaitables](https://docs.python.org/3/library/asyncio-task.html#awaitables)
+- [Creating tasks](https://docs.python.org/3/library/asyncio-task.html#creating-tasks)
+- [Task cancellation](https://docs.python.org/3/library/asyncio-task.html#task-cancellation)
+- [Task groups](https://docs.python.org/3/library/asyncio-task.html#task-groups)
+- [Sleeping](https://docs.python.org/3/library/asyncio-task.html#sleeping)
+- [Running tasks concurrently](https://docs.python.org/3/library/asyncio-task.html#running-tasks-concurrently)
+- [Eager task factory](https://docs.python.org/3/library/asyncio-task.html#eager-task-factory)
+- [Shielding from cancellation](https://docs.python.org/3/library/asyncio-task.html#shielding-from-cancellation)
+- [Timeouts](https://docs.python.org/3/library/asyncio-task.html#timeouts)
+- [Waiting primitives](https://docs.python.org/3/library/asyncio-task.html#waiting-primitives)
+- [Running in threads](https://docs.python.org/3/library/asyncio-task.html#running-in-threads)
+- [Scheduling from other threads](https://docs.python.org/3/library/asyncio-task.html#scheduling-from-other-threads)
+- [Introspection](https://docs.python.org/3/library/asyncio-task.html#introspection)
+- [Task object](https://docs.python.org/3/library/asyncio-task.html#task-object)
 
 ## [Coroutines](https://docs.python.org/3/library/asyncio-task.html#id2) [¶](https://docs.python.org/3/library/asyncio-task.html#coroutines)
 
@@ -40,7 +39,7 @@ This section outlines high-level asyncio APIs to work with coroutines and Tasks.
 
 [Coroutines](https://docs.python.org/3/glossary.html#term-coroutine) declared with the async/await syntax is the preferred way of writing asyncio applications. For example, the following snippet of code prints “hello”, waits 1 second, and then prints “world”:
 
-```
+```python
 >>> import asyncio
 
 >>> async def main():
@@ -55,17 +54,95 @@ world
 
 Note that simply calling a coroutine will not schedule it to be executed:
 
-```
+```python
 >>> main()
 <coroutine object main at 0x1053bb7c8>
 ```
 
 To actually run a coroutine, asyncio provides the following mechanisms:
 
-- The asyncio.run() function to run the top-level entry point “main()” function (see the above example.)
-- Awaiting on a coroutine. The following snippet of code will print “hello” after waiting for 1 second, and then print “world” after waiting for another 2 seconds: import asyncio import time async def say_after(delay, what): await asyncio.sleep(delay) print(what) async def main(): print(f"started at {time.strftime('%X')}") await say_after(1, 'hello') await say_after(2, 'world') print(f"finished at {time.strftime('%X')}") asyncio.run(main()) Expected output: started at 17:13:52 hello world finished at 17:13:55
-- The asyncio.create_task() function to run coroutines concurrently as asyncio Tasks. Let’s modify the above example and run two say_after coroutines concurrently: async def main(): task1 = asyncio.create_task( say_after(1, 'hello')) task2 = asyncio.create_task( say_after(2, 'world')) print(f"started at {time.strftime('%X')}") # Wait until both tasks are completed (should take # around 2 seconds.) await task1 await task2 print(f"finished at {time.strftime('%X')}") Note that expected output now shows that the snippet runs 1 second faster than before: started at 17:14:32 hello world finished at 17:14:34
-- The asyncio.TaskGroup class provides a more modern alternative to create_task(). Using this API, the last example becomes: async def main(): async with asyncio.TaskGroup() as tg: task1 = tg.create_task( say_after(1, 'hello')) task2 = tg.create_task( say_after(2, 'world')) print(f"started at {time.strftime('%X')}") # The await is implicit when the context manager exits. print(f"finished at {time.strftime('%X')}") The timing and output should be the same as for the previous version. Added in version 3.11: asyncio.TaskGroup.
+- The [\`asyncio.run()\`](https://docs.python.org/3/library/asyncio-runner.html#asyncio.run) function to run the top-level entry point “main()” function (see the above example.)
+- Awaiting on a coroutine. The following snippet of code will print “hello” after waiting for 1 second, and then print “world” after waiting for *another* 2 seconds:
+
+```python
+import asyncio
+import time
+
+async def say_after(delay, what):
+    await asyncio.sleep(delay)
+    print(what)
+
+async def main():
+    print(f"started at {time.strftime('%X')}")
+
+    await say_after(1, 'hello')
+    await say_after(2, 'world')
+
+    print(f"finished at {time.strftime('%X')}")
+
+asyncio.run(main())
+```
+
+   Expected output:
+
+```python
+started at 17:13:52
+hello
+world
+finished at 17:13:55
+```
+
+- The [\`asyncio.create\_task()\`](https://docs.python.org/3/library/asyncio-task.html#asyncio.create_task) function to run coroutines concurrently as asyncio [\`Tasks\`](https://docs.python.org/3/library/asyncio-task.html#asyncio.Task) .
+   Let’s modify the above example and run two `say_after` coroutines *concurrently* :
+
+```python
+async def main():
+    task1 = asyncio.create_task(
+        say_after(1, 'hello'))
+
+    task2 = asyncio.create_task(
+        say_after(2, 'world'))
+
+    print(f"started at {time.strftime('%X')}")
+
+    # Wait until both tasks are completed (should take
+    # around 2 seconds.)
+    await task1
+    await task2
+
+    print(f"finished at {time.strftime('%X')}")
+```
+
+   Note that expected output now shows that the snippet runs 1 second faster than before:
+
+```python
+started at 17:14:32
+hello
+world
+finished at 17:14:34
+```
+
+- The [\`asyncio.TaskGroup\`](https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup) class provides a more modern alternative to [\`create\_task()\`](https://docs.python.org/3/library/asyncio-task.html#asyncio.create_task) . Using this API, the last example becomes:
+
+```python
+async def main():
+    async with asyncio.TaskGroup() as tg:
+        task1 = tg.create_task(
+            say_after(1, 'hello'))
+
+        task2 = tg.create_task(
+            say_after(2, 'world'))
+
+        print(f"started at {time.strftime('%X')}")
+
+    # The await is implicit when the context manager exits.
+
+    print(f"finished at {time.strftime('%X')}")
+```
+
+   The timing and output should be the same as for the previous version.
+
+Added in version 3.11: [\`asyncio.TaskGroup\`](https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup) .
 
 ## [Awaitables](https://docs.python.org/3/library/asyncio-task.html#id3) [¶](https://docs.python.org/3/library/asyncio-task.html#awaitables)
 
@@ -77,7 +154,7 @@ Coroutines
 
 Python coroutines are *awaitables* and therefore can be awaited from other coroutines:
 
-```
+```python
 import asyncio
 
 async def nested():
@@ -99,8 +176,8 @@ Important
 
 In this documentation the term “coroutine” can be used for two closely related concepts:
 
-- a coroutine function: an async def function;
-- a coroutine object: an object returned by calling a coroutine function.
+- a *coroutine function* : an [\`async def\`](https://docs.python.org/3/reference/compound_stmts.html#async-def) function;
+- a *coroutine object* : an object returned by calling a *coroutine function* .
 
 Tasks
 
@@ -108,7 +185,7 @@ Tasks
 
 When a coroutine is wrapped into a *Task* with functions like [\`asyncio.create\_task()\`](https://docs.python.org/3/library/asyncio-task.html#asyncio.create_task) the coroutine is automatically scheduled to run soon:
 
-```
+```python
 import asyncio
 
 async def nested():
@@ -138,7 +215,7 @@ Normally **there is no need** to create Future objects at the application level 
 
 Future objects, sometimes exposed by libraries and some asyncio APIs, can be awaited:
 
-```
+```python
 async def main():
     await function_that_returns_a_future_object()
 
@@ -177,7 +254,7 @@ Important
 
 Save a reference to the result of this function, to avoid a task disappearing mid-execution. The event loop only keeps weak references to tasks. A task that isn’t referenced elsewhere may get garbage collected at any time, even before it’s done. For reliable “fire-and-forget” background tasks, gather them in a collection:
 
-```
+```python
 background_tasks = set()
 
 for i in range(10):
@@ -228,7 +305,7 @@ Changed in version 3.14: Passes on all *kwargs* to [\`loop.create\_task()\`](htt
 
 Example:
 
-```
+```python
 async def main():
     async with asyncio.TaskGroup() as tg:
         task1 = tg.create_task(some_coro(...))
@@ -258,7 +335,7 @@ Changed in version 3.13: Improved handling of simultaneous internal and external
 
 While terminating a task group is not natively supported by the standard library, termination can be achieved by adding an exception-raising task to the task group and ignoring the raised exception:
 
-```
+```python
 import asyncio
 from asyncio import TaskGroup
 
@@ -292,7 +369,7 @@ asyncio.run(main())
 
 Expected output:
 
-```
+```text
 Task 1: start
 Task 2: start
 Task 1: done
@@ -312,7 +389,7 @@ Setting the delay to 0 provides an optimized path to allow other tasks to run. T
 
 Example of coroutine displaying the current date every second for 5 seconds:
 
-```
+```python
 import asyncio
 import datetime as dt
 
@@ -356,7 +433,7 @@ A new alternative to create and run tasks concurrently and wait for their comple
 
 Example:
 
-```
+```python
 import asyncio
 
 async def factorial(name, number):
@@ -439,14 +516,14 @@ If *aw* is a coroutine it is automatically scheduled as a Task.
 
 The statement:
 
-```
+```python
 task = asyncio.create_task(something())
 res = await shield(task)
 ```
 
 is equivalent to:
 
-```
+```python
 res = await something()
 ```
 
@@ -456,7 +533,7 @@ If `something()` is cancelled by other means (i.e. from within itself) that woul
 
 If it is desired to completely ignore cancellation (not recommended) the `shield()` function should be combined with a try/except clause, as follows:
 
-```
+```python
 task = asyncio.create_task(something())
 try:
     res = await shield(task)
@@ -484,7 +561,7 @@ In either case, the context manager can be rescheduled after creation using [\`T
 
 Example:
 
-```
+```python
 async def main():
     async with asyncio.timeout(10):
         await long_running_task()
@@ -498,7 +575,7 @@ The [\`asyncio.timeout()\`](https://docs.python.org/3/library/asyncio-task.html#
 
 Example of catching [\`TimeoutError\`](https://docs.python.org/3/library/exceptions.html#TimeoutError) :
 
-```
+```python
 async def main():
     try:
         async with asyncio.timeout(10):
@@ -519,8 +596,8 @@ Prefer using [\`asyncio.timeout()\`](https://docs.python.org/3/library/asyncio-t
 
 `when` should be an absolute time at which the context should time out, as measured by the event loop’s clock:
 
-- If when is None, the timeout will never trigger.
-- If when < loop.time(), the timeout will trigger on the next iteration of the event loop.
+- If `when` is `None` , the timeout will never trigger.
+- If `when < loop.time()` , the timeout will trigger on the next iteration of the event loop.
 
 > [float](https://docs.python.org/3/library/functions.html#float)
 > [None](https://docs.python.org/3/library/constants.html#None)
@@ -541,7 +618,7 @@ Prefer using [\`asyncio.timeout()\`](https://docs.python.org/3/library/asyncio-t
 
 Example:
 
-```
+```python
 async def main():
     try:
         # We do not know the timeout when starting, so we pass ``None``.
@@ -568,7 +645,7 @@ Similar to [\`asyncio.timeout()\`](https://docs.python.org/3/library/asyncio-tas
 
 Example:
 
-```
+```python
 async def main():
     loop = get_running_loop()
     deadline = loop.time() + 20
@@ -601,7 +678,7 @@ If the wait is cancelled, the future *aw* is also cancelled.
 
 Example:
 
-```
+```python
 async def eternity():
     # Sleep for one hour
     await asyncio.sleep(3600)
@@ -639,7 +716,7 @@ Returns two sets of Tasks/Futures: `(done, pending)` .
 
 Usage:
 
-```
+```python
 done, pending = await asyncio.wait(aws)
 ```
 
@@ -671,7 +748,7 @@ Run [awaitable objects](https://docs.python.org/3/library/asyncio-task.html#asyn
 
 The object returned by `as_completed()` can be iterated as an [asynchronous iterator](https://docs.python.org/3/glossary.html#term-asynchronous-iterator) or a plain [iterator](https://docs.python.org/3/glossary.html#term-iterator) . When asynchronous iteration is used, the originally-supplied awaitables are yielded if they are tasks or futures. This makes it easy to correlate previously-scheduled tasks with their results. Example:
 
-```
+```python
 ipv4_connect = create_task(open_connection("127.0.0.1", 80))
 ipv6_connect = create_task(open_connection("::1", 80))
 tasks = [ipv4_connect, ipv6_connect]
@@ -691,7 +768,7 @@ During asynchronous iteration, implicitly-created tasks will be yielded for supp
 
 When used as a plain iterator, each iteration yields a new coroutine that returns the result or raises the exception of the next completed awaitable. This pattern is compatible with Python versions older than 3.13:
 
-```
+```python
 ipv4_connect = create_task(open_connection("127.0.0.1", 80))
 ipv6_connect = create_task(open_connection("::1", 80))
 tasks = [ipv4_connect, ipv6_connect]
@@ -727,7 +804,7 @@ Return a coroutine that can be awaited to get the eventual result of *func* .
 
 This coroutine function is primarily intended to be used for executing IO-bound functions/methods that would otherwise block the event loop if they were run in the main thread. For example:
 
-```
+```python
 def blocking_io():
     print(f"start blocking_io at {time.strftime('%X')}")
     # Note that time.sleep() can be replaced with any blocking
@@ -772,7 +849,7 @@ Return a [\`concurrent.futures.Future\`](https://docs.python.org/3/library/concu
 
 This function is meant to be called from a different OS thread than the one where the event loop is running. Example:
 
-```
+```python
 def in_thread(loop: asyncio.AbstractEventLoop) -> None:
     # Run some blocking IO
     pathlib.Path("example.txt").write_text("hello world", encoding="utf8")
@@ -796,7 +873,7 @@ async def amain() -> None:
 
 It’s also possible to run the other way around. Example:
 
-```
+```python
 @contextlib.contextmanager
 def loop_in_thread() -> Generator[asyncio.AbstractEventLoop]:
     loop_fut = concurrent.futures.Future[asyncio.AbstractEventLoop]()
@@ -832,7 +909,7 @@ with loop_in_thread() as loop:
 
 If an exception is raised in the coroutine, the returned Future will be notified. It can also be used to cancel the task in the event loop:
 
-```
+```python
 try:
     result = future.result(timeout)
 except TimeoutError:
@@ -1024,7 +1101,7 @@ Changed in version 3.11: The `msg` parameter is propagated from cancelled task t
 
 The following example illustrates how coroutines can intercept the cancellation request:
 
-```
+```python
 async def cancel_me():
     print('cancel_me(): before sleep')
 
@@ -1078,7 +1155,7 @@ Added in version 3.11.
 
 This method is used by asyncio’s internals and isn’t expected to be used by end-user code. In particular, if a Task gets successfully uncancelled, this allows for elements of structured concurrency like [Task groups](https://docs.python.org/3/library/asyncio-task.html#taskgroups) and [\`asyncio.timeout()\`](https://docs.python.org/3/library/asyncio-task.html#asyncio.timeout) to continue running, isolating cancellation to the respective structured block. For example:
 
-```
+```python
 async def make_request_with_timeout():
     try:
         async with asyncio.timeout(1):

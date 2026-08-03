@@ -1,15 +1,15 @@
 ---
-title: "Window: fetch() method - Web APIs | MDN"
+title: "Window: fetch() method"
 source: "https://developer.mozilla.org/en-US/docs/Web/API/Window/fetch"
-captured_at: "2026-07-28T13:00:31.564Z"
+captured_at: "2026-08-03T10:58:35.401Z"
 language: "en-US"
 description: "The fetch() method of the Window interface starts the process of fetching a resource from the network, returning a promise that is fulfilled once the response is available."
 canonical: "https://developer.mozilla.org/en-US/docs/Web/API/Window/fetch"
 extractor: "page2ai-core"
-extractor_version: "0.1.0"
+extractor_version: "0.1.5"
 ---
 
-# Window: fetch() method - Web APIs | MDN
+# Window: fetch() method
 
 # Window: fetch() method
 
@@ -40,7 +40,7 @@ The `fetch()` method is controlled by the `connect-src` directive of [Content Se
 
 ## [Syntax](https://developer.mozilla.org/en-US/docs/Web/API/Window/fetch#syntax)
 
-```
+```js
 fetch(resource)
 fetch(resource, options)
 ```
@@ -88,7 +88,7 @@ Can occur for the following reasons:
 
 In our [Fetch Request example](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-request) (see [Fetch Request live](https://mdn.github.io/dom-examples/fetch/fetch-request/) ) we create a new [\`Request\`](https://developer.mozilla.org/en-US/docs/Web/API/Request) object using the relevant constructor, then fetch it using a `fetch()` call. Since we are fetching an image, we run [\`Response.blob()\`](https://developer.mozilla.org/en-US/docs/Web/API/Response/blob) on the response to give it the proper MIME type so it will be handled properly, then create an Object URL of it and display it in an [\`<img>\`](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/img) element.
 
-```
+```js
 const myImage = document.querySelector("img");
 
 const myRequest = new Request("flowers.jpg");
@@ -109,7 +109,7 @@ window
 
 In our [Fetch Request with init example](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-request-with-init) (see [Fetch Request init live](https://mdn.github.io/dom-examples/fetch/fetch-request-with-init/) ) we do the same thing except that we pass in an *options* object when we invoke `fetch()` . In this case, we can set a [\`Cache-Control\`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control) value to indicate what kind of cached responses we're okay with:
 
-```
+```js
 const myImage = document.querySelector("img");
 const reqHeaders = new Headers();
 
@@ -130,13 +130,13 @@ fetch(req).then((response) => {
 
 You could also pass the `init` object in with the `Request` constructor to get the same effect:
 
-```
+```js
 const req = new Request("flowers.jpg", options);
 ```
 
 You can also use an object literal as `headers` in `init` :
 
-```
+```js
 const options = {
   headers: {
     "Cache-Control": "max-age=60480",

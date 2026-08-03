@@ -2,3 +2,8 @@ node_modules
 *.log
 .env
 .env.local
+
+dev-corpus/results/
+corpus-selection/capture-out/
+_t53-*
+

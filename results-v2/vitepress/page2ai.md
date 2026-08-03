@@ -1,15 +1,16 @@
 ---
-title: "Getting Started | VitePress"
+title: "Getting Started"
 source: "https://vitepress.dev/guide/getting-started"
-captured_at: "2026-07-28T13:00:28.975Z"
+captured_at: "2026-08-03T10:58:35.372Z"
 language: "en-US"
 description: "Get up and running with VitePress. Learn how to install, scaffold, and start developing your documentation site."
 canonical: "https://vitepress.dev/guide/getting-started"
+og_title: "Getting Started | VitePress"
 extractor: "page2ai-core"
-extractor_version: "0.1.0"
+extractor_version: "0.1.5"
 ---
 
-# Getting Started | VitePress
+# Getting Started
 
 # Getting Started [​](https://vitepress.dev/guide/getting-started#getting-started)
 
@@ -23,28 +24,28 @@ You can try VitePress directly in your browser on [StackBlitz](https://vitepress
 
 - [Node.js](https://nodejs.org/) version 22 or higher.
 - Terminal for accessing VitePress via its command line interface (CLI).
-- Text Editor with [Markdown](https://en.wikipedia.org/wiki/Markdown) syntax support. VSCode is recommended, along with the official Vue extension.
+- Text Editor with [Markdown](https://en.wikipedia.org/wiki/Markdown) syntax support.
    - [VSCode](https://code.visualstudio.com/) is recommended, along with the [official Vue extension](https://marketplace.visualstudio.com/items?itemName=Vue.volar) .
 
 VitePress can be used on its own, or be installed into an existing project. In both cases, you can install it with:
 
-```
+```sh
 $ npm add -D vitepress@next
 ```
 
-```
+```sh
 $ pnpm add -D vitepress@next
 ```
 
-```
+```sh
 $ yarn add -D vitepress@next vue
 ```
 
-```
+```sh
 $ bun add -D vitepress@next
 ```
 
-```
+```sh
 $ deno add -D vitepress@next
 ```
 
@@ -56,19 +57,19 @@ VitePress is an ESM-only package. Don ' t use `require()` to import it, and make
 
 VitePress ships with a command line setup wizard that will help you scaffold a basic project. After installation, start the wizard by running:
 
-```
+```sh
 $ npx vitepress init
 ```
 
-```
+```sh
 $ pnpm vitepress init
 ```
 
-```
+```sh
 $ yarn vitepress init
 ```
 
-```
+```sh
 $ bun vitepress init
 ```
 
@@ -138,7 +139,7 @@ By default, VitePress stores its dev server cache in `.vitepress/cache` , and th
 
 The config file ( `.vitepress/config.js` ) allows you to customize various aspects of your VitePress site, with the most basic options being the title and description of the site:
 
-```
+```js
 export default {
   // site-level options
   title: 'VitePress',
@@ -164,7 +165,7 @@ VitePress also provides the ability to generate clean URLs, rewrite paths, and d
 
 The tool should have also injected the following npm scripts to your `package.json` if you allowed it to do so during the setup process:
 
-```
+```json
 {
   ...
   "scripts": {
@@ -178,37 +179,37 @@ The tool should have also injected the following npm scripts to your `package.js
 
 The `docs:dev` script will start a local dev server with instant hot updates. Run it with the following command:
 
-```
+```sh
 $ npm run docs:dev
 ```
 
-```
+```sh
 $ pnpm run docs:dev
 ```
 
-```
+```sh
 $ yarn docs:dev
 ```
 
-```
+```sh
 $ bun run docs:dev
 ```
 
 Instead of npm scripts, you can also invoke VitePress directly with:
 
-```
+```sh
 $ npx vitepress dev docs
 ```
 
-```
+```sh
 $ pnpm vitepress dev docs
 ```
 
-```
+```sh
 $ yarn vitepress dev docs
 ```
 
-```
+```sh
 $ bun vitepress dev docs
 ```
 
@@ -218,8 +219,8 @@ The dev server should be running at `http://localhost:5173` . Visit the URL in y
 
 ## What ' s Next? [​](https://vitepress.dev/guide/getting-started#what-s-next)
 
-- To better understand how markdown files are mapped to generated HTML, proceed to the Routing Guide.
-- To discover more about what you can do on the page, such as writing markdown content or using Vue Components, refer to the "Writing" section of the guide. A great place to start would be to learn about Markdown Extensions.
-- To explore the features provided by the default documentation theme, check out the Default Theme Config Reference.
-- If you want to further customize the appearance of your site, explore how to either Extend the Default Theme or Build a Custom Theme.
-- Once your documentation site takes shape, make sure to read the Deployment Guide.
+- To better understand how markdown files are mapped to generated HTML, proceed to the [Routing Guide](https://vitepress.dev/guide/routing) .
+- To discover more about what you can do on the page, such as writing markdown content or using Vue Components, refer to the " Writing " section of the guide. A great place to start would be to learn about [Markdown Extensions](https://vitepress.dev/guide/markdown) .
+- To explore the features provided by the default documentation theme, check out the [Default Theme Config Reference](https://vitepress.dev/reference/default-theme-config) .
+- If you want to further customize the appearance of your site, explore how to either [Extend the Default Theme](https://vitepress.dev/guide/extending-default-theme) or [Build a Custom Theme](https://vitepress.dev/guide/custom-theme) .
+- Once your documentation site takes shape, make sure to read the [Deployment Guide](https://vitepress.dev/guide/deploy) .

@@ -1,15 +1,16 @@
 ---
-title: "Introduction | Docusaurus"
+title: "Introduction"
 source: "https://docusaurus.io/docs"
-captured_at: "2026-07-28T13:00:19.570Z"
+captured_at: "2026-08-03T10:58:35.297Z"
 language: "en"
 description: "Docusaurus was designed from the ground up to be easily installed and used to get your website up and running quickly."
 canonical: "https://docusaurus.io/docs"
+og_title: "Introduction | Docusaurus"
 extractor: "page2ai-core"
-extractor_version: "0.1.0"
+extractor_version: "0.1.5"
 ---
 
-# Introduction | Docusaurus
+# Introduction
 
 - Introduction
 
@@ -35,13 +36,13 @@ Create a new Docusaurus site and follow the **very short** embedded tutorial.
 
 Install [Node.js](https://nodejs.org/en/download/) and create a new Docusaurus site:
 
-```
+```bash
 npx create-docusaurus@latest my-website classic
 ```
 
 Start the site:
 
-```
+```bash
 cd my-websitenpx docusaurus start
 ```
 
@@ -79,13 +80,13 @@ For existing v1 users that are seeking to upgrade to v2+, you can follow our [mi
 
 Docusaurus is built with high attention to the developer and contributor experience.
 
-- ⚛️ **Built with 💚 and React** : Extend and customize with React Gain full control of your site's browsing experience by providing your own React components
+- ⚛️ **Built with 💚 and React** :
    - Extend and customize with React
    - Gain full control of your site's browsing experience by providing your own React components
-- 🔌 **Pluggable** : Bootstrap your site with a basic template, then use advanced features and plugins Open source your plugins to share with the community
+- 🔌 **Pluggable** :
    - Bootstrap your site with a basic template, then use advanced features and plugins
    - Open source your plugins to share with the community
-- ✂️ **Developer experience** : Start writing your docs right now Universal configuration entry point to make it more maintainable by contributors Hot reloading with lightning-fast incremental build on changes Route-based code and data splitting Publish to GitHub Pages, Netlify, Vercel, and other deployment services with ease
+- ✂️ **Developer experience** :
    - Start writing your docs right now
    - Universal configuration entry point to make it more maintainable by contributors
    - Hot reloading with lightning-fast incremental build on changes
@@ -94,10 +95,10 @@ Docusaurus is built with high attention to the developer and contributor experie
 
 Our shared goal—to help your users quickly find what they need and understand your products better. We share our best practices to help you build your docs site right and well.
 
-- 🎯 **SEO friendly** : HTML files are statically generated for every possible path. Page-specific SEO to help your users land on your official docs directly relating their problems at hand.
+- 🎯 **SEO friendly** :
    - HTML files are statically generated for every possible path.
    - Page-specific SEO to help your users land on your official docs directly relating their problems at hand.
-- 📝 **Powered by MDX** : Write interactive components via JSX and React embedded in Markdown. Share your code in live editors to get your users to love your products on the spot.
+- 📝 **Powered by MDX** :
    - Write interactive components via JSX and React embedded in Markdown.
    - Share your code in live editors to get your users to love your products on the spot.
 - 🔍 **Search** : Your full site is searchable.

@@ -1,0 +1,29 @@
+{
+  "_what": "Author-picked DEV corpus: documentation pages of major AI companies and popular AI tools. Used for regression-testing @page2ai/core's PRODUCTION fetch path (md-suffix -> content negotiation -> HTML parse) against live sites, across tool versions.",
+  "_not_the_benchmark": "Per CORPUS_SELECTION.md section 5 these pages are author-chosen and NEVER enter a headline table. The rule-bound v0.3 corpus is selected by corpus-selection/ tooling; this list exists so that code changes are exercised on the sites Page2AI's users actually convert (AI developers copying model docs into LLM context).",
+  "_provenance": "Requested by the project owner 2026-08-03 (companies: chatgpt, claude, gemini, spark, grok, kimi, qwen, deepseek, perplexity; tools: Open WebUI, litellm, openrouter, hermes, opencode, codex cli, antigravity). Merged with the 2026-07-22 reasoning-docs test list. URLs verified at add time; docs sites move - a 404 here is a finding, not a failure of the list.",
+  "pages": [
+    { "slug": "openai-reasoning",        "category": "ai-company", "vendor": "OpenAI",        "url": "https://platform.openai.com/docs/guides/reasoning",                        "added": "2026-08-03" },
+    { "slug": "openai-devdocs-reasoning","category": "ai-company", "vendor": "OpenAI",        "url": "https://developers.openai.com/api/docs/guides/reasoning",                  "added": "2026-08-03" },
+    { "slug": "anthropic-ext-thinking",  "category": "ai-company", "vendor": "Anthropic",     "url": "https://platform.claude.com/docs/en/build-with-claude/extended-thinking",  "added": "2026-08-03" },
+    { "slug": "gemini-thinking",         "category": "ai-company", "vendor": "Google",        "url": "https://ai.google.dev/gemini-api/docs/thinking",                           "added": "2026-08-03" },
+    { "slug": "meta-spark-chat",         "category": "ai-company", "vendor": "Meta",          "url": "https://ai.developer.meta.com/docs/features/chat-completion/",             "added": "2026-08-03", "note": "login-walled server-side as of 2026-08-03 (page answers 'Not Logged In'); expected thin" },
+    { "slug": "grok-reasoning",          "category": "ai-company", "vendor": "xAI",           "url": "https://docs.x.ai/docs/guides/reasoning",                                  "added": "2026-08-03" },
+    { "slug": "kimi-thinking",           "category": "ai-company", "vendor": "Moonshot",      "url": "https://platform.kimi.ai/docs/guide/use-thinking-effort",                  "added": "2026-08-03" },
+    { "slug": "qwen-docs",               "category": "ai-company", "vendor": "Alibaba Qwen",  "url": "https://qwen.readthedocs.io/en/latest/",                                   "added": "2026-08-03" },
+    { "slug": "deepseek-reasoning",      "category": "ai-company", "vendor": "DeepSeek",      "url": "https://api-docs.deepseek.com/guides/reasoning_model",                     "added": "2026-08-03" },
+    { "slug": "perplexity-start",        "category": "ai-company", "vendor": "Perplexity",    "url": "https://docs.perplexity.ai/guides/getting-started",                        "added": "2026-08-03" },
+    { "slug": "mistral-reasoning",       "category": "ai-company", "vendor": "Mistral",       "url": "https://docs.mistral.ai/capabilities/reasoning/",                          "added": "2026-08-03" },
+    { "slug": "cohere-chat",             "category": "ai-company", "vendor": "Cohere",        "url": "https://docs.cohere.com/docs/chat-api",                                    "added": "2026-08-03" },
+    { "slug": "openwebui",               "category": "ai-tool",    "vendor": "Open WebUI",    "url": "https://docs.openwebui.com/",                                              "added": "2026-08-03" },
+    { "slug": "litellm",                 "category": "ai-tool",    "vendor": "LiteLLM",       "url": "https://docs.litellm.ai/docs/",                                            "added": "2026-08-03" },
+    { "slug": "openrouter-reasoning",    "category": "ai-tool",    "vendor": "OpenRouter",    "url": "https://openrouter.ai/docs/guides/best-practices/reasoning-tokens",        "added": "2026-08-03" },
+    { "slug": "hermes-nous",             "category": "ai-tool",    "vendor": "Nous Research", "url": "https://hermes.nousresearch.com/",                                         "added": "2026-08-03" },
+    { "slug": "opencode",                "category": "ai-tool",    "vendor": "opencode",      "url": "https://opencode.ai/docs/",                                                "added": "2026-08-03" },
+    { "slug": "codex-cli",               "category": "ai-tool",    "vendor": "OpenAI Codex",  "url": "https://developers.openai.com/codex/cli/",                                 "added": "2026-08-03" },
+    { "slug": "antigravity",             "category": "ai-tool",    "vendor": "Google",        "url": "https://antigravity.google/docs/getting-started",                          "added": "2026-08-03", "note": "/docs alone serves a 39-char client-side redirect stub; the target page has real content" },
+    { "slug": "claude-code",             "category": "ai-tool",    "vendor": "Anthropic",     "url": "https://code.claude.com/docs/en/overview",                                 "added": "2026-08-03" },
+    { "slug": "vllm-reasoning",          "category": "ai-tool",    "vendor": "vLLM",          "url": "https://docs.vllm.ai/en/latest/features/reasoning_outputs/",               "added": "2026-08-03" },
+    { "slug": "ollama-api",              "category": "ai-tool",    "vendor": "Ollama",        "url": "https://docs.ollama.com/api",                                              "added": "2026-08-03" }
+  ]
+}

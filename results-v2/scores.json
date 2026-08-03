@@ -1,5 +1,5 @@
 {
-  "scored_at": "2026-07-28T13:00:55.265Z",
+  "scored_at": "2026-08-03T10:58:35.933Z",
   "excluded": [],
   "shell_pages": [
     "mintlify-anthropic"
@@ -10,17 +10,21 @@
       "pages": 14,
       "errors": 0,
       "code_recall": 1,
-      "code_fenced": 0.9896,
+      "code_fenced": 1,
       "heading_recall": 0.9286,
-      "boilerplate_leak": 0.0692,
-      "text_recall": 0.7665,
+      "boilerplate_leak": 0.0238,
+      "text_recall": 0.7593,
       "content_recall": 0.9286,
-      "cleanliness": 0.9308,
-      "f_score": 0.8872,
-      "f_score_prose": 0.8177,
-      "lang_label_rate": 0.4167,
-      "median_bytes": 8869,
-      "total_ms": 146
+      "cleanliness": 0.9762,
+      "f_score": 0.9161,
+      "f_score_prose": 0.8422,
+      "lang_label_rate": 0.8222,
+      "text_recall_lt": 0.9996,
+      "boilerplate_leak_lt": 0.0094,
+      "f_score_lt": 0.9237,
+      "f_score_prose_lt": 0.9236,
+      "median_bytes": 8072,
+      "total_ms": 272
     },
     {
       "tool": "trafilatura",
@@ -36,6 +40,10 @@
       "f_score": 0.8133,
       "f_score_prose": 0.7761,
       "lang_label_rate": 0,
+      "text_recall_lt": 0.8615,
+      "boilerplate_leak_lt": 0.033,
+      "f_score_lt": 0.819,
+      "f_score_prose_lt": 0.8334,
       "median_bytes": 6614,
       "total_ms": 7883
     },
@@ -53,6 +61,10 @@
       "f_score": 0.7841,
       "f_score_prose": 0.7615,
       "lang_label_rate": 0.6778,
+      "text_recall_lt": 0.9285,
+      "boilerplate_leak_lt": 0.0438,
+      "f_score_lt": 0.7766,
+      "f_score_prose_lt": 0.839,
       "median_bytes": 6661,
       "total_ms": 8041
     },
@@ -70,6 +82,10 @@
       "f_score": 0.6603,
       "f_score_prose": 0.6975,
       "lang_label_rate": 0,
+      "text_recall_lt": 0.9654,
+      "boilerplate_leak_lt": 0.04,
+      "f_score_lt": 0.6631,
+      "f_score_prose_lt": 0.7904,
       "median_bytes": 4895,
       "total_ms": 1498
     },
@@ -87,6 +103,10 @@
       "f_score": 0.0714,
       "f_score_prose": 0.0714,
       "lang_label_rate": 0.1623,
+      "text_recall_lt": 0.9862,
+      "boilerplate_leak_lt": 0.9286,
+      "f_score_lt": 0.0714,
+      "f_score_prose_lt": 0.0714,
       "median_bytes": 13029,
       "total_ms": 654
     },
@@ -104,6 +124,10 @@
       "f_score": 0.0714,
       "f_score_prose": 0.0714,
       "lang_label_rate": 0,
+      "text_recall_lt": 0.9862,
+      "boilerplate_leak_lt": 0.9286,
+      "f_score_lt": 0.0714,
+      "f_score_prose_lt": 0.0714,
       "median_bytes": 12492,
       "total_ms": 19554
     }
@@ -114,12 +138,12 @@
       "pages": 13,
       "code_recall": 1,
       "heading_recall": 1,
-      "boilerplate_leak": 0.0745,
-      "text_recall": 0.7665,
+      "boilerplate_leak": 0.0256,
+      "text_recall": 0.7593,
       "content_recall": 1,
-      "cleanliness": 0.9255,
-      "f_score": 0.9555,
-      "f_score_prose": 0.8806
+      "cleanliness": 0.9744,
+      "f_score": 0.9865,
+      "f_score_prose": 0.907
     },
     {
       "tool": "trafilatura",
@@ -189,10 +213,10 @@
       "tool": "page2ai",
       "article_in_server_html": false,
       "error": null,
-      "bytes_out": 562,
+      "bytes_out": 486,
       "bytes_html": 956931,
-      "compression": 0.0006,
-      "ms": 29,
+      "compression": 0.0005,
+      "ms": 46,
       "n_code": 0,
       "n_headings": 6,
       "n_boilerplate": 80,
@@ -210,7 +234,13 @@
       "fences": 0,
       "lang_label_rate": null,
       "tables_in_output": 0,
-      "tables_in_page": 0
+      "tables_in_page": 0,
+      "heading_recall_lt": 0,
+      "text_recall_lt": null,
+      "boilerplate_leak_lt": 0,
+      "cleanliness_lt": 1,
+      "f_score_lt": 0,
+      "f_score_prose_lt": 0
     },
     {
       "slug": "mintlify-anthropic",
@@ -239,7 +269,13 @@
       "fences": 0,
       "lang_label_rate": null,
       "tables_in_output": 0,
-      "tables_in_page": 0
+      "tables_in_page": 0,
+      "heading_recall_lt": 0,
+      "text_recall_lt": null,
+      "boilerplate_leak_lt": 0.0125,
+      "cleanliness_lt": 0.9875,
+      "f_score_lt": 0,
+      "f_score_prose_lt": 0
     },
     {
       "slug": "mintlify-anthropic",
@@ -268,7 +304,13 @@
       "fences": 4,
       "lang_label_rate": 0,
       "tables_in_output": 0,
-      "tables_in_page": 0
+      "tables_in_page": 0,
+      "heading_recall_lt": 0.1667,
+      "text_recall_lt": null,
+      "boilerplate_leak_lt": 0.6125,
+      "cleanliness_lt": 0.3875,
+      "f_score_lt": 0.2331,
+      "f_score_prose_lt": 0.2331
     },
     {
       "slug": "mintlify-anthropic",
@@ -297,7 +339,13 @@
       "fences": 4,
       "lang_label_rate": 0,
       "tables_in_output": 0,
-      "tables_in_page": 0
+      "tables_in_page": 0,
+      "heading_recall_lt": 1,
+      "text_recall_lt": null,
+      "boilerplate_leak_lt": 1,
+      "cleanliness_lt": 0,
+      "f_score_lt": 0,
+      "f_score_prose_lt": 0
     },
     {
       "slug": "mintlify-anthropic",
@@ -326,7 +374,13 @@
       "fences": 4,
       "lang_label_rate": 0,
       "tables_in_output": 0,
-      "tables_in_page": 0
+      "tables_in_page": 0,
+      "heading_recall_lt": 0.1667,
+      "text_recall_lt": null,
+      "boilerplate_leak_lt": 0.4625,
+      "cleanliness_lt": 0.5375,
+      "f_score_lt": 0.2544,
+      "f_score_prose_lt": 0.2544
     },
     {
       "slug": "mintlify-anthropic",
@@ -355,7 +409,13 @@
       "fences": 4,
       "lang_label_rate": 0,
       "tables_in_output": 0,
-      "tables_in_page": 0
+      "tables_in_page": 0,
+      "heading_recall_lt": 1,
+      "text_recall_lt": null,
+      "boilerplate_leak_lt": 1,
+      "cleanliness_lt": 0,
+      "f_score_lt": 0,
+      "f_score_prose_lt": 0
     },
     {
       "slug": "docusaurus",
@@ -363,10 +423,10 @@
       "tool": "page2ai",
       "article_in_server_html": true,
       "error": null,
-      "bytes_out": 14473,
+      "bytes_out": 13617,
       "bytes_html": 49664,
-      "compression": 0.2914,
-      "ms": 10,
+      "compression": 0.2742,
+      "ms": 14,
       "n_code": 2,
       "n_headings": 17,
       "n_boilerplate": 13,
@@ -382,9 +442,15 @@
       "content_recall_prose": 0.7927,
       "f_score_prose": 0.8844,
       "fences": 2,
-      "lang_label_rate": 0,
+      "lang_label_rate": 1,
       "tables_in_output": 0,
-      "tables_in_page": 0
+      "tables_in_page": 0,
+      "heading_recall_lt": 1,
+      "text_recall_lt": 1,
+      "boilerplate_leak_lt": 0,
+      "cleanliness_lt": 1,
+      "f_score_lt": 1,
+      "f_score_prose_lt": 1
     },
     {
       "slug": "docusaurus",
@@ -413,7 +479,13 @@
       "fences": 2,
       "lang_label_rate": 0,
       "tables_in_output": 0,
-      "tables_in_page": 0
+      "tables_in_page": 0,
+      "heading_recall_lt": 0.5294,
+      "text_recall_lt": 0.9841,
+      "boilerplate_leak_lt": 0,
+      "cleanliness_lt": 1,
+      "f_score_lt": 0.7333,
+      "f_score_prose_lt": 0.9419
     },
     {
       "slug": "docusaurus",
@@ -442,7 +514,13 @@
       "fences": 2,
       "lang_label_rate": 1,
       "tables_in_output": 0,
-      "tables_in_page": 0
+      "tables_in_page": 0,
+      "heading_recall_lt": 0.9412,
+      "text_recall_lt": 1,
+      "boilerplate_leak_lt": 0,
+      "cleanliness_lt": 1,
+      "f_score_lt": 0.973,
+      "f_score_prose_lt": 0.9939
     },
     {
       "slug": "docusaurus",
@@ -471,7 +549,13 @@
       "fences": 2,
       "lang_label_rate": 0,
       "tables_in_output": 0,
-      "tables_in_page": 0
+      "tables_in_page": 0,
+      "heading_recall_lt": 1,
+      "text_recall_lt": 1,
+      "boilerplate_leak_lt": 1,
+      "cleanliness_lt": 0,
+      "f_score_lt": 0,
+      "f_score_prose_lt": 0
     },
     {
       "slug": "docusaurus",
@@ -500,7 +584,13 @@
       "fences": 2,
       "lang_label_rate": 0,
       "tables_in_output": 0,
-      "tables_in_page": 0
+      "tables_in_page": 0,
+      "heading_recall_lt": 1,
+      "text_recall_lt": 0.9683,
+      "boilerplate_leak_lt": 0,
+      "cleanliness_lt": 1,
+      "f_score_lt": 1,
+      "f_score_prose_lt": 0.9877
     },
     {
       "slug": "docusaurus",
@@ -529,7 +619,13 @@
       "fences": 2,
       "lang_label_rate": 0,
       "tables_in_output": 0,
-      "tables_in_page": 0
+      "tables_in_page": 0,
+      "heading_recall_lt": 1,
+      "text_recall_lt": 1,
+      "boilerplate_leak_lt": 1,
+      "cleanliness_lt": 0,
+      "f_score_lt": 0,
+      "f_score_prose_lt": 0
     },
     {
       "slug": "starlight",
@@ -537,10 +633,10 @@
       "tool": "page2ai",
       "article_in_server_html": true,
       "error": null,
-      "bytes_out": 6118,
+      "bytes_out": 6066,
       "bytes_html": 80358,
-      "compression": 0.0761,
-      "ms": 7,
+      "compression": 0.0755,
+      "ms": 12,
       "n_code": 3,
       "n_headings": 8,
       "n_boilerplate": 21,
@@ -558,7 +654,13 @@
       "fences": 9,
       "lang_label_rate": 1,
       "tables_in_output": 0,
-      "tables_in_page": 0
+      "tables_in_page": 0,
+      "heading_recall_lt": 1,
+      "text_recall_lt": 1,
+      "boilerplate_leak_lt": 0,
+      "cleanliness_lt": 1,
+      "f_score_lt": 1,
+      "f_score_prose_lt": 1
     },
     {
       "slug": "starlight",
@@ -587,7 +689,13 @@
       "fences": 3,
       "lang_label_rate": 0,
       "tables_in_output": 0,
-      "tables_in_page": 0
+      "tables_in_page": 0,
+      "heading_recall_lt": 0.5,
+      "text_recall_lt": 0.9048,
+      "boilerplate_leak_lt": 0,
+      "cleanliness_lt": 1,
+      "f_score_lt": 0.625,
+      "f_score_prose_lt": 0.8571
     },
     {
       "slug": "starlight",
@@ -616,7 +724,13 @@
       "fences": 3,
       "lang_label_rate": 1,
       "tables_in_output": 0,
-      "tables_in_page": 0
+      "tables_in_page": 0,
+      "heading_recall_lt": 0.875,
+      "text_recall_lt": 0.9048,
+      "boilerplate_leak_lt": 0,
+      "cleanliness_lt": 1,
+      "f_score_lt": 0.8421,
+      "f_score_prose_lt": 0.9153
     },
     {
       "slug": "starlight",
@@ -645,7 +759,13 @@
       "fences": 9,
       "lang_label_rate": 0,
       "tables_in_output": 0,
-      "tables_in_page": 0
+      "tables_in_page": 0,
+      "heading_recall_lt": 1,
+      "text_recall_lt": 1,
+      "boilerplate_leak_lt": 1,
+      "cleanliness_lt": 0,
+      "f_score_lt": 0,
+      "f_score_prose_lt": 0
     },
     {
       "slug": "starlight",
@@ -674,7 +794,13 @@
       "fences": 0,
       "lang_label_rate": null,
       "tables_in_output": 0,
-      "tables_in_page": 0
+      "tables_in_page": 0,
+      "heading_recall_lt": 1,
+      "text_recall_lt": 0.9048,
+      "boilerplate_leak_lt": 0,
+      "cleanliness_lt": 1,
+      "f_score_lt": 1,
+      "f_score_prose_lt": 0.9677
     },
     {
       "slug": "starlight",
@@ -703,7 +829,13 @@
       "fences": 9,
       "lang_label_rate": 0,
       "tables_in_output": 0,
-      "tables_in_page": 0
+      "tables_in_page": 0,
+      "heading_recall_lt": 1,
+      "text_recall_lt": 1,
+      "boilerplate_leak_lt": 1,
+      "cleanliness_lt": 0,
+      "f_score_lt": 0,
+      "f_score_prose_lt": 0
     },
     {
       "slug": "nextra",
@@ -711,28 +843,34 @@
       "tool": "page2ai",
       "article_in_server_html": true,
       "error": null,
-      "bytes_out": 2026,
+      "bytes_out": 1980,
       "bytes_html": 235336,
-      "compression": 0.0086,
-      "ms": 6,
+      "compression": 0.0084,
+      "ms": 21,
       "n_code": 0,
       "n_headings": 6,
       "n_boilerplate": 42,
       "code_recall": null,
       "code_fenced": null,
       "heading_recall": 1,
-      "boilerplate_leak": 0.0238,
+      "boilerplate_leak": 0,
       "content_recall": 1,
-      "cleanliness": 0.9762,
-      "f_score": 0.988,
+      "cleanliness": 1,
+      "f_score": 1,
       "n_prose": 4,
       "text_recall": 0.75,
       "content_recall_prose": 0.9,
-      "f_score_prose": 0.9365,
+      "f_score_prose": 0.9474,
       "fences": 0,
       "lang_label_rate": null,
       "tables_in_output": 0,
-      "tables_in_page": 0
+      "tables_in_page": 0,
+      "heading_recall_lt": 1,
+      "text_recall_lt": 1,
+      "boilerplate_leak_lt": 0,
+      "cleanliness_lt": 1,
+      "f_score_lt": 1,
+      "f_score_prose_lt": 1
     },
     {
       "slug": "nextra",
@@ -761,7 +899,13 @@
       "fences": 0,
       "lang_label_rate": null,
       "tables_in_output": 0,
-      "tables_in_page": 0
+      "tables_in_page": 0,
+      "heading_recall_lt": 1,
+      "text_recall_lt": 1,
+      "boilerplate_leak_lt": 0.0476,
+      "cleanliness_lt": 0.9524,
+      "f_score_lt": 0.9756,
+      "f_score_prose_lt": 0.9756
     },
     {
       "slug": "nextra",
@@ -790,7 +934,13 @@
       "fences": 0,
       "lang_label_rate": null,
       "tables_in_output": 0,
-      "tables_in_page": 0
+      "tables_in_page": 0,
+      "heading_recall_lt": 0.8333,
+      "text_recall_lt": 1,
+      "boilerplate_leak_lt": 0,
+      "cleanliness_lt": 1,
+      "f_score_lt": 0.9091,
+      "f_score_prose_lt": 0.9474
     },
     {
       "slug": "nextra",
@@ -819,7 +969,13 @@
       "fences": 0,
       "lang_label_rate": null,
       "tables_in_output": 0,
-      "tables_in_page": 0
+      "tables_in_page": 0,
+      "heading_recall_lt": 1,
+      "text_recall_lt": 1,
+      "boilerplate_leak_lt": 1,
+      "cleanliness_lt": 0,
+      "f_score_lt": 0,
+      "f_score_prose_lt": 0
     },
     {
       "slug": "nextra",
@@ -848,7 +1004,13 @@
       "fences": 0,
       "lang_label_rate": null,
       "tables_in_output": 0,
-      "tables_in_page": 0
+      "tables_in_page": 0,
+      "heading_recall_lt": 1,
+      "text_recall_lt": 1,
+      "boilerplate_leak_lt": 0,
+      "cleanliness_lt": 1,
+      "f_score_lt": 1,
+      "f_score_prose_lt": 1
     },
     {
       "slug": "nextra",
@@ -877,7 +1039,13 @@
       "fences": 0,
       "lang_label_rate": null,
       "tables_in_output": 0,
-      "tables_in_page": 0
+      "tables_in_page": 0,
+      "heading_recall_lt": 1,
+      "text_recall_lt": 1,
+      "boilerplate_leak_lt": 1,
+      "cleanliness_lt": 0,
+      "f_score_lt": 0,
+      "f_score_prose_lt": 0
     },
     {
       "slug": "fumadocs",
@@ -885,10 +1053,10 @@
       "tool": "page2ai",
       "article_in_server_html": true,
       "error": null,
-      "bytes_out": 5115,
+      "bytes_out": 5124,
       "bytes_html": 386398,
-      "compression": 0.0132,
-      "ms": 9,
+      "compression": 0.0133,
+      "ms": 20,
       "n_code": 11,
       "n_headings": 10,
       "n_boilerplate": 11,
@@ -906,7 +1074,13 @@
       "fences": 11,
       "lang_label_rate": 0,
       "tables_in_output": 0,
-      "tables_in_page": 0
+      "tables_in_page": 0,
+      "heading_recall_lt": 1,
+      "text_recall_lt": 1,
+      "boilerplate_leak_lt": 0,
+      "cleanliness_lt": 1,
+      "f_score_lt": 1,
+      "f_score_prose_lt": 1
     },
     {
       "slug": "fumadocs",
@@ -935,7 +1109,13 @@
       "fences": 11,
       "lang_label_rate": 0,
       "tables_in_output": 0,
-      "tables_in_page": 0
+      "tables_in_page": 0,
+      "heading_recall_lt": 0.8,
+      "text_recall_lt": 0.8667,
+      "boilerplate_leak_lt": 0,
+      "cleanliness_lt": 1,
+      "f_score_lt": 0.95,
+      "f_score_prose_lt": 0.9412
     },
     {
       "slug": "fumadocs",
@@ -964,7 +1144,13 @@
       "fences": 11,
       "lang_label_rate": 0,
       "tables_in_output": 0,
-      "tables_in_page": 0
+      "tables_in_page": 0,
+      "heading_recall_lt": 1,
+      "text_recall_lt": 0.6,
+      "boilerplate_leak_lt": 0,
+      "cleanliness_lt": 1,
+      "f_score_lt": 1,
+      "f_score_prose_lt": 0.9091
     },
     {
       "slug": "fumadocs",
@@ -993,7 +1179,13 @@
       "fences": 11,
       "lang_label_rate": 0,
       "tables_in_output": 0,
-      "tables_in_page": 0
+      "tables_in_page": 0,
+      "heading_recall_lt": 1,
+      "text_recall_lt": 1,
+      "boilerplate_leak_lt": 1,
+      "cleanliness_lt": 0,
+      "f_score_lt": 0,
+      "f_score_prose_lt": 0
     },
     {
       "slug": "fumadocs",
@@ -1022,7 +1214,13 @@
       "fences": 9,
       "lang_label_rate": 0,
       "tables_in_output": 0,
-      "tables_in_page": 0
+      "tables_in_page": 0,
+      "heading_recall_lt": 1,
+      "text_recall_lt": 0.9333,
+      "boilerplate_leak_lt": 0,
+      "cleanliness_lt": 1,
+      "f_score_lt": 1,
+      "f_score_prose_lt": 0.9859
     },
     {
       "slug": "fumadocs",
@@ -1051,7 +1249,13 @@
       "fences": 11,
       "lang_label_rate": 0,
       "tables_in_output": 0,
-      "tables_in_page": 0
+      "tables_in_page": 0,
+      "heading_recall_lt": 1,
+      "text_recall_lt": 1,
+      "boilerplate_leak_lt": 1,
+      "cleanliness_lt": 0,
+      "f_score_lt": 0,
+      "f_score_prose_lt": 0
     },
     {
       "slug": "vitepress",
@@ -1059,10 +1263,10 @@
       "tool": "page2ai",
       "article_in_server_html": true,
       "error": null,
-      "bytes_out": 7497,
+      "bytes_out": 7770,
       "bytes_html": 58204,
-      "compression": 0.1288,
-      "ms": 5,
+      "compression": 0.1335,
+      "ms": 15,
       "n_code": 7,
       "n_headings": 10,
       "n_boilerplate": 23,
@@ -1074,13 +1278,19 @@
       "cleanliness": 1,
       "f_score": 1,
       "n_prose": 27,
-      "text_recall": 0.963,
-      "content_recall_prose": 0.9773,
-      "f_score_prose": 0.9885,
+      "text_recall": 0.8889,
+      "content_recall_prose": 0.9318,
+      "f_score_prose": 0.9647,
       "fences": 21,
-      "lang_label_rate": 0,
+      "lang_label_rate": 0.9048,
       "tables_in_output": 0,
-      "tables_in_page": 0
+      "tables_in_page": 0,
+      "heading_recall_lt": 1,
+      "text_recall_lt": 1,
+      "boilerplate_leak_lt": 0,
+      "cleanliness_lt": 1,
+      "f_score_lt": 1,
+      "f_score_prose_lt": 1
     },
     {
       "slug": "vitepress",
@@ -1109,7 +1319,13 @@
       "fences": 21,
       "lang_label_rate": 0,
       "tables_in_output": 0,
-      "tables_in_page": 0
+      "tables_in_page": 0,
+      "heading_recall_lt": 0.9,
+      "text_recall_lt": 1,
+      "boilerplate_leak_lt": 0,
+      "cleanliness_lt": 1,
+      "f_score_lt": 0.9697,
+      "f_score_prose_lt": 0.9885
     },
     {
       "slug": "vitepress",
@@ -1138,7 +1354,13 @@
       "fences": 21,
       "lang_label_rate": 0.9048,
       "tables_in_output": 0,
-      "tables_in_page": 0
+      "tables_in_page": 0,
+      "heading_recall_lt": 0.9,
+      "text_recall_lt": 1,
+      "boilerplate_leak_lt": 0,
+      "cleanliness_lt": 1,
+      "f_score_lt": 0.9697,
+      "f_score_prose_lt": 0.9885
     },
     {
       "slug": "vitepress",
@@ -1167,7 +1389,13 @@
       "fences": 21,
       "lang_label_rate": 0,
       "tables_in_output": 0,
-      "tables_in_page": 0
+      "tables_in_page": 0,
+      "heading_recall_lt": 1,
+      "text_recall_lt": 1,
+      "boilerplate_leak_lt": 1,
+      "cleanliness_lt": 0,
+      "f_score_lt": 0,
+      "f_score_prose_lt": 0
     },
     {
       "slug": "vitepress",
@@ -1196,7 +1424,13 @@
       "fences": 4,
       "lang_label_rate": 0,
       "tables_in_output": 0,
-      "tables_in_page": 0
+      "tables_in_page": 0,
+      "heading_recall_lt": 1,
+      "text_recall_lt": 0.9259,
+      "boilerplate_leak_lt": 0,
+      "cleanliness_lt": 1,
+      "f_score_lt": 1,
+      "f_score_prose_lt": 0.9767
     },
     {
       "slug": "vitepress",
@@ -1225,7 +1459,13 @@
       "fences": 21,
       "lang_label_rate": 0,
       "tables_in_output": 0,
-      "tables_in_page": 0
+      "tables_in_page": 0,
+      "heading_recall_lt": 1,
+      "text_recall_lt": 1,
+      "boilerplate_leak_lt": 1,
+      "cleanliness_lt": 0,
+      "f_score_lt": 0,
+      "f_score_prose_lt": 0
     },
     {
       "slug": "mdn",
@@ -1233,10 +1473,10 @@
       "tool": "page2ai",
       "article_in_server_html": true,
       "error": null,
-      "bytes_out": 11223,
+      "bytes_out": 11199,
       "bytes_html": 180372,
-      "compression": 0.0622,
-      "ms": 11,
+      "compression": 0.0621,
+      "ms": 23,
       "n_code": 5,
       "n_headings": 11,
       "n_boilerplate": 80,
@@ -1252,9 +1492,15 @@
       "content_recall_prose": 0.6829,
       "f_score_prose": 0.8074,
       "fences": 5,
-      "lang_label_rate": 0,
+      "lang_label_rate": 1,
       "tables_in_output": 1,
-      "tables_in_page": 1
+      "tables_in_page": 1,
+      "heading_recall_lt": 1,
+      "text_recall_lt": 1,
+      "boilerplate_leak_lt": 0,
+      "cleanliness_lt": 1,
+      "f_score_lt": 1,
+      "f_score_prose_lt": 1
     },
     {
       "slug": "mdn",
@@ -1283,7 +1529,13 @@
       "fences": 5,
       "lang_label_rate": 0,
       "tables_in_output": 0,
-      "tables_in_page": 1
+      "tables_in_page": 1,
+      "heading_recall_lt": 0.7273,
+      "text_recall_lt": 0.96,
+      "boilerplate_leak_lt": 0,
+      "cleanliness_lt": 1,
+      "f_score_lt": 0.8966,
+      "f_score_prose_lt": 0.9487
     },
     {
       "slug": "mdn",
@@ -1312,7 +1564,13 @@
       "fences": 5,
       "lang_label_rate": 1,
       "tables_in_output": 0,
-      "tables_in_page": 1
+      "tables_in_page": 1,
+      "heading_recall_lt": 0.5455,
+      "text_recall_lt": 0.96,
+      "boilerplate_leak_lt": 0,
+      "cleanliness_lt": 1,
+      "f_score_lt": 0.8148,
+      "f_score_prose_lt": 0.9211
     },
     {
       "slug": "mdn",
@@ -1341,7 +1599,13 @@
       "fences": 5,
       "lang_label_rate": 0,
       "tables_in_output": 0,
-      "tables_in_page": 1
+      "tables_in_page": 1,
+      "heading_recall_lt": 1,
+      "text_recall_lt": 1,
+      "boilerplate_leak_lt": 1,
+      "cleanliness_lt": 0,
+      "f_score_lt": 0,
+      "f_score_prose_lt": 0
     },
     {
       "slug": "mdn",
@@ -1370,7 +1634,13 @@
       "fences": 4,
       "lang_label_rate": 0,
       "tables_in_output": 1,
-      "tables_in_page": 1
+      "tables_in_page": 1,
+      "heading_recall_lt": 0.6364,
+      "text_recall_lt": 0.64,
+      "boilerplate_leak_lt": 0,
+      "cleanliness_lt": 1,
+      "f_score_lt": 0.8571,
+      "f_score_prose_lt": 0.8116
     },
     {
       "slug": "mdn",
@@ -1399,7 +1669,13 @@
       "fences": 5,
       "lang_label_rate": 0,
       "tables_in_output": 1,
-      "tables_in_page": 1
+      "tables_in_page": 1,
+      "heading_recall_lt": 1,
+      "text_recall_lt": 1,
+      "boilerplate_leak_lt": 1,
+      "cleanliness_lt": 0,
+      "f_score_lt": 0,
+      "f_score_prose_lt": 0
     },
     {
       "slug": "tailwind",
@@ -1407,10 +1683,10 @@
       "tool": "page2ai",
       "article_in_server_html": true,
       "error": null,
-      "bytes_out": 18812,
+      "bytes_out": 18606,
       "bytes_html": 389114,
-      "compression": 0.0483,
-      "ms": 12,
+      "compression": 0.0478,
+      "ms": 22,
       "n_code": 7,
       "n_headings": 31,
       "n_boilerplate": 0,
@@ -1428,7 +1704,13 @@
       "fences": 7,
       "lang_label_rate": 0,
       "tables_in_output": 1,
-      "tables_in_page": 1
+      "tables_in_page": 1,
+      "heading_recall_lt": 1,
+      "text_recall_lt": 1,
+      "boilerplate_leak_lt": 0,
+      "cleanliness_lt": 1,
+      "f_score_lt": 1,
+      "f_score_prose_lt": 1
     },
     {
       "slug": "tailwind",
@@ -1457,7 +1739,13 @@
       "fences": 7,
       "lang_label_rate": 0,
       "tables_in_output": 0,
-      "tables_in_page": 1
+      "tables_in_page": 1,
+      "heading_recall_lt": 0.2581,
+      "text_recall_lt": 1,
+      "boilerplate_leak_lt": 0,
+      "cleanliness_lt": 1,
+      "f_score_lt": 0.566,
+      "f_score_prose_lt": 0.6849
     },
     {
       "slug": "tailwind",
@@ -1486,7 +1774,13 @@
       "fences": 7,
       "lang_label_rate": 0,
       "tables_in_output": 0,
-      "tables_in_page": 1
+      "tables_in_page": 1,
+      "heading_recall_lt": 0.2581,
+      "text_recall_lt": 1,
+      "boilerplate_leak_lt": 0,
+      "cleanliness_lt": 1,
+      "f_score_lt": 0.566,
+      "f_score_prose_lt": 0.6849
     },
     {
       "slug": "tailwind",
@@ -1515,7 +1809,13 @@
       "fences": 7,
       "lang_label_rate": 0,
       "tables_in_output": 0,
-      "tables_in_page": 1
+      "tables_in_page": 1,
+      "heading_recall_lt": 1,
+      "text_recall_lt": 1,
+      "boilerplate_leak_lt": 0,
+      "cleanliness_lt": 1,
+      "f_score_lt": 1,
+      "f_score_prose_lt": 1
     },
     {
       "slug": "tailwind",
@@ -1544,7 +1844,13 @@
       "fences": 0,
       "lang_label_rate": null,
       "tables_in_output": 1,
-      "tables_in_page": 1
+      "tables_in_page": 1,
+      "heading_recall_lt": 0.1613,
+      "text_recall_lt": 0.6,
+      "boilerplate_leak_lt": 0,
+      "cleanliness_lt": 1,
+      "f_score_lt": 0.48,
+      "f_score_prose_lt": 0.5455
     },
     {
       "slug": "tailwind",
@@ -1573,7 +1879,13 @@
       "fences": 7,
       "lang_label_rate": 0,
       "tables_in_output": 1,
-      "tables_in_page": 1
+      "tables_in_page": 1,
+      "heading_recall_lt": 1,
+      "text_recall_lt": 1,
+      "boilerplate_leak_lt": 0,
+      "cleanliness_lt": 1,
+      "f_score_lt": 1,
+      "f_score_prose_lt": 1
     },
     {
       "slug": "svelte",
@@ -1581,10 +1893,10 @@
       "tool": "page2ai",
       "article_in_server_html": true,
       "error": null,
-      "bytes_out": 8869,
+      "bytes_out": 7711,
       "bytes_html": 80913,
-      "compression": 0.1096,
-      "ms": 4,
+      "compression": 0.0953,
+      "ms": 5,
       "n_code": 2,
       "n_headings": 11,
       "n_boilerplate": 1,
@@ -1602,7 +1914,13 @@
       "fences": 1,
       "lang_label_rate": 1,
       "tables_in_output": 0,
-      "tables_in_page": 0
+      "tables_in_page": 0,
+      "heading_recall_lt": 1,
+      "text_recall_lt": 1,
+      "boilerplate_leak_lt": 0,
+      "cleanliness_lt": 1,
+      "f_score_lt": 1,
+      "f_score_prose_lt": 1
     },
     {
       "slug": "svelte",
@@ -1631,7 +1949,13 @@
       "fences": 1,
       "lang_label_rate": 0,
       "tables_in_output": 0,
-      "tables_in_page": 0
+      "tables_in_page": 0,
+      "heading_recall_lt": 0.0909,
+      "text_recall_lt": 1,
+      "boilerplate_leak_lt": 0,
+      "cleanliness_lt": 1,
+      "f_score_lt": 0.1429,
+      "f_score_prose_lt": 0.5714
     },
     {
       "slug": "svelte",
@@ -1660,7 +1984,13 @@
       "fences": 1,
       "lang_label_rate": 1,
       "tables_in_output": 0,
-      "tables_in_page": 0
+      "tables_in_page": 0,
+      "heading_recall_lt": 0.0909,
+      "text_recall_lt": 1,
+      "boilerplate_leak_lt": 0,
+      "cleanliness_lt": 1,
+      "f_score_lt": 0.1429,
+      "f_score_prose_lt": 0.5714
     },
     {
       "slug": "svelte",
@@ -1689,7 +2019,13 @@
       "fences": 1,
       "lang_label_rate": 0,
       "tables_in_output": 0,
-      "tables_in_page": 0
+      "tables_in_page": 0,
+      "heading_recall_lt": 1,
+      "text_recall_lt": 1,
+      "boilerplate_leak_lt": 1,
+      "cleanliness_lt": 0,
+      "f_score_lt": 0,
+      "f_score_prose_lt": 0
     },
     {
       "slug": "svelte",
@@ -1718,7 +2054,13 @@
       "fences": 1,
       "lang_label_rate": 0,
       "tables_in_output": 0,
-      "tables_in_page": 0
+      "tables_in_page": 0,
+      "heading_recall_lt": 0.1818,
+      "text_recall_lt": 1,
+      "boilerplate_leak_lt": 0,
+      "cleanliness_lt": 1,
+      "f_score_lt": 0.375,
+      "f_score_prose_lt": 0.6667
     },
     {
       "slug": "svelte",
@@ -1747,7 +2089,13 @@
       "fences": 3,
       "lang_label_rate": 0,
       "tables_in_output": 0,
-      "tables_in_page": 0
+      "tables_in_page": 0,
+      "heading_recall_lt": 1,
+      "text_recall_lt": 1,
+      "boilerplate_leak_lt": 1,
+      "cleanliness_lt": 0,
+      "f_score_lt": 0,
+      "f_score_prose_lt": 0
     },
     {
       "slug": "biome",
@@ -1755,10 +2103,10 @@
       "tool": "page2ai",
       "article_in_server_html": true,
       "error": null,
-      "bytes_out": 8116,
+      "bytes_out": 8072,
       "bytes_html": 141534,
-      "compression": 0.0573,
-      "ms": 10,
+      "compression": 0.057,
+      "ms": 17,
       "n_code": 11,
       "n_headings": 7,
       "n_boilerplate": 43,
@@ -1776,7 +2124,13 @@
       "fences": 15,
       "lang_label_rate": 1,
       "tables_in_output": 0,
-      "tables_in_page": 0
+      "tables_in_page": 0,
+      "heading_recall_lt": 1,
+      "text_recall_lt": 1,
+      "boilerplate_leak_lt": 0,
+      "cleanliness_lt": 1,
+      "f_score_lt": 1,
+      "f_score_prose_lt": 1
     },
     {
       "slug": "biome",
@@ -1805,7 +2159,13 @@
       "fences": 3,
       "lang_label_rate": 0,
       "tables_in_output": 0,
-      "tables_in_page": 0
+      "tables_in_page": 0,
+      "heading_recall_lt": 0.5714,
+      "text_recall_lt": 0.9286,
+      "boilerplate_leak_lt": 0,
+      "cleanliness_lt": 1,
+      "f_score_lt": 0.3636,
+      "f_score_prose_lt": 0.6939
     },
     {
       "slug": "biome",
@@ -1834,7 +2194,13 @@
       "fences": 3,
       "lang_label_rate": 1,
       "tables_in_output": 0,
-      "tables_in_page": 0
+      "tables_in_page": 0,
+      "heading_recall_lt": 0.8571,
+      "text_recall_lt": 0.8571,
+      "boilerplate_leak_lt": 0,
+      "cleanliness_lt": 1,
+      "f_score_lt": 0.5,
+      "f_score_prose_lt": 0.72
     },
     {
       "slug": "biome",
@@ -1863,7 +2229,13 @@
       "fences": 15,
       "lang_label_rate": 0,
       "tables_in_output": 0,
-      "tables_in_page": 0
+      "tables_in_page": 0,
+      "heading_recall_lt": 1,
+      "text_recall_lt": 1,
+      "boilerplate_leak_lt": 1,
+      "cleanliness_lt": 0,
+      "f_score_lt": 0,
+      "f_score_prose_lt": 0
     },
     {
       "slug": "biome",
@@ -1892,7 +2264,13 @@
       "fences": 5,
       "lang_label_rate": 0,
       "tables_in_output": 0,
-      "tables_in_page": 0
+      "tables_in_page": 0,
+      "heading_recall_lt": 0.8571,
+      "text_recall_lt": 0.9286,
+      "boilerplate_leak_lt": 0,
+      "cleanliness_lt": 1,
+      "f_score_lt": 0.5,
+      "f_score_prose_lt": 0.7451
     },
     {
       "slug": "biome",
@@ -1921,7 +2299,13 @@
       "fences": 15,
       "lang_label_rate": 0,
       "tables_in_output": 0,
-      "tables_in_page": 0
+      "tables_in_page": 0,
+      "heading_recall_lt": 1,
+      "text_recall_lt": 1,
+      "boilerplate_leak_lt": 1,
+      "cleanliness_lt": 0,
+      "f_score_lt": 0,
+      "f_score_prose_lt": 0
     },
     {
       "slug": "python-docs",
@@ -1929,28 +2313,34 @@
       "tool": "page2ai",
       "article_in_server_html": true,
       "error": null,
-      "bytes_out": 60757,
+      "bytes_out": 62701,
       "bytes_html": 176093,
-      "compression": 0.345,
-      "ms": 20,
+      "compression": 0.3561,
+      "ms": 46,
       "n_code": 32,
       "n_headings": 17,
       "n_boilerplate": 9,
       "code_recall": 1,
-      "code_fenced": 0.875,
+      "code_fenced": 1,
       "heading_recall": 1,
-      "boilerplate_leak": 0.1111,
+      "boilerplate_leak": 0,
       "content_recall": 1,
-      "cleanliness": 0.8889,
-      "f_score": 0.9412,
+      "cleanliness": 1,
+      "f_score": 1,
       "n_prose": 201,
-      "text_recall": 0.6269,
-      "content_recall_prose": 0.7,
-      "f_score_prose": 0.7832,
-      "fences": 28,
-      "lang_label_rate": 0,
+      "text_recall": 0.607,
+      "content_recall_prose": 0.684,
+      "f_score_prose": 0.8124,
+      "fences": 33,
+      "lang_label_rate": 1,
       "tables_in_output": 1,
-      "tables_in_page": 1
+      "tables_in_page": 1,
+      "heading_recall_lt": 1,
+      "text_recall_lt": 0.995,
+      "boilerplate_leak_lt": 0,
+      "cleanliness_lt": 1,
+      "f_score_lt": 1,
+      "f_score_prose_lt": 0.998
     },
     {
       "slug": "python-docs",
@@ -1979,7 +2369,13 @@
       "fences": 0,
       "lang_label_rate": null,
       "tables_in_output": 0,
-      "tables_in_page": 1
+      "tables_in_page": 1,
+      "heading_recall_lt": 1,
+      "text_recall_lt": 0.9851,
+      "boilerplate_leak_lt": 0,
+      "cleanliness_lt": 1,
+      "f_score_lt": 0.7595,
+      "f_score_prose_lt": 0.954
     },
     {
       "slug": "python-docs",
@@ -2008,7 +2404,13 @@
       "fences": 28,
       "lang_label_rate": 0.0357,
       "tables_in_output": 0,
-      "tables_in_page": 1
+      "tables_in_page": 1,
+      "heading_recall_lt": 1,
+      "text_recall_lt": 0.801,
+      "boilerplate_leak_lt": 0,
+      "cleanliness_lt": 1,
+      "f_score_lt": 1,
+      "f_score_prose_lt": 0.913
     },
     {
       "slug": "python-docs",
@@ -2037,7 +2439,13 @@
       "fences": 0,
       "lang_label_rate": null,
       "tables_in_output": 0,
-      "tables_in_page": 1
+      "tables_in_page": 1,
+      "heading_recall_lt": 1,
+      "text_recall_lt": 0.8209,
+      "boilerplate_leak_lt": 1,
+      "cleanliness_lt": 0,
+      "f_score_lt": 0,
+      "f_score_prose_lt": 0
     },
     {
       "slug": "python-docs",
@@ -2066,7 +2474,13 @@
       "fences": 8,
       "lang_label_rate": 0,
       "tables_in_output": 0,
-      "tables_in_page": 1
+      "tables_in_page": 1,
+      "heading_recall_lt": 1,
+      "text_recall_lt": 0.6667,
+      "boilerplate_leak_lt": 0,
+      "cleanliness_lt": 1,
+      "f_score_lt": 1,
+      "f_score_prose_lt": 0.8453
     },
     {
       "slug": "python-docs",
@@ -2095,7 +2509,13 @@
       "fences": 13,
       "lang_label_rate": 0,
       "tables_in_output": 0,
-      "tables_in_page": 1
+      "tables_in_page": 1,
+      "heading_recall_lt": 1,
+      "text_recall_lt": 0.8209,
+      "boilerplate_leak_lt": 1,
+      "cleanliness_lt": 0,
+      "f_score_lt": 0,
+      "f_score_prose_lt": 0
     },
     {
       "slug": "rust-book",
@@ -2103,9 +2523,9 @@
       "tool": "page2ai",
       "article_in_server_html": true,
       "error": null,
-      "bytes_out": 13286,
+      "bytes_out": 13222,
       "bytes_html": 38648,
-      "compression": 0.3438,
+      "compression": 0.3421,
       "ms": 3,
       "n_code": 11,
       "n_headings": 7,
@@ -2113,18 +2533,24 @@
       "code_recall": 1,
       "code_fenced": 1,
       "heading_recall": 1,
-      "boilerplate_leak": 0.5,
+      "boilerplate_leak": 0,
       "content_recall": 1,
-      "cleanliness": 0.5,
-      "f_score": 0.6667,
+      "cleanliness": 1,
+      "f_score": 1,
       "n_prose": 29,
       "text_recall": 0.9655,
       "content_recall_prose": 0.9787,
-      "f_score_prose": 0.6619,
+      "f_score_prose": 0.9892,
       "fences": 11,
       "lang_label_rate": 1,
       "tables_in_output": 0,
-      "tables_in_page": 0
+      "tables_in_page": 0,
+      "heading_recall_lt": 1,
+      "text_recall_lt": 1,
+      "boilerplate_leak_lt": 0,
+      "cleanliness_lt": 1,
+      "f_score_lt": 1,
+      "f_score_prose_lt": 1
     },
     {
       "slug": "rust-book",
@@ -2153,7 +2579,13 @@
       "fences": 11,
       "lang_label_rate": 0,
       "tables_in_output": 0,
-      "tables_in_page": 0
+      "tables_in_page": 0,
+      "heading_recall_lt": 1,
+      "text_recall_lt": 1,
+      "boilerplate_leak_lt": 0.5,
+      "cleanliness_lt": 0.5,
+      "f_score_lt": 0.6667,
+      "f_score_prose_lt": 0.6667
     },
     {
       "slug": "rust-book",
@@ -2182,7 +2614,13 @@
       "fences": 11,
       "lang_label_rate": 0.9091,
       "tables_in_output": 0,
-      "tables_in_page": 0
+      "tables_in_page": 0,
+      "heading_recall_lt": 1,
+      "text_recall_lt": 1,
+      "boilerplate_leak_lt": 0,
+      "cleanliness_lt": 1,
+      "f_score_lt": 1,
+      "f_score_prose_lt": 1
     },
     {
       "slug": "rust-book",
@@ -2211,7 +2649,13 @@
       "fences": 11,
       "lang_label_rate": 1,
       "tables_in_output": 0,
-      "tables_in_page": 0
+      "tables_in_page": 0,
+      "heading_recall_lt": 1,
+      "text_recall_lt": 1,
+      "boilerplate_leak_lt": 1,
+      "cleanliness_lt": 0,
+      "f_score_lt": 0,
+      "f_score_prose_lt": 0
     },
     {
       "slug": "rust-book",
@@ -2240,7 +2684,13 @@
       "fences": 11,
       "lang_label_rate": 0,
       "tables_in_output": 0,
-      "tables_in_page": 0
+      "tables_in_page": 0,
+      "heading_recall_lt": 1,
+      "text_recall_lt": 1,
+      "boilerplate_leak_lt": 0,
+      "cleanliness_lt": 1,
+      "f_score_lt": 1,
+      "f_score_prose_lt": 1
     },
     {
       "slug": "rust-book",
@@ -2269,7 +2719,13 @@
       "fences": 11,
       "lang_label_rate": 0,
       "tables_in_output": 0,
-      "tables_in_page": 0
+      "tables_in_page": 0,
+      "heading_recall_lt": 1,
+      "text_recall_lt": 1,
+      "boilerplate_leak_lt": 1,
+      "cleanliness_lt": 0,
+      "f_score_lt": 0,
+      "f_score_prose_lt": 0
     },
     {
       "slug": "hono",
@@ -2277,10 +2733,10 @@
       "tool": "page2ai",
       "article_in_server_html": true,
       "error": null,
-      "bytes_out": 5615,
+      "bytes_out": 5652,
       "bytes_html": 98762,
-      "compression": 0.0569,
-      "ms": 8,
+      "compression": 0.0572,
+      "ms": 11,
       "n_code": 13,
       "n_headings": 10,
       "n_boilerplate": 29,
@@ -2296,9 +2752,15 @@
       "content_recall_prose": 0.975,
       "f_score_prose": 0.9525,
       "fences": 26,
-      "lang_label_rate": 0,
+      "lang_label_rate": 0.9615,
       "tables_in_output": 0,
-      "tables_in_page": 0
+      "tables_in_page": 0,
+      "heading_recall_lt": 1,
+      "text_recall_lt": 1,
+      "boilerplate_leak_lt": 0.069,
+      "cleanliness_lt": 0.931,
+      "f_score_lt": 0.9643,
+      "f_score_prose_lt": 0.9643
     },
     {
       "slug": "hono",
@@ -2327,7 +2789,13 @@
       "fences": 26,
       "lang_label_rate": 0,
       "tables_in_output": 0,
-      "tables_in_page": 0
+      "tables_in_page": 0,
+      "heading_recall_lt": 1,
+      "text_recall_lt": 1,
+      "boilerplate_leak_lt": 0,
+      "cleanliness_lt": 1,
+      "f_score_lt": 1,
+      "f_score_prose_lt": 1
     },
     {
       "slug": "hono",
@@ -2356,7 +2824,13 @@
       "fences": 26,
       "lang_label_rate": 0.9615,
       "tables_in_output": 0,
-      "tables_in_page": 0
+      "tables_in_page": 0,
+      "heading_recall_lt": 0.9,
+      "text_recall_lt": 1,
+      "boilerplate_leak_lt": 0,
+      "cleanliness_lt": 1,
+      "f_score_lt": 0.9778,
+      "f_score_prose_lt": 0.9873
     },
     {
       "slug": "hono",
@@ -2385,7 +2859,13 @@
       "fences": 26,
       "lang_label_rate": 0,
       "tables_in_output": 0,
-      "tables_in_page": 0
+      "tables_in_page": 0,
+      "heading_recall_lt": 1,
+      "text_recall_lt": 1,
+      "boilerplate_leak_lt": 1,
+      "cleanliness_lt": 0,
+      "f_score_lt": 0,
+      "f_score_prose_lt": 0
     },
     {
       "slug": "hono",
@@ -2414,7 +2894,13 @@
       "fences": 13,
       "lang_label_rate": 0,
       "tables_in_output": 0,
-      "tables_in_page": 0
+      "tables_in_page": 0,
+      "heading_recall_lt": 1,
+      "text_recall_lt": 1,
+      "boilerplate_leak_lt": 0,
+      "cleanliness_lt": 1,
+      "f_score_lt": 1,
+      "f_score_prose_lt": 1
     },
     {
       "slug": "hono",
@@ -2443,7 +2929,13 @@
       "fences": 26,
       "lang_label_rate": 0,
       "tables_in_output": 0,
-      "tables_in_page": 0
+      "tables_in_page": 0,
+      "heading_recall_lt": 1,
+      "text_recall_lt": 1,
+      "boilerplate_leak_lt": 1,
+      "cleanliness_lt": 0,
+      "f_score_lt": 0,
+      "f_score_prose_lt": 0
     },
     {
       "slug": "gitbook-sentry",
@@ -2451,10 +2943,10 @@
       "tool": "page2ai",
       "article_in_server_html": true,
       "error": null,
-      "bytes_out": 22012,
+      "bytes_out": 22021,
       "bytes_html": 589563,
-      "compression": 0.0373,
-      "ms": 12,
+      "compression": 0.0374,
+      "ms": 17,
       "n_code": 9,
       "n_headings": 19,
       "n_boilerplate": 16,
@@ -2472,7 +2964,13 @@
       "fences": 19,
       "lang_label_rate": 1,
       "tables_in_output": 0,
-      "tables_in_page": 0
+      "tables_in_page": 0,
+      "heading_recall_lt": 1,
+      "text_recall_lt": 1,
+      "boilerplate_leak_lt": 0.0625,
+      "cleanliness_lt": 0.9375,
+      "f_score_lt": 0.9677,
+      "f_score_prose_lt": 0.9677
     },
     {
       "slug": "gitbook-sentry",
@@ -2501,7 +2999,13 @@
       "fences": 8,
       "lang_label_rate": 0,
       "tables_in_output": 0,
-      "tables_in_page": 0
+      "tables_in_page": 0,
+      "heading_recall_lt": 0.3158,
+      "text_recall_lt": 0.9211,
+      "boilerplate_leak_lt": 0,
+      "cleanliness_lt": 1,
+      "f_score_lt": 0.6341,
+      "f_score_prose_lt": 0.8421
     },
     {
       "slug": "gitbook-sentry",
@@ -2530,7 +3034,13 @@
       "fences": 8,
       "lang_label_rate": 1,
       "tables_in_output": 0,
-      "tables_in_page": 0
+      "tables_in_page": 0,
+      "heading_recall_lt": 0.9474,
+      "text_recall_lt": 0.9474,
+      "boilerplate_leak_lt": 0,
+      "cleanliness_lt": 1,
+      "f_score_lt": 0.9434,
+      "f_score_prose_lt": 0.9606
     },
     {
       "slug": "gitbook-sentry",
@@ -2559,7 +3069,13 @@
       "fences": 19,
       "lang_label_rate": 0.9474,
       "tables_in_output": 0,
-      "tables_in_page": 0
+      "tables_in_page": 0,
+      "heading_recall_lt": 1,
+      "text_recall_lt": 1,
+      "boilerplate_leak_lt": 1,
+      "cleanliness_lt": 0,
+      "f_score_lt": 0,
+      "f_score_prose_lt": 0
     },
     {
       "slug": "gitbook-sentry",
@@ -2588,7 +3104,13 @@
       "fences": 18,
       "lang_label_rate": 0,
       "tables_in_output": 0,
-      "tables_in_page": 0
+      "tables_in_page": 0,
+      "heading_recall_lt": 1,
+      "text_recall_lt": 0.6316,
+      "boilerplate_leak_lt": 0,
+      "cleanliness_lt": 1,
+      "f_score_lt": 1,
+      "f_score_prose_lt": 0.8814
     },
     {
       "slug": "gitbook-sentry",
@@ -2617,7 +3139,13 @@
       "fences": 19,
       "lang_label_rate": 0,
       "tables_in_output": 0,
-      "tables_in_page": 0
+      "tables_in_page": 0,
+      "heading_recall_lt": 1,
+      "text_recall_lt": 1,
+      "boilerplate_leak_lt": 1,
+      "cleanliness_lt": 0,
+      "f_score_lt": 0,
+      "f_score_prose_lt": 0
     }
   ]
 }

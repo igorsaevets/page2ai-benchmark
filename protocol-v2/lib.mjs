@@ -17,6 +17,28 @@ export const squeeze = (s) =>
 /** Strip ALL whitespace. For code, which every converter re-indents. */
 export const stripWs = (s) => String(s).replace(/\s+/g, "");
 
+/**
+ * Amendment 7: remove markdown link/image TARGETS, keep the display text. `[text](url)` -> text.
+ * Bare URLs and <autolinks> are NOT touched - they are visible text. Applied before squeeze() in
+ * the prose/heading/boilerplate matchers; never in code matching.
+ *
+ * The hiding-channel safeguard (named in the amendment): a target that does not LOOK like a
+ * URL, path or fragment is kept as text rather than stripped. Without this, a tool could park
+ * leaked chrome strings inside `[x](leaked sidebar text)` and the leak matcher would never see
+ * them. A real URL slug still strips (the vacuous-match fix); free text in target position
+ * stays matchable.
+ */
+const urlishTarget = (t) => {
+  const s = String(t).trim();
+  if (s === "") return true;
+  if (/^(?:[a-z][a-z0-9+.-]*:|\/|\.{1,2}\/|#|\?)/i.test(s)) return true;   // scheme, absolute or relative path, fragment, query
+  return /^[^\s()]+$/.test(s) && /[./]/.test(s);                           // bare host-ish token like example.com or docs/page
+};
+export const stripLinkTargets = (md) =>
+  String(md)
+    .replace(/!\[([^\]]*)\]\(([^)]*)\)/g, (m, text, target) => (urlishTarget(target) ? text : `${text} ${target}`))
+    .replace(/\[([^\]]*)\]\(([^)]*)\)/g, (m, text, target) => (urlishTarget(target) ? text : `${text} ${target}`));
+
 export const sha256 = (buf) => createHash("sha256").update(buf).digest("hex");
 
 /**
