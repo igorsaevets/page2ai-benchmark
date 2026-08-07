@@ -1,0 +1,6811 @@
+{
+  "generated_from": "pool-2026-08-07.json",
+  "ci": {
+    "run_id": "31214856112",
+    "run_attempt": "1",
+    "repository": "igorsaevets/page2ai-benchmark",
+    "sha": "6637b798fd987befea16d95383bac0a86ef87b67"
+  },
+  "rows": [
+    {
+      "key": "theartofcommandline",
+      "sources": [
+        "Q1"
+      ],
+      "name": "jlevy/the-art-of-command-line",
+      "description": "Master the command line, in one page",
+      "topics": [
+        "bash",
+        "documentation",
+        "linux",
+        "macos",
+        "unix",
+        "windows"
+      ],
+      "stars": 162040,
+      "verdict": "OUT",
+      "reason": "F1: found only by the `topic:documentation` search, which the rule documents as not implying a generator, and its own description does not claim documentation-site generation",
+      "evidence": "Q1-only"
+    },
+    {
+      "key": "next",
+      "sources": [
+        "Q2",
+        "Q3"
+      ],
+      "name": "vercel/next.js",
+      "description": "The React Framework",
+      "topics": [
+        "blog",
+        "browser",
+        "compiler",
+        "components",
+        "hybrid",
+        "nextjs",
+        "node",
+        "react",
+        "server-rendering",
+        "ssg",
+        "static",
+        "static-site-generator",
+        "universal",
+        "vercel"
+      ],
+      "stars": 141678,
+      "jamstackSlug": "next",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "storybook",
+      "sources": [
+        "Q1"
+      ],
+      "name": "storybookjs/storybook",
+      "description": "Storybook is the industry standard workshop for building, documenting, and testing UI components in isolation",
+      "topics": [
+        "angular",
+        "components",
+        "design-systems",
+        "documentation",
+        "html",
+        "javascript",
+        "react",
+        "react-native",
+        "stories",
+        "storybook",
+        "styleguide",
+        "svelte",
+        "testing",
+        "typescript",
+        "ui",
+        "vite",
+        "vue",
+        "web-components",
+        "webpack",
+        "workshop"
+      ],
+      "stars": 90784,
+      "verdict": "OUT",
+      "reason": "F1: component workshop",
+      "evidence": "storybook"
+    },
+    {
+      "key": "mermaid",
+      "sources": [
+        "Q1"
+      ],
+      "name": "mermaid-js/mermaid",
+      "description": "Generation of diagrams like flowcharts or sequence diagrams from text in a similar manner as markdown",
+      "topics": [
+        "diagrams",
+        "diagrams-as-code",
+        "documentation",
+        "flowchart",
+        "javascript",
+        "mindmap",
+        "typescript",
+        "uml-diagrams"
+      ],
+      "stars": 89622,
+      "verdict": "OUT",
+      "reason": "F1: found only by the `topic:documentation` search, which the rule documents as not implying a generator, and its own description does not claim documentation-site generation",
+      "evidence": "Q1-only"
+    },
+    {
+      "key": "hugo",
+      "sources": [
+        "Q2",
+        "Q3"
+      ],
+      "name": "gohugoio/hugo",
+      "description": "The world’s fastest framework for building websites.",
+      "topics": [
+        "blog-engine",
+        "cms",
+        "content-management-system",
+        "documentation-tool",
+        "go",
+        "hugo",
+        "static-site-generator"
+      ],
+      "stars": 89365,
+      "jamstackSlug": "hugo",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "framework for building websites"
+    },
+    {
+      "key": "appflowy",
+      "sources": [
+        "Q1"
+      ],
+      "name": "AppFlowy-IO/AppFlowy",
+      "description": "Bring projects, wikis, and teams together with AI. AppFlowy is the AI collaborative workspace where you achieve more without losing control of your data. The leading open source Notion alternative.",
+      "topics": [
+        "blog",
+        "confluence-alternative",
+        "content-management",
+        "content-services",
+        "documentation",
+        "flutter",
+        "note-taking",
+        "notion-alternative",
+        "project-management",
+        "task-management",
+        "team-collaboration",
+        "wiki"
+      ],
+      "stars": 75058,
+      "verdict": "OUT",
+      "reason": "F1: wiki",
+      "evidence": "wikis"
+    },
+    {
+      "key": "docusaurus",
+      "sources": [
+        "G",
+        "Q1",
+        "Q3",
+        "Q4"
+      ],
+      "name": "facebook/docusaurus",
+      "description": "Easy to maintain open source documentation websites.",
+      "topics": [
+        "documentation",
+        "hacktoberfest",
+        "javascript",
+        "open-source",
+        "react",
+        "website"
+      ],
+      "stars": 65857,
+      "jamstackSlug": "docusaurus",
+      "w3techsId": "cm-docusaurus",
+      "verdict": "IN",
+      "reason": "grandfathered: present in the v0.2 corpus (section 4)",
+      "evidence": ""
+    },
+    {
+      "key": "tldr",
+      "sources": [
+        "Q1"
+      ],
+      "name": "tldr-pages/tldr",
+      "description": "Collaborative cheatsheets for console commands 📚.",
+      "topics": [
+        "android",
+        "bsd",
+        "cheatsheet",
+        "cheatsheets",
+        "cli",
+        "command-line",
+        "console",
+        "documentation",
+        "examples",
+        "hacktoberfest",
+        "help",
+        "linux",
+        "macos",
+        "man-page",
+        "manual",
+        "osx",
+        "shell",
+        "terminal",
+        "tldr",
+        "windows"
+      ],
+      "stars": 63327,
+      "verdict": "OUT",
+      "reason": "F1: cheatsheet collection",
+      "evidence": "cheatsheets"
+    },
+    {
+      "key": "astro",
+      "sources": [
+        "Q2",
+        "Q3"
+      ],
+      "name": "withastro/astro",
+      "description": "The web framework for content-driven websites. ⭐️ Star to support our work!",
+      "topics": [
+        "astro",
+        "blog",
+        "browser",
+        "components",
+        "hybrid",
+        "islands",
+        "node",
+        "server",
+        "static",
+        "static-site-generator",
+        "universal"
+      ],
+      "stars": 61625,
+      "jamstackSlug": "astro",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "web framework"
+    },
+    {
+      "key": "nuxt",
+      "sources": [
+        "Q2",
+        "Q3"
+      ],
+      "name": "nuxt/nuxt",
+      "description": "the full-stack Vue framework",
+      "topics": [
+        "csr",
+        "framework",
+        "full-stack",
+        "hacktoberfest",
+        "hybrid",
+        "node",
+        "nuxt",
+        "server-rendering",
+        "ssg",
+        "ssr",
+        "static-site-generator",
+        "universal",
+        "vue"
+      ],
+      "stars": 60734,
+      "jamstackSlug": "nuxt",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "gatsby",
+      "sources": [
+        "Q2",
+        "Q3"
+      ],
+      "name": "gatsbyjs/gatsby",
+      "description": "React-based framework with performance, scalability, and security built in.",
+      "topics": [
+        "blog",
+        "compiler",
+        "gatsby",
+        "graphql",
+        "react",
+        "static-site-generator",
+        "web-app"
+      ],
+      "stars": 55937,
+      "jamstackSlug": "gatsby",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "jekyll",
+      "sources": [
+        "Q2",
+        "Q3"
+      ],
+      "name": "jekyll/jekyll",
+      "description": ":globe_with_meridians: Jekyll is a blog-aware static site generator in Ruby",
+      "topics": [
+        "blog-engine",
+        "jekyll",
+        "liquid",
+        "markdown",
+        "ruby",
+        "static-site-generator"
+      ],
+      "stars": 51620,
+      "jamstackSlug": "jekyll",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "professionalprogramming",
+      "sources": [
+        "Q1"
+      ],
+      "name": "charlax/professional-programming",
+      "description": "A collection of learning resources for curious software engineers",
+      "topics": [
+        "architecture",
+        "computer-science",
+        "concepts",
+        "documentation",
+        "engineer",
+        "learning",
+        "lessons-learned",
+        "professional",
+        "programmer",
+        "programming-language",
+        "read-articles",
+        "scalability",
+        "software-engineering"
+      ],
+      "stars": 51337,
+      "verdict": "OUT",
+      "reason": "F1: cheatsheet collection",
+      "evidence": "collection of"
+    },
+    {
+      "key": "hexo",
+      "sources": [
+        "Q2",
+        "Q3"
+      ],
+      "name": "hexojs/hexo",
+      "description": "A fast, simple & powerful blog framework, powered by Node.js.",
+      "topics": [
+        "hacktoberfest",
+        "hexo",
+        "javascript",
+        "nodejs",
+        "static-site-generator",
+        "typescript"
+      ],
+      "stars": 41768,
+      "jamstackSlug": "hexo",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "cheat",
+      "sources": [
+        "Q1"
+      ],
+      "name": "chubin/cheat.sh",
+      "description": "the only cheat sheet you need",
+      "topics": [
+        "cheatsheet",
+        "cli",
+        "command-line",
+        "curl",
+        "documentation",
+        "examples",
+        "hacktoberfest2021",
+        "help",
+        "terminal",
+        "tldr"
+      ],
+      "stars": 41612,
+      "verdict": "OUT",
+      "reason": "F1: cheatsheet collection",
+      "evidence": "cheat sheet"
+    },
+    {
+      "key": "devdocs",
+      "sources": [
+        "Q1"
+      ],
+      "name": "freeCodeCamp/devdocs",
+      "description": "API Documentation Browser",
+      "topics": [
+        "api-documentation",
+        "app",
+        "devdocs",
+        "developer-tools",
+        "docs",
+        "documentation",
+        "documentation-tool",
+        "offline",
+        "pwa"
+      ],
+      "stars": 39268,
+      "verdict": "IN",
+      "reason": "stated purpose is documentation",
+      "evidence": "Documentation"
+    },
+    {
+      "key": "wtfpython",
+      "sources": [
+        "Q1"
+      ],
+      "name": "satwikkansal/wtfpython",
+      "description": "What the f*ck Python? 😱",
+      "topics": [
+        "documentation",
+        "gotchas",
+        "interview-questions",
+        "pitfalls",
+        "python",
+        "python-interview-questions",
+        "snippets",
+        "wats",
+        "wtf"
+      ],
+      "stars": 37045,
+      "verdict": "OUT",
+      "reason": "F1: found only by the `topic:documentation` search, which the rule documents as not implying a generator, and its own description does not claim documentation-site generation",
+      "evidence": "Q1-only"
+    },
+    {
+      "key": "slate",
+      "sources": [
+        "Q2",
+        "Q3"
+      ],
+      "name": "slatedocs/slate",
+      "description": "Beautiful static documentation for your API",
+      "topics": [
+        "api",
+        "api-documentation",
+        "slate",
+        "static-site-generator"
+      ],
+      "stars": 36048,
+      "jamstackSlug": "slate",
+      "verdict": "IN",
+      "reason": "stated purpose is documentation",
+      "evidence": "documentation"
+    },
+    {
+      "key": "remix",
+      "sources": [
+        "Q3"
+      ],
+      "name": "remix",
+      "description": "Build Better Websites. Create modern, resilient user experiences with web fundamentals.",
+      "stars": 31528,
+      "jamstackSlug": "remix",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "docsify",
+      "sources": [
+        "Q1",
+        "Q3"
+      ],
+      "name": "docsifyjs/docsify",
+      "description": "🃏 A magical documentation site generator.",
+      "topics": [
+        "doc",
+        "docs",
+        "docsify",
+        "documentation",
+        "documentation-tool",
+        "github-pages",
+        "markdown",
+        "vue"
+      ],
+      "stars": 31441,
+      "jamstackSlug": "docsify",
+      "verdict": "IN",
+      "reason": "stated purpose is documentation",
+      "evidence": "documentation"
+    },
+    {
+      "key": "gitbook",
+      "sources": [
+        "Q1",
+        "Q3",
+        "Q4"
+      ],
+      "name": "GitbookIO/gitbook",
+      "description": "The open source frontend for GitBook doc sites",
+      "topics": [
+        "documentation",
+        "git",
+        "gitbook",
+        "markdown"
+      ],
+      "stars": 28986,
+      "jamstackSlug": "gitbook",
+      "w3techsId": "cm-gitbook",
+      "verdict": "IN",
+      "reason": "in W3Techs' documentation-platforms category (source-implied F1)",
+      "evidence": "cm-gitbook"
+    },
+    {
+      "key": "wiki",
+      "sources": [
+        "Q1"
+      ],
+      "name": "requarks/wiki",
+      "description": "Wiki.js | A modern and powerful wiki app built on Node.js",
+      "topics": [
+        "cross-platform",
+        "documentation",
+        "git",
+        "markdown",
+        "nodejs",
+        "open-source",
+        "wiki"
+      ],
+      "stars": 28727,
+      "verdict": "OUT",
+      "reason": "F1: wiki",
+      "evidence": "wiki"
+    },
+    {
+      "key": "mkdocsmaterial",
+      "sources": [
+        "Q1"
+      ],
+      "name": "squidfunk/mkdocs-material",
+      "description": "Documentation that simply works",
+      "topics": [
+        "documentation",
+        "framework",
+        "material-design",
+        "mkdocs",
+        "plugins",
+        "theme"
+      ],
+      "stars": 27226,
+      "verdict": "IN",
+      "reason": "stated purpose is documentation",
+      "evidence": "Documentation"
+    },
+    {
+      "key": "docz",
+      "sources": [
+        "Q1"
+      ],
+      "name": "pedronauck/docz",
+      "description": "✍ It has never been so easy to document your things!",
+      "topics": [
+        "design-system",
+        "docs",
+        "documentation",
+        "docz",
+        "gatsby",
+        "js",
+        "mdx",
+        "react",
+        "theme",
+        "ui",
+        "zero-configuration"
+      ],
+      "stars": 23587,
+      "verdict": "OUT",
+      "reason": "F1: found only by the `topic:documentation` search, which the rule documents as not implying a generator, and its own description does not claim documentation-site generation",
+      "evidence": "Q1-only"
+    },
+    {
+      "key": "chineseprogrammerwrongpronunciation",
+      "sources": [
+        "Q1"
+      ],
+      "name": "shimohq/chinese-programmer-wrong-pronunciation",
+      "description": "中国程序员容易发音错误的单词",
+      "topics": [
+        "chinese-programmers",
+        "documentation",
+        "pronunciation",
+        "spelling"
+      ],
+      "stars": 23254,
+      "verdict": "OUT",
+      "reason": "F1: found only by the `topic:documentation` search, which the rule documents as not implying a generator, and its own description does not claim documentation-site generation",
+      "evidence": "Q1-only"
+    },
+    {
+      "key": "vuepress",
+      "sources": [
+        "Q2",
+        "Q3"
+      ],
+      "name": "vuejs/vuepress",
+      "description": "📝 Minimalistic Vue-powered static site generator",
+      "topics": [
+        "blog-engine",
+        "docs-generator",
+        "seo",
+        "static-site-generator",
+        "vue",
+        "vuepress"
+      ],
+      "stars": 22746,
+      "jamstackSlug": "vuepress",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "mkdocs",
+      "sources": [
+        "Q1",
+        "Q2",
+        "Q3",
+        "Q4"
+      ],
+      "name": "mkdocs/mkdocs",
+      "description": "Project documentation with Markdown.",
+      "topics": [
+        "documentation",
+        "markdown",
+        "mkdocs",
+        "python",
+        "static-site-generator"
+      ],
+      "stars": 22317,
+      "jamstackSlug": "mkdocs",
+      "w3techsId": "cm-mkdocs",
+      "verdict": "IN",
+      "reason": "in W3Techs' documentation-platforms category (source-implied F1)",
+      "evidence": "cm-mkdocs"
+    },
+    {
+      "key": "docmost",
+      "sources": [
+        "Q1"
+      ],
+      "name": "docmost/docmost",
+      "description": "Docmost is an open-source collaborative wiki and documentation software. It is an open-source alternative to Confluence and Notion.",
+      "topics": [
+        "confluence",
+        "documentation",
+        "drawio",
+        "knowledge-base",
+        "mediawiki",
+        "miro",
+        "notion",
+        "notion-alternative",
+        "open-source",
+        "opensource",
+        "quip",
+        "realtime-collaboration",
+        "wiki"
+      ],
+      "stars": 21286,
+      "verdict": "IN",
+      "reason": "stated purpose is documentation",
+      "evidence": "documentation"
+    },
+    {
+      "key": "mdbook",
+      "sources": [
+        "G",
+        "Q3"
+      ],
+      "name": "mdbook",
+      "description": "GitBook alternative implemented in Rust.",
+      "stars": 20174,
+      "jamstackSlug": "mdBook",
+      "verdict": "IN",
+      "reason": "grandfathered: present in the v0.2 corpus (section 4)",
+      "evidence": ""
+    },
+    {
+      "key": "buildawesome",
+      "sources": [
+        "Q2"
+      ],
+      "name": "11ty/buildawesome",
+      "description": "A simpler site generator. Transforms a directory of templates (of varying types) into HTML.",
+      "topics": [
+        "blog-engine",
+        "documentation-tool",
+        "eleventy",
+        "javascript",
+        "static-site-generator",
+        "templates"
+      ],
+      "stars": 19837,
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "site generator"
+    },
+    {
+      "key": "sveltekit",
+      "sources": [
+        "Q3"
+      ],
+      "name": "sveltekit",
+      "description": "SvelteKit is an application framework powered by Svelte — build bigger apps with a smaller footprint.",
+      "stars": 19627,
+      "jamstackSlug": "sveltekit",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "decapcms",
+      "sources": [
+        "Q2"
+      ],
+      "name": "decaporg/decap-cms",
+      "description": "A Git-based CMS for Static Site Generators",
+      "topics": [
+        "cms",
+        "content-management-system",
+        "decap-cms",
+        "git-based-cms",
+        "headless-cms",
+        "jamstack",
+        "javascript",
+        "netlify-cms",
+        "npm-package",
+        "react",
+        "static",
+        "static-site",
+        "static-site-generator"
+      ],
+      "stars": 19284,
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "bookstack",
+      "sources": [
+        "Q1"
+      ],
+      "name": "BookStackApp/BookStack",
+      "description": "NOW MANAGED ON CODEBERG",
+      "topics": [
+        "bookstack",
+        "documentation",
+        "laravel",
+        "php",
+        "selfhosted",
+        "wiki"
+      ],
+      "stars": 18974,
+      "verdict": "OUT",
+      "reason": "F1: found only by the `topic:documentation` search, which the rule documents as not implying a generator, and its own description does not claim documentation-site generation",
+      "evidence": "Q1-only"
+    },
+    {
+      "key": "eleventy",
+      "sources": [
+        "Q3"
+      ],
+      "name": "eleventy",
+      "description": "A simpler static site generator",
+      "stars": 18662,
+      "jamstackSlug": "eleventy",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "tuieditor",
+      "sources": [
+        "Q1"
+      ],
+      "name": "nhn/tui.editor",
+      "description": "🍞📝 Markdown WYSIWYG Editor. GFM Standard + Chart & UML Extensible.",
+      "topics": [
+        "chart",
+        "commonmark",
+        "documentation",
+        "editor",
+        "frontend",
+        "gfm",
+        "html",
+        "jquery",
+        "jquery-plugin",
+        "markdown",
+        "uml",
+        "wysiwyg"
+      ],
+      "stars": 18011,
+      "verdict": "OUT",
+      "reason": "F1: WYSIWYG editor",
+      "evidence": "WYSIWYG"
+    },
+    {
+      "key": "zola",
+      "sources": [
+        "Q2",
+        "Q3"
+      ],
+      "name": "getzola/zola",
+      "description": "A fast static site generator in a single binary with everything built-in. https://www.getzola.org",
+      "topics": [
+        "blog-engine",
+        "cms",
+        "content-management-system",
+        "documentation-tool",
+        "markdown",
+        "markdown-to-html",
+        "rust",
+        "site-generator",
+        "static",
+        "static-site-generator",
+        "tera"
+      ],
+      "stars": 17307,
+      "jamstackSlug": "zola",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "docs",
+      "sources": [
+        "Q1"
+      ],
+      "name": "suitenumerique/docs",
+      "description": "Docs is an open-source text editor: web-native, made for real-time collaboration, cleanly structured documents and sub-documents with full ownership of your data. Built to scale with Django and React.",
+      "topics": [
+        "blocknotejs",
+        "collaborative",
+        "django",
+        "documentation",
+        "g2g",
+        "government",
+        "knowledge",
+        "knowledge-base",
+        "mit",
+        "mit-license",
+        "opensource",
+        "reactjs",
+        "realtime-collaboration",
+        "self-hosted",
+        "wiki",
+        "yjs"
+      ],
+      "stars": 16706,
+      "verdict": "OUT",
+      "reason": "F1: found only by the `topic:documentation` search, which the rule documents as not implying a generator, and its own description does not claim documentation-site generation",
+      "evidence": "Q1-only"
+    },
+    {
+      "key": "architecturedecisionrecord",
+      "sources": [
+        "Q1"
+      ],
+      "name": "architecture-decision-record/architecture-decision-record",
+      "description": "Architecture decision record (ADR) examples for software planning, IT leadership, and template documentation",
+      "topics": [
+        "adr",
+        "architecture-decision-record",
+        "decision-record",
+        "decisions",
+        "documentation",
+        "project-management",
+        "teamwork",
+        "tutorial"
+      ],
+      "stars": 16613,
+      "verdict": "IN",
+      "reason": "stated purpose is documentation",
+      "evidence": "documentation"
+    },
+    {
+      "key": "quarkdown",
+      "sources": [
+        "Q1",
+        "Q2"
+      ],
+      "name": "iamgio/quarkdown",
+      "description": "🪐 Markdown with superpowers: from ideas to papers, presentations, websites, books, and knowledge bases.",
+      "topics": [
+        "compiler",
+        "documentation",
+        "knowledge-management",
+        "markdown",
+        "markup",
+        "markup-language",
+        "paper",
+        "pdf",
+        "presentations",
+        "scripting-language",
+        "slides",
+        "static-site-generator",
+        "typesetting",
+        "typesetting-system",
+        "wiki"
+      ],
+      "stars": 15881,
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "umijs",
+      "sources": [
+        "Q3"
+      ],
+      "name": "umijs",
+      "description": "Pluggable enterprise-level react application framework",
+      "stars": 15848,
+      "jamstackSlug": "umi",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "chinesecopywritingguidelines",
+      "sources": [
+        "Q1"
+      ],
+      "name": "sparanoid/chinese-copywriting-guidelines",
+      "description": "Chinese copywriting guidelines for better written communication／中文文案排版指北",
+      "topics": [
+        "chinese",
+        "chinese-simplified",
+        "chinese-traditional",
+        "copywriting",
+        "css",
+        "documentation",
+        "guideline",
+        "leancloud",
+        "markdown"
+      ],
+      "stars": 15618,
+      "verdict": "OUT",
+      "reason": "F1: found only by the `topic:documentation` search, which the rule documents as not implying a generator, and its own description does not claim documentation-site generation",
+      "evidence": "Q1-only"
+    },
+    {
+      "key": "opensourceguide",
+      "sources": [
+        "Q1"
+      ],
+      "name": "github/opensource.guide",
+      "description": "📚 Community guides for open source creators",
+      "topics": [
+        "best-practices",
+        "documentation",
+        "hacktoberfest",
+        "open-source",
+        "oss",
+        "tutorial"
+      ],
+      "stars": 15615,
+      "verdict": "OUT",
+      "reason": "F1: found only by the `topic:documentation` search, which the rule documents as not implying a generator, and its own description does not claim documentation-site generation",
+      "evidence": "Q1-only"
+    },
+    {
+      "key": "vitepress",
+      "sources": [
+        "G",
+        "Q3"
+      ],
+      "name": "vitepress",
+      "description": "Vue-powered Static Site Generator based on vite",
+      "stars": 15553,
+      "jamstackSlug": "vitepress",
+      "verdict": "IN",
+      "reason": "grandfathered: present in the v0.2 corpus (section 4)",
+      "evidence": ""
+    },
+    {
+      "key": "jsdoc",
+      "sources": [
+        "Q1"
+      ],
+      "name": "jsdoc/jsdoc",
+      "description": "An API documentation generator for JavaScript.",
+      "topics": [
+        "api",
+        "docs",
+        "documentation",
+        "javascript",
+        "jsdoc"
+      ],
+      "stars": 15451,
+      "verdict": "IN",
+      "reason": "stated purpose is documentation",
+      "evidence": "documentation"
+    },
+    {
+      "key": "electronvue",
+      "sources": [
+        "Q1"
+      ],
+      "name": "SimulatedGREG/electron-vue",
+      "description": "An Electron & Vue.js quick start boilerplate with vue-cli scaffolding, common Vue plugins, electron-packager/electron-builder, unit/e2e testing, vue-devtools, and webpack.",
+      "topics": [
+        "babel",
+        "boilerplate",
+        "documentation",
+        "electron",
+        "electron-builder",
+        "electron-packager",
+        "end-to-end-testing",
+        "es6",
+        "unit-testing",
+        "vue",
+        "vue-cli",
+        "webpack"
+      ],
+      "stars": 15386,
+      "verdict": "OUT",
+      "reason": "F1: example/template/content repository",
+      "evidence": "boilerplate"
+    },
+    {
+      "key": "skillseekers",
+      "sources": [
+        "Q1"
+      ],
+      "name": "yusufkaraaslan/Skill_Seekers",
+      "description": "Convert documentation websites, GitHub repositories, and PDFs into Claude AI skills with automatic conflict detection",
+      "topics": [
+        "ai-tools",
+        "ast-parser",
+        "automation",
+        "claude-ai",
+        "claude-skills",
+        "code-analysis",
+        "conflict-detection",
+        "documentation",
+        "documentation-generator",
+        "github",
+        "github-scraper",
+        "mcp",
+        "mcp-server",
+        "multi-source",
+        "ocr",
+        "pdf",
+        "python",
+        "web-scraping"
+      ],
+      "stars": 14723,
+      "verdict": "IN",
+      "reason": "stated purpose is documentation",
+      "evidence": "documentation"
+    },
+    {
+      "key": "editormd",
+      "sources": [
+        "Q1"
+      ],
+      "name": "pandao/editor.md",
+      "description": "The open source embeddable online markdown editor (component).",
+      "topics": [
+        "codemirror",
+        "commonmark",
+        "documentation",
+        "editor",
+        "flowchart",
+        "gfm",
+        "javascript",
+        "jquery",
+        "katex",
+        "markdown",
+        "markdown-editor",
+        "markdown-writer",
+        "marked",
+        "sequence-diagram",
+        "toc"
+      ],
+      "stars": 14318,
+      "verdict": "OUT",
+      "reason": "F1: WYSIWYG editor",
+      "evidence": "markdown editor"
+    },
+    {
+      "key": "gollum",
+      "sources": [
+        "Q1"
+      ],
+      "name": "gollum/gollum",
+      "description": "A simple, Git-powered wiki with a local frontend and support for many kinds of markup and content.",
+      "topics": [
+        "documentation",
+        "documentation-tool",
+        "gollum",
+        "jruby-support",
+        "markdown",
+        "ruby",
+        "wiki"
+      ],
+      "stars": 14308,
+      "verdict": "OUT",
+      "reason": "F1: wiki",
+      "evidence": "wiki"
+    },
+    {
+      "key": "nextra",
+      "sources": [
+        "G",
+        "Q2"
+      ],
+      "name": "shuding/nextra",
+      "description": "Simple, powerful and flexible site generation framework with everything you love from Next.js.",
+      "topics": [
+        "markdown",
+        "mdx",
+        "nextjs",
+        "nextra",
+        "react",
+        "static-site-generator"
+      ],
+      "stars": 13897,
+      "verdict": "IN",
+      "reason": "grandfathered: present in the v0.2 corpus (section 4)",
+      "evidence": ""
+    },
+    {
+      "key": "pelican",
+      "sources": [
+        "Q2",
+        "Q3"
+      ],
+      "name": "getpelican/pelican",
+      "description": "Static site generator that supports Markdown and reST syntax. Powered by Python.",
+      "topics": [
+        "pelican",
+        "python",
+        "static-site-generator"
+      ],
+      "stars": 13331,
+      "jamstackSlug": "pelican",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "Static site generator"
+    },
+    {
+      "key": "fresh",
+      "sources": [
+        "Q3"
+      ],
+      "name": "fresh",
+      "description": "Fresh is a next generation web framework, built for speed, reliability, and simplicity",
+      "stars": 13254,
+      "jamstackSlug": "fresh",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "web framework"
+    },
+    {
+      "key": "core",
+      "sources": [
+        "Q2"
+      ],
+      "name": "stenciljs/core",
+      "description": "A toolchain for building scalable, enterprise-ready component systems on top of TypeScript and Web Component standards. Stencil components can be distributed natively to React, Angular, Vue, (+ more) ",
+      "topics": [
+        "custom-element",
+        "design-system",
+        "ionic",
+        "ssg",
+        "ssr",
+        "static-site-generator",
+        "stencil",
+        "stenciljs",
+        "typescript",
+        "webcomponent"
+      ],
+      "stars": 13126,
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "quartz",
+      "sources": [
+        "Q2"
+      ],
+      "name": "jackyzha0/quartz",
+      "description": "🌱 a fast, batteries-included static-site generator that transforms Markdown content into fully functional websites",
+      "topics": [
+        "digital-garden",
+        "networked-thought",
+        "obsidian",
+        "obsidian-md",
+        "quartz-ssg",
+        "static-site-generator"
+      ],
+      "stars": 12955,
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "site generator"
+    },
+    {
+      "key": "zeal",
+      "sources": [
+        "Q1"
+      ],
+      "name": "zealdocs/zeal",
+      "description": "Offline documentation browser. Your personal reference library, searchable in an instant.",
+      "topics": [
+        "api",
+        "api-documentation",
+        "dash",
+        "desktop-application",
+        "developer-tools",
+        "docs",
+        "docset",
+        "documentation",
+        "documentation-tool",
+        "linux",
+        "offline",
+        "qt",
+        "reference",
+        "windows",
+        "zeal"
+      ],
+      "stars": 12751,
+      "verdict": "IN",
+      "reason": "stated purpose is documentation",
+      "evidence": "documentation"
+    },
+    {
+      "key": "reactdev",
+      "sources": [
+        "Q1"
+      ],
+      "name": "reactjs/react.dev",
+      "description": "The React documentation website",
+      "topics": [
+        "documentation",
+        "javascript",
+        "react",
+        "website"
+      ],
+      "stars": 11778,
+      "verdict": "IN",
+      "reason": "stated purpose is documentation",
+      "evidence": "documentation"
+    },
+    {
+      "key": "reactstyleguidist",
+      "sources": [
+        "Q1"
+      ],
+      "name": "styleguidist/react-styleguidist",
+      "description": "Isolated React component development environment with a living style guide",
+      "topics": [
+        "documentation",
+        "hacktoberfest",
+        "react",
+        "styleguide"
+      ],
+      "stars": 11079,
+      "verdict": "OUT",
+      "reason": "F1: found only by the `topic:documentation` search, which the rule documents as not implying a generator, and its own description does not claim documentation-site generation",
+      "evidence": "Q1-only"
+    },
+    {
+      "key": "content",
+      "sources": [
+        "Q1"
+      ],
+      "name": "mdn/content",
+      "description": "The official source for MDN Web Docs content. Home to over 14,000 pages of documentation about HTML, CSS, JS, HTTP, Web APIs, and more.",
+      "topics": [
+        "css",
+        "documentation",
+        "html",
+        "http",
+        "javascript",
+        "learning",
+        "mdn",
+        "reference",
+        "web-development",
+        "web-standards"
+      ],
+      "stars": 10911,
+      "verdict": "IN",
+      "reason": "stated purpose is documentation",
+      "evidence": "documentation"
+    },
+    {
+      "key": "awsdocsdkexamples",
+      "sources": [
+        "Q1"
+      ],
+      "name": "awsdocs/aws-doc-sdk-examples",
+      "description": "Welcome to the AWS Code Examples Repository.  This repo contains code examples used in the AWS documentation, AWS SDK Developer Guides, and more. For more information, see the Readme.md file below.",
+      "topics": [
+        "aws",
+        "cpp",
+        "documentation",
+        "dotnet",
+        "examples",
+        "go",
+        "java",
+        "javascript",
+        "php",
+        "programming",
+        "python",
+        "ruby"
+      ],
+      "stars": 10444,
+      "verdict": "IN",
+      "reason": "stated purpose is documentation",
+      "evidence": "documentation"
+    },
+    {
+      "key": "framework",
+      "sources": [
+        "Q2"
+      ],
+      "name": "nuxt/framework",
+      "description": "Old repo of Nuxt 3 framework, now on nuxt/nuxt",
+      "topics": [
+        "csr",
+        "full-stack",
+        "hybrid",
+        "node",
+        "nuxt",
+        "server-rendering",
+        "ssg",
+        "ssr",
+        "static-site-generator",
+        "universal",
+        "vue"
+      ],
+      "stars": 10438,
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "reactstatic",
+      "sources": [
+        "Q2",
+        "Q3"
+      ],
+      "name": "react-static/react-static",
+      "description": "⚛️ 🚀 A progressive static site generator for React.",
+      "topics": [
+        "marketing",
+        "react",
+        "react-static",
+        "static",
+        "static-site",
+        "static-site-generator"
+      ],
+      "stars": 10346,
+      "jamstackSlug": "react-static",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "gridea",
+      "sources": [
+        "Q2",
+        "Q3"
+      ],
+      "name": "getgridea/gridea",
+      "description": "✍️ A static blog writing client (一个静态博客写作客户端)",
+      "topics": [
+        "blog",
+        "blog-engine",
+        "blog-platform",
+        "cms",
+        "electron",
+        "electronjs",
+        "gridea",
+        "jamstack",
+        "macos",
+        "static-blog",
+        "static-site",
+        "static-site-cms",
+        "static-site-generator",
+        "typescript",
+        "vue",
+        "vue2",
+        "windows"
+      ],
+      "stars": 10266,
+      "jamstackSlug": "gridea",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "pandawiki",
+      "sources": [
+        "Q1"
+      ],
+      "name": "chaitin/PandaWiki",
+      "description": "PandaWiki 是一款 AI 大模型驱动的开源知识库搭建系统，帮助你快速构建智能化的 产品文档、技术文档、FAQ、博客系统，借助大模型的力量为你提供 AI 创作、AI 问答、AI 搜索等能力。",
+      "topics": [
+        "ai",
+        "docs",
+        "document",
+        "documentation",
+        "kb",
+        "knownledge",
+        "llm",
+        "self-hosted",
+        "wiki"
+      ],
+      "stars": 10094,
+      "verdict": "OUT",
+      "reason": "F1: found only by the `topic:documentation` search, which the rule documents as not implying a generator, and its own description does not claim documentation-site generation",
+      "evidence": "Q1-only"
+    },
+    {
+      "key": "homeassistantio",
+      "sources": [
+        "Q1"
+      ],
+      "name": "home-assistant/home-assistant.io",
+      "description": ":blue_book: Home Assistant User documentation",
+      "topics": [
+        "documentation",
+        "hacktoberfest",
+        "hass",
+        "hassio",
+        "home-assistant",
+        "jekyll"
+      ],
+      "stars": 9675,
+      "verdict": "IN",
+      "reason": "stated purpose is documentation",
+      "evidence": "documentation"
+    },
+    {
+      "key": "kit",
+      "sources": [
+        "Q2"
+      ],
+      "name": "HugoBlox/kit",
+      "description": "🧱 Describe your site, AI builds it, you own it as Markdown. Snap together Tailwind blocks like Lego — landing pages, blogs, portfolios, docs & more. No AI slop. Free to deploy anywhere 👇",
+      "topics": [
+        "academic",
+        "blog",
+        "documentation-tool",
+        "github-pages",
+        "hugo",
+        "hugo-theme",
+        "hugoblox",
+        "jupyter",
+        "landing-page",
+        "netlify",
+        "page-builder",
+        "personal-website",
+        "portfolio",
+        "r",
+        "rmarkdown",
+        "rstudio",
+        "static-site-generator",
+        "vercel",
+        "website-builder",
+        "website-template"
+      ],
+      "stars": 9621,
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "beautifuldocs",
+      "sources": [
+        "Q1"
+      ],
+      "name": "matheusfelipeog/beautiful-docs",
+      "description": "Pointers to useful, well-written, and otherwise beautiful documentation.",
+      "topics": [
+        "beautiful",
+        "beautiful-docs",
+        "dev",
+        "developer",
+        "doc",
+        "docs",
+        "documentation",
+        "documentations",
+        "list"
+      ],
+      "stars": 9518,
+      "verdict": "IN",
+      "reason": "stated purpose is documentation",
+      "evidence": "documentation"
+    },
+    {
+      "key": "justthedocs",
+      "sources": [
+        "Q1"
+      ],
+      "name": "just-the-docs/just-the-docs",
+      "description": "A modern, high customizable, responsive Jekyll theme for documentation with built-in search.",
+      "topics": [
+        "documentation",
+        "github-pages",
+        "jekyll",
+        "jekyll-theme"
+      ],
+      "stars": 9117,
+      "verdict": "IN",
+      "reason": "stated purpose is documentation",
+      "evidence": "documentation"
+    },
+    {
+      "key": "starlight",
+      "sources": [
+        "Q1",
+        "Q2",
+        "Q3"
+      ],
+      "name": "withastro/starlight",
+      "description": "🌟 Build beautiful, accessible, high-performance documentation websites with Astro",
+      "topics": [
+        "astro",
+        "docs-generator",
+        "documentation",
+        "starlight",
+        "static-site-generator"
+      ],
+      "stars": 9028,
+      "jamstackSlug": "starlight",
+      "verdict": "IN",
+      "reason": "stated purpose is documentation",
+      "evidence": "documentation"
+    },
+    {
+      "key": "lkmpg",
+      "sources": [
+        "Q1"
+      ],
+      "name": "sysprog21/lkmpg",
+      "description": "The Linux Kernel Module Programming Guide (updated for 5.0+ kernels)",
+      "topics": [
+        "books",
+        "c",
+        "device-driver",
+        "documentation",
+        "kernel",
+        "linux",
+        "linux-kernel",
+        "linux-kernel-driver",
+        "linux-kernel-module",
+        "lkm",
+        "lkmpg"
+      ],
+      "stars": 8552,
+      "verdict": "OUT",
+      "reason": "F1: found only by the `topic:documentation` search, which the rule documents as not implying a generator, and its own description does not claim documentation-site generation",
+      "evidence": "Q1-only"
+    },
+    {
+      "key": "gridsome",
+      "sources": [
+        "Q2",
+        "Q3"
+      ],
+      "name": "gridsome/gridsome",
+      "description": "⚡️ The Jamstack framework for Vue.js",
+      "topics": [
+        "graphql",
+        "gridsome",
+        "jamstack",
+        "nodejs",
+        "static-site-generator",
+        "vue"
+      ],
+      "stars": 8476,
+      "jamstackSlug": "gridsome",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "typedoc",
+      "sources": [
+        "Q1"
+      ],
+      "name": "TypeStrong/typedoc",
+      "description": "Documentation generator for TypeScript projects.",
+      "topics": [
+        "documentation",
+        "generator",
+        "typescript"
+      ],
+      "stars": 8436,
+      "verdict": "IN",
+      "reason": "stated purpose is documentation",
+      "evidence": "Documentation"
+    },
+    {
+      "key": "entitycomponentsystemsamples",
+      "sources": [
+        "Q1"
+      ],
+      "name": "Unity-Technologies/EntityComponentSystemSamples",
+      "description": "",
+      "topics": [
+        "auto-vectorisation",
+        "auto-vectorization",
+        "burst",
+        "component",
+        "containers",
+        "csharp",
+        "documentation",
+        "ecs",
+        "entity",
+        "high",
+        "jobs",
+        "multicore",
+        "multicore-processors",
+        "multicore-programming",
+        "native",
+        "performance",
+        "simd",
+        "system",
+        "tutorials",
+        "unity3d"
+      ],
+      "stars": 8155,
+      "verdict": "OUT",
+      "reason": "F1: found only by the `topic:documentation` search, which the rule documents as not implying a generator, and its own description does not claim documentation-site generation",
+      "evidence": "Q1-only"
+    },
+    {
+      "key": "markdoc",
+      "sources": [
+        "Q1"
+      ],
+      "name": "markdoc/markdoc",
+      "description": "A powerful, flexible, Markdown-based authoring framework.",
+      "topics": [
+        "authoring",
+        "documentation",
+        "markdoc",
+        "markdown",
+        "react",
+        "toolchain"
+      ],
+      "stars": 8094,
+      "verdict": "OUT",
+      "reason": "F1: found only by the `topic:documentation` search, which the rule documents as not implying a generator, and its own description does not claim documentation-site generation",
+      "evidence": "Q1-only"
+    },
+    {
+      "key": "sphinx",
+      "sources": [
+        "G",
+        "Q1",
+        "Q3",
+        "Q4"
+      ],
+      "name": "sphinx-doc/sphinx",
+      "description": "The Sphinx documentation generator",
+      "topics": [
+        "docs",
+        "documentation",
+        "documentation-tool",
+        "markdown",
+        "python",
+        "restructuredtext",
+        "sphinx"
+      ],
+      "stars": 7959,
+      "jamstackSlug": "sphinx",
+      "w3techsId": "cm-sphinx",
+      "verdict": "IN",
+      "reason": "grandfathered: present in the v0.2 corpus (section 4)",
+      "evidence": ""
+    },
+    {
+      "key": "100gomistakes",
+      "sources": [
+        "Q1"
+      ],
+      "name": "teivah/100-go-mistakes",
+      "description": "📖 100 Go Mistakes and How to Avoid Them",
+      "topics": [
+        "book",
+        "chinese",
+        "documentation",
+        "english",
+        "go",
+        "golang",
+        "japanese"
+      ],
+      "stars": 7954,
+      "verdict": "OUT",
+      "reason": "F1: found only by the `topic:documentation` search, which the rule documents as not implying a generator, and its own description does not claim documentation-site generation",
+      "evidence": "Q1-only"
+    },
+    {
+      "key": "metalsmith",
+      "sources": [
+        "Q2",
+        "Q3"
+      ],
+      "name": "metalsmith/metalsmith",
+      "description": "An extremely simple, pluggable static site generator for Node.js",
+      "topics": [
+        "javascript",
+        "markdown",
+        "markdown-to-html",
+        "metalsmith",
+        "nodejs",
+        "ssg",
+        "static-site-generator",
+        "templates"
+      ],
+      "stars": 7822,
+      "jamstackSlug": "metalsmith",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "lemonadestand",
+      "sources": [
+        "Q1"
+      ],
+      "name": "nayafia/lemonade-stand",
+      "description": "A handy guide to financial support for open source",
+      "topics": [
+        "community",
+        "content",
+        "documentation",
+        "funding",
+        "lists",
+        "money",
+        "sponsorships"
+      ],
+      "stars": 7681,
+      "verdict": "OUT",
+      "reason": "F1: learning resource, not a generator",
+      "evidence": "guide to"
+    },
+    {
+      "key": "smartcontractbestpractices",
+      "sources": [
+        "Q1"
+      ],
+      "name": "ConsenSysDiligence/smart-contract-best-practices",
+      "description": "A guide to smart contract security best practices",
+      "topics": [
+        "blockchain",
+        "documentation",
+        "ethereum",
+        "security",
+        "smart-contracts",
+        "solidity"
+      ],
+      "stars": 7574,
+      "verdict": "OUT",
+      "reason": "F1: learning resource, not a generator",
+      "evidence": "guide to"
+    },
+    {
+      "key": "publii",
+      "sources": [
+        "Q2",
+        "Q3"
+      ],
+      "name": "GetPublii/Publii",
+      "description": "The most intuitive Static Site CMS designed for SEO-optimized and privacy-focused websites.",
+      "topics": [
+        "cms",
+        "electron",
+        "electronjs",
+        "fedora",
+        "handlebars",
+        "handlebars-js",
+        "linux",
+        "linux-app",
+        "macos",
+        "static-site",
+        "static-site-generator",
+        "static-website",
+        "ubuntu",
+        "vue",
+        "vuejs",
+        "vuejs2",
+        "windows",
+        "windows-10",
+        "windows-7",
+        "windows-8"
+      ],
+      "stars": 7282,
+      "jamstackSlug": "publii",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "prerenderspaplugin",
+      "sources": [
+        "Q2"
+      ],
+      "name": "chrisvfritz/prerender-spa-plugin",
+      "description": "Prerenders static HTML in a single-page application.",
+      "topics": [
+        "prerender",
+        "seo",
+        "spa",
+        "static-site-generator",
+        "webpack",
+        "webpack-plugin"
+      ],
+      "stars": 7272,
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "middleman",
+      "sources": [
+        "Q2",
+        "Q3"
+      ],
+      "name": "middleman/middleman",
+      "description": "Hand-crafted frontend development",
+      "topics": [
+        "middleman",
+        "static-site-generator"
+      ],
+      "stars": 7113,
+      "jamstackSlug": "middleman",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "dashios",
+      "sources": [
+        "Q1"
+      ],
+      "name": "Kapeli/Dash-iOS",
+      "description": "Dash for iOS was discontinued. Please check out Dash for macOS instead.",
+      "topics": [
+        "api",
+        "app",
+        "documentation",
+        "ipad",
+        "iphone",
+        "offline"
+      ],
+      "stars": 7096,
+      "verdict": "OUT",
+      "reason": "F1: found only by the `topic:documentation` search, which the rule documents as not implying a generator, and its own description does not claim documentation-site generation",
+      "evidence": "Q1-only"
+    },
+    {
+      "key": "sapper",
+      "sources": [
+        "Q3"
+      ],
+      "name": "sapper.js",
+      "description": "Sapper is a framework for building high-performance universal web apps.",
+      "stars": 6975,
+      "jamstackSlug": "sapper",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "brunch",
+      "sources": [
+        "Q3"
+      ],
+      "name": "brunch",
+      "description": "An ultra-fast HTML5 build tool. Capable of static site generation.",
+      "stars": 6782,
+      "jamstackSlug": "brunch",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "astrowind",
+      "sources": [
+        "Q2"
+      ],
+      "name": "arthelokyo/astrowind",
+      "description": "⭕️ AstroWind: A free template using Astro v7 and Tailwind CSS v4. Astro starter theme.",
+      "topics": [
+        "astro",
+        "astro-blog",
+        "astro-starter",
+        "astro-template",
+        "astro-theme",
+        "astro-themes",
+        "blog",
+        "jamstack",
+        "javascript",
+        "landing-page",
+        "ssg",
+        "static-site",
+        "static-site-generator",
+        "tailwind",
+        "tailwind-css-template",
+        "tailwind-template",
+        "tailwindcss",
+        "template",
+        "theme",
+        "website-template"
+      ],
+      "stars": 5864,
+      "verdict": "OUT",
+      "reason": "F1: example/template/content repository",
+      "evidence": "template"
+    },
+    {
+      "key": "beautifuljekyll",
+      "sources": [
+        "Q2",
+        "Q3"
+      ],
+      "name": "daattali/beautiful-jekyll",
+      "description": "✨ Build a beautiful and simple website in literally minutes. Demo at https://beautifuljekyll.com",
+      "topics": [
+        "blog",
+        "github-pages",
+        "jekyll",
+        "jekyll-theme",
+        "jekyll-themes",
+        "responsive",
+        "ruby-gem",
+        "static-site-generator"
+      ],
+      "stars": 5817,
+      "jamstackSlug": "beautiful-jekyll",
+      "verdict": "OUT",
+      "reason": "F1: example/template/content repository",
+      "evidence": "Demo"
+    },
+    {
+      "key": "vike",
+      "sources": [
+        "Q2"
+      ],
+      "name": "vikejs/vike",
+      "description": "(Replaces Next.js/Nuxt) 🔨 Build mission-critical applications with stability and development freedom.",
+      "topics": [
+        "full-stack",
+        "node",
+        "react",
+        "react-ssr",
+        "server-rendering",
+        "server-side-rendering",
+        "solid",
+        "solid-ssr",
+        "ssr",
+        "static-site-generator",
+        "vite",
+        "vite-plugin",
+        "vite-ssr",
+        "vitejs",
+        "vue",
+        "vue-ssr",
+        "web-framework"
+      ],
+      "stars": 5803,
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "zensical",
+      "sources": [
+        "Q2"
+      ],
+      "name": "zensical/zensical",
+      "description": "A modern static site generator by the Material for MkDocs team",
+      "topics": [
+        "documentation",
+        "static-site-generator"
+      ],
+      "stars": 5403,
+      "verdict": "IN",
+      "reason": "stated purpose is documentation",
+      "evidence": "MkDocs"
+    },
+    {
+      "key": "actionsghpages",
+      "sources": [
+        "Q2"
+      ],
+      "name": "peaceiris/actions-gh-pages",
+      "description": "GitHub Actions for GitHub Pages 🚀 Deploy static files and publish your site easily. Static-Site-Generators-friendly.",
+      "topics": [
+        "actions",
+        "gatsby",
+        "github-actions",
+        "github-pages",
+        "hugo",
+        "mdbook",
+        "mkdocs",
+        "nextjs",
+        "nuxt",
+        "static-site-generator",
+        "vuepress"
+      ],
+      "stars": 5352,
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "reactsnap",
+      "sources": [
+        "Q2"
+      ],
+      "name": "stereobooster/react-snap",
+      "description": "👻 Zero-configuration framework-agnostic static prerendering for SPAs",
+      "topics": [
+        "prerender",
+        "react",
+        "seo",
+        "server-side-rendering",
+        "ssr",
+        "static-site-generator",
+        "vue",
+        "zero-configuration"
+      ],
+      "stars": 5118,
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "harp",
+      "sources": [
+        "Q3"
+      ],
+      "name": "harp",
+      "description": "Harp is a static web server that can also compile your project down to static assets.",
+      "stars": 4994,
+      "jamstackSlug": "harp",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "publish",
+      "sources": [
+        "Q2",
+        "Q3"
+      ],
+      "name": "JohnSundell/Publish",
+      "description": "A static site generator for Swift developers",
+      "topics": [
+        "publish",
+        "static-site-generator",
+        "swift",
+        "web-development"
+      ],
+      "stars": 4967,
+      "jamstackSlug": "publish",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "astropaper",
+      "sources": [
+        "Q2"
+      ],
+      "name": "satnaing/astro-paper",
+      "description": "A minimal, accessible and SEO-friendly Astro blog theme.",
+      "topics": [
+        "a11y",
+        "accessibility",
+        "astro",
+        "astro-theme",
+        "astro-themes",
+        "blog",
+        "jamstack",
+        "markdown",
+        "ssg",
+        "static-site",
+        "static-site-generator",
+        "tailwindcss",
+        "template",
+        "theme",
+        "typescript"
+      ],
+      "stars": 4931,
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "quarto",
+      "sources": [
+        "Q3"
+      ],
+      "name": "quarto",
+      "description": "Quarto® is an open-source scientific and technical publishing system built on Pandoc",
+      "stars": 4780,
+      "jamstackSlug": "quarto",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "docfx",
+      "sources": [
+        "Q2",
+        "Q3",
+        "Q4"
+      ],
+      "name": "dotnet/docfx",
+      "description": "Static site generator for .NET API documentation.",
+      "topics": [
+        "api",
+        "csharp",
+        "documentation",
+        "dotnet",
+        "markdown",
+        "static-site-generator"
+      ],
+      "stars": 4441,
+      "jamstackSlug": "docfx",
+      "w3techsId": "cm-docfx",
+      "verdict": "IN",
+      "reason": "in W3Techs' documentation-platforms category (source-implied F1)",
+      "evidence": "cm-docfx"
+    },
+    {
+      "key": "expose",
+      "sources": [
+        "Q3"
+      ],
+      "name": "expose",
+      "description": "A simple static site generator for photoessays",
+      "stars": 4410,
+      "jamstackSlug": "expose",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "assemble",
+      "sources": [
+        "Q2",
+        "Q3"
+      ],
+      "name": "assemble/assemble",
+      "description": "Get the rocks out of your socks! Assemble makes you fast at web development! Used by thousands of projects for rapid prototyping, themes, scaffolds, boilerplates, e-books, UI components, API documenta",
+      "topics": [
+        "assemble",
+        "blog-engine",
+        "build",
+        "css",
+        "docs",
+        "documentation",
+        "generator",
+        "grunt",
+        "gulp",
+        "html",
+        "html-templates",
+        "javascript",
+        "markdown",
+        "md",
+        "nodejs",
+        "pwa",
+        "scaffold",
+        "static-site",
+        "static-site-generator",
+        "templates"
+      ],
+      "stars": 4253,
+      "jamstackSlug": "assemble",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "lektor",
+      "sources": [
+        "Q2",
+        "Q3"
+      ],
+      "name": "lektor/lektor",
+      "description": "The lektor static file content management system",
+      "topics": [
+        "cms",
+        "static-site-generator"
+      ],
+      "stars": 3947,
+      "jamstackSlug": "lektor",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "pagescms",
+      "sources": [
+        "Q2"
+      ],
+      "name": "hunvreus/pagescms",
+      "description": "The simplest CMS you'll ever need. Manage content and media right in your GitHub repository.",
+      "topics": [
+        "11ty",
+        "astro",
+        "cms",
+        "docusaurus",
+        "eleventy",
+        "gatsby",
+        "hugo",
+        "jekyll",
+        "nextjs",
+        "ssg",
+        "static-site",
+        "static-site-generator",
+        "vitepress",
+        "vue",
+        "vuejs",
+        "vuejs3",
+        "vuepress"
+      ],
+      "stars": 3898,
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "dumi",
+      "sources": [
+        "Q2"
+      ],
+      "name": "umijs/dumi",
+      "description": "📖 Static Site Generator for component library development",
+      "topics": [
+        "docs-generator",
+        "library-development",
+        "static-site-generator",
+        "umi"
+      ],
+      "stars": 3797,
+      "verdict": "OUT",
+      "reason": "F1: component workshop",
+      "evidence": "component library"
+    },
+    {
+      "key": "wintersmith",
+      "sources": [
+        "Q2",
+        "Q3"
+      ],
+      "name": "jnordberg/wintersmith",
+      "description": "A flexible static site generator",
+      "topics": [
+        "nodejs",
+        "static-site-generator",
+        "wintersmith"
+      ],
+      "stars": 3478,
+      "jamstackSlug": "wintersmith",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "cactus",
+      "sources": [
+        "Q3"
+      ],
+      "name": "cactus",
+      "description": "Static site generator for designers.",
+      "stars": 3473,
+      "jamstackSlug": "cactus",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "Static site generator"
+    },
+    {
+      "key": "phenomic",
+      "sources": [
+        "Q2",
+        "Q3"
+      ],
+      "name": "MoOx/phenomic",
+      "description": "DEPRECATED. Please use Next.js instead.",
+      "topics": [
+        "compiler",
+        "markdown",
+        "phenomic",
+        "react",
+        "static-site-generator",
+        "webpack",
+        "website"
+      ],
+      "stars": 3172,
+      "jamstackSlug": "phenomic",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "analog",
+      "sources": [
+        "Q2",
+        "Q3"
+      ],
+      "name": "analogjs/analog",
+      "description": "The fullstack meta-framework for Angular. Powered by Vite and Nitro",
+      "topics": [
+        "angular",
+        "framework",
+        "fullstack",
+        "meta-framework",
+        "nitro",
+        "router",
+        "server-side-rendering",
+        "ssg",
+        "ssr",
+        "static-site-generator",
+        "vite",
+        "web"
+      ],
+      "stars": 3159,
+      "jamstackSlug": "analog",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "hugocoder",
+      "sources": [
+        "Q2"
+      ],
+      "name": "luizdepra/hugo-coder",
+      "description": "A minimalist blog theme for hugo.",
+      "topics": [
+        "blog-theme",
+        "golang",
+        "hugo",
+        "hugo-theme",
+        "minimalist",
+        "responsive",
+        "static-site-generator",
+        "theme"
+      ],
+      "stars": 3098,
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "cms",
+      "sources": [
+        "Q2"
+      ],
+      "name": "chrisdiana/cms.js",
+      "description": "Client-Side JavaScript Site Generator",
+      "topics": [
+        "file-based",
+        "javascript",
+        "markdown",
+        "markdown-parser",
+        "single-page-app",
+        "static-site-generator"
+      ],
+      "stars": 3058,
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "Site Generator"
+    },
+    {
+      "key": "docpad",
+      "sources": [
+        "Q2",
+        "Q3"
+      ],
+      "name": "docpad/docpad",
+      "description": "Empower your website frontends with layouts, meta-data, pre-processors (markdown, jade, coffeescript, etc.), partials, skeletons, file watching, querying, and an amazing plugin system. DocPad will str",
+      "topics": [
+        "app",
+        "coffeescript",
+        "docpad",
+        "docpad-core",
+        "node",
+        "preprocessor",
+        "static-site-generator",
+        "template-engine"
+      ],
+      "stars": 3046,
+      "jamstackSlug": "docpad",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "rmarkdown",
+      "sources": [
+        "Q3"
+      ],
+      "name": "r markdown",
+      "description": "Dynamic Documents for R",
+      "stars": 2962,
+      "jamstackSlug": "rmarkdown",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "docsy",
+      "sources": [
+        "Q3"
+      ],
+      "name": "docsy",
+      "description": "A Hugo theme for creating great technical documentation sites",
+      "stars": 2797,
+      "jamstackSlug": "docsy",
+      "verdict": "IN",
+      "reason": "stated purpose is documentation",
+      "evidence": "documentation"
+    },
+    {
+      "key": "hubpress",
+      "sources": [
+        "Q3"
+      ],
+      "name": "hubpress",
+      "description": "A web application to build your Blog on GitHub.",
+      "stars": 2796,
+      "jamstackSlug": "hubpress",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "hakyll",
+      "sources": [
+        "Q3"
+      ],
+      "name": "hakyll",
+      "description": "A configurable Haskell library, for small-to-medium sites.",
+      "stars": 2768,
+      "jamstackSlug": "hakyll",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "nikola",
+      "sources": [
+        "Q2",
+        "Q3"
+      ],
+      "name": "getnikola/nikola",
+      "description": "A static website and blog generator",
+      "topics": [
+        "python",
+        "static-site",
+        "static-site-generator"
+      ],
+      "stars": 2742,
+      "jamstackSlug": "nikola",
+      "verdict": "OUT",
+      "reason": "F1: blog engine",
+      "evidence": "blog generator"
+    },
+    {
+      "key": "sveltiacms",
+      "sources": [
+        "Q2"
+      ],
+      "name": "sveltia/sveltia-cms",
+      "description": "Leading Git-based headless CMS. Successor to Netlify/Decap CMS. Modern UX, first-class i18n support, mobile support + 100s of improvements. Framework-agnostic, open source & free.",
+      "topics": [
+        "cms",
+        "content-management",
+        "content-management-system",
+        "dam",
+        "dark-mode",
+        "decap-cms",
+        "digital-asset-management",
+        "git-based-cms",
+        "github-api",
+        "headless-cms",
+        "jamstack",
+        "netlify-cms",
+        "pexels-api",
+        "pixabay-api",
+        "static-site-generator",
+        "stock-photos",
+        "svelte",
+        "sveltia-cms",
+        "unsplash-api"
+      ],
+      "stars": 2680,
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "silex",
+      "sources": [
+        "Q3"
+      ],
+      "name": "silex",
+      "description": "A drag and drop editor mixed with an online CSS editor",
+      "stars": 2606,
+      "jamstackSlug": "silex",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "scully",
+      "sources": [
+        "Q3"
+      ],
+      "name": "scully",
+      "description": "Scully is a static site generator for Angular projects looking to embrace the Jamstack.",
+      "stars": 2546,
+      "jamstackSlug": "scully",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "primo",
+      "sources": [
+        "Q3"
+      ],
+      "name": "primo",
+      "description": "An all-in-one static site builder",
+      "stars": 2227,
+      "jamstackSlug": "primo",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "jigsaw",
+      "sources": [
+        "Q3"
+      ],
+      "name": "jigsaw",
+      "description": "Static sites for Laravel developers",
+      "stars": 2205,
+      "jamstackSlug": "jigsaw",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "lume",
+      "sources": [
+        "Q3"
+      ],
+      "name": "lume",
+      "description": "🔥 Easy and flexible static site generator for Deno 🦕",
+      "stars": 2140,
+      "jamstackSlug": "lume",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "saber",
+      "sources": [
+        "Q3"
+      ],
+      "name": "saber",
+      "description": "A framework for building modern static websites.",
+      "stars": 2139,
+      "jamstackSlug": "saber",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "nanoc",
+      "sources": [
+        "Q3"
+      ],
+      "name": "nanoc",
+      "description": "Simple but very flexible static site generator",
+      "stars": 2131,
+      "jamstackSlug": "nanoc",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "elder",
+      "sources": [
+        "Q3"
+      ],
+      "name": "elder.js",
+      "description": "An opinionated, SEO focused, static site generator for Svelte.",
+      "stars": 2122,
+      "jamstackSlug": "elderjs",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "routify",
+      "sources": [
+        "Q3"
+      ],
+      "name": "routify",
+      "description": "Routes for Svelte, automated by your file structure.",
+      "stars": 1953,
+      "jamstackSlug": "routify",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "markdownstyles",
+      "sources": [
+        "Q3"
+      ],
+      "name": "markdown-styles",
+      "description": "Markdown to static HTML generator and multiple CSS themes for Markdown",
+      "stars": 1880,
+      "jamstackSlug": "markdown-styles",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "rspress",
+      "sources": [
+        "Q3"
+      ],
+      "name": "rspress",
+      "description": "Simple, efficient and easy to extend.",
+      "stars": 1879,
+      "jamstackSlug": "rspress",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "makesite",
+      "sources": [
+        "Q3"
+      ],
+      "name": "makesite.py",
+      "description": "Simple, lightweight, and magic-free static site/blog generator for Python coders.",
+      "stars": 1848,
+      "jamstackSlug": "makesite",
+      "verdict": "OUT",
+      "reason": "F1: blog engine",
+      "evidence": "blog generator"
+    },
+    {
+      "key": "blogdown",
+      "sources": [
+        "Q3"
+      ],
+      "name": "blogdown",
+      "description": "Create Blogs and Websites with R Markdown",
+      "stars": 1773,
+      "jamstackSlug": "blogdown-r",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "octopress",
+      "sources": [
+        "Q3"
+      ],
+      "name": "octopress",
+      "description": "A blogging framework for hackers based on Jekyll.",
+      "stars": 1753,
+      "jamstackSlug": "octopress",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "staticsiteboilerplate",
+      "sources": [
+        "Q3"
+      ],
+      "name": "static site boilerplate",
+      "description": "A modern static site generator.",
+      "stars": 1739,
+      "jamstackSlug": "static-site-boilerplate",
+      "verdict": "OUT",
+      "reason": "F1: example/template/content repository",
+      "evidence": "boilerplate"
+    },
+    {
+      "key": "bashblog",
+      "sources": [
+        "Q3"
+      ],
+      "name": "bashblog",
+      "description": "A single Bash script to create blogs.",
+      "stars": 1727,
+      "jamstackSlug": "bashblog",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "statiq",
+      "sources": [
+        "Q3"
+      ],
+      "name": "statiq",
+      "description": "Statiq Web is a flexible static site generator written in .NET",
+      "stars": 1668,
+      "jamstackSlug": "statiq",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "cobalt",
+      "sources": [
+        "Q3"
+      ],
+      "name": "cobalt",
+      "description": "A static site generator written in Rust.",
+      "stars": 1483,
+      "jamstackSlug": "cobalt",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "sculpin",
+      "sources": [
+        "Q3"
+      ],
+      "name": "sculpin",
+      "description": "Sculpin is a static site generator written in PHP",
+      "stars": 1478,
+      "jamstackSlug": "sculpin",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "wp2static",
+      "sources": [
+        "Q3"
+      ],
+      "name": "wp2static",
+      "description": "Leverage WordPress as a great CMS, but benefit from the speed, security and portability that a static website provides",
+      "stars": 1454,
+      "jamstackSlug": "wp2static",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "roots",
+      "sources": [
+        "Q3"
+      ],
+      "name": "roots",
+      "description": "roots is a toolbox for building simple, beautiful, and efficient products for the web.",
+      "stars": 1452,
+      "jamstackSlug": "roots",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "wheat",
+      "sources": [
+        "Q3"
+      ],
+      "name": "wheat",
+      "description": "A blog engine for coders written in node.JS",
+      "stars": 1360,
+      "jamstackSlug": "wheat",
+      "verdict": "OUT",
+      "reason": "F1: blog engine",
+      "evidence": "blog engine"
+    },
+    {
+      "key": "log4brains",
+      "sources": [
+        "Q3"
+      ],
+      "name": "log4brains",
+      "description": "Docs-as-code knowledge base to manage Architecture Decision Records (ADR) for your project and publish them automatically as a static website",
+      "stars": 1292,
+      "jamstackSlug": "log4brains",
+      "verdict": "IN",
+      "reason": "stated purpose is documentation",
+      "evidence": "knowledge base"
+    },
+    {
+      "key": "bridgetown",
+      "sources": [
+        "Q3"
+      ],
+      "name": "bridgetown",
+      "description": "A Webpack-aware, Ruby-powered static site generator for the modern Jamstack era.",
+      "stars": 1257,
+      "jamstackSlug": "bridgetown",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "pollen",
+      "sources": [
+        "Q3"
+      ],
+      "name": "pollen",
+      "description": "A web book-publishing system written in Racket with static html as default output target.",
+      "stars": 1198,
+      "jamstackSlug": "pollen",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "punch",
+      "sources": [
+        "Q3"
+      ],
+      "name": "punch",
+      "description": "Simple, intuitive. It delights designers and developers alike.",
+      "stars": 1169,
+      "jamstackSlug": "punch",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "jbake",
+      "sources": [
+        "Q3"
+      ],
+      "name": "jbake",
+      "description": "A static site/blog generator for developers & designers",
+      "stars": 1140,
+      "jamstackSlug": "jbake",
+      "verdict": "OUT",
+      "reason": "F1: blog engine",
+      "evidence": "blog generator"
+    },
+    {
+      "key": "iles",
+      "sources": [
+        "Q3"
+      ],
+      "name": "iles",
+      "description": "The Joyful Site Generator. Islands of Interactivity with Vue, Preact, Svelte, and more.",
+      "stars": 1134,
+      "jamstackSlug": "iles",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "Site Generator"
+    },
+    {
+      "key": "cryogen",
+      "sources": [
+        "Q3"
+      ],
+      "name": "cryogen",
+      "description": "A simple static site generator shipped on Leiningen",
+      "stars": 1113,
+      "jamstackSlug": "cryogen",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "inkpaper",
+      "sources": [
+        "Q3"
+      ],
+      "name": "inkpaper",
+      "description": "InkPaper is an elegant, extremely fast static blog generator.",
+      "stars": 1091,
+      "jamstackSlug": "inkpaper",
+      "verdict": "OUT",
+      "reason": "F1: blog engine",
+      "evidence": "blog generator"
+    },
+    {
+      "key": "plenti",
+      "sources": [
+        "Q3"
+      ],
+      "name": "plenti",
+      "description": "Dead simple SSG that lets you focus on being productive.",
+      "stars": 1056,
+      "jamstackSlug": "plenti",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "franklin",
+      "sources": [
+        "Q3"
+      ],
+      "name": "franklin",
+      "description": "A simple, customisable static site generator oriented towards technical blogging and light, fast-loading pages.",
+      "stars": 1018,
+      "jamstackSlug": "franklin",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "flatmarket",
+      "sources": [
+        "Q3"
+      ],
+      "name": "flatmarket",
+      "description": "A free, open source e-commerce platform for static websites.",
+      "stars": 1000,
+      "jamstackSlug": "flatmarket",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "frog",
+      "sources": [
+        "Q3"
+      ],
+      "name": "frog",
+      "description": "Frog is a static web site generator implemented in Racket, targeting Bootstrap.",
+      "stars": 927,
+      "jamstackSlug": "frog",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "site generator"
+    },
+    {
+      "key": "simple",
+      "sources": [
+        "Q3"
+      ],
+      "name": "simple",
+      "description": "Simple is a pure static static blog generator.",
+      "stars": 908,
+      "jamstackSlug": "simple",
+      "verdict": "OUT",
+      "reason": "F1: blog engine",
+      "evidence": "blog generator"
+    },
+    {
+      "key": "cabin",
+      "sources": [
+        "Q3"
+      ],
+      "name": "cabin",
+      "description": "Simple and extensible static site generator powered by Grunt.",
+      "stars": 890,
+      "jamstackSlug": "cabin",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "docpress",
+      "sources": [
+        "Q3"
+      ],
+      "name": "docpress",
+      "description": "Painless Markdown publishing",
+      "stars": 884,
+      "jamstackSlug": "docpress",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "couscous",
+      "sources": [
+        "Q3"
+      ],
+      "name": "couscous",
+      "description": "Couscous turn Markdown documentation into beautiful websites.",
+      "stars": 839,
+      "jamstackSlug": "couscous",
+      "verdict": "IN",
+      "reason": "stated purpose is documentation",
+      "evidence": "documentation"
+    },
+    {
+      "key": "thumbsup",
+      "sources": [
+        "Q3"
+      ],
+      "name": "thumbsup",
+      "description": "Static photo &amp; video gallery generator",
+      "stars": 824,
+      "jamstackSlug": "thumbsup",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "frozenflask",
+      "sources": [
+        "Q3"
+      ],
+      "name": "frozen-flask",
+      "description": "Frozen-Flask freezes a Flask application into a set of static files.",
+      "stars": 798,
+      "jamstackSlug": "frozen-flask",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "enduro",
+      "sources": [
+        "Q3"
+      ],
+      "name": "enduro.js",
+      "description": "Minimalistic, lean & mean, node.js static page generator",
+      "stars": 686,
+      "jamstackSlug": "endurojs",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "elmpages",
+      "sources": [
+        "Q3"
+      ],
+      "name": "elm-pages",
+      "description": "Build fast, modern sites with Elm's delightful type system to help you! 📚",
+      "stars": 673,
+      "jamstackSlug": "elm-pages",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "ruhoh",
+      "sources": [
+        "Q3"
+      ],
+      "name": "ruhoh",
+      "description": "The Universal Static Blog API.",
+      "stars": 617,
+      "jamstackSlug": "ruhoh",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "poet",
+      "sources": [
+        "Q3"
+      ],
+      "name": "poet",
+      "description": "A node.js blog engine.",
+      "stars": 604,
+      "jamstackSlug": "poet",
+      "verdict": "OUT",
+      "reason": "F1: blog engine",
+      "evidence": "blog engine"
+    },
+    {
+      "key": "gor",
+      "sources": [
+        "Q3"
+      ],
+      "name": "gor",
+      "description": "A static websites and blog generator engine written in Go",
+      "stars": 598,
+      "jamstackSlug": "gor",
+      "verdict": "OUT",
+      "reason": "F1: blog engine",
+      "evidence": "blog generator"
+    },
+    {
+      "key": "pretzel",
+      "sources": [
+        "Q3"
+      ],
+      "name": "pretzel",
+      "description": "A site generation tool (and then some) for .NET platforms.",
+      "stars": 593,
+      "jamstackSlug": "pretzel",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "coleslaw",
+      "sources": [
+        "Q3"
+      ],
+      "name": "coleslaw",
+      "description": "Flexible Lisp Blogware.",
+      "stars": 571,
+      "jamstackSlug": "coleslaw",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "blacksmith",
+      "sources": [
+        "Q3"
+      ],
+      "name": "blacksmith",
+      "description": "A generic static site generator built using flatiron, plates, and marked.",
+      "stars": 552,
+      "jamstackSlug": "blacksmith",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "cuttlebelle",
+      "sources": [
+        "Q3"
+      ],
+      "name": "cuttlebelle",
+      "description": "The react static site generator that separates editing and code concerns",
+      "stars": 551,
+      "jamstackSlug": "cuttlebelle",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "orchid",
+      "sources": [
+        "Q3"
+      ],
+      "name": "orchid",
+      "description": "A beautiful and truly unique documentation engine and static site generator.",
+      "stars": 524,
+      "jamstackSlug": "orchid",
+      "verdict": "IN",
+      "reason": "stated purpose is documentation",
+      "evidence": "documentation"
+    },
+    {
+      "key": "djangodistill",
+      "sources": [
+        "Q3"
+      ],
+      "name": "django-distill",
+      "description": "django-distill lets you to create and publish a static website from any Django project.",
+      "stars": 501,
+      "jamstackSlug": "django-distill",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "scroll",
+      "sources": [
+        "Q3"
+      ],
+      "name": "scroll",
+      "description": "Scroll is a language and static site generator for scientists of all ages.",
+      "stars": 476,
+      "jamstackSlug": "scroll",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "spike",
+      "sources": [
+        "Q3"
+      ],
+      "name": "spike",
+      "description": "An opinionated static build tool, powered by webpack",
+      "stars": 471,
+      "jamstackSlug": "spike",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "yellow",
+      "sources": [
+        "Q3"
+      ],
+      "name": "yellow",
+      "description": "Datenstrom Yellow is for people who make websites.",
+      "stars": 467,
+      "jamstackSlug": "yellow",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "antwar",
+      "sources": [
+        "Q3"
+      ],
+      "name": "antwar",
+      "description": "A static site generator using React and webpack.",
+      "stars": 459,
+      "jamstackSlug": "antwar",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "gostatic",
+      "sources": [
+        "Q3"
+      ],
+      "name": "gostatic",
+      "description": "A fast static site generator written in Go.",
+      "stars": 451,
+      "jamstackSlug": "gostatic",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "abell",
+      "sources": [
+        "Q3"
+      ],
+      "name": "abell",
+      "description": "A Low Level, Framework Agnostic, Vite powered Static Site Generator for JavaScript Developers",
+      "stars": 433,
+      "jamstackSlug": "abell",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "Static Site Generator"
+    },
+    {
+      "key": "codedoc",
+      "sources": [
+        "Q3"
+      ],
+      "name": "codedoc",
+      "description": "Beautiful, component-based JAMStack sites for software docs/wiki",
+      "stars": 432,
+      "jamstackSlug": "codedoc",
+      "verdict": "OUT",
+      "reason": "F1: wiki",
+      "evidence": "wiki"
+    },
+    {
+      "key": "charge",
+      "sources": [
+        "Q3"
+      ],
+      "name": "charge",
+      "description": "An opinionated, zero-config static site generator",
+      "stars": 428,
+      "jamstackSlug": "charge",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "grow",
+      "sources": [
+        "Q3"
+      ],
+      "name": "grow",
+      "description": "Grow is a declarative, file-based static site generator for building maintainable, high-quality websites.",
+      "stars": 405,
+      "jamstackSlug": "grow",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "soupault",
+      "sources": [
+        "Q3"
+      ],
+      "name": "soupault",
+      "description": "Website generator based on HTML rewriting instead of template processing. Single binary, extensible with Lua plugins.",
+      "stars": 404,
+      "jamstackSlug": "soupault",
+      "verdict": "OUT",
+      "reason": "F1: example/template/content repository",
+      "evidence": "template"
+    },
+    {
+      "key": "madoko",
+      "sources": [
+        "Q3"
+      ],
+      "name": "madoko",
+      "description": "A fast processor for high quality academic and technical articles from Markdown and LaTeX.",
+      "stars": 399,
+      "jamstackSlug": "madoko",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "obelisk",
+      "sources": [
+        "Q3"
+      ],
+      "name": "obelisk",
+      "description": "Static Site Generator written in Elixir.",
+      "stars": 393,
+      "jamstackSlug": "obelisk",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "Static Site Generator"
+    },
+    {
+      "key": "yst",
+      "sources": [
+        "Q3"
+      ],
+      "name": "yst",
+      "description": "Static websites from YAML and string templates",
+      "stars": 390,
+      "jamstackSlug": "yst",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "hydephp",
+      "sources": [
+        "Q3"
+      ],
+      "name": "hydephp",
+      "description": "Elegant and Powerful Static Site Generator",
+      "stars": 374,
+      "jamstackSlug": "hydephp",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "Static Site Generator"
+    },
+    {
+      "key": "spress",
+      "sources": [
+        "Q3"
+      ],
+      "name": "spress",
+      "description": "Spress is a static site generator and blog engine written in PHP",
+      "stars": 371,
+      "jamstackSlug": "spress",
+      "verdict": "OUT",
+      "reason": "F1: blog engine",
+      "evidence": "blog engine"
+    },
+    {
+      "key": "prosopopee",
+      "sources": [
+        "Q3"
+      ],
+      "name": "prosopopee",
+      "description": "A static website generator that allows you to tell a story with your pictures",
+      "stars": 353,
+      "jamstackSlug": "prosopopee",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "perun",
+      "sources": [
+        "Q3"
+      ],
+      "name": "perun",
+      "description": "Composable static site generator build with Clojure and Boot",
+      "stars": 350,
+      "jamstackSlug": "perun",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "blogofile",
+      "sources": [
+        "Q3"
+      ],
+      "name": "blogofile",
+      "description": "A static website compiler and blog engine, written and extended in Python",
+      "stars": 342,
+      "jamstackSlug": "blogofile",
+      "verdict": "OUT",
+      "reason": "F1: blog engine",
+      "evidence": "blog engine"
+    },
+    {
+      "key": "heckle",
+      "sources": [
+        "Q3"
+      ],
+      "name": "heckle",
+      "description": "",
+      "stars": 342,
+      "jamstackSlug": "heckle",
+      "verdict": "IN",
+      "reason": "borderline: no description in the captured source",
+      "evidence": ""
+    },
+    {
+      "key": "almacescaffolding",
+      "sources": [
+        "Q3"
+      ],
+      "name": "almace scaffolding",
+      "description": "",
+      "stars": 338,
+      "jamstackSlug": "amsf",
+      "verdict": "IN",
+      "reason": "borderline: no description in the captured source",
+      "evidence": ""
+    },
+    {
+      "key": "staticjinja",
+      "sources": [
+        "Q3"
+      ],
+      "name": "staticjinja",
+      "description": "Effortlessly deploy static sites with Jinja2.",
+      "stars": 328,
+      "jamstackSlug": "staticjinja",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "serum",
+      "sources": [
+        "Q3"
+      ],
+      "name": "serum",
+      "description": "A simple static website generator written in Elixir.",
+      "stars": 324,
+      "jamstackSlug": "serum",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "verless",
+      "sources": [
+        "Q3"
+      ],
+      "name": "verless",
+      "description": "A simple and lightweight Static Site Generator.",
+      "stars": 309,
+      "jamstackSlug": "verless",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "Static Site Generator"
+    },
+    {
+      "key": "sergey",
+      "sources": [
+        "Q3"
+      ],
+      "name": "sergey",
+      "description": "The little static site generator",
+      "stars": 304,
+      "jamstackSlug": "sergey",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "tinkerer",
+      "sources": [
+        "Q3"
+      ],
+      "name": "tinkerer",
+      "description": "Tinkerer is a blogging engine/static website generator powered by Sphinx",
+      "stars": 304,
+      "jamstackSlug": "tinkerer",
+      "verdict": "IN",
+      "reason": "stated purpose is documentation",
+      "evidence": "Sphinx"
+    },
+    {
+      "key": "cleaver",
+      "sources": [
+        "Q3"
+      ],
+      "name": "cleaver",
+      "description": "A blazing-fast static site generator using Laravel's Blade templating engine",
+      "stars": 297,
+      "jamstackSlug": "cleaver",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "awestruct",
+      "sources": [
+        "Q3"
+      ],
+      "name": "awestruct",
+      "description": "A static site-baking tool",
+      "stars": 292,
+      "jamstackSlug": "awestruct",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "acrylamid",
+      "sources": [
+        "Q3"
+      ],
+      "name": "acrylamid",
+      "description": "Static blog or site generator",
+      "stars": 279,
+      "jamstackSlug": "acrylamid",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "site generator"
+    },
+    {
+      "key": "cecil",
+      "sources": [
+        "Q3"
+      ],
+      "name": "cecil",
+      "description": "Your content driven static site generator.",
+      "stars": 278,
+      "jamstackSlug": "cecil",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "junglejs",
+      "sources": [
+        "Q3"
+      ],
+      "name": "junglejs",
+      "description": "JungleJS is a new static site generator that uses Svelte and GraphQL.",
+      "stars": 275,
+      "jamstackSlug": "jungle",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "webby",
+      "sources": [
+        "Q3"
+      ],
+      "name": "webby",
+      "description": "Webby is a fantastic little website management system.",
+      "stars": 265,
+      "jamstackSlug": "webby",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "reptar",
+      "sources": [
+        "Q3"
+      ],
+      "name": "reptar",
+      "description": "A modern static site generator written in next generation (ES2015+) JavaScript.",
+      "stars": 264,
+      "jamstackSlug": "reptar",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "statik",
+      "sources": [
+        "Q3"
+      ],
+      "name": "statik",
+      "description": "A simple, generic, static web site generator for developers.",
+      "stars": 260,
+      "jamstackSlug": "statik",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "site generator"
+    },
+    {
+      "key": "fornax",
+      "sources": [
+        "Q3"
+      ],
+      "name": "fornax",
+      "description": "Scriptable static site generator using type safe F# DSL to define page templates.",
+      "stars": 251,
+      "jamstackSlug": "fornax",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "statamic",
+      "sources": [
+        "Q3"
+      ],
+      "name": "statamic",
+      "description": "A Laravel-powered, flat-first CMS that can run headless, as a full PHP stack, or generate and deploy static sites.",
+      "stars": 251,
+      "jamstackSlug": "statamic",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "techy",
+      "sources": [
+        "Q3"
+      ],
+      "name": "techy",
+      "description": "The geeky way of writing",
+      "stars": 250,
+      "jamstackSlug": "techy",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "teedoc",
+      "sources": [
+        "Q3"
+      ],
+      "name": "teedoc",
+      "description": "A document site generator, Convert documents in Markdown or Jupyter Notebook format into HTML static web pages",
+      "stars": 250,
+      "jamstackSlug": "teedoc",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "site generator"
+    },
+    {
+      "key": "zodiac",
+      "sources": [
+        "Q3"
+      ],
+      "name": "zodiac",
+      "description": "A static site generator powered by awk and sh.",
+      "stars": 244,
+      "jamstackSlug": "zodiac",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "nift",
+      "sources": [
+        "Q3"
+      ],
+      "name": "nift",
+      "description": "A cross-platform open source git-like and LaTeX-like site manager.",
+      "stars": 243,
+      "jamstackSlug": "nift",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "toucan",
+      "sources": [
+        "Q3"
+      ],
+      "name": "toucan",
+      "description": "Toucan is a markdown-based Static Site Generator (SSG) written in Swift.",
+      "stars": 233,
+      "jamstackSlug": "toucan",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "Static Site Generator"
+    },
+    {
+      "key": "styx",
+      "sources": [
+        "Q3"
+      ],
+      "name": "styx",
+      "description": "Nix based static site generator.",
+      "stars": 223,
+      "jamstackSlug": "styx",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "capri",
+      "sources": [
+        "Q3"
+      ],
+      "name": "capri",
+      "description": "",
+      "stars": 216,
+      "jamstackSlug": "capri",
+      "verdict": "IN",
+      "reason": "borderline: no description in the captured source",
+      "evidence": ""
+    },
+    {
+      "key": "blazorstatic",
+      "sources": [
+        "Q3"
+      ],
+      "name": "blazorstatic",
+      "description": "Transform your Blazor app into a static site generator",
+      "stars": 215,
+      "jamstackSlug": "blazorstatic",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "slick",
+      "sources": [
+        "Q3"
+      ],
+      "name": "slick",
+      "description": "",
+      "stars": 215,
+      "jamstackSlug": "slick",
+      "verdict": "IN",
+      "reason": "borderline: no description in the captured source",
+      "evidence": ""
+    },
+    {
+      "key": "zas",
+      "sources": [
+        "Q3"
+      ],
+      "name": "zas",
+      "description": "Most zen static website generator in Golang.",
+      "stars": 212,
+      "jamstackSlug": "zas",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "nanogen",
+      "sources": [
+        "Q3"
+      ],
+      "name": "nanogen",
+      "description": "A minimalist static site generator in Node.js.",
+      "stars": 207,
+      "jamstackSlug": "nanogen",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "elmstatic",
+      "sources": [
+        "Q3"
+      ],
+      "name": "elmstatic",
+      "description": "Write your layouts in Elm and your content in Markdown.",
+      "stars": 200,
+      "jamstackSlug": "elmstatic",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "tags",
+      "sources": [
+        "Q3"
+      ],
+      "name": "tags",
+      "description": "The simplest static site generator",
+      "stars": 191,
+      "jamstackSlug": "tags",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "blogc",
+      "sources": [
+        "Q3"
+      ],
+      "name": "blogc",
+      "description": "A blog compiler.",
+      "stars": 186,
+      "jamstackSlug": "blogc",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "empressblog",
+      "sources": [
+        "Q3"
+      ],
+      "name": "empress-blog",
+      "description": "Fully-functional, SEO friendly static site implementation of a blog system built on Ember",
+      "stars": 185,
+      "jamstackSlug": "empress-blog",
+      "verdict": "OUT",
+      "reason": "F1: blog engine",
+      "evidence": "blog system"
+    },
+    {
+      "key": "lego",
+      "sources": [
+        "Q3"
+      ],
+      "name": "lego",
+      "description": "A fast Static Site Generator that generates optimised, performant websites.",
+      "stars": 185,
+      "jamstackSlug": "lego",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "Static Site Generator"
+    },
+    {
+      "key": "gulpsite",
+      "sources": [
+        "Q3"
+      ],
+      "name": "gulp site",
+      "description": "Static site generator using Gulp",
+      "stars": 183,
+      "jamstackSlug": "gulp-site-generator",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "Static site generator"
+    },
+    {
+      "key": "gopablo",
+      "sources": [
+        "Q3"
+      ],
+      "name": "gopablo",
+      "description": "A static site generator with a modern development workflow.",
+      "stars": 180,
+      "jamstackSlug": "gopablo",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "urubu",
+      "sources": [
+        "Q3"
+      ],
+      "name": "urubu",
+      "description": "A micro CMS for static websites",
+      "stars": 180,
+      "jamstackSlug": "urubu",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "hastie",
+      "sources": [
+        "Q3"
+      ],
+      "name": "hastie",
+      "description": "A static site generator in Python",
+      "stars": 179,
+      "jamstackSlug": "hastie",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "blackhole",
+      "sources": [
+        "Q3"
+      ],
+      "name": "blackhole",
+      "description": "Static site generator for Grav CMS",
+      "stars": 170,
+      "jamstackSlug": "blackhole",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "Static site generator"
+    },
+    {
+      "key": "hydrogen",
+      "sources": [
+        "Q3"
+      ],
+      "name": "hydrogen",
+      "description": "The lightest static-site generator",
+      "stars": 169,
+      "jamstackSlug": "hydrogen",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "site generator"
+    },
+    {
+      "key": "tropical",
+      "sources": [
+        "Q3"
+      ],
+      "name": "tropical",
+      "description": "",
+      "stars": 167,
+      "jamstackSlug": "tropical",
+      "verdict": "IN",
+      "reason": "borderline: no description in the captured source",
+      "evidence": ""
+    },
+    {
+      "key": "tarbell",
+      "sources": [
+        "Q3"
+      ],
+      "name": "tarbell",
+      "description": "Simple static sites for storytellers.",
+      "stars": 164,
+      "jamstackSlug": "tarbell",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "lingon",
+      "sources": [
+        "Q3"
+      ],
+      "name": "lingon",
+      "description": "Lingon is a performant single-page application dev tool that focuses on developer happiness.",
+      "stars": 163,
+      "jamstackSlug": "lingon",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "tinyjam",
+      "sources": [
+        "Q3"
+      ],
+      "name": "tinyjam",
+      "description": "A radically simple, zero-config static site generator.",
+      "stars": 162,
+      "jamstackSlug": "tinyjam",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "grain",
+      "sources": [
+        "Q3"
+      ],
+      "name": "grain",
+      "description": "A generator for sites, blogs & documentation, supports Markdown, AsciiDoc and RST",
+      "stars": 159,
+      "jamstackSlug": "grain",
+      "verdict": "IN",
+      "reason": "stated purpose is documentation",
+      "evidence": "documentation"
+    },
+    {
+      "key": "linkfreegenerator",
+      "sources": [
+        "Q3"
+      ],
+      "name": "linkfree generator",
+      "description": "Generate one page websites without use of the command line.",
+      "stars": 153,
+      "jamstackSlug": "linkfree-gen",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "bloggrify",
+      "sources": [
+        "Q3"
+      ],
+      "name": "bloggrify",
+      "description": "A static blog generator built on top of Nuxt-content",
+      "stars": 151,
+      "jamstackSlug": "bloggrify",
+      "verdict": "OUT",
+      "reason": "F1: blog engine",
+      "evidence": "blog generator"
+    },
+    {
+      "key": "gloria",
+      "sources": [
+        "Q3"
+      ],
+      "name": "gloria",
+      "description": "Gloria is a static site generator, a beginners friendly project",
+      "stars": 151,
+      "jamstackSlug": "gloria",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "graze",
+      "sources": [
+        "Q3"
+      ],
+      "name": "graze",
+      "description": "Static site generator using Razor.",
+      "stars": 151,
+      "jamstackSlug": "graze",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "Static site generator"
+    },
+    {
+      "key": "photish",
+      "sources": [
+        "Q3"
+      ],
+      "name": "photish",
+      "description": "Fast, simple, configurable photo portfolio website generator.",
+      "stars": 150,
+      "jamstackSlug": "photish",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "markbind",
+      "sources": [
+        "Q3"
+      ],
+      "name": "markbind",
+      "description": "Optimized for generating technical documentation and educational websites from Markdown text.",
+      "stars": 148,
+      "jamstackSlug": "markbind",
+      "verdict": "IN",
+      "reason": "stated purpose is documentation",
+      "evidence": "documentation"
+    },
+    {
+      "key": "stitcher",
+      "sources": [
+        "Q3"
+      ],
+      "name": "stitcher",
+      "description": "Static websites for PHP developers",
+      "stars": 148,
+      "jamstackSlug": "stitcher",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "rosid",
+      "sources": [
+        "Q3"
+      ],
+      "name": "rosid",
+      "description": "Just-in-time development server and static site exporter.",
+      "stars": 145,
+      "jamstackSlug": "rosid",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "minimal",
+      "sources": [
+        "Q3"
+      ],
+      "name": "minimal",
+      "description": "A fast personal website and blog generator for Go, Node.js and Python without external dependencies.",
+      "stars": 144,
+      "jamstackSlug": "minimal",
+      "verdict": "OUT",
+      "reason": "F1: blog engine",
+      "evidence": "blog generator"
+    },
+    {
+      "key": "wyam",
+      "sources": [
+        "Q3"
+      ],
+      "name": "wyam",
+      "description": "A simple to use, highly modular, and extremely configurable static content generator.",
+      "stars": 144,
+      "jamstackSlug": "wyam",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "aspnetstatic",
+      "sources": [
+        "Q3"
+      ],
+      "name": "aspnetstatic",
+      "description": "Transforms ASP.NET Core into a Static Site Generator",
+      "stars": 138,
+      "jamstackSlug": "AspNetStatic",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "Static Site Generator"
+    },
+    {
+      "key": "stenope",
+      "sources": [
+        "Q3"
+      ],
+      "name": "stenope",
+      "description": "Static website generator for Symfony apps & developers",
+      "stars": 130,
+      "jamstackSlug": "stenope",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "ema",
+      "sources": [
+        "Q3"
+      ],
+      "name": "ema",
+      "description": "Haskell static site generator with hot reload",
+      "stars": 126,
+      "jamstackSlug": "ema",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "jaq",
+      "sources": [
+        "Q3"
+      ],
+      "name": "jaq",
+      "description": "A shortcut to Asciidoc templating on Github's Jekyll hosting infrastructure.",
+      "stars": 125,
+      "jamstackSlug": "jaq",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "curvenote",
+      "sources": [
+        "Q3"
+      ],
+      "name": "curvenote",
+      "description": "A website generator for scientific and technical articles",
+      "stars": 124,
+      "jamstackSlug": "curvenote",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "lambdapad",
+      "sources": [
+        "Q3"
+      ],
+      "name": "lambda pad",
+      "description": "Static site generator using Erlang. Yes, Erlang.",
+      "stars": 123,
+      "jamstackSlug": "lambdapad",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "Static site generator"
+    },
+    {
+      "key": "tumblelog",
+      "sources": [
+        "Q3"
+      ],
+      "name": "tumblelog",
+      "description": "Simple static site generator with the focus on a tumbleblog",
+      "stars": 123,
+      "jamstackSlug": "tumblelog-pl",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "kulfon",
+      "sources": [
+        "Q3"
+      ],
+      "name": "kulfon",
+      "description": "Kulfon is a static site generator written in JavaScript and inspired by Hugo.",
+      "stars": 119,
+      "jamstackSlug": "kulfon",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "sitepipe",
+      "sources": [
+        "Q3"
+      ],
+      "name": "sitepipe",
+      "description": "",
+      "stars": 118,
+      "jamstackSlug": "sitepipe",
+      "verdict": "IN",
+      "reason": "borderline: no description in the captured source",
+      "evidence": ""
+    },
+    {
+      "key": "webgen",
+      "sources": [
+        "Q3"
+      ],
+      "name": "webgen",
+      "description": "Static website generation made easy",
+      "stars": 116,
+      "jamstackSlug": "webgen",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "greenwood",
+      "sources": [
+        "Q3"
+      ],
+      "name": "greenwood",
+      "description": "Your workbench for the web.",
+      "stars": 114,
+      "jamstackSlug": "greenwood",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "plerd",
+      "sources": [
+        "Q3"
+      ],
+      "name": "plerd",
+      "description": "Ultralight Dropbox-friendly Markdown-based blogging.",
+      "stars": 114,
+      "jamstackSlug": "plerd",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "jus",
+      "sources": [
+        "Q3"
+      ],
+      "name": "jus",
+      "description": "dev server and build tool with no configuration and no boilerplate code",
+      "stars": 113,
+      "jamstackSlug": "jus",
+      "verdict": "OUT",
+      "reason": "F1: example/template/content repository",
+      "evidence": "boilerplate"
+    },
+    {
+      "key": "serif",
+      "sources": [
+        "Q3"
+      ],
+      "name": "serif",
+      "description": "Serif is a static site generator and an optional admin interface",
+      "stars": 113,
+      "jamstackSlug": "serif",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "underblog",
+      "sources": [
+        "Q3"
+      ],
+      "name": "underblog",
+      "description": "Simple static blog generator",
+      "stars": 112,
+      "jamstackSlug": "underblog",
+      "verdict": "OUT",
+      "reason": "F1: blog engine",
+      "evidence": "blog generator"
+    },
+    {
+      "key": "wok",
+      "sources": [
+        "Q3"
+      ],
+      "name": "wok",
+      "description": "Toss some content, templates, and media in a pan and fry it up!",
+      "stars": 112,
+      "jamstackSlug": "wok",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "hepek",
+      "sources": [
+        "Q3"
+      ],
+      "name": "hepek",
+      "description": "Render Scala objects into files",
+      "stars": 110,
+      "jamstackSlug": "hepek",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "sblg",
+      "sources": [
+        "Q3"
+      ],
+      "name": "sblg",
+      "description": "simple off-line blog utility",
+      "stars": 103,
+      "jamstackSlug": "sblg",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "saga",
+      "sources": [
+        "Q3"
+      ],
+      "name": "saga",
+      "description": "A static site generator written in Swift.",
+      "stars": 100,
+      "jamstackSlug": "saga",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "qpage",
+      "sources": [
+        "Q3"
+      ],
+      "name": "qpage",
+      "description": "QPage or QuickPage is a free project for creating academic homepage without any code",
+      "stars": 98,
+      "jamstackSlug": "qpage",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "jenny",
+      "sources": [
+        "Q3"
+      ],
+      "name": "jenny",
+      "description": "Static blog generator that uses basic GNU tools.",
+      "stars": 96,
+      "jamstackSlug": "jenny",
+      "verdict": "OUT",
+      "reason": "F1: blog engine",
+      "evidence": "blog generator"
+    },
+    {
+      "key": "broccolitaco",
+      "sources": [
+        "Q3"
+      ],
+      "name": "broccoli taco",
+      "description": "A fast, simple, and flexible static site generator based on Broccoli.",
+      "stars": 93,
+      "jamstackSlug": "broccoli-taco",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "statie",
+      "sources": [
+        "Q3"
+      ],
+      "name": "statie",
+      "description": "Modern and Simple Static Site Generator in PHP",
+      "stars": 92,
+      "jamstackSlug": "statie",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "Static Site Generator"
+    },
+    {
+      "key": "docnado",
+      "sources": [
+        "Q3"
+      ],
+      "name": "docnado",
+      "description": "A rapid documentation tool to blow you away! Batteries and style included; you just need to type.",
+      "stars": 91,
+      "jamstackSlug": "docnado",
+      "verdict": "IN",
+      "reason": "stated purpose is documentation",
+      "evidence": "documentation"
+    },
+    {
+      "key": "elmstarter",
+      "sources": [
+        "Q3"
+      ],
+      "name": "elm-starter",
+      "description": "An Elm-based bootstrapper for Elm applications that supports server side rendering",
+      "stars": 86,
+      "jamstackSlug": "elm-starter",
+      "verdict": "OUT",
+      "reason": "F1: example/template/content repository",
+      "evidence": "starter"
+    },
+    {
+      "key": "enfield",
+      "sources": [
+        "Q3"
+      ],
+      "name": "enfield",
+      "description": "Node.js Jekyll Port",
+      "stars": 83,
+      "jamstackSlug": "enfield",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "tclssg",
+      "sources": [
+        "Q3"
+      ],
+      "name": "tclssg",
+      "description": "A static site generator that uses Tcl for both code and templates.",
+      "stars": 83,
+      "jamstackSlug": "tclssg",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "glayu",
+      "sources": [
+        "Q3"
+      ],
+      "name": "glayu",
+      "description": "A static site generator for mid-sized sites.",
+      "stars": 80,
+      "jamstackSlug": "glayu",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "motyl",
+      "sources": [
+        "Q3"
+      ],
+      "name": "motyl",
+      "description": "Opinionated blog-aware static site generator written in Ruby.",
+      "stars": 80,
+      "jamstackSlug": "motyl",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "ornate",
+      "sources": [
+        "Q3"
+      ],
+      "name": "ornate",
+      "description": "Ornate is a tool for building multi-page HTML sites from Markdown sources.",
+      "stars": 80,
+      "jamstackSlug": "ornate",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "sitefi",
+      "sources": [
+        "Q3"
+      ],
+      "name": "sitefi",
+      "description": "A highly configurable static site/blog generator for F#.",
+      "stars": 78,
+      "jamstackSlug": "sitefi",
+      "verdict": "OUT",
+      "reason": "F1: blog engine",
+      "evidence": "blog generator"
+    },
+    {
+      "key": "fledermaus",
+      "sources": [
+        "Q3"
+      ],
+      "name": "fledermaus",
+      "description": "Batman’s toolbelt for static site generation",
+      "stars": 76,
+      "jamstackSlug": "fledermaus",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "hastysite",
+      "sources": [
+        "Q3"
+      ],
+      "name": "hastysite",
+      "description": "HastySite is a minimalist, self-contained, and highly-extensible static site generator.",
+      "stars": 76,
+      "jamstackSlug": "hastysite",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "gisttxt",
+      "sources": [
+        "Q3"
+      ],
+      "name": "gist-txt",
+      "description": "A minimal text adventure engine.",
+      "stars": 72,
+      "jamstackSlug": "gist-txt",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "mimogear",
+      "sources": [
+        "Q3"
+      ],
+      "name": "mimogear",
+      "description": "A super simple static site generator and web development boilerplate.",
+      "stars": 71,
+      "jamstackSlug": "mimogear",
+      "verdict": "OUT",
+      "reason": "F1: example/template/content repository",
+      "evidence": "boilerplate"
+    },
+    {
+      "key": "tome",
+      "sources": [
+        "Q3"
+      ],
+      "name": "tome",
+      "description": "A static site generator lovingly crafted with Drupal 8.",
+      "stars": 70,
+      "jamstackSlug": "tome",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "quarkusroq",
+      "sources": [
+        "Q3"
+      ],
+      "name": "quarkus roq",
+      "description": "Roq allows to easily create a static website or blog using Quarkus super-powers.",
+      "stars": 69,
+      "jamstackSlug": "quarkus-roq",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "coil",
+      "sources": [
+        "Q3"
+      ],
+      "name": "coil",
+      "description": "Coil is a minimalistic static content engine written in elixir",
+      "stars": 68,
+      "jamstackSlug": "coil",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "squido",
+      "sources": [
+        "Q3"
+      ],
+      "name": "squido",
+      "description": "A dead simple static HTML website builder which can be hosted anywhere for super fast websites and very little effort. Create your Blog or Documentation using our boilerplate examples.",
+      "stars": 68,
+      "jamstackSlug": "squido",
+      "verdict": "IN",
+      "reason": "stated purpose is documentation",
+      "evidence": "Documentation"
+    },
+    {
+      "key": "pubserver",
+      "sources": [
+        "Q3"
+      ],
+      "name": "pub-server",
+      "description": "",
+      "stars": 66,
+      "jamstackSlug": "pub-server",
+      "verdict": "IN",
+      "reason": "borderline: no description in the captured source",
+      "evidence": ""
+    },
+    {
+      "key": "dimples",
+      "sources": [
+        "Q3"
+      ],
+      "name": "dimples",
+      "description": "A very, very, very simple static site generator gem.",
+      "stars": 64,
+      "jamstackSlug": "dimples",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "templer",
+      "sources": [
+        "Q3"
+      ],
+      "name": "templer",
+      "description": "Templer is a modular extensible static-site-generator written in perl.",
+      "stars": 63,
+      "jamstackSlug": "templer",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "cory",
+      "sources": [
+        "Q3"
+      ],
+      "name": "cory",
+      "description": "A static site generator for JavaScript lovers.",
+      "stars": 61,
+      "jamstackSlug": "cory",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "finch",
+      "sources": [
+        "Q3"
+      ],
+      "name": "finch",
+      "description": "A really fast and simple static site generator in OCaml",
+      "stars": 59,
+      "jamstackSlug": "finch",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "vite",
+      "sources": [
+        "Q3"
+      ],
+      "name": "vite",
+      "description": "A simple and minimal static site generator",
+      "stars": 59,
+      "jamstackSlug": "vite",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "susi",
+      "sources": [
+        "Q3"
+      ],
+      "name": "susi",
+      "description": "The SUper SImple site generator.",
+      "stars": 58,
+      "jamstackSlug": "susi",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "site generator"
+    },
+    {
+      "key": "recordcollector",
+      "sources": [
+        "Q3"
+      ],
+      "name": "record collector",
+      "description": "",
+      "stars": 56,
+      "jamstackSlug": "record-collector",
+      "verdict": "IN",
+      "reason": "borderline: no description in the captured source",
+      "evidence": ""
+    },
+    {
+      "key": "monkeyman",
+      "sources": [
+        "Q3"
+      ],
+      "name": "monkeyman",
+      "description": "Simple static site generator for Scala and middleman lovers",
+      "stars": 51,
+      "jamstackSlug": "monkeyman",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "sitio",
+      "sources": [
+        "Q3"
+      ],
+      "name": "sitio",
+      "description": "An imperative static site generator built with React and browserify",
+      "stars": 50,
+      "jamstackSlug": "sitio",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "kotsu",
+      "sources": [
+        "Q3"
+      ],
+      "name": "kotsu",
+      "description": "An extremely simple, pluggable static site generator.",
+      "stars": 49,
+      "jamstackSlug": "kotsu",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "bake",
+      "sources": [
+        "Q3"
+      ],
+      "name": "bake",
+      "description": "",
+      "stars": 48,
+      "jamstackSlug": "bake",
+      "verdict": "IN",
+      "reason": "borderline: no description in the captured source",
+      "evidence": ""
+    },
+    {
+      "key": "dapper",
+      "sources": [
+        "Q3"
+      ],
+      "name": "dapper",
+      "description": "Dapper is a simple, flexible, and pragmatic static site generator written in Perl.",
+      "stars": 48,
+      "jamstackSlug": "dapper",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "easystatic",
+      "sources": [
+        "Q3"
+      ],
+      "name": "easystatic",
+      "description": "Static site generator powered by Markdown It, Postcss, Babel, Browsersync",
+      "stars": 47,
+      "jamstackSlug": "easystatic",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "Static site generator"
+    },
+    {
+      "key": "polo",
+      "sources": [
+        "Q3"
+      ],
+      "name": "polo",
+      "description": "Static site generator written in Go and \"compatible\" with Jekyll & Pelican content",
+      "stars": 47,
+      "jamstackSlug": "polo",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "Static site generator"
+    },
+    {
+      "key": "drupan",
+      "sources": [
+        "Q3"
+      ],
+      "name": "drupan",
+      "description": "trying to hit the sweet spot between simplicity and being feature rich enough for every use case.",
+      "stars": 45,
+      "jamstackSlug": "drupan",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "pykwiki",
+      "sources": [
+        "Q3"
+      ],
+      "name": "pykwiki",
+      "description": "",
+      "stars": 45,
+      "jamstackSlug": "pykwiki",
+      "verdict": "IN",
+      "reason": "borderline: no description in the captured source",
+      "evidence": ""
+    },
+    {
+      "key": "staartsite",
+      "sources": [
+        "Q3"
+      ],
+      "name": "staart site",
+      "description": "",
+      "stars": 44,
+      "jamstackSlug": "staart-site",
+      "verdict": "IN",
+      "reason": "borderline: no description in the captured source",
+      "evidence": ""
+    },
+    {
+      "key": "stagen",
+      "sources": [
+        "Q3"
+      ],
+      "name": "stagen",
+      "description": "StaGen is the static site generator behind WizTools.org",
+      "stars": 43,
+      "jamstackSlug": "stagen",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "misakaibaker",
+      "sources": [
+        "Q3"
+      ],
+      "name": "misakai baker",
+      "description": "",
+      "stars": 42,
+      "jamstackSlug": "baker",
+      "verdict": "IN",
+      "reason": "borderline: no description in the captured source",
+      "evidence": ""
+    },
+    {
+      "key": "piecrust2",
+      "sources": [
+        "Q3"
+      ],
+      "name": "piecrust2",
+      "description": "PieCrust is a static website generator and flat-file CMS",
+      "stars": 42,
+      "jamstackSlug": "piecrust",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "ace",
+      "sources": [
+        "Q3"
+      ],
+      "name": "ace",
+      "description": "Ace is a static page generator.",
+      "stars": 40,
+      "jamstackSlug": "ace",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "writer39sblock",
+      "sources": [
+        "Q3"
+      ],
+      "name": "writer&#39;s block",
+      "description": "Personal wiki engine for hackers",
+      "stars": 39,
+      "jamstackSlug": "wb",
+      "verdict": "OUT",
+      "reason": "F1: wiki",
+      "evidence": "wiki"
+    },
+    {
+      "key": "cmints",
+      "sources": [
+        "Q3"
+      ],
+      "name": "cmints",
+      "description": "CMS and Static Site Generator for single and multi-language websites creation.",
+      "stars": 38,
+      "jamstackSlug": "cmints",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "Static Site Generator"
+    },
+    {
+      "key": "sphido",
+      "sources": [
+        "Q3"
+      ],
+      "name": "sphido",
+      "description": "A rocket fast, light-weight and flexible static site generator.",
+      "stars": 38,
+      "jamstackSlug": "sphido",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "bolt",
+      "sources": [
+        "Q3"
+      ],
+      "name": "bolt",
+      "description": "⚡ is a fast, organized, mobile first Grunt seed project for fast static apps.",
+      "stars": 37,
+      "jamstackSlug": "bolt",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "harold",
+      "sources": [
+        "Q3"
+      ],
+      "name": "harold",
+      "description": "",
+      "stars": 37,
+      "jamstackSlug": "harold",
+      "verdict": "IN",
+      "reason": "borderline: no description in the captured source",
+      "evidence": ""
+    },
+    {
+      "key": "platframe",
+      "sources": [
+        "Q3"
+      ],
+      "name": "platframe",
+      "description": "A structured, scalable and modular platform for web and frontend development.",
+      "stars": 37,
+      "jamstackSlug": "platframe",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "amagaki",
+      "sources": [
+        "Q3"
+      ],
+      "name": "amagaki",
+      "description": "A TypeScript site generator for hand-coding interactive marketing sites.",
+      "stars": 36,
+      "jamstackSlug": "amagaki",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "site generator"
+    },
+    {
+      "key": "litepub",
+      "sources": [
+        "Q3"
+      ],
+      "name": "litepub",
+      "description": "",
+      "stars": 36,
+      "jamstackSlug": "litepub",
+      "verdict": "IN",
+      "reason": "borderline: no description in the captured source",
+      "evidence": ""
+    },
+    {
+      "key": "waffel",
+      "sources": [
+        "Q3"
+      ],
+      "name": "waffel",
+      "description": "Static site generation done tasty.",
+      "stars": 36,
+      "jamstackSlug": "waffel",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "ironbeard",
+      "sources": [
+        "Q3"
+      ],
+      "name": "ironbeard",
+      "description": "Simple, zero-configuration static site generator written in .NET Core.",
+      "stars": 35,
+      "jamstackSlug": "iron-beard",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "starterproject",
+      "sources": [
+        "Q3"
+      ],
+      "name": "starter project",
+      "description": "Starter Package is a package with the latest best practices for your HTML (pug), CSS (Sass), JavaScript (es6), graphic, font, and favicon files.",
+      "stars": 35,
+      "jamstackSlug": "starter-project",
+      "verdict": "OUT",
+      "reason": "F1: example/template/content repository",
+      "evidence": "starter"
+    },
+    {
+      "key": "skydocs",
+      "sources": [
+        "Q3"
+      ],
+      "name": "skydocs",
+      "description": "SkyDocs is a lightweight static documentation builder with MarkDown.",
+      "stars": 34,
+      "jamstackSlug": "skydocs",
+      "verdict": "IN",
+      "reason": "stated purpose is documentation",
+      "evidence": "documentation"
+    },
+    {
+      "key": "admdevkit",
+      "sources": [
+        "Q3"
+      ],
+      "name": "adm-dev-kit",
+      "description": "ADM-DEV-KIT is static web server and build tool built with plugins and tools like Node.js, JSPM, Express.js, Browser-Sync, Gulp.js, PostHTML, PostCSS and others.",
+      "stars": 32,
+      "jamstackSlug": "adm-dev-kit",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "tapestry",
+      "sources": [
+        "Q3"
+      ],
+      "name": "tapestry",
+      "description": "Static sites for PHP developers",
+      "stars": 32,
+      "jamstackSlug": "tapestry",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "ata39sssg",
+      "sources": [
+        "Q3"
+      ],
+      "name": "ata&#39;s ssg",
+      "description": "Simple PHP Static Site Generator for GitHub Pages.",
+      "stars": 31,
+      "jamstackSlug": "atas",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "Static Site Generator"
+    },
+    {
+      "key": "bashblogng",
+      "sources": [
+        "Q3"
+      ],
+      "name": "bashblog-ng",
+      "description": "Bash script to create and manage blogs.",
+      "stars": 31,
+      "jamstackSlug": "bashblog-ng",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "qgoda",
+      "sources": [
+        "Q3"
+      ],
+      "name": "qgoda",
+      "description": "A sophisticated, blog-aware static site generator with unprecedented multi-language features",
+      "stars": 31,
+      "jamstackSlug": "qgoda",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "elsa",
+      "sources": [
+        "Q3"
+      ],
+      "name": "elsa",
+      "description": "Helper module for hosting Frozen-Flask-based websites on GitHub Pages",
+      "stars": 30,
+      "jamstackSlug": "elsa",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "fossfolio",
+      "sources": [
+        "Q3"
+      ],
+      "name": "fossfolio",
+      "description": "Probably the simplest static site generator in the world!",
+      "stars": 30,
+      "jamstackSlug": "fossfolio",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "gustwind",
+      "sources": [
+        "Q3"
+      ],
+      "name": "gustwind",
+      "description": "🐳💨 Deno powered JSON oriented site generator 🦕",
+      "stars": 30,
+      "jamstackSlug": "gustwind",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "site generator"
+    },
+    {
+      "key": "griffin",
+      "sources": [
+        "Q3"
+      ],
+      "name": "griffin",
+      "description": "Blazing fast, simple, static site generator",
+      "stars": 29,
+      "jamstackSlug": "griffin",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "intuitiondev",
+      "sources": [
+        "Q3"
+      ],
+      "name": "intuition.dev",
+      "description": "",
+      "stars": 29,
+      "jamstackSlug": "intu-dev",
+      "verdict": "IN",
+      "reason": "borderline: no description in the captured source",
+      "evidence": ""
+    },
+    {
+      "key": "staticlite",
+      "sources": [
+        "Q3"
+      ],
+      "name": "static lite",
+      "description": "A minimalist configuration for generating static sites, powered entirely by NPM scripts.",
+      "stars": 29,
+      "jamstackSlug": "static-lite",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "stasis",
+      "sources": [
+        "Q3"
+      ],
+      "name": "stasis",
+      "description": "A static site generator that is simple and easy to use.",
+      "stars": 28,
+      "jamstackSlug": "stasis-generator",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "vaseman",
+      "sources": [
+        "Q3"
+      ],
+      "name": "vaseman",
+      "description": "Static Site And Prototype Generator",
+      "stars": 28,
+      "jamstackSlug": "vaseman",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "reem",
+      "sources": [
+        "Q3"
+      ],
+      "name": "reem",
+      "description": "JavaScript static site generator for anything",
+      "stars": 27,
+      "jamstackSlug": "reem",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "skf",
+      "sources": [
+        "Q3"
+      ],
+      "name": "skf",
+      "description": "Plugin-based static website generator inspired by Suckless Web Framework.",
+      "stars": 27,
+      "jamstackSlug": "skf",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "Web Framework"
+    },
+    {
+      "key": "engineer",
+      "sources": [
+        "Q3"
+      ],
+      "name": "engineer",
+      "description": "Featureless static website generator",
+      "stars": 25,
+      "jamstackSlug": "engineer",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "pagegen",
+      "sources": [
+        "Q3"
+      ],
+      "name": "pagegen",
+      "description": "Manage sites and blogs, SEO friendly.",
+      "stars": 25,
+      "jamstackSlug": "pagegen",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "stacy",
+      "sources": [
+        "Q3"
+      ],
+      "name": "stacy",
+      "description": "Website generator that combines content from Contentful CMS with Handlebars templates and publishes the website in Amazon S3.",
+      "stars": 25,
+      "jamstackSlug": "stacy",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "yass",
+      "sources": [
+        "Q3"
+      ],
+      "name": "yass",
+      "description": "A Fast and Extensible Static Site Generator.",
+      "stars": 25,
+      "jamstackSlug": "yass",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "Static Site Generator"
+    },
+    {
+      "key": "blended",
+      "sources": [
+        "Q3"
+      ],
+      "name": "blended",
+      "description": "The Most Versatile Static HTML Site Generator",
+      "stars": 24,
+      "jamstackSlug": "blended",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "Site Generator"
+    },
+    {
+      "key": "mangony",
+      "sources": [
+        "Q3"
+      ],
+      "name": "mangony",
+      "description": "Yet another static site generator for Grunt, Gulp and Node.js - fast, simple and powerful.",
+      "stars": 24,
+      "jamstackSlug": "mangony",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "scalatic",
+      "sources": [
+        "Q3"
+      ],
+      "name": "scalatic",
+      "description": "Dead simple static blog generator written in Scala.",
+      "stars": 24,
+      "jamstackSlug": "scalatic",
+      "verdict": "OUT",
+      "reason": "F1: blog engine",
+      "evidence": "blog generator"
+    },
+    {
+      "key": "staticsiteexpress",
+      "sources": [
+        "Q3"
+      ],
+      "name": "static-site-express",
+      "description": "A simple Node.js based static site generator that uses EJS and Markdown.",
+      "stars": 24,
+      "jamstackSlug": "static-site-express",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "stati",
+      "sources": [
+        "Q3"
+      ],
+      "name": "stati",
+      "description": "Stati is an extensible PHP static site generator that can work with existing Jekyll sites.",
+      "stars": 23,
+      "jamstackSlug": "stati",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "bookgen",
+      "sources": [
+        "Q3"
+      ],
+      "name": "bookgen",
+      "description": "A static site generator inspired by the GitBook toolchain.",
+      "stars": 22,
+      "jamstackSlug": "bookgen",
+      "verdict": "IN",
+      "reason": "stated purpose is documentation",
+      "evidence": "GitBook"
+    },
+    {
+      "key": "hasclunk",
+      "sources": [
+        "Q3"
+      ],
+      "name": "hasclunk",
+      "description": "Simple dependency light blog generator",
+      "stars": 21,
+      "jamstackSlug": "hasclunk",
+      "verdict": "OUT",
+      "reason": "F1: blog engine",
+      "evidence": "blog generator"
+    },
+    {
+      "key": "jssg",
+      "sources": [
+        "Q3"
+      ],
+      "name": "jssg",
+      "description": "A static site/blog generator in Java",
+      "stars": 21,
+      "jamstackSlug": "jssg",
+      "verdict": "OUT",
+      "reason": "F1: blog engine",
+      "evidence": "blog generator"
+    },
+    {
+      "key": "bowman",
+      "sources": [
+        "Q3"
+      ],
+      "name": "bowman",
+      "description": "A simple static site generator with an integrated toolchain for efficient development and delivery.",
+      "stars": 20,
+      "jamstackSlug": "bowman",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "dssg",
+      "sources": [
+        "Q3"
+      ],
+      "name": "dssg",
+      "description": "A static site generator with a different approach",
+      "stars": 20,
+      "jamstackSlug": "dssg",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "ulka",
+      "sources": [
+        "Q3"
+      ],
+      "name": "ulka",
+      "description": "A simpler static site generator written in JavaScript to transform static data to html.",
+      "stars": 20,
+      "jamstackSlug": "ulka",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "hikaru",
+      "sources": [
+        "Q3"
+      ],
+      "name": "hikaru",
+      "description": "A static site generator that generates routes based on directories naturally.",
+      "stars": 19,
+      "jamstackSlug": "hikaru",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "minerl",
+      "sources": [
+        "Q3"
+      ],
+      "name": "minerl",
+      "description": "Minerl is a blog-aware static site generator written in Perl.",
+      "stars": 19,
+      "jamstackSlug": "minerl",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "pystatic",
+      "sources": [
+        "Q3"
+      ],
+      "name": "pystatic",
+      "description": "Dead simple, one-line, few options static website generator. Just write your stuff instead of learning generators.",
+      "stars": 19,
+      "jamstackSlug": "pystatic",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "rinco",
+      "sources": [
+        "Q3"
+      ],
+      "name": "rinco",
+      "description": "A simple static site generator.",
+      "stars": 18,
+      "jamstackSlug": "rinco",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "bootdown",
+      "sources": [
+        "Q3"
+      ],
+      "name": "bootdown",
+      "description": "Extremely simple static sites with Markdown and BootStrap.",
+      "stars": 17,
+      "jamstackSlug": "bootdown",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "orisonjs",
+      "sources": [
+        "Q3"
+      ],
+      "name": "orisonjs",
+      "description": "Create pages, layouts, partials, and contextual data using lit-html",
+      "stars": 17,
+      "jamstackSlug": "orison",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "yasbe",
+      "sources": [
+        "Q3"
+      ],
+      "name": "yasbe",
+      "description": "Yet Another Static Blog Engine",
+      "stars": 17,
+      "jamstackSlug": "yasbe",
+      "verdict": "OUT",
+      "reason": "F1: blog engine",
+      "evidence": "Blog Engine"
+    },
+    {
+      "key": "entussg",
+      "sources": [
+        "Q3"
+      ],
+      "name": "entu ssg",
+      "description": "A simple Pug, Markdown, Yaml static site generator with multi-locale support.",
+      "stars": 16,
+      "jamstackSlug": "entu-ssg",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "grazedocs",
+      "sources": [
+        "Q3"
+      ],
+      "name": "grazedocs",
+      "description": "GrazeDocs is a static site generator for creating documentation for your projects.",
+      "stars": 16,
+      "jamstackSlug": "grazedocs",
+      "verdict": "IN",
+      "reason": "stated purpose is documentation",
+      "evidence": "documentation"
+    },
+    {
+      "key": "magnanimous",
+      "sources": [
+        "Q3"
+      ],
+      "name": "magnanimous",
+      "description": "Magnanimous is a simple static website generator.",
+      "stars": 16,
+      "jamstackSlug": "magnanimous",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "muleify",
+      "sources": [
+        "Q3"
+      ],
+      "name": "muleify",
+      "description": "A zero configuration static site generator and asset preprocessor compiler.",
+      "stars": 16,
+      "jamstackSlug": "muleify",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "gustav",
+      "sources": [
+        "Q3"
+      ],
+      "name": "gustav",
+      "description": "Gustav is a powerful static-site generator written in PHP.",
+      "stars": 15,
+      "jamstackSlug": "gustav",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "site generator"
+    },
+    {
+      "key": "s2gen",
+      "sources": [
+        "Q3"
+      ],
+      "name": "s2gen",
+      "description": "A dead-simple Scala-based site generator",
+      "stars": 15,
+      "jamstackSlug": "s2gen",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "site generator"
+    },
+    {
+      "key": "wpwmm4",
+      "sources": [
+        "Q3"
+      ],
+      "name": "wpwmm4",
+      "description": "Web Page With Make and M4",
+      "stars": 15,
+      "jamstackSlug": "wpwmm4",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "gerablog",
+      "sources": [
+        "Q3"
+      ],
+      "name": "gerablog",
+      "description": "Gerablog is a simple and small static blog generator.",
+      "stars": 14,
+      "jamstackSlug": "gerablog",
+      "verdict": "OUT",
+      "reason": "F1: blog engine",
+      "evidence": "blog generator"
+    },
+    {
+      "key": "halwa",
+      "sources": [
+        "Q3"
+      ],
+      "name": "halwa",
+      "description": "Halwa is a single file static site generator written in Python.",
+      "stars": 14,
+      "jamstackSlug": "halwa",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "makdoc",
+      "sources": [
+        "Q3"
+      ],
+      "name": "makdoc",
+      "description": "",
+      "stars": 14,
+      "jamstackSlug": "gulp-makdoc",
+      "verdict": "IN",
+      "reason": "borderline: no description in the captured source",
+      "evidence": ""
+    },
+    {
+      "key": "modulo",
+      "sources": [
+        "Q3"
+      ],
+      "name": "modulo.js",
+      "description": "An easy-to-use, zero-dependency Jamstack framework in 2000 lines",
+      "stars": 14,
+      "jamstackSlug": "modulojs",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "trio",
+      "sources": [
+        "Q3"
+      ],
+      "name": "trio",
+      "description": "A fast, simple yet powerful JavaScript-driven static site generator.",
+      "stars": 14,
+      "jamstackSlug": "trio",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "kaktos",
+      "sources": [
+        "Q3"
+      ],
+      "name": "kaktos",
+      "description": "Kaktos is a python static site generator",
+      "stars": 13,
+      "jamstackSlug": "kaktos",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "onessg",
+      "sources": [
+        "Q3"
+      ],
+      "name": "onessg",
+      "description": "",
+      "stars": 13,
+      "jamstackSlug": "onessg",
+      "verdict": "IN",
+      "reason": "borderline: no description in the captured source",
+      "evidence": ""
+    },
+    {
+      "key": "spignite",
+      "sources": [
+        "Q3"
+      ],
+      "name": "spignite",
+      "description": "",
+      "stars": 13,
+      "jamstackSlug": "spignite",
+      "verdict": "IN",
+      "reason": "borderline: no description in the captured source",
+      "evidence": ""
+    },
+    {
+      "key": "genericstaticsitegenerator",
+      "sources": [
+        "Q3"
+      ],
+      "name": "generic static site generator",
+      "description": "",
+      "stars": 12,
+      "jamstackSlug": "gssg",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "gruntflats",
+      "sources": [
+        "Q3"
+      ],
+      "name": "grunt-flats",
+      "description": "Grunt task for generating static pages from templated partials.",
+      "stars": 12,
+      "jamstackSlug": "grunt-flats",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "lerret",
+      "sources": [
+        "Q3"
+      ],
+      "name": "lerret",
+      "description": "A static site generator for image galleries.",
+      "stars": 12,
+      "jamstackSlug": "lerret",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "minisitegenerator",
+      "sources": [
+        "Q3"
+      ],
+      "name": "mini site generator",
+      "description": "",
+      "stars": 12,
+      "jamstackSlug": "mini-site-generator",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "site generator"
+    },
+    {
+      "key": "publican",
+      "sources": [
+        "Q3"
+      ],
+      "name": "publican",
+      "description": "A simple HTML-first static site generator for Node.js",
+      "stars": 12,
+      "jamstackSlug": "publican",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "bang",
+      "sources": [
+        "Q3"
+      ],
+      "name": "bang",
+      "description": "Quirky text processor and static website generator.",
+      "stars": 11,
+      "jamstackSlug": "bang",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "last",
+      "sources": [
+        "Q3"
+      ],
+      "name": "last",
+      "description": "",
+      "stars": 11,
+      "jamstackSlug": "last",
+      "verdict": "IN",
+      "reason": "borderline: no description in the captured source",
+      "evidence": ""
+    },
+    {
+      "key": "basildon",
+      "sources": [
+        "Q3"
+      ],
+      "name": "basildon",
+      "description": "Generates HTML, PDF (via LaTeX), and any other text output from Markdown content and Twig templates.",
+      "stars": 10,
+      "jamstackSlug": "basildon",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "idlisite",
+      "sources": [
+        "Q3"
+      ],
+      "name": "idlisite",
+      "description": "",
+      "stars": 10,
+      "jamstackSlug": "idlisite",
+      "verdict": "IN",
+      "reason": "borderline: no description in the captured source",
+      "evidence": ""
+    },
+    {
+      "key": "krems",
+      "sources": [
+        "Q3"
+      ],
+      "name": "krems",
+      "description": "Krems static site generator",
+      "stars": 10,
+      "jamstackSlug": "krems",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "scribing",
+      "sources": [
+        "Q3"
+      ],
+      "name": "scribing",
+      "description": "Scribing is a static site generator written in PHP",
+      "stars": 10,
+      "jamstackSlug": "scribing",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "taft",
+      "sources": [
+        "Q3"
+      ],
+      "name": "taft",
+      "description": "Static site generator for the command line",
+      "stars": 10,
+      "jamstackSlug": "taft",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "Static site generator"
+    },
+    {
+      "key": "blo",
+      "sources": [
+        "Q3"
+      ],
+      "name": "blo",
+      "description": "",
+      "stars": 9,
+      "jamstackSlug": "blo",
+      "verdict": "IN",
+      "reason": "borderline: no description in the captured source",
+      "evidence": ""
+    },
+    {
+      "key": "simplifiedsaaze",
+      "sources": [
+        "Q3"
+      ],
+      "name": "simplified saaze",
+      "description": "An easy-to-use generator supporting MathJax and other embeds, faster than Hugo and Zola",
+      "stars": 9,
+      "jamstackSlug": "simplified-saaze",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "ago",
+      "sources": [
+        "Q3"
+      ],
+      "name": "ago",
+      "description": "A static blog generator script without any fuzz",
+      "stars": 8,
+      "jamstackSlug": "ago",
+      "verdict": "OUT",
+      "reason": "F1: blog engine",
+      "evidence": "blog generator"
+    },
+    {
+      "key": "bestatic",
+      "sources": [
+        "Q3"
+      ],
+      "name": "bestatic",
+      "description": "A simple but feature-rich static site generator, written in Python and Jinja2.",
+      "stars": 8,
+      "jamstackSlug": "bestatic",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "keystone",
+      "sources": [
+        "Q3"
+      ],
+      "name": "keystone",
+      "description": "",
+      "stars": 8,
+      "jamstackSlug": "keystone",
+      "verdict": "IN",
+      "reason": "borderline: no description in the captured source",
+      "evidence": ""
+    },
+    {
+      "key": "lazytravelblog",
+      "sources": [
+        "Q3"
+      ],
+      "name": "lazy travel blog",
+      "description": "Create a travel blog with minimal effort, using other people's pictures on Instagram.",
+      "stars": 8,
+      "jamstackSlug": "lazy-travel-blog",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "pft",
+      "sources": [
+        "Q3"
+      ],
+      "name": "pft",
+      "description": "PFT is a Static, Unicode-ready, Hacker-friendly, Free-as-in-freedom, Privacy-preserving website generator written in Perl.",
+      "stars": 8,
+      "jamstackSlug": "pft",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "20ful",
+      "sources": [
+        "Q3"
+      ],
+      "name": "20ful",
+      "description": "Universal static site generator",
+      "stars": 7,
+      "jamstackSlug": "20ful",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "simplest",
+      "sources": [
+        "Q3"
+      ],
+      "name": "simplest",
+      "description": "The simplest static sitegen there is. Build a modern, fully working website using only HTML.",
+      "stars": 7,
+      "jamstackSlug": "simplest",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "coralite",
+      "sources": [
+        "Q3"
+      ],
+      "name": "coralite",
+      "description": "Build for the Web, With the Web!",
+      "stars": 6,
+      "jamstackSlug": "coralite",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "htmlbuilder",
+      "sources": [
+        "Q3"
+      ],
+      "name": "htmlbuilder",
+      "description": "Static website generator with GUI, local webserver and ftp updater",
+      "stars": 6,
+      "jamstackSlug": "htmlbuilder",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "lastpage",
+      "sources": [
+        "Q3"
+      ],
+      "name": "lastpage",
+      "description": "Lastpage is a .net core static website generator based on Mustachio which is based on Mustache",
+      "stars": 6,
+      "jamstackSlug": "lastpage",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "makestaticsite",
+      "sources": [
+        "Q3"
+      ],
+      "name": "makestaticsite",
+      "description": "Generate and deploy static websites with Bash.",
+      "stars": 6,
+      "jamstackSlug": "makestaticsite",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "staticmarkdown",
+      "sources": [
+        "Q3"
+      ],
+      "name": "static markdown",
+      "description": "Generate static sites using markdown or HTML",
+      "stars": 6,
+      "jamstackSlug": "static-markdown",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "statify",
+      "sources": [
+        "Q3"
+      ],
+      "name": "statify",
+      "description": "Simple, lightweight, one file static site generator, Powered by Python 3 & Jninja2.",
+      "stars": 6,
+      "jamstackSlug": "statify",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "weaver",
+      "sources": [
+        "Q3"
+      ],
+      "name": "weaver",
+      "description": "A simple DSL-based web generator",
+      "stars": 6,
+      "jamstackSlug": "weaver",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "grus",
+      "sources": [
+        "Q3"
+      ],
+      "name": "grus",
+      "description": "Static site generator written in Scala using ScalaTags for templates and Flexmark for markdown.",
+      "stars": 5,
+      "jamstackSlug": "grus",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "Static site generator"
+    },
+    {
+      "key": "zox",
+      "sources": [
+        "Q3"
+      ],
+      "name": "zox",
+      "description": "Service-Oriented Web Framework, build scalable web apps and services with React and GraphQL or generate Static Sites",
+      "stars": 5,
+      "jamstackSlug": "zox",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "Web Framework"
+    },
+    {
+      "key": "arfr",
+      "sources": [
+        "Q3"
+      ],
+      "name": "arfr",
+      "description": "",
+      "stars": 4,
+      "jamstackSlug": "staticstuff",
+      "verdict": "IN",
+      "reason": "borderline: no description in the captured source",
+      "evidence": ""
+    },
+    {
+      "key": "asimov",
+      "sources": [
+        "Q3"
+      ],
+      "name": "asimov",
+      "description": "Static site generator, powered by asimov.js and asimov-server.",
+      "stars": 4,
+      "jamstackSlug": "asimov-static",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "Static site generator"
+    },
+    {
+      "key": "bakeit",
+      "sources": [
+        "Q3"
+      ],
+      "name": "bakeit",
+      "description": "Static site generator with build-in store/business locator map template.",
+      "stars": 4,
+      "jamstackSlug": "bakeit",
+      "verdict": "OUT",
+      "reason": "F1: example/template/content repository",
+      "evidence": "template"
+    },
+    {
+      "key": "igapyonv3",
+      "sources": [
+        "Q3"
+      ],
+      "name": "igapyonv3",
+      "description": "A static site/blog generator for developers & designers",
+      "stars": 4,
+      "jamstackSlug": "igapyonv3",
+      "verdict": "OUT",
+      "reason": "F1: blog engine",
+      "evidence": "blog generator"
+    },
+    {
+      "key": "jamstackpy",
+      "sources": [
+        "Q3"
+      ],
+      "name": "jamstackpy",
+      "description": "",
+      "stars": 4,
+      "jamstackSlug": "jamstackpy",
+      "verdict": "IN",
+      "reason": "borderline: no description in the captured source",
+      "evidence": ""
+    },
+    {
+      "key": "kart",
+      "sources": [
+        "Q3"
+      ],
+      "name": "kart",
+      "description": "A very flexible static site generator written in python.",
+      "stars": 4,
+      "jamstackSlug": "kart",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "openrat",
+      "sources": [
+        "Q3"
+      ],
+      "name": "openrat",
+      "description": "A static site generator with web UI",
+      "stars": 4,
+      "jamstackSlug": "openrat",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "sitegen",
+      "sources": [
+        "Q3"
+      ],
+      "name": "sitegen",
+      "description": "A simple but flexible static site generator.",
+      "stars": 4,
+      "jamstackSlug": "sitegen",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "uriel",
+      "sources": [
+        "Q3"
+      ],
+      "name": "uriel",
+      "description": "Minimalistic, stable, feature complete static site generator.",
+      "stars": 4,
+      "jamstackSlug": "uriel",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "wmk",
+      "sources": [
+        "Q3"
+      ],
+      "name": "wmk",
+      "description": "A flexible and versatile static site generator",
+      "stars": 4,
+      "jamstackSlug": "wmk",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "hindsite",
+      "sources": [
+        "Q3"
+      ],
+      "name": "hindsite",
+      "description": "A fast static site Generator.",
+      "stars": 3,
+      "jamstackSlug": "hindsite",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site Generator"
+    },
+    {
+      "key": "wg",
+      "sources": [
+        "Q3"
+      ],
+      "name": "wg",
+      "description": "Basic static website generator",
+      "stars": 3,
+      "jamstackSlug": "wg",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "youngsoni",
+      "sources": [
+        "Q3"
+      ],
+      "name": "youngsoni",
+      "description": "A static site generator.",
+      "stars": 3,
+      "jamstackSlug": "youngsoni",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "passage",
+      "sources": [
+        "Q3"
+      ],
+      "name": "passage",
+      "description": "A highly customizable and minimalistic PHP based static site generator.",
+      "stars": 1,
+      "jamstackSlug": "passage",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "poltergeist",
+      "sources": [
+        "Q3"
+      ],
+      "name": "poltergeist",
+      "description": "Build fast websites with HTML/Markdown/Sass deployed to S3 & CloudFront",
+      "stars": 1,
+      "jamstackSlug": "poltergeist",
+      "verdict": "IN",
+      "reason": "borderline: taxonomy matched neither list",
+      "evidence": ""
+    },
+    {
+      "key": "statiksite",
+      "sources": [
+        "Q3"
+      ],
+      "name": "statik-site",
+      "description": "statik-site: A fast, simple and modular static site generator",
+      "stars": 1,
+      "jamstackSlug": "statik-site",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "tinyssg",
+      "sources": [
+        "Q3"
+      ],
+      "name": "tiny ssg",
+      "description": "static site generator built with Python, with some interesting features for pre-processing the images.",
+      "stars": 1,
+      "jamstackSlug": "tinySSG",
+      "verdict": "OUT",
+      "reason": "F1: general-purpose web framework or site generator, documentation not its stated purpose",
+      "evidence": "static site generator"
+    },
+    {
+      "key": "adoberobohelp",
+      "sources": [
+        "Q4"
+      ],
+      "name": "Adobe RoboHelp",
+      "description": "",
+      "w3techsId": "cm-robohelp",
+      "verdict": "IN",
+      "reason": "in W3Techs' documentation-platforms category (source-implied F1)",
+      "evidence": "cm-robohelp"
+    },
+    {
+      "key": "anodize",
+      "sources": [
+        "Q3"
+      ],
+      "name": "anodize",
+      "description": "",
+      "stars": 0,
+      "jamstackSlug": "anodize",
+      "verdict": "IN",
+      "reason": "borderline: no description in the captured source",
+      "evidence": ""
+    },
+    {
+      "key": "antora",
+      "sources": [
+        "Q3",
+        "Q4"
+      ],
+      "name": "antora",
+      "description": "",
+      "stars": 0,
+      "jamstackSlug": "antora",
+      "w3techsId": "cm-antora",
+      "verdict": "IN",
+      "reason": "in W3Techs' documentation-platforms category (source-implied F1)",
+      "evidence": "cm-antora"
+    },
+    {
+      "key": "astrobiomedocs",
+      "sources": [
+        "G"
+      ],
+      "name": "Astro (Biome docs)",
+      "verdict": "IN",
+      "reason": "grandfathered: present in the v0.2 corpus (section 4)",
+      "evidence": ""
+    },
+    {
+      "key": "bagatto",
+      "sources": [
+        "Q3"
+      ],
+      "name": "bagatto",
+      "description": "",
+      "stars": 0,
+      "jamstackSlug": "bagatto",
+      "verdict": "IN",
+      "reason": "borderline: no description in the captured source",
+      "evidence": ""
+    },
+    {
+      "key": "betterdocs",
+      "sources": [
+        "Q4"
+      ],
+      "name": "BetterDocs",
+      "description": "",
+      "w3techsId": "cm-betterdocs",
+      "verdict": "IN",
+      "reason": "in W3Techs' documentation-platforms category (source-implied F1)",
+      "evidence": "cm-betterdocs"
+    },
+    {
+      "key": "blogo",
+      "sources": [
+        "Q3"
+      ],
+      "name": "blogo",
+      "description": "",
+      "stars": 0,
+      "jamstackSlug": "blogo",
+      "verdict": "IN",
+      "reason": "borderline: no description in the captured source",
+      "evidence": ""
+    },
+    {
+      "key": "coppersmith",
+      "sources": [
+        "Q3"
+      ],
+      "name": "coppersmith",
+      "description": "",
+      "stars": 0,
+      "jamstackSlug": "coppersmith",
+      "verdict": "IN",
+      "reason": "borderline: no description in the captured source",
+      "evidence": ""
+    },
+    {
+      "key": "deadsimplelog",
+      "sources": [
+        "Q3"
+      ],
+      "name": "deadsimplelog",
+      "description": "",
+      "stars": 0,
+      "jamstackSlug": "deadsimplelog",
+      "verdict": "IN",
+      "reason": "borderline: no description in the captured source",
+      "evidence": ""
+    },
+    {
+      "key": "docusaurussentrydocs",
+      "sources": [
+        "G"
+      ],
+      "name": "Docusaurus (Sentry docs)",
+      "verdict": "IN",
+      "reason": "grandfathered: present in the v0.2 corpus (section 4)",
+      "evidence": ""
+    },
+    {
+      "key": "docutils",
+      "sources": [
+        "Q4"
+      ],
+      "name": "Docutils",
+      "description": "",
+      "w3techsId": "cm-docutils",
+      "verdict": "IN",
+      "reason": "in W3Techs' documentation-platforms category (source-implied F1)",
+      "evidence": "cm-docutils"
+    },
+    {
+      "key": "expansive",
+      "sources": [
+        "Q3"
+      ],
+      "name": "expansive",
+      "description": "",
+      "stars": 0,
+      "jamstackSlug": "expansive",
+      "verdict": "IN",
+      "reason": "borderline: no description in the captured source",
+      "evidence": ""
+    },
+    {
+      "key": "fumadocs",
+      "sources": [
+        "G"
+      ],
+      "name": "Fumadocs",
+      "verdict": "IN",
+      "reason": "grandfathered: present in the v0.2 corpus (section 4)",
+      "evidence": ""
+    },
+    {
+      "key": "haunt",
+      "sources": [
+        "Q3"
+      ],
+      "name": "haunt",
+      "description": "",
+      "stars": 0,
+      "jamstackSlug": "haunt",
+      "verdict": "IN",
+      "reason": "borderline: no description in the captured source",
+      "evidence": ""
+    },
+    {
+      "key": "helpscout",
+      "sources": [
+        "Q4"
+      ],
+      "name": "Help Scout",
+      "description": "",
+      "w3techsId": "cm-helpscout",
+      "verdict": "IN",
+      "reason": "in W3Techs' documentation-platforms category (source-implied F1)",
+      "evidence": "cm-helpscout"
+    },
+    {
+      "key": "hwaro",
+      "sources": [
+        "Q3"
+      ],
+      "name": "hwaro",
+      "description": "",
+      "stars": 0,
+      "jamstackSlug": "hwaro",
+      "verdict": "IN",
+      "reason": "borderline: no description in the captured source",
+      "evidence": ""
+    },
+    {
+      "key": "minissg",
+      "sources": [
+        "Q3"
+      ],
+      "name": "mini ssg",
+      "description": "",
+      "stars": 0,
+      "jamstackSlug": "minissg",
+      "verdict": "IN",
+      "reason": "borderline: no description in the captured source",
+      "evidence": ""
+    },
+    {
+      "key": "mintlify",
+      "sources": [
+        "G",
+        "Q4"
+      ],
+      "name": "Mintlify",
+      "description": "",
+      "w3techsId": "cm-mintlify",
+      "verdict": "IN",
+      "reason": "grandfathered: present in the v0.2 corpus (section 4)",
+      "evidence": ""
+    },
+    {
+      "key": "mkws1",
+      "sources": [
+        "Q3"
+      ],
+      "name": "mkws(1)",
+      "description": "",
+      "stars": 0,
+      "jamstackSlug": "mkws",
+      "verdict": "IN",
+      "reason": "borderline: no description in the captured source",
+      "evidence": ""
+    },
+    {
+      "key": "nextjstailwinddocs",
+      "sources": [
+        "G"
+      ],
+      "name": "Next.js (Tailwind docs)",
+      "verdict": "IN",
+      "reason": "grandfathered: present in the v0.2 corpus (section 4)",
+      "evidence": ""
+    },
+    {
+      "key": "pandoc",
+      "sources": [
+        "Q4"
+      ],
+      "name": "Pandoc",
+      "description": "",
+      "w3techsId": "cm-pandoc",
+      "verdict": "IN",
+      "reason": "in W3Techs' documentation-platforms category (source-implied F1)",
+      "evidence": "cm-pandoc"
+    },
+    {
+      "key": "perron",
+      "sources": [
+        "Q3"
+      ],
+      "name": "perron",
+      "description": "",
+      "stars": 0,
+      "jamstackSlug": "perron",
+      "verdict": "IN",
+      "reason": "borderline: no description in the captured source",
+      "evidence": ""
+    },
+    {
+      "key": "picossg",
+      "sources": [
+        "Q3"
+      ],
+      "name": "picossg",
+      "description": "",
+      "stars": 0,
+      "jamstackSlug": "picossg",
+      "verdict": "IN",
+      "reason": "borderline: no description in the captured source",
+      "evidence": ""
+    },
+    {
+      "key": "poole",
+      "sources": [
+        "Q3"
+      ],
+      "name": "poole",
+      "description": "",
+      "stars": 0,
+      "jamstackSlug": "poole",
+      "verdict": "IN",
+      "reason": "borderline: no description in the captured source",
+      "evidence": ""
+    },
+    {
+      "key": "rustyll",
+      "sources": [
+        "Q3"
+      ],
+      "name": "rustyll",
+      "description": "",
+      "stars": 0,
+      "jamstackSlug": "rustyll",
+      "verdict": "IN",
+      "reason": "borderline: no description in the captured source",
+      "evidence": ""
+    },
+    {
+      "key": "skua",
+      "sources": [
+        "Q3"
+      ],
+      "name": "skua",
+      "description": "",
+      "stars": 0,
+      "jamstackSlug": "skua",
+      "verdict": "IN",
+      "reason": "borderline: no description in the captured source",
+      "evidence": ""
+    },
+    {
+      "key": "stapy",
+      "sources": [
+        "Q3"
+      ],
+      "name": "stapy",
+      "description": "",
+      "stars": 0,
+      "jamstackSlug": "stapy",
+      "verdict": "IN",
+      "reason": "borderline: no description in the captured source",
+      "evidence": ""
+    },
+    {
+      "key": "starlightastro",
+      "sources": [
+        "G"
+      ],
+      "name": "Starlight (Astro)",
+      "verdict": "IN",
+      "reason": "grandfathered: present in the v0.2 corpus (section 4)",
+      "evidence": ""
+    },
+    {
+      "key": "statuessg",
+      "sources": [
+        "Q3"
+      ],
+      "name": "statue ssg",
+      "description": "",
+      "stars": 0,
+      "jamstackSlug": "statue",
+      "verdict": "IN",
+      "reason": "borderline: no description in the captured source",
+      "evidence": ""
+    },
+    {
+      "key": "stog",
+      "sources": [
+        "Q3"
+      ],
+      "name": "stog",
+      "description": "",
+      "stars": 0,
+      "jamstackSlug": "stog",
+      "verdict": "IN",
+      "reason": "borderline: no description in the captured source",
+      "evidence": ""
+    },
+    {
+      "key": "sveltekitsveltedocs",
+      "sources": [
+        "G"
+      ],
+      "name": "SvelteKit (Svelte docs)",
+      "verdict": "IN",
+      "reason": "grandfathered: present in the v0.2 corpus (section 4)",
+      "evidence": ""
+    },
+    {
+      "key": "tanstackstart",
+      "sources": [
+        "Q3"
+      ],
+      "name": "tanstack start",
+      "description": "",
+      "stars": 0,
+      "jamstackSlug": "tanstack-start",
+      "verdict": "IN",
+      "reason": "borderline: no description in the captured source",
+      "evidence": ""
+    },
+    {
+      "key": "usmu",
+      "sources": [
+        "Q3"
+      ],
+      "name": "usmu",
+      "description": "",
+      "stars": 0,
+      "jamstackSlug": "usmu",
+      "verdict": "IN",
+      "reason": "borderline: no description in the captured source",
+      "evidence": ""
+    },
+    {
+      "key": "vitepresshonodocs",
+      "sources": [
+        "G"
+      ],
+      "name": "VitePress (Hono docs)",
+      "verdict": "IN",
+      "reason": "grandfathered: present in the v0.2 corpus (section 4)",
+      "evidence": ""
+    },
+    {
+      "key": "vitto",
+      "sources": [
+        "Q3"
+      ],
+      "name": "vitto",
+      "description": "",
+      "stars": 0,
+      "jamstackSlug": "vitto",
+      "verdict": "IN",
+      "reason": "borderline: no description in the captured source",
+      "evidence": ""
+    },
+    {
+      "key": "yarimdn",
+      "sources": [
+        "G"
+      ],
+      "name": "Yari (MDN)",
+      "verdict": "IN",
+      "reason": "grandfathered: present in the v0.2 corpus (section 4)",
+      "evidence": ""
+    },
+    {
+      "key": "yocaml",
+      "sources": [
+        "Q3"
+      ],
+      "name": "yocaml",
+      "description": "",
+      "stars": 0,
+      "jamstackSlug": "yocaml",
+      "verdict": "IN",
+      "reason": "borderline: no description in the captured source",
+      "evidence": ""
+    }
+  ]
+}
