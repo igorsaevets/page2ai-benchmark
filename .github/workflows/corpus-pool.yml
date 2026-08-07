@@ -11,10 +11,19 @@
 #
 # Anti-cherry-picking covenant (reviewer-raised): search results fluctuate, so re-dispatching
 # the workflow and committing the friendliest pool would be an exploit. The FIRST successful
-# run on 2026-08-04 UTC is the authoritative one; later runs are void for selection. The run
+# run of this workflow is the authoritative one; later runs are void for selection. The run
 # list of this workflow is public, so a commit citing anything but the first successful run is
 # itself the evidence of the exploit. Artifacts expire (90-day GitHub cap), but the pool BYTES
 # are committed verbatim per section 1 - the artifact is a verification window, not the record.
+#
+# 2026-08-07 ERRATUM, recorded rather than quietly re-dated. The covenant originally read "the
+# first successful run on 2026-08-04 UTC". No run happened that day: the file carried a YAML
+# syntax error (see the digest step at the bottom), so GitHub never scheduled the cron and the
+# only trace was startup-failure run 30807775090. The public run list of this workflow shows
+# ZERO successful runs before this fix, which is exactly the evidence that nothing was captured
+# and discarded - there was no earlier pool to cherry-pick from. The binding therefore moves to
+# the first successful run after this commit, and the date on the calendar changed for a
+# mechanical reason that anyone can verify, not because a captured pool was unwelcome.
 
 name: corpus-pool-capture
 
@@ -90,6 +99,12 @@ jobs:
           path: corpus-selection/capture-out/
           retention-days: 90
 
+      # The plain-scalar form of this step ("run: echo "... digest: ..."") is invalid YAML - a
+      # colon-space inside an unquoted scalar - and it made the WHOLE FILE unparseable. GitHub
+      # still listed the workflow as "active", still accepted the cron, and silently never ran
+      # it: the only visible trace was startup-failure run 30807775090 attributed to the push.
+      # The 2026-08-04 capture window was lost to this. Block scalars everywhere from now on.
       - name: Record artifact digest (survives the 90-day artifact expiry in this run's log)
         if: env.SKIP != '1'
-        run: echo "artifact sha256 digest: ${{ steps.artifact.outputs.digest }}" >> "$GITHUB_STEP_SUMMARY"
+        run: |
+          echo "artifact sha256 digest: ${{ steps.artifact.outputs.digest }}" >> "$GITHUB_STEP_SUMMARY"
