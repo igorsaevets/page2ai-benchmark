@@ -1,0 +1,15 @@
+# Captured source bodies are evidence, not source code.
+#
+# corpus-selection/pool-<date>.json records a sha256 of each raw body exactly as the CI capture
+# received it, and build-inclusion-log.mjs refuses to classify when a hash does not match. Git's
+# end-of-line normalisation silently defeats that: w3techs.com serves CRLF, and with autocrlf on
+# the committed blob for q4-w3techs.html hashed 19fd6cbf... against a recorded 7deab823..., so the
+# integrity check would have failed for anyone who cloned the repository - while passing on the
+# author's disk, which is the worst possible direction for a check to fail in.
+#
+# -text pins these paths to the bytes that were captured.
+corpus-selection/pool-raw-*/** -text
+
+# The corpus itself is the same kind of evidence: PROTOCOL.md scores committed page bytes, and a
+# rewritten line ending is a different page.
+corpus/**/page.html -text
