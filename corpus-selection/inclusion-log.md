@@ -26,8 +26,28 @@ nothing. The only trace was startup-failure run
 
 The workflow's public run list therefore shows **zero successful runs before the fix**, which is
 the evidence that no pool was captured and discarded: there was nothing to cherry-pick from. The
-capture above is the first successful run of this workflow, full stop. This paragraph is the
-deviation from section 1, recorded rather than quietly re-dated.
+capture above is the first successful run of this workflow, full stop.
+
+An external reviewer pointed out that this argument closes only half the hole, and he was right.
+It answers "was a friendlier pool discarded" and says nothing about the two things the author
+regained when the cron died: **control over when to repair, and four days of drift in live
+sources**. So, bluntly:
+
+- **The 2026-08-04 pool is lost and is not reproducible.** GitHub stars, the jamstack listing and
+  the W3Techs category all moved between 2026-08-04 and 2026-08-07. This capture is a different
+  candidate universe, not the scheduled one recovered late, and no wording makes it the same one.
+- This edition is bound to the first successful run of fix commit `6637b79`, dated 2026-08-07.
+- **That commit differs from the pre-failure commit `a15acb3` by exactly one non-comment line**,
+  and that line is a step which writes a hash into the job summary - it cannot change what is
+  captured. Anyone can check the claim rather than take it:
+
+      git diff a15acb3 6637b79 --name-only          # one file: the workflow
+      git diff a15acb3 6637b79 -- .github/workflows/corpus-pool.yml | grep -E '^[+-]' | grep -vE '^[+-][[:space:]]*#'
+
+  which prints the plain scalar going out and the block scalar coming in, and nothing else.
+
+What remains unmitigated is the drift, and it is listed here rather than argued away. The defence
+is section 7: anyone may re-run the pool at a newer date and publish what changes.
 
 ## The classifier was revised twice after its output was first seen
 
