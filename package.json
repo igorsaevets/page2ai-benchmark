@@ -42,7 +42,7 @@
     "@mozilla/readability": "^0.6.0",
     "@page2ai/core": "^0.1.5",
     "defuddle": "^0.19.2",
-    "jsdom": "^30.0.0",
+    "jsdom": "^30.0.1",
     "linkedom": "^0.18.0",
     "turndown": "^7.2.4"
   }
