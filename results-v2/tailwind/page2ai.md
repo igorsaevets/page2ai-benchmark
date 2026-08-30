@@ -1,13 +1,13 @@
 ---
 title: "flex - Flexbox & Grid - Tailwind CSS"
 source: "https://tailwindcss.com/docs/flex"
-captured_at: "2026-08-03T10:58:35.423Z"
+captured_at: "2026-08-30T04:15:14.177Z"
 language: "en"
 description: "Utilities for controlling how flex items both grow and shrink."
 canonical: "https://tailwindcss.com/docs/flex"
 og_title: "flex - Flexbox & Grid"
 extractor: "page2ai-core"
-extractor_version: "0.1.5"
+extractor_version: "0.1.8"
 ---
 
 # flex - Flexbox & Grid - Tailwind CSS

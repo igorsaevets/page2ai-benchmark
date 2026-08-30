@@ -1,15 +1,13 @@
 ---
 title: "Getting Started"
 source: "https://biomejs.dev/guides/getting-started/"
-captured_at: "2026-08-03T10:58:35.451Z"
+captured_at: "2026-08-30T04:15:20.905Z"
 language: "en"
 description: "Learn how to set up a new project with Biome."
 canonical: "https://biomejs.dev/guides/getting-started/"
 extractor: "page2ai-core"
-extractor_version: "0.1.5"
+extractor_version: "0.1.8"
 ---
-
-# Getting Started
 
 # Getting Started
 

@@ -1,17 +1,15 @@
 ---
 title: "Getting Started"
 source: "https://hono.dev/docs/getting-started/basic"
-captured_at: "2026-08-03T10:58:35.519Z"
+captured_at: "2026-08-30T04:15:38.003Z"
 language: "en-US"
 description: "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
 canonical: "https://hono.dev/docs/getting-started/basic"
 extractor: "page2ai-core"
-extractor_version: "0.1.5"
+extractor_version: "0.1.8"
 ---
 
 # Getting Started
-
-# Getting Started [​](https://hono.dev/docs/getting-started/basic#getting-started)
 
 Using Hono is super easy. We can set up the project, write code, develop with a local server, and deploy quickly. The same code will work on any runtime, just with different entry points. Let ' s look at the basic usage of Hono.
 

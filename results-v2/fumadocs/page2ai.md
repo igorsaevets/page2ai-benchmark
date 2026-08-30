@@ -1,20 +1,18 @@
 ---
 title: "Next.js"
 source: "https://www.fumadocs.dev/docs/manual-installation/next"
-captured_at: "2026-08-03T10:58:35.355Z"
+captured_at: "2026-08-30T04:15:04.221Z"
 language: "en"
 description: "Setup Fumadocs on Next.js."
 canonical: "https://www.fumadocs.dev/docs/manual-installation/next"
 og_title: "Next.js | Fumadocs"
 extractor: "page2ai-core"
-extractor_version: "0.1.5"
+extractor_version: "0.1.8"
 ---
 
 # Next.js
 
 [Manual Installation](https://www.fumadocs.dev/docs/manual-installation)
-
-# Next.js
 
 Setup Fumadocs on Next.js.
 

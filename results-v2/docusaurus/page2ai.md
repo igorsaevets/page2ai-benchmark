@@ -1,20 +1,18 @@
 ---
 title: "Introduction"
 source: "https://docusaurus.io/docs"
-captured_at: "2026-08-03T10:58:35.297Z"
+captured_at: "2026-08-30T04:14:56.104Z"
 language: "en"
 description: "Docusaurus was designed from the ground up to be easily installed and used to get your website up and running quickly."
 canonical: "https://docusaurus.io/docs"
 og_title: "Introduction | Docusaurus"
 extractor: "page2ai-core"
-extractor_version: "0.1.5"
+extractor_version: "0.1.8"
 ---
 
 # Introduction
 
 - Introduction
-
-# Introduction
 
 ⚡️ Docusaurus will help you ship a **beautiful documentation site in no time** .
 

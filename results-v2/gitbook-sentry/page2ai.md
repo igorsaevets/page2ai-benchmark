@@ -1,13 +1,13 @@
 ---
 title: "Browser JavaScript"
 source: "https://docs.sentry.io/platforms/javascript/"
-captured_at: "2026-08-03T10:58:35.538Z"
+captured_at: "2026-08-30T04:15:41.825Z"
 language: "en"
 description: "Learn how to manually set up Sentry in your JavaScript app and capture your first errors."
 canonical: "https://docs.sentry.io/platforms/javascript/"
 og_title: "Browser JavaScript | Sentry for JavaScript"
 extractor: "page2ai-core"
-extractor_version: "0.1.5"
+extractor_version: "0.1.8"
 ---
 
 # Browser JavaScript
@@ -15,8 +15,6 @@ extractor_version: "0.1.5"
 - [Home](https://docs.sentry.io/)
 - [Platforms](https://docs.sentry.io/platforms/)
 - [JavaScript](https://docs.sentry.io/platforms/javascript/)
-
-# Browser JavaScript
 
 ## Learn how to manually set up Sentry in your JavaScript app and capture your first errors.
 

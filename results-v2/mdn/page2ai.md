@@ -1,15 +1,13 @@
 ---
 title: "Window: fetch() method"
 source: "https://developer.mozilla.org/en-US/docs/Web/API/Window/fetch"
-captured_at: "2026-08-03T10:58:35.401Z"
+captured_at: "2026-08-30T04:15:10.630Z"
 language: "en-US"
 description: "The fetch() method of the Window interface starts the process of fetching a resource from the network, returning a promise that is fulfilled once the response is available."
 canonical: "https://developer.mozilla.org/en-US/docs/Web/API/Window/fetch"
 extractor: "page2ai-core"
-extractor_version: "0.1.5"
+extractor_version: "0.1.8"
 ---
-
-# Window: fetch() method
 
 # Window: fetch() method
 

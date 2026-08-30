@@ -1,16 +1,14 @@
 ---
 title: "Storing Lists of Values with Vectors"
 source: "https://doc.rust-lang.org/book/ch08-01-vectors.html"
-captured_at: "2026-08-03T10:58:35.507Z"
+captured_at: "2026-08-30T04:15:35.852Z"
 language: "en"
 canonical: "https://doc.rust-lang.org/book/ch08-01-vectors.html"
 extractor: "page2ai-core"
-extractor_version: "0.1.5"
+extractor_version: "0.1.8"
 ---
 
 # Storing Lists of Values with Vectors
-
-## [Storing Lists of Values with Vectors](https://doc.rust-lang.org/book/ch08-01-vectors.html#storing-lists-of-values-with-vectors)
 
 The first collection type we’ll look at is `Vec<T>` , also known as a vector. Vectors allow you to store more than one value in a single data structure that puts all the values next to each other in memory. Vectors can only store values of the same type. They are useful when you have a list of items, such as the lines of text in a file or the prices of items in a shopping cart.
 

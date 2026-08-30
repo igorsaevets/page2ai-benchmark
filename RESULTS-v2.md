@@ -233,3 +233,16 @@ produces inconsistent trees in linkedom — `<main>` and the article overlap as 
 as a known parser divergence, not repaired blind). trafilatura remains the cleaner extractor on
 the article-only population; the gap narrowed, and that comparison should be re-read under both
 matchers in `scores.json` rather than from the prose above.
+
+## Update, 2026-08-30: core 0.1.8 duplicate-heading fix — metrics verified unmoved
+
+`@page2ai/core` 0.1.8 fixes [page2ai-core#9](https://github.com/igorsaevets/page2ai-core/issues/9):
+the Node renderer emitted a title-derived H1 and then rendered the page's own identical `<h1>`
+again. Before release the fix ran A/B on this corpus (same cached bytes, published 0.1.7 vs the
+fix, all six tools re-executed): 11 of 14 pages each lost exactly the one duplicate heading line
+and nothing else, and every recall / leakage / f-score column above is unchanged to 4 decimals —
+the duplicate never inflated recall, because the heading matchers test containment, not count.
+The committed extracts and `scores.json` now come from that 0.1.8 run, alongside two dependency
+refreshes verified as no-ops: defuddle 0.19.3 and jsdom 30.0.1 reproduce the previously committed
+outputs byte-for-byte on all 14 pages. `bytes_out` shrinks slightly and `compression` moves in
+the 4th decimal on exactly the 11 affected pages; nothing else moved.
