@@ -1,13 +1,13 @@
 ---
 title: "Next.js"
 source: "https://www.fumadocs.dev/docs/manual-installation/next"
-captured_at: "2026-10-18T09:37:08.206Z"
+captured_at: "2026-10-18T09:59:27.947Z"
 language: "en"
 description: "Setup Fumadocs on Next.js."
 canonical: "https://www.fumadocs.dev/docs/manual-installation/next"
 og_title: "Next.js | Fumadocs"
 extractor: "page2ai-core"
-extractor_version: "0.1.13"
+extractor_version: "0.2.2"
 ---
 
 # Next.js
@@ -15,8 +15,6 @@ extractor_version: "0.1.13"
 [Manual Installation](https://www.fumadocs.dev/docs/manual-installation)
 
 Setup Fumadocs on Next.js.
-
-Copy Markdown Open
 
 ## [Prerequisite](https://www.fumadocs.dev/docs/manual-installation/next#prerequisite)
 
@@ -30,12 +28,6 @@ We will use [Fumadocs MDX](https://www.fumadocs.dev/docs/mdx) as a content sourc
 ### [Installation](https://www.fumadocs.dev/docs/manual-installation/next#installation)
 
 npm
-
-pnpm
-
-yarn
-
-bun
 
 ```
 npm i fumadocs-mdx fumadocs-core @types/mdx
@@ -125,12 +117,6 @@ Fumadocs also supports other content sources, including [Content Collections](ht
 
 npm
 
-pnpm
-
-yarn
-
-bun
-
 ```
 npm i fumadocs-ui fumadocs-core
 ```
@@ -195,12 +181,6 @@ Create the following files & routes:
 
 components/mdx.tsx
 
-app/docs/layout.tsx
-
-app/docs/[[...slug]]/page.tsx
-
-app/api/search/route.ts
-
 ```
 import defaultMdxComponents from 'fumadocs-ui/mdx';
 import type { MDXComponents } from 'mdx/types';
@@ -238,8 +218,6 @@ I love Anime.
 ```
 
 How is this guide?
-
-Good Bad
 
 Last updated on
 

@@ -1,13 +1,13 @@
 ---
 title: "Introduction"
 source: "https://docusaurus.io/docs"
-captured_at: "2026-10-18T09:37:05.193Z"
+captured_at: "2026-10-18T09:59:23.793Z"
 language: "en"
 description: "Docusaurus was designed from the ground up to be easily installed and used to get your website up and running quickly."
 canonical: "https://docusaurus.io/docs"
 og_title: "Introduction | Docusaurus"
 extractor: "page2ai-core"
-extractor_version: "0.1.13"
+extractor_version: "0.2.2"
 ---
 
 # Introduction
@@ -15,8 +15,6 @@ extractor_version: "0.1.13"
 - Introduction
 
 Version: 3.10.2
-
-On this page
 
 ⚡️ Docusaurus will help you ship a **beautiful documentation site in no time**.
 
@@ -60,8 +58,6 @@ Or read the **[5-minute tutorial](https://tutorial.docusaurus.io/)** online.
 ## Docusaurus: Documentation Made Easy[​](https://docusaurus.io/docs#docusaurus-documentation-made-easy)
 
 In this presentation at [Algolia Community Event](https://www.algolia.com/), [Meta Open Source team](https://opensource.facebook.com/) shared a brief walk-through of Docusaurus. They covered how to get started with the project, enable plugins, and set up functionalities like documentation and blogging.
-
-Watch
 
 ## Migrating from v1[​](https://docusaurus.io/docs#migrating-from-v1)
 
