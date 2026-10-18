@@ -1,12 +1,12 @@
 ---
 title: "What are runes? • Svelte Docs"
 source: "https://svelte.dev/docs/svelte/what-are-runes"
-captured_at: "2026-08-30T04:15:17.994Z"
+captured_at: "2026-10-18T09:37:12.936Z"
 language: "en"
 description: "What are runes? • Svelte documentation"
 canonical: "https://svelte.dev/docs/svelte/what-are-runes"
 extractor: "page2ai-core"
-extractor_version: "0.1.8"
+extractor_version: "0.1.13"
 ---
 
 # What are runes? • Svelte Docs
@@ -50,15 +50,15 @@ extractor_version: "0.1.8"
    - [Scoped styles](https://svelte.dev/docs/svelte/scoped-styles)
    - [Global styles](https://svelte.dev/docs/svelte/global-styles)
    - [Custom properties](https://svelte.dev/docs/svelte/custom-properties)
-   - [Nested < style> elements](https://svelte.dev/docs/svelte/nested-style-elements)
+   - [Nested <style> elements](https://svelte.dev/docs/svelte/nested-style-elements)
 - Special elements
-   - [< svelte:boundary>](https://svelte.dev/docs/svelte/svelte-boundary)
-   - [< svelte:window>](https://svelte.dev/docs/svelte/svelte-window)
-   - [< svelte:document>](https://svelte.dev/docs/svelte/svelte-document)
-   - [< svelte:body>](https://svelte.dev/docs/svelte/svelte-body)
-   - [< svelte:head>](https://svelte.dev/docs/svelte/svelte-head)
-   - [< svelte:element>](https://svelte.dev/docs/svelte/svelte-element)
-   - [< svelte:options>](https://svelte.dev/docs/svelte/svelte-options)
+   - [<svelte:boundary>](https://svelte.dev/docs/svelte/svelte-boundary)
+   - [<svelte:window>](https://svelte.dev/docs/svelte/svelte-window)
+   - [<svelte:document>](https://svelte.dev/docs/svelte/svelte-document)
+   - [<svelte:body>](https://svelte.dev/docs/svelte/svelte-body)
+   - [<svelte:head>](https://svelte.dev/docs/svelte/svelte-head)
+   - [<svelte:element>](https://svelte.dev/docs/svelte/svelte-element)
+   - [<svelte:options>](https://svelte.dev/docs/svelte/svelte-options)
 - Runtime
    - [Stores](https://svelte.dev/docs/svelte/stores)
    - [Context](https://svelte.dev/docs/svelte/context)
@@ -100,12 +100,14 @@ extractor_version: "0.1.8"
    - [export let](https://svelte.dev/docs/svelte/legacy-export-let)
    - [$$props and $$restProps](https://svelte.dev/docs/svelte/legacy-$$props-and-$$restProps)
    - [on:](https://svelte.dev/docs/svelte/legacy-on)
-   - [< slot>](https://svelte.dev/docs/svelte/legacy-slots)
+   - [<slot>](https://svelte.dev/docs/svelte/legacy-slots)
    - [$$slots](https://svelte.dev/docs/svelte/legacy-$$slots)
-   - [< svelte:fragment>](https://svelte.dev/docs/svelte/legacy-svelte-fragment)
-   - [< svelte:component>](https://svelte.dev/docs/svelte/legacy-svelte-component)
-   - [< svelte:self>](https://svelte.dev/docs/svelte/legacy-svelte-self)
+   - [<svelte:fragment>](https://svelte.dev/docs/svelte/legacy-svelte-fragment)
+   - [<svelte:component>](https://svelte.dev/docs/svelte/legacy-svelte-component)
+   - [<svelte:self>](https://svelte.dev/docs/svelte/legacy-svelte-self)
    - [Imperative component API](https://svelte.dev/docs/svelte/legacy-component-api)
+
+Svelte Runes
 
 # What are runes?
 
@@ -118,7 +120,7 @@ extractor_version: "0.1.8"
 > 
 > A letter or mark used as a mystical or magic symbol.
 
-Runes are symbols that you use in `.svelte` and `.svelte.js` / `.svelte.ts` files to control the Svelte compiler. If you think of Svelte as a language, runes are part of the syntax — they are *keywords* .
+Runes are symbols that you use in `.svelte` and `.svelte.js` / `.svelte.ts` files to control the Svelte compiler. If you think of Svelte as a language, runes are part of the syntax — they are *keywords*.
 
 Runes have a `$` prefix and look like functions:
 
@@ -131,13 +133,18 @@ let count = $state(0);@see{@link https://svelte.dev/docs/svelte/$state Documenta
 
 They differ from normal JavaScript functions in important ways, however:
 
-- You don ' t need to import them — they are part of the language
-- They ' re not values — you can ' t assign them to a variable or pass them as arguments to a function
+- You don't need to import them — they are part of the language
+- They're not values — you can't assign them to a variable or pass them as arguments to a function
 - Just like JavaScript keywords, they are only valid in certain positions (the compiler will help you if you put them in the wrong place)
 
-> Runes didn ' t exist prior to Svelte 5.
+> Legacy mode
+> 
+> 
+> Runes didn't exist prior to Svelte 5.
 
 [Edit this page on GitHub](https://github.com/sveltejs/svelte/edit/main/documentation/docs/02-runes/01-what-are-runes.md) [llms.txt](https://svelte.dev/docs/svelte/what-are-runes/llms.txt)
+
+previous next
 
 [.svelte.js and .svelte.ts files](https://svelte.dev/docs/svelte/svelte-js-files)
 [$state](https://svelte.dev/docs/svelte/$state)

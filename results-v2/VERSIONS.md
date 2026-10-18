@@ -1,9 +1,9 @@
 # Resolved tool versions for the committed scored run
 
 Corpus captured 2026-07-28; the offline extract/score track was last re-executed
-2026-08-30 (see the dated notes below).
+2026-10-18 (see the dated notes below).
 
-The manifests declare ranges (`^`); this file records what the committed
+The manifests declare ranges (`^`/`~`); this file records what the committed
 `package-lock.json` / `requirements.txt` actually resolved for the run whose
 numbers live in `scores.json`. `npm ci` (not `npm install`) reproduces exactly
 these; recorded here so the published numbers can be attributed to exact
@@ -13,9 +13,9 @@ versions without opening the lockfile.
 
 | package | version |
 |---|---|
-| @page2ai/core | 0.1.8 |
+| @page2ai/core | 0.1.13 |
 | @mozilla/readability | 0.6.0 |
-| defuddle | 0.19.3 |
+| defuddle | 0.19.5 |
 | turndown | 7.2.4 |
 | jsdom | 30.0.1 |
 | linkedom | 0.18.13 |
@@ -32,6 +32,18 @@ the jsdom-fed arms reproduced the committed outputs byte-for-byte; page2ai's
 recall / leak / f-score column is unchanged to 4 decimals, so the published
 tables hold; only `bytes_out` and the 4th decimal of `compression` moved, on
 exactly those 11 pages.
+
+On 2026-10-18 the offline track re-ran after a dependency update: @page2ai/core
+0.1.8 to 0.1.13, defuddle 0.19.3 to 0.19.5, undici 8.9.0 to 8.12.2 (override
+for security), source-map-js 1.2.1 to 1.2.2 (override for security). jsdom
+stayed at 30.0.1 because jsdom 30.1.x introduced a 2048-char CSS selector
+limit in @asamuzakjp/dom-selector 10.x that breaks defuddle's content
+extraction on every page (falls back to whole-document output). defuddle 0.19.5
+with jsdom 30.0.1 reproduces 0.19.3's outputs byte-for-byte on 12 of 14 pages
+(1-byte whitespace diff on docusaurus and vitepress, no metric impact). page2ai
+scores improved on 4 pages (mintlify-anthropic 0 to 0.2331; nextra, python-docs
+and rust-book to 1.0) and the aggregate f_score rose from 0.8872 to 0.9327.
+readability-turndown and turndown-raw reproduced byte-for-byte.
 
 ## Python tools (from protocol-v2/requirements.txt, pinned)
 

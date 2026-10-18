@@ -1,22 +1,21 @@
 ---
 title: "flex - Flexbox & Grid - Tailwind CSS"
 source: "https://tailwindcss.com/docs/flex"
-captured_at: "2026-08-30T04:15:14.177Z"
+captured_at: "2026-10-18T09:37:11.713Z"
 language: "en"
 description: "Utilities for controlling how flex items both grow and shrink."
 canonical: "https://tailwindcss.com/docs/flex"
 og_title: "flex - Flexbox & Grid"
 extractor: "page2ai-core"
-extractor_version: "0.1.8"
+extractor_version: "0.1.13"
 ---
 
 # flex - Flexbox & Grid - Tailwind CSS
 
-[Docs](https://tailwindcss.com/docs)
-[Blog](https://tailwindcss.com/blog)
-[Showcase](https://tailwindcss.com/showcase)
-[Partners](https://tailwindcss.com/partners)
-[Plus](https://tailwindcss.com/plus?ref=top)
+v4.3
+
+⌘K Ctrl K [Docs](https://tailwindcss.com/docs) [Blog](https://tailwindcss.com/blog) [Showcase](https://tailwindcss.com/showcase) [Partners](https://tailwindcss.com/partners) [Plus](https://tailwindcss.com/plus?ref=top)
+
 1. Flexbox & Grid
 2. flex
 - [Documentation](https://tailwindcss.com/docs/installation)
@@ -287,19 +286,25 @@ Utilities for controlling how flex items both grow and shrink.
 
 | Class | Styles |
 | --- | --- |
-| flex-<number> | flex: <number>; |
-| flex-<fraction> | flex: calc(<fraction> * 100%); |
-| flex-auto | flex: auto; |
-| flex-initial | flex: 0 auto; |
-| flex-none | flex: none; |
-| flex-(<custom-property>) | flex: var(<custom-property>); |
-| flex-[<value>] | flex: <value>; |
+| `flex-<number>` | `flex: <number>;` |
+| `flex-<fraction>` | `flex: calc(<fraction> * 100%);` |
+| `flex-auto` | `flex: auto;` |
+| `flex-initial` | `flex: 0 auto;` |
+| `flex-none` | `flex: none;` |
+| `flex-(<custom-property>)` | `flex: var(<custom-property>);` |
+| `flex-[<value>]` | `flex: <value>;` |
 
 ## [Examples](https://tailwindcss.com/docs/flex#examples)
 
 ### [Basic example](https://tailwindcss.com/docs/flex#basic-example)
 
 Use `flex-<number>` utilities like `flex-1` to allow a flex item to grow and shrink as needed, ignoring its initial size:
+
+01
+
+02
+
+03
 
 ```
 <div class="flex">  <div class="w-14 flex-none ...">01</div>  <div class="w-64 flex-1 ...">02</div>  <div class="w-32 flex-1 ...">03</div></div>
@@ -309,6 +314,12 @@ Use `flex-<number>` utilities like `flex-1` to allow a flex item to grow and shr
 
 Use `flex-initial` to allow a flex item to shrink but not grow, taking into account its initial size:
 
+01
+
+02
+
+03
+
 ```
 <div class="flex">  <div class="w-14 flex-none ...">01</div>  <div class="w-64 flex-initial ...">02</div>  <div class="w-32 flex-initial ...">03</div></div>
 ```
@@ -317,6 +328,12 @@ Use `flex-initial` to allow a flex item to shrink but not grow, taking into acco
 
 Use `flex-auto` to allow a flex item to grow and shrink, taking into account its initial size:
 
+01
+
+02
+
+03
+
 ```
 <div class="flex ...">  <div class="w-14 flex-none ...">01</div>  <div class="w-64 flex-auto ...">02</div>  <div class="w-32 flex-auto ...">03</div></div>
 ```
@@ -324,6 +341,12 @@ Use `flex-auto` to allow a flex item to grow and shrink, taking into account its
 ### [None](https://tailwindcss.com/docs/flex#none)
 
 Use `flex-none` to prevent a flex item from growing or shrinking:
+
+01
+
+02
+
+03
 
 ```
 <div class="flex ...">  <div class="w-14 flex-none ...">01</div>  <div class="w-32 flex-none ...">02</div>  <div class="flex-1 ...">03</div></div>
@@ -353,7 +376,7 @@ Prefix a `flex` utility with a breakpoint variant like `md:` to only apply the u
 <div class="flex-none md:flex-1 ...">  <!-- ... --></div>
 ```
 
-Learn more about using variants in the [variants documentation](https://tailwindcss.com/docs/hover-focus-and-other-states) .
+Learn more about using variants in the [variants documentation](https://tailwindcss.com/docs/hover-focus-and-other-states).
 
 [flex-wrap](https://tailwindcss.com/docs/flex-wrap)
 [flex-grow](https://tailwindcss.com/docs/flex-grow)
@@ -422,4 +445,5 @@ Learn more about using variants in the [variants documentation](https://tailwind
 - [GitHub](https://github.com/tailwindlabs/tailwindcss)
 - [Discord](https://tailwindcss.com/partners#insiders)
 - [X](https://x.com/tailwindcss)
-[Trademark Policy](https://tailwindcss.com/brand)
+
+Copyright © 2026 Tailwind Labs Inc. · [Trademark Policy](https://tailwindcss.com/brand)

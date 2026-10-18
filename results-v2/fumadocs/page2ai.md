@@ -1,13 +1,13 @@
 ---
 title: "Next.js"
 source: "https://www.fumadocs.dev/docs/manual-installation/next"
-captured_at: "2026-08-30T04:15:04.221Z"
+captured_at: "2026-10-18T09:37:08.206Z"
 language: "en"
 description: "Setup Fumadocs on Next.js."
 canonical: "https://www.fumadocs.dev/docs/manual-installation/next"
 og_title: "Next.js | Fumadocs"
 extractor: "page2ai-core"
-extractor_version: "0.1.8"
+extractor_version: "0.1.13"
 ---
 
 # Next.js
@@ -15,6 +15,8 @@ extractor_version: "0.1.8"
 [Manual Installation](https://www.fumadocs.dev/docs/manual-installation)
 
 Setup Fumadocs on Next.js.
+
+Copy Markdown Open
 
 ## [Prerequisite](https://www.fumadocs.dev/docs/manual-installation/next#prerequisite)
 
@@ -27,11 +29,21 @@ We will use [Fumadocs MDX](https://www.fumadocs.dev/docs/mdx) as a content sourc
 
 ### [Installation](https://www.fumadocs.dev/docs/manual-installation/next#installation)
 
+npm
+
+pnpm
+
+yarn
+
+bun
+
 ```
 npm i fumadocs-mdx fumadocs-core @types/mdx
 ```
 
 Create the configuration file:
+
+source.config.ts
 
 ```
 import { defineDocs, defineConfig } from 'fumadocs-mdx/config';
@@ -44,6 +56,8 @@ export default defineConfig();
 ```
 
 Add the plugin to Next.js config:
+
+next.config.mjs
 
 ```
 import { createMDX } from 'fumadocs-mdx/next';
@@ -63,11 +77,13 @@ export default withMDX(config);
 
 ESM Only
 
-Fumadocs MDX is ESM-only, it ' s recommended to use `next.config.mjs` for accurate ESM resolution.
+Fumadocs MDX is ESM-only, it's recommended to use `next.config.mjs` for accurate ESM resolution.
 
 For TypeScript config file, it requires Native Node.js TypeScript Resolver, you can see [Next.js docs](https://nextjs.org/docs/app/api-reference/config/typescript#using-nodejs-native-typescript-resolver-for-nextconfigts) for details.
 
 Setup an import alias (recommended):
+
+tsconfig.json
 
 ```
 {
@@ -83,6 +99,8 @@ Setup an import alias (recommended):
 
 You can create a `lib/source.ts` file and obtain Fumadocs source from the `docs` collection output.
 
+lib/source.ts
+
 ```
 import { docs } from 'collections/server';
 import { loader } from 'fumadocs-core/source';
@@ -93,7 +111,7 @@ export const source = loader({
 });
 ```
 
-The `.source` folder will be generated when you run `next dev` or `next build` .
+The `.source` folder will be generated when you run `next dev` or `next build`.
 
 ### [Done](https://www.fumadocs.dev/docs/manual-installation/next#done)
 
@@ -105,13 +123,23 @@ Fumadocs also supports other content sources, including [Content Collections](ht
 
 ## [Getting Started](https://www.fumadocs.dev/docs/manual-installation/next#getting-started)
 
+npm
+
+pnpm
+
+yarn
+
+bun
+
 ```
 npm i fumadocs-ui fumadocs-core
 ```
 
 ### [Root Layout](https://www.fumadocs.dev/docs/manual-installation/next#root-layout)
 
-Wrap the entire application inside [Root Provider](https://www.fumadocs.dev/docs/ui/layouts/root-provider) , and add required styles to `body` .
+Wrap the entire application inside [Root Provider](https://www.fumadocs.dev/docs/ui/layouts/root-provider), and add required styles to `body`.
+
+app/layout.tsx
 
 ```
 import { RootProvider } from 'fumadocs-ui/provider/next';
@@ -133,7 +161,9 @@ export default function Layout({ children }: { children: ReactNode }) {
 
 ### [Styles](https://www.fumadocs.dev/docs/manual-installation/next#styles)
 
-Add the following Tailwind CSS styles to `global.css` .
+Add the following Tailwind CSS styles to `global.css`.
+
+global.css
 
 ```
 @import 'tailwindcss';
@@ -141,11 +171,13 @@ Add the following Tailwind CSS styles to `global.css` .
 @import 'fumadocs-ui/css/preset.css';
 ```
 
-It doesn ' t come with a default font, you may choose one from `next/font` .
+It doesn't come with a default font, you may choose one from `next/font`.
 
 ### [Routes](https://www.fumadocs.dev/docs/manual-installation/next#routes)
 
 Create a `lib/layout.shared.tsx` file to put the shared options for our layouts.
+
+lib/layout.shared.tsx
 
 ```
 import type { BaseLayoutProps } from 'fumadocs-ui/layouts/shared';
@@ -160,6 +192,14 @@ export function baseOptions(): BaseLayoutProps {
 ```
 
 Create the following files & routes:
+
+components/mdx.tsx
+
+app/docs/layout.tsx
+
+app/docs/[[...slug]]/page.tsx
+
+app/api/search/route.ts
 
 ```
 import defaultMdxComponents from 'fumadocs-ui/mdx';
@@ -179,11 +219,13 @@ declare global {
 }
 ```
 
-The search is powered by Orama, learn more about [Document Search](https://www.fumadocs.dev/docs/headless/search) .
+The search is powered by Orama, learn more about [Document Search](https://www.fumadocs.dev/docs/headless/search).
 
 ### [Finish](https://www.fumadocs.dev/docs/manual-installation/next#finish)
 
 You can start the dev server and create MDX files.
+
+content/docs/index.mdx
 
 ```
 ---
@@ -196,6 +238,8 @@ I love Anime.
 ```
 
 How is this guide?
+
+Good Bad
 
 Last updated on
 

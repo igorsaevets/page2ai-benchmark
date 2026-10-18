@@ -1,12 +1,12 @@
 ---
 title: "Getting Started"
 source: "https://biomejs.dev/guides/getting-started/"
-captured_at: "2026-08-30T04:15:20.905Z"
+captured_at: "2026-10-18T09:37:13.954Z"
 language: "en"
 description: "Learn how to set up a new project with Biome."
 canonical: "https://biomejs.dev/guides/getting-started/"
 extractor: "page2ai-core"
-extractor_version: "0.1.8"
+extractor_version: "0.1.13"
 ---
 
 # Getting Started
@@ -39,7 +39,7 @@ Biome is best installed as a development dependency of your projects, but it is 
 1yarn add -D -E @biomejs/biome
 ```
 
-`-E` ensures that the package manager pins the version of Biome. See the [versioning page](https://biomejs.dev/internals/versioning) for more information about [why pinning the version is important](https://biomejs.dev/internals/versioning#why-pinning-the-version-is-important) .
+`-E` ensures that the package manager pins the version of Biome. See the [versioning page](https://biomejs.dev/internals/versioning) for more information about [why pinning the version is important](https://biomejs.dev/internals/versioning#why-pinning-the-version-is-important).
 
 ## Configuration
 
@@ -146,7 +146,7 @@ Biome is available as a first-party extension in your favorite editors.
 - [IntelliJ](https://biomejs.dev/editors/first-party-extensions#intellij)
 - [Zed](https://biomejs.dev/editors/first-party-extensions#zed)
 
-There are also [community extensions](https://biomejs.dev/editors/third-party-extensions) for other editors, such as **Vim** , **Neovim** , and **Sublime Text** , to name a few.
+There are also [community extensions](https://biomejs.dev/editors/third-party-extensions) for other editors, such as **Vim**, **Neovim**, and **Sublime Text**, to name a few.
 
 ### Continuous Integration
 
