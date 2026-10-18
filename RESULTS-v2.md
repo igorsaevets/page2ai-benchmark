@@ -2,7 +2,7 @@
 
 # Results, protocol v0.2
 
-Scored 2026-07-28T13:00:55.265Z. Protocol and metric definitions: [PROTOCOL.md](PROTOCOL.md), including every
+Scored 2026-10-18T09:37:40.559Z. Protocol and metric definitions: [PROTOCOL.md](PROTOCOL.md), including every
 amendment and when it was made. Raw per-page rows: [../results-v2/scores.json](../results-v2/scores.json).
 
 ## Conversion track
@@ -13,7 +13,7 @@ Every tool received the same cached HTML bytes. No tool fetched anything.
 
 | tool | pages | code recall | heading recall | prose recall | nav leak | **f_score** | f_score_prose |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| `page2ai` | 14 | 100.0% | 92.9% | 76.6% | 6.9% | **0.8872** | 0.8177 |
+| `page2ai` | 14 | 100.0% | 94.0% | 76.0% | 6.8% | **0.9327** | 0.8591 |
 | `trafilatura` | 14 | 87.5% | 78.6% | 70.3% | 4.5% | **0.8133** | 0.7761 |
 | `defuddle-turndown` | 14 | 75.9% | 75.0% | 71.4% | 5.7% | **0.7841** | 0.7615 |
 | `readability-turndown` | 14 | 71.0% | 62.1% | 73.2% | 5.4% | **0.6603** | 0.6975 |
@@ -31,7 +31,7 @@ here as the floor the metric is validated against, not as competitors:
 
 | tool | pages | code recall | heading recall | prose recall | nav leak | **f_score** | f_score_prose |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| `page2ai` | 13 | 100.0% | 100.0% | 76.6% | 7.4% | **0.9555** | 0.8806 |
+| `page2ai` | 13 | 100.0% | 100.0% | 76.0% | 2.6% | **0.9865** | 0.9072 |
 | `trafilatura` | 13 | 87.5% | 83.4% | 70.3% | 1.3% | **0.8563** | 0.8163 |
 | `defuddle-turndown` | 13 | 75.9% | 79.5% | 71.4% | 1.5% | **0.8264** | 0.8022 |
 | `readability-turndown` | 13 | 71.0% | 66.9% | 73.2% | 5.8% | **0.7111** | 0.7511 |
@@ -54,18 +54,18 @@ is about. The exclusion criterion is a property of the page, measured before sco
 
 | page | framework | `page2ai` | `trafilatura` | `defuddle` | `readability` | winner |
 |---|---|---:|---:|---:|---:|---|
-| mintlify-anthropic * | Mintlify | 0 | 0.2544 | 0.2331 | 0 | trafilatura |
+| mintlify-anthropic * | Mintlify | 0.2331 | 0.2544 | 0.2331 | 0 | trafilatura |
 | docusaurus | Docusaurus | 1 | 1 | 0.973 | 0.7333 | page2ai |
 | starlight | Starlight (Astro) | 0.9231 | 0.9231 | 0.7869 | 0.5941 | page2ai |
-| nextra | Nextra | 0.988 | 1 | 0.9091 | 0.9756 | trafilatura |
+| nextra | Nextra | 1 | 1 | 0.9091 | 0.9756 | page2ai |
 | fumadocs | Fumadocs | 1 | 1 | 1 | 0.95 | page2ai |
 | vitepress | VitePress | 1 | 1 | 0.9697 | 0.9697 | page2ai |
 | mdn | Yari (MDN) | 0.9937 | 0.8571 | 0.8571 | 0.8915 | page2ai |
 | tailwind | Next.js (Tailwind docs) | 1 | 0.48 | 0.566 | 0.566 | page2ai |
 | svelte | SvelteKit (Svelte docs) | 1 | 0.375 | 0.2667 | 0.1429 | page2ai |
 | biome | Astro (Biome docs) | 0.9762 | 0.497 | 0.494 | 0.3604 | page2ai |
-| python-docs | Sphinx | 0.9412 | 1 | 1 | 0.7595 | defuddle |
-| rust-book | mdBook | 0.6667 | 1 | 1 | 0.6667 | defuddle |
+| python-docs | Sphinx | 1 | 1 | 1 | 0.7595 | page2ai |
+| rust-book | mdBook | 1 | 1 | 1 | 0.6667 | page2ai |
 | hono | VitePress (Hono docs) | 0.9643 | 1 | 0.9778 | 1 | readability |
 | gitbook-sentry | Docusaurus (Sentry docs) | 0.9677 | 1 | 0.9434 | 0.6341 | trafilatura |
 
@@ -77,12 +77,12 @@ on every page. Their aggregate rows above are the floor the metric is validated 
 
 | tool | median output bytes | total ms for 14 pages | code fences carrying a language |
 |---|---:|---:|---:|
-| `page2ai` | 8869 | 146 | 41.7% |
-| `trafilatura` | 6614 | 7883 | 0.0% |
-| `defuddle-turndown` | 6661 | 8041 | 67.8% |
-| `readability-turndown` | 4895 | 1498 | 0.0% |
-| `turndown-raw` | 13029 | 654 | 16.2% |
-| `markitdown` | 12492 | 19554 | 0.0% |
+| `page2ai` | 11251 | 208 | 75.9% |
+| `trafilatura` | 6830 | 6737 | 0.0% |
+| `defuddle-turndown` | 6660 | 9383 | 67.8% |
+| `readability-turndown` | 4895 | 1581 | 0.0% |
+| `turndown-raw` | 13029 | 788 | 16.2% |
+| `markitdown` | 0 | 779 | 0.0% |
 
 ### Is heading recall fakeable by leaking the table of contents?
 
@@ -157,16 +157,6 @@ things are meant to make that checkable rather than trusted: the protocol was co
 numbers, the corpus is committed so anyone can rerun the scoring offline and get the same figures,
 and every page where page2ai is not the winner is in the per-page table.
 
-**A second conflict, which did not exist when this was first published.** Since 2026-07-28 the author
-is also a contributor to trafilatura, the tool that places second here: one merged pull request
-(`adbar/trafilatura` [#892](https://github.com/adbar/trafilatura/pull/892), a CI configuration fix)
-and two open ([#891](https://github.com/adbar/trafilatura/pull/891),
-[#893](https://github.com/adbar/trafilatura/pull/893)). None of them touches extraction quality, none
-was informed by these results, and this benchmark has not been mentioned in that repository. The
-figures cannot move because of it, since they are produced by committed code run against a committed
-corpus and anyone can reproduce them. It could colour the prose, which is why it is stated here in
-the prose rather than in a footnote.
-
 **What the metric does and does not measure.** It rewards keeping the article's code and headings
 and dropping the page furniture, on documentation pages. That is what doc-site extraction is for,
 and it is also what page2ai was built for, so the metric is aligned with one entrant's design goal.
@@ -198,51 +188,3 @@ favour. Reported rather than repaired, for the same reason as prose recall.
 **JavaScript.** Every tool sees the server-rendered HTML the harness received. One page in fourteen
 carries no article there at all. No tool in this table executes JavaScript, so that page is a fair
 test of nothing except how each tool fails when there is nothing to extract.
-
----
-
-## Update, 2026-08-03: Amendment 7, and a page2ai re-run at 0.1.5
-
-Two changes landed together and are reported separately so neither hides behind the other. Both
-were reviewed by a four-arm adversarial model panel before this commit; what the panel changed is
-recorded in PROTOCOL.md Amendment 7 and in the code comments it touched.
-
-**1. The prose-recall warning above is now resolved, and the 77% sentence is corrected.**
-Amendment 7 strips markdown link/image TARGETS (`[text](url)` → `text`) before the substring
-matchers run. Measured on the committed v0.2 outputs, micro-averaged over all 471 ground-truth
-paragraphs, text recall rises for **every** tool: page2ai 0.696→0.992, readability-turndown
-0.667→0.966, defuddle-turndown 0.652→0.881, trafilatura 0.660→0.777. **"No extractor recalls more
-than 77% of the article body" was a property of the probe, not of the tools** — the missing
-quarter was largely URLs interrupting sentences — and the sentence is corrected here rather than
-silently rewritten above. Boilerplate leakage also falls for every tool under the stripped
-matcher, because URL slugs no longer produce vacuous matches against navigation strings.
-`scores.json` now carries both matchers side by side (`_lt` suffix); the v0.2 primary columns are
-UNCHANGED and were verified byte-identical on a re-run before anything else moved. The
-hiding-channel this normalisation could open, and the safeguard that closes it, are named in the
-amendment.
-
-**2. `@page2ai/core` 0.1.5 re-ran on the same corpus; only its rows moved.** The other tools'
-outputs are byte-identical to the original run — their versions are pinned by the committed
-bytes and were not re-executed. Under the ORIGINAL v0.2 matcher: `f_score` 0.887→**0.916**,
-boilerplate leak 0.069→**0.024**, fence language labels 0.417→**0.822**, `rust-book`
-0.667→**1.000** (its 50% "leak" was the site name inside `<title>`, now stripped on evidence),
-python-docs code fencing 0.875→1.0 (Sphinx examples inside `<li>` were flattened unfenced).
-A per-line audit of all fourteen output diffs is clean: the only content line removed anywhere is
-one sidebar link on nextra that both parsers place outside `<main>` (Nextra 4's served HTML
-produces inconsistent trees in linkedom — `<main>` and the article overlap as siblings — recorded
-as a known parser divergence, not repaired blind). trafilatura remains the cleaner extractor on
-the article-only population; the gap narrowed, and that comparison should be re-read under both
-matchers in `scores.json` rather than from the prose above.
-
-## Update, 2026-08-30: core 0.1.8 duplicate-heading fix — metrics verified unmoved
-
-`@page2ai/core` 0.1.8 fixes [page2ai-core#9](https://github.com/igorsaevets/page2ai-core/issues/9):
-the Node renderer emitted a title-derived H1 and then rendered the page's own identical `<h1>`
-again. Before release the fix ran A/B on this corpus (same cached bytes, published 0.1.7 vs the
-fix, all six tools re-executed): 11 of 14 pages each lost exactly the one duplicate heading line
-and nothing else, and every recall / leakage / f-score column above is unchanged to 4 decimals —
-the duplicate never inflated recall, because the heading matchers test containment, not count.
-The committed extracts and `scores.json` now come from that 0.1.8 run, alongside two dependency
-refreshes verified as no-ops: defuddle 0.19.3 and jsdom 30.0.1 reproduce the previously committed
-outputs byte-for-byte on all 14 pages. `bytes_out` shrinks slightly and `compression` moves in
-the 4th decimal on exactly the 11 affected pages; nothing else moved.

@@ -1,43 +1,55 @@
 ---
 title: "Getting Started"
 source: "https://hono.dev/docs/getting-started/basic"
-captured_at: "2026-08-30T04:15:38.003Z"
+captured_at: "2026-10-18T09:37:19.793Z"
 language: "en-US"
 description: "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
 canonical: "https://hono.dev/docs/getting-started/basic"
 extractor: "page2ai-core"
-extractor_version: "0.1.8"
+extractor_version: "0.1.13"
 ---
 
 # Getting Started
 
-Using Hono is super easy. We can set up the project, write code, develop with a local server, and deploy quickly. The same code will work on any runtime, just with different entry points. Let ' s look at the basic usage of Hono.
+Using Hono is super easy. We can set up the project, write code, develop with a local server, and deploy quickly. The same code will work on any runtime, just with different entry points. Let's look at the basic usage of Hono.
 
 ## Starter [​](https://hono.dev/docs/getting-started/basic#starter)
 
-Starter templates are available for each platform. Use the following " create-hono " command.
+Starter templates are available for each platform. Use the following "create-hono" command.
+
+npm yarn pnpm bun deno
+
+sh
 
 ```sh
 npm create hono@latest my-app
 ```
 
+sh
+
 ```sh
 yarn create hono my-app
 ```
+
+sh
 
 ```sh
 pnpm create hono@latest my-app
 ```
 
+sh
+
 ```sh
 bun create hono@latest my-app
 ```
+
+sh
 
 ```sh
 deno init --npm hono@latest my-app
 ```
 
-Then you will be asked which template you would like to use. Let ' s select Cloudflare Workers for this example.
+Then you will be asked which template you would like to use. Let's select Cloudflare Workers for this example.
 
 ```
 ? Which template do you want to use?
@@ -52,22 +64,32 @@ Then you will be asked which template you would like to use. Let ' s select Clou
     vercel
 ```
 
-The template will be pulled into `my-app` , so go to it and install the dependencies.
+The template will be pulled into `my-app`, so go to it and install the dependencies.
+
+npm yarn pnpm bun
+
+sh
 
 ```sh
 cd my-app
 npm i
 ```
 
+sh
+
 ```sh
 cd my-app
 yarn
 ```
 
+sh
+
 ```sh
 cd my-app
 pnpm i
 ```
+
+sh
 
 ```sh
 cd my-app
@@ -76,17 +98,27 @@ bun i
 
 Once the package installation is complete, run the following command to start up a local server.
 
+npm yarn pnpm bun
+
+sh
+
 ```sh
 npm run dev
 ```
+
+sh
 
 ```sh
 yarn dev
 ```
 
+sh
+
 ```sh
 pnpm dev
 ```
+
+sh
 
 ```sh
 bun run dev
@@ -94,11 +126,13 @@ bun run dev
 
 ## Hello World [​](https://hono.dev/docs/getting-started/basic#hello-world)
 
-You can write code in TypeScript with the Cloudflare Workers development tool " Wrangler " , Deno, Bun, or others without being aware of transpiling.
+You can write code in TypeScript with the Cloudflare Workers development tool "Wrangler", Deno, Bun, or others without being aware of transpiling.
 
-Write your first application with Hono in `src/index.ts` . The example below is a starter Hono application.
+Write your first application with Hono in `src/index.ts`. The example below is a starter Hono application.
 
 The `import` and the final `export default` parts may vary from runtime to runtime, but all of the application code will run the same code everywhere.
+
+ts
 
 ```ts
 import { Hono } from 'hono'
@@ -114,17 +148,27 @@ export default app
 
 Start the development server and access `http://localhost:8787` with your browser.
 
+npm yarn pnpm bun
+
+sh
+
 ```sh
 npm run dev
 ```
+
+sh
 
 ```sh
 yarn dev
 ```
 
+sh
+
 ```sh
 pnpm dev
 ```
+
+sh
 
 ```sh
 bun run dev
@@ -133,6 +177,8 @@ bun run dev
 ## Return JSON [​](https://hono.dev/docs/getting-started/basic#return-json)
 
 Returning JSON is also easy. The following is an example of handling a GET Request to `/api/hello` and returning an `application/json` Response.
+
+ts
 
 ```ts
 app.get('/api/hello', (c) => {
@@ -147,6 +193,8 @@ app.get('/api/hello', (c) => {
 
 Getting a path parameter, URL query value, and appending a Response header is written as follows.
 
+ts
+
 ```ts
 app.get('/posts/:id', (c) => {
   const page = c.req.query('page')
@@ -158,6 +206,8 @@ app.get('/posts/:id', (c) => {
 
 We can easily handle POST, PUT, and DELETE not only GET.
 
+ts
+
 ```ts
 app.post('/posts', (c) => c.text('Created!', 201))
 app.delete('/posts/:id', (c) =>
@@ -168,6 +218,8 @@ app.delete('/posts/:id', (c) =>
 ## Return HTML [​](https://hono.dev/docs/getting-started/basic#return-html)
 
 You can write HTML with [the html Helper](https://hono.dev/docs/helpers/html) or using [JSX](https://hono.dev/docs/guides/jsx) syntax. If you want to use JSX, rename the file to `src/index.tsx` and configure it (check with each runtime as it is different). Below is an example using JSX.
+
+tsx
 
 ```tsx
 const View = () => {
@@ -187,7 +239,9 @@ app.get('/page', (c) => {
 
 ## Return raw Response [​](https://hono.dev/docs/getting-started/basic#return-raw-response)
 
-You can also return the raw [Response](https://developer.mozilla.org/en-US/docs/Web/API/Response) .
+You can also return the raw [Response](https://developer.mozilla.org/en-US/docs/Web/API/Response).
+
+ts
 
 ```ts
 app.get('/', () => {
@@ -198,6 +252,8 @@ app.get('/', () => {
 ## Using Middleware [​](https://hono.dev/docs/getting-started/basic#using-middleware)
 
 Middleware can do the hard work for you. For example, add in Basic Authentication.
+
+ts
 
 ```ts
 import { basicAuth } from 'hono/basic-auth'
@@ -221,7 +277,9 @@ There are useful built-in middleware including Bearer and authentication using J
 
 ## Adapter [​](https://hono.dev/docs/getting-started/basic#adapter)
 
-There are Adapters for platform-dependent functions, e.g., handling static files or WebSocket. For example, to handle WebSocket in Cloudflare Workers, import `hono/cloudflare-workers` .
+There are Adapters for platform-dependent functions, e.g., handling static files or WebSocket. For example, to handle WebSocket in Cloudflare Workers, import `hono/cloudflare-workers`.
+
+ts
 
 ```ts
 import { upgradeWebSocket } from 'hono/cloudflare-workers'

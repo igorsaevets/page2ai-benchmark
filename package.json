@@ -42,8 +42,12 @@
     "@mozilla/readability": "^0.6.0",
     "@page2ai/core": "^0.1.7",
     "defuddle": "^0.19.3",
-    "jsdom": "^30.0.1",
+    "jsdom": "~30.0.1",
     "linkedom": "^0.18.0",
     "turndown": "^7.2.4"
+  },
+  "overrides": {
+    "undici": "^8.12.2",
+    "source-map-js": "^1.2.2"
   }
 }

@@ -1,12 +1,12 @@
 ---
 title: "Getting Started"
 source: "https://starlight.astro.build/getting-started/"
-captured_at: "2026-08-30T04:14:58.881Z"
+captured_at: "2026-10-18T09:37:06.159Z"
 language: "en"
 description: "Learn how to start building your next documentation site with Starlight by Astro."
 canonical: "https://starlight.astro.build/getting-started/"
 extractor: "page2ai-core"
-extractor_version: "0.1.8"
+extractor_version: "0.1.13"
 ---
 
 # Getting Started
@@ -27,13 +27,19 @@ Create a new Astro + Starlight project by running the following command in your 
 - [pnpm](https://starlight.astro.build/getting-started/#tab-panel-408)
 - [Yarn](https://starlight.astro.build/getting-started/#tab-panel-409)
 
+Terminal window
+
 ```sh
 npm create astro@latest -- --template starlight
 ```
 
+Terminal window
+
 ```sh
 pnpm create astro --template starlight
 ```
+
+Terminal window
 
 ```sh
 yarn create astro --template starlight
@@ -41,7 +47,7 @@ yarn create astro --template starlight
 
 This will create a new [project directory](https://starlight.astro.build/guides/project-structure/) with all the necessary files and configurations for your site.
 
-Try Starlight in your browser: [open the template on StackBlitz](https://stackblitz.com/github/withastro/starlight/tree/main/examples/basics) .
+Try Starlight in your browser: [open the template on StackBlitz](https://stackblitz.com/github/withastro/starlight/tree/main/examples/basics).
 
 ### Start the development server
 
@@ -55,13 +61,19 @@ Inside your project directory, run the following command to start the developmen
 - [pnpm](https://starlight.astro.build/getting-started/#tab-panel-411)
 - [Yarn](https://starlight.astro.build/getting-started/#tab-panel-412)
 
+Terminal window
+
 ```sh
 npm run dev
 ```
 
+Terminal window
+
 ```sh
 pnpm dev
 ```
+
+Terminal window
 
 ```sh
 yarn dev
@@ -82,7 +94,7 @@ Read more about file-based routing and support for MDX and Markdoc files in the 
 ### Next steps
 
 [Section titled “Next steps”](https://starlight.astro.build/getting-started/#next-steps)
-- **Configure:** Learn about common options in [“Customizing Starlight”](https://starlight.astro.build/guides/customization/) .
+- **Configure:** Learn about common options in [“Customizing Starlight”](https://starlight.astro.build/guides/customization/).
 - **Navigate:** Set up your sidebar with the [“Sidebar Navigation”](https://starlight.astro.build/guides/sidebar/) guide.
 - **Components:** Discover built-in cards, tabs, and more in the [“Components”](https://starlight.astro.build/components/using-components/) guide.
 - **Extend:** Explore community add-ons in our [“Plugins”](https://starlight.astro.build/resources/plugins/) and [“Themes”](https://starlight.astro.build/resources/themes/) catalogs.
@@ -100,13 +112,19 @@ Starlight is an Astro integration. You can update it and other Astro packages by
 - [pnpm](https://starlight.astro.build/getting-started/#tab-panel-414)
 - [Yarn](https://starlight.astro.build/getting-started/#tab-panel-415)
 
+Terminal window
+
 ```sh
 npx @astrojs/upgrade
 ```
 
+Terminal window
+
 ```sh
 pnpm dlx @astrojs/upgrade
 ```
+
+Terminal window
 
 ```sh
 yarn dlx @astrojs/upgrade
@@ -122,7 +140,7 @@ Use the [project configuration](https://starlight.astro.build/reference/configur
 
 If your answer cannot be found in these docs, please visit the [full Astro Docs](https://docs.astro.build/) for complete Astro documentation. Your question may be answered by understanding how Astro works in general, underneath this Starlight theme.
 
-You can also check for any known [Starlight issues on GitHub](https://github.com/withastro/starlight/issues) , and get help in the [Astro Discord](https://astro.build/chat/) from our active, friendly community! Post questions in our `#support` forum with the “starlight” tag, or visit our dedicated `#starlight` channel to discuss current development and more!
+You can also check for any known [Starlight issues on GitHub](https://github.com/withastro/starlight/issues), and get help in the [Astro Discord](https://astro.build/chat/) from our active, friendly community! Post questions in our `#support` forum with the “starlight” tag, or visit our dedicated `#starlight` channel to discuss current development and more!
 
 [Edit page](https://github.com/withastro/starlight/edit/main/docs/src/content/docs/getting-started.mdx)
 
