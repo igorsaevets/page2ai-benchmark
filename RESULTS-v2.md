@@ -2,7 +2,7 @@
 
 # Results, protocol v0.2
 
-Scored 2026-10-18T09:37:40.559Z. Protocol and metric definitions: [PROTOCOL.md](PROTOCOL.md), including every
+Scored 2026-10-18T09:59:52.993Z. Protocol and metric definitions: [PROTOCOL.md](PROTOCOL.md), including every
 amendment and when it was made. Raw per-page rows: [../results-v2/scores.json](../results-v2/scores.json).
 
 ## Conversion track
@@ -77,12 +77,12 @@ on every page. Their aggregate rows above are the floor the metric is validated 
 
 | tool | median output bytes | total ms for 14 pages | code fences carrying a language |
 |---|---:|---:|---:|
-| `page2ai` | 11251 | 208 | 75.9% |
-| `trafilatura` | 6830 | 6737 | 0.0% |
-| `defuddle-turndown` | 6660 | 9383 | 67.8% |
-| `readability-turndown` | 4895 | 1581 | 0.0% |
-| `turndown-raw` | 13029 | 788 | 16.2% |
-| `markitdown` | 0 | 779 | 0.0% |
+| `page2ai` | 11250 | 265 | 75.9% |
+| `trafilatura` | 6830 | 7425 | 0.0% |
+| `defuddle-turndown` | 6660 | 14502 | 67.8% |
+| `readability-turndown` | 4895 | 2123 | 0.0% |
+| `turndown-raw` | 13029 | 1018 | 16.2% |
+| `markitdown` | 0 | 896 | 0.0% |
 
 ### Is heading recall fakeable by leaking the table of contents?
 

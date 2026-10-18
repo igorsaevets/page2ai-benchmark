@@ -1,12 +1,12 @@
 ---
 title: "What are runes? • Svelte Docs"
 source: "https://svelte.dev/docs/svelte/what-are-runes"
-captured_at: "2026-10-18T09:37:12.936Z"
+captured_at: "2026-10-18T09:59:34.002Z"
 language: "en"
 description: "What are runes? • Svelte documentation"
 canonical: "https://svelte.dev/docs/svelte/what-are-runes"
 extractor: "page2ai-core"
-extractor_version: "0.1.13"
+extractor_version: "0.2.2"
 ---
 
 # What are runes? • Svelte Docs

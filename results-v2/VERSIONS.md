@@ -13,7 +13,7 @@ versions without opening the lockfile.
 
 | package | version |
 |---|---|
-| @page2ai/core | 0.1.13 |
+| @page2ai/core | 0.2.2 |
 | @mozilla/readability | 0.6.0 |
 | defuddle | 0.19.5 |
 | turndown | 7.2.4 |
@@ -44,6 +44,15 @@ with jsdom 30.0.1 reproduces 0.19.3's outputs byte-for-byte on 12 of 14 pages
 scores improved on 4 pages (mintlify-anthropic 0 to 0.2331; nextra, python-docs
 and rust-book to 1.0) and the aggregate f_score rose from 0.8872 to 0.9327.
 readability-turndown and turndown-raw reproduced byte-for-byte.
+
+On 2026-10-18 the range was changed from ^0.1.7 to ^0.2.2 (core 0.1.13 to
+0.2.2). Core 0.2.x includes BL-49 (content-from-page-only), P2A-019 (ordered
+list numbering) and the panel review fix. All scoring metrics (f_score,
+heading_recall, code_recall, boilerplate_leak) are unchanged on every page.
+bytes_out decreased on all 14 pages: 10 pages by exactly 1 byte (the version
+string "0.1.13" to "0.2.2" in frontmatter), 4 pages by 20-146 bytes (improved
+boilerplate removal: tab labels, copy buttons, keyboard shortcuts). Non-page2ai
+tools reproduced byte-for-byte (control arm clean).
 
 ## Python tools (from protocol-v2/requirements.txt, pinned)
 

@@ -1,13 +1,13 @@
 ---
 title: "Browser JavaScript"
 source: "https://docs.sentry.io/platforms/javascript/"
-captured_at: "2026-10-18T09:37:21.073Z"
+captured_at: "2026-10-18T09:59:45.955Z"
 language: "en"
 description: "Learn how to manually set up Sentry in your JavaScript app and capture your first errors."
 canonical: "https://docs.sentry.io/platforms/javascript/"
 og_title: "Browser JavaScript | Sentry for JavaScript"
 extractor: "page2ai-core"
-extractor_version: "0.1.13"
+extractor_version: "0.2.2"
 ---
 
 # Browser JavaScript
@@ -16,15 +16,11 @@ extractor_version: "0.1.13"
 - [Platforms](https://docs.sentry.io/platforms/)
 - [JavaScript](https://docs.sentry.io/platforms/javascript/)
 
-Copy page
-
 ## Learn how to manually set up Sentry in your JavaScript app and capture your first errors.
 
 Agent-Assisted Setup
 
 `Use curl to download, read and follow https://skills.sentry.dev/instrument to set up the Sentry Browser JavaScript SDK.`
-
-Copy Prompt
 
 Your agent will set up Sentry in your Browser JavaScript app automatically. Works with Cursor, Claude Code, Codex, and more. [View docs ↗](https://docs.sentry.io/ai/agent-plugin/)
 
@@ -69,8 +65,6 @@ We recommend installing Sentry via a package manager. If that isn't an option fo
 
 Run the command for your preferred package manager to add the Sentry SDK to your application:
 
-npm yarn pnpm
-
 Copied
 
 ```bash
@@ -104,8 +98,6 @@ If you're updating your Sentry SDK to the latest version, check out our [migrati
 ### [Initialize the Sentry SDK](https://docs.sentry.io/platforms/javascript/#initialize-the-sentry-sdk)
 
 Initialize Sentry as early as possible in your application's lifecycle. The setup differs slightly depending on how you installed the Sentry SDK. Be sure to follow the instructions in the related tab (npm, Loader, CDN):
-
-npm
 
 Copied
 
@@ -367,8 +359,6 @@ The stack traces in your Sentry errors probably won't look like your actual code
 
 Alternatively, take a look at our [Uploading Source Maps](https://docs.sentry.io/platforms/javascript/sourcemaps/uploading/) documentation.
 
-Bash
-
 Copied
 
 ```bash
@@ -384,8 +374,6 @@ npx @sentry/wizard@latest -i sourcemaps
 You can prevent ad blockers from blocking Sentry events using tunneling. Use the `tunnel` option in `Sentry.init` to add an API endpoint in your application that forwards Sentry events to Sentry servers.
 
 This will send all events to the `tunnel` endpoint. However, the events need to be parsed and redirected to Sentry, so you'll need to do additional configuration on the server. You can find a detailed explanation on how to do this on our [Troubleshooting page](https://docs.sentry.io/platforms/javascript/troubleshooting/#using-the-tunnel-option).
-
-JavaScript
 
 Copied
 
@@ -417,8 +405,6 @@ Open the page in a browser and click the button to throw an error.
 
 Errors triggered from within your browser's developer tools (like the browser console) are sandboxed, so they will not trigger Sentry's error monitoring.
 
-HTML
-
 Copied
 
 ```html
@@ -446,8 +432,6 @@ Copied
 To test your tracing configuration, update the previous code to simulate a longer operation and start a trace.
 
 Open the page in a browser and click the button to throw an error and create a trace.
-
-HTML
 
 Copied
 
@@ -488,8 +472,6 @@ Copied
 ### [Logs NEW](https://docs.sentry.io/platforms/javascript/#logs-)
 
 To verify that Sentry catches your logs, add some log statements to your application:
-
-JavaScript
 
 Copied
 
@@ -554,13 +536,9 @@ Are you having problems setting up the SDK?
 
 Was this helpful?
 
-Yes 👍 No 👎
-
 How can we improve this page?
 
 Email (optional)
-
-Submit feedback
 
 **Help improve this content**
 
