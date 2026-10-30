@@ -1,5 +1,5 @@
 {
-  "audited_at": "2026-10-30T22:02:41.057Z",
+  "audited_at": "2026-10-30T22:39:29.044Z",
   "question": "Does duplicated TOC/sidebar heading text let a tool score heading recall without extracting the article?",
   "corpus_headings": 170,
   "corpus_headings_also_in_chrome": 52,

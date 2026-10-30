@@ -10,6 +10,22 @@ Biome is best installed as a development dependency of your projects, but it is 
 npm i -D -E @biomejs/biome
 ```
 
+```
+pnpm add -D -E @biomejs/biome
+```
+
+```
+bun add -D -E @biomejs/biome
+```
+
+```
+deno add -D npm:@biomejs/biome
+```
+
+```
+yarn add -D -E @biomejs/biome
+```
+
 Although Biome can run with zero configuration, you’ll likely want to tweak some settings to suit your project’s needs, in which case you can run the following command to generate a `biome.json` configuration file.
 
 *   [npm](#tab-panel-497)
@@ -20,6 +36,22 @@ Although Biome can run with zero configuration, you’ll likely want to tweak so
 
 ```
 npx @biomejs/biome init
+```
+
+```
+pnpx @biomejs/biome init
+```
+
+```
+bunx --bun @biomejs/biome init
+```
+
+```
+deno run -A npm:@biomejs/biome init
+```
+
+```
+yarn exec biome -- init
 ```
 
 Lets get a quick overview of how to use Biome in your project.
@@ -38,6 +70,22 @@ Biome provides a [command-line interface](https://biomejs.dev/reference/cli) to 
 
 ```
 # Format all filesnpx @biomejs/biome format --write# Format specific filesnpx @biomejs/biome format --write <files># Lint files and apply safe fixes to all filesnpx @biomejs/biome lint --write# Lint files and apply safe fixes to specific filesnpx @biomejs/biome lint --write <files># Format, lint, and organize imports of all filesnpx @biomejs/biome check --write# Format, lint, and organize imports of specific filesnpx @biomejs/biome check --write <files>
+```
+
+```
+# Format all filespnpx @biomejs/biome format --write# Format specific filespnpx @biomejs/biome format --write <files># Lint and apply safe fixes to all filespnpx @biomejs/biome lint --write# Lint files and apply safe fixes to specific filespnpx @biomejs/biome lint --write <files># Format, lint, and organize imports of all filespnpx @biomejs/biome check --write# Format, lint, and organize imports of specific filespnpx @biomejs/biome check --write <files>
+```
+
+```
+# Format all filesbunx --bun @biomejs/biome format --write# Format specific filesbunx --bun @biomejs/biome format --write <files># Lint and apply safe fixes to all filesbunx --bun @biomejs/biome lint --write# Lint files and apply safe fixes to specific filesbunx --bun @biomejs/biome lint --write <files># Format, lint, and organize imports of all filesbunx --bun @biomejs/biome check --write# Format, lint, and organize imports of specific filesbunx --bun @biomejs/biome check --write <files>
+```
+
+```
+# Format specific filesdeno run -A npm:@biomejs/biome format --write <files># Format all filesdeno run -A npm:@biomejs/biome format --write# Lint files and apply safe fixes to all filesdeno run -A npm:@biomejs/biome lint --write# Lint files and apply safe fixes to specific filesdeno run -A npm:@biomejs/biome lint --write <files># Format, lint, and organize imports of all filesdeno run -A npm:@biomejs/biome check --write# Format, lint, and organize imports of specific filesdeno run -A npm:@biomejs/biome check --write <files>
+```
+
+```
+# Format all filesyarn exec biome format --write# Format specific filesyarn exec biome format --write <files># Lint files and apply safe fixes to all filesyarn exec biome lint --write# Lint files and apply safe fixes to specific filesyarn exec biome lint --write <files># Format, lint, and organize imports of all filesyarn exec biome check --write# Format, lint, and organize imports of specific filesyarn exec biome check --write <files>
 ```
 
 ### Editor integrations
