@@ -2,7 +2,7 @@
 
 # Results, protocol v0.2
 
-Scored 2026-10-30T22:02:39.551Z. Protocol and metric definitions: [PROTOCOL.md](PROTOCOL.md), including every
+Scored 2026-10-30T22:39:27.593Z. Protocol and metric definitions: [PROTOCOL.md](PROTOCOL.md), including every
 amendment and when it was made. Raw per-page rows: [../results-v2/scores.json](../results-v2/scores.json).
 
 ## Conversion track
@@ -16,7 +16,7 @@ Every tool received the same cached HTML bytes. No tool fetched anything.
 | `page2ai` | 14 | 100.0% | 94.0% | 76.0% | 6.8% | **0.9327** | 0.8591 |
 | `trafilatura` | 14 | 87.5% | 78.6% | 70.3% | 4.5% | **0.8133** | 0.7761 |
 | `defuddle-turndown` | 14 | 75.9% | 75.0% | 71.4% | 5.7% | **0.7841** | 0.7615 |
-| `readability-turndown` | 14 | 71.0% | 62.1% | 73.2% | 5.4% | **0.6603** | 0.6975 |
+| `readability-turndown` | 14 | 78.4% | 62.1% | 73.2% | 8.7% | **0.6745** | 0.7034 |
 
 Whole-document converters, shown separately because they perform no content extraction and are
 here as the floor the metric is validated against, not as competitors:
@@ -34,7 +34,7 @@ here as the floor the metric is validated against, not as competitors:
 | `page2ai` | 13 | 100.0% | 100.0% | 76.0% | 2.6% | **0.9865** | 0.9072 |
 | `trafilatura` | 13 | 87.5% | 83.4% | 70.3% | 1.3% | **0.8563** | 0.8163 |
 | `defuddle-turndown` | 13 | 75.9% | 79.5% | 71.4% | 1.5% | **0.8264** | 0.8022 |
-| `readability-turndown` | 13 | 71.0% | 66.9% | 73.2% | 5.8% | **0.7111** | 0.7511 |
+| `readability-turndown` | 13 | 78.4% | 66.9% | 73.2% | 5.8% | **0.7264** | 0.7575 |
 
 Whole-document converters, shown separately because they perform no content extraction and are
 here as the floor the metric is validated against, not as competitors:
@@ -56,7 +56,7 @@ is about. The exclusion criterion is a property of the page, measured before sco
 |---|---|---:|---:|---:|---:|---|
 | mintlify-anthropic * | Mintlify | 0.2331 | 0.2544 | 0.2331 | 0 | trafilatura |
 | docusaurus | Docusaurus | 1 | 1 | 0.973 | 0.7333 | page2ai |
-| starlight | Starlight (Astro) | 0.9231 | 0.9231 | 0.7869 | 0.5941 | page2ai |
+| starlight | Starlight (Astro) | 0.9231 | 0.9231 | 0.7869 | 0.7304 | page2ai |
 | nextra | Nextra | 1 | 1 | 0.9091 | 0.9756 | page2ai |
 | fumadocs | Fumadocs | 1 | 1 | 1 | 0.95 | page2ai |
 | vitepress | VitePress | 1 | 1 | 0.9697 | 0.9697 | page2ai |
@@ -67,7 +67,7 @@ is about. The exclusion criterion is a property of the page, measured before sco
 | python-docs | Sphinx | 1 | 1 | 1 | 0.7595 | page2ai |
 | rust-book | mdBook | 1 | 1 | 1 | 0.6667 | page2ai |
 | hono | VitePress (Hono docs) | 0.9643 | 1 | 0.9778 | 1 | readability |
-| gitbook-sentry | Docusaurus (Sentry docs) | 0.9677 | 1 | 0.9434 | 0.6341 | trafilatura |
+| gitbook-sentry | Docusaurus (Sentry docs) | 0.9677 | 1 | 0.9434 | 0.6977 | trafilatura |
 
 Pages marked `*` carry no article in their server HTML. `turndown-raw` and `markitdown` are
 omitted from this table; both reproduce the whole document, so they win recall and lose cleanliness
@@ -77,16 +77,16 @@ on every page. Their aggregate rows above are the floor the metric is validated 
 
 | tool | median output bytes | total ms for 14 pages | code fences carrying a language |
 |---|---:|---:|---:|
-| `page2ai` | 11250 | 326 | 75.9% |
-| `trafilatura` | 6614 | 5251 | 0.0% |
-| `defuddle-turndown` | 6660 | 12711 | 67.8% |
-| `readability-turndown` | 4895 | 1880 | 0.0% |
-| `turndown-raw` | 13029 | 837 | 16.2% |
-| `markitdown` | 12492 | 8353 | 0.0% |
+| `page2ai` | 11250 | 332 | 75.9% |
+| `trafilatura` | 6614 | 5143 | 0.0% |
+| `defuddle-turndown` | 6660 | 11967 | 67.8% |
+| `readability-turndown` | 6999 | 1950 | 0.0% |
+| `turndown-raw` | 13029 | 838 | 16.2% |
+| `markitdown` | 12492 | 8057 | 0.0% |
 
 ### Is heading recall fakeable by leaking the table of contents?
 
-Audited 2026-10-30T22:02:41.057Z by `protocol-v2/toc_audit.mjs`. Raw: [../results-v2/toc-audit.json](../results-v2/toc-audit.json).
+Audited 2026-10-30T22:39:29.044Z by `protocol-v2/toc_audit.mjs`. Raw: [../results-v2/toc-audit.json](../results-v2/toc-audit.json).
 
 **52 of 170 ground-truth headings (30.6%) also appear outside the article.** On **4 of 14** pages (starlight, fumadocs, biome, python-docs) *every* heading is duplicated outside the content root, so on those pages `heading_recall` cannot tell extraction from leakage for any tool.
 

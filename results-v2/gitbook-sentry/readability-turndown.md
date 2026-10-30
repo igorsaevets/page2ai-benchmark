@@ -47,6 +47,18 @@ Copied
 npm install @sentry/browser --save
 ```
 
+```
+npm install @sentry/browser --save
+```
+
+```
+yarn add @sentry/browser
+```
+
+```
+pnpm add @sentry/browser
+```
+
 In Sentry, go to **Settings > Projects > (select project) > SDK Setup > Loader Script**. Enable the features you want (for example, Tracing or Session Replay), copy the script tag, and place it before all other scripts in your app.
 
 Sentry provides different bundles that include specific feature combinations. Go to our list of [available bundles](https://docs.sentry.io/platforms/javascript/install/loader/#cdn) and copy the one that fits your needs. Next, place the script tag before all other scripts in your app.
@@ -114,11 +126,208 @@ Sentry.init({
 });
 ```
 
+```
+import * as Sentry from "___SDK_PACKAGE___";
+
+Sentry.init({
+  dsn: "___PUBLIC_DSN___",
+
+  dataCollection: {
+    // To disable sending user data and HTTP bodies, uncomment the lines below. For more info visit:
+    // https://docs.sentry.io/platforms/javascript/configuration/options/#dataCollection
+    // userInfo: false,
+    // httpBodies: [],
+  },
+
+  // Alternatively, use `process.env.npm_package_version` for a dynamic release version
+  // if your build tool supports it.
+  release: "my-project-name@2.3.12",
+  integrations: [
+    // ___PRODUCT_OPTION_START___ performance
+    Sentry.browserTracingIntegration(),
+    // ___PRODUCT_OPTION_END___ performance
+    // ___PRODUCT_OPTION_START___ session-replay
+    Sentry.replayIntegration(),
+    // ___PRODUCT_OPTION_END___ session-replay
+    // ___PRODUCT_OPTION_START___ user-feedback
+    Sentry.feedbackIntegration({
+      // Additional SDK configuration goes in here, for example:
+      colorScheme: "system",
+    }),
+    // ___PRODUCT_OPTION_END___ user-feedback
+  ],
+  // ___PRODUCT_OPTION_START___ logs
+
+  // Enable logs to be sent to Sentry
+  enableLogs: true,
+  // ___PRODUCT_OPTION_END___ logs
+  // ___PRODUCT_OPTION_START___ performance
+
+  // Set tracesSampleRate to 1.0 to capture 100%
+  // of transactions for tracing.
+  // We recommend adjusting this value in production
+  // Learn more at
+  // https://docs.sentry.io/platforms/javascript/configuration/options/#traces-sample-rate
+  tracesSampleRate: 1.0,
+
+  // Set `tracePropagationTargets` to control for which URLs trace propagation should be enabled
+  tracePropagationTargets: ["localhost", /^https:\/\/yourserver\.io\/api/],
+  // ___PRODUCT_OPTION_END___ performance
+  // ___PRODUCT_OPTION_START___ session-replay
+
+  // Capture Replay for 10% of all sessions,
+  // plus for 100% of sessions with an error
+  // Learn more at
+  // https://docs.sentry.io/platforms/javascript/session-replay/configuration/#general-integration-configuration
+  replaysSessionSampleRate: 0.1,
+  replaysOnErrorSampleRate: 1.0,
+  // ___PRODUCT_OPTION_END___ session-replay
+});
+```
+
+```
+<script
+  src="https://js.sentry-cdn.com/___PUBLIC_KEY___.min.js"
+  crossorigin="anonymous"
+></script>
+
+<script>
+  window.sentryOnLoad = function () {
+    Sentry.init({
+      dsn: "___PUBLIC_DSN___",
+
+      dataCollection: {
+        // To disable sending user data and HTTP bodies, uncomment the lines below. For more info visit:
+        // https://docs.sentry.io/platforms/javascript/configuration/options/#dataCollection
+        // userInfo: false,
+        // httpBodies: [],
+      },
+
+      // Alternatively, use `process.env.npm_package_version` for a dynamic release version
+      // if your build tool supports it.
+      release: "my-project-name@2.3.12",
+      integrations: [
+        // ___PRODUCT_OPTION_START___ performance
+        Sentry.browserTracingIntegration(),
+        // ___PRODUCT_OPTION_END___ performance
+        // ___PRODUCT_OPTION_START___ session-replay
+        Sentry.replayIntegration(),
+        // ___PRODUCT_OPTION_END___ session-replay
+        // ___PRODUCT_OPTION_START___ user-feedback
+        Sentry.feedbackIntegration({
+          // Additional SDK configuration goes in here, for example:
+          colorScheme: "system",
+        }),
+        // ___PRODUCT_OPTION_END___ user-feedback
+      ],
+      // ___PRODUCT_OPTION_START___ logs
+
+      // Enable logs to be sent to Sentry
+      enableLogs: true,
+      // ___PRODUCT_OPTION_END___ logs
+      // ___PRODUCT_OPTION_START___ performance
+
+      // Set tracesSampleRate to 1.0 to capture 100%
+      // of transactions for tracing.
+      // We recommend adjusting this value in production
+      // Learn more at
+      // https://docs.sentry.io/platforms/javascript/configuration/options/#traces-sample-rate
+      tracesSampleRate: 1.0,
+
+      // Set `tracePropagationTargets` to control for which URLs trace propagation should be enabled
+      tracePropagationTargets: [
+        "localhost",
+        /^https:\/\/yourserver\.io\/api/,
+      ],
+      // ___PRODUCT_OPTION_END___ performance
+      // ___PRODUCT_OPTION_START___ session-replay
+
+      // Capture Replay for 10% of all sessions,
+      // plus for 100% of sessions with an error
+      // Learn more at
+      // https://docs.sentry.io/platforms/javascript/session-replay/configuration/#general-integration-configuration
+      replaysSessionSampleRate: 0.1,
+      replaysOnErrorSampleRate: 1.0,
+      // ___PRODUCT_OPTION_END___ session-replay
+    });
+  };
+</script>
+```
+
+```
+<script
+  src="https://browser.sentry-cdn.com/10.68.0/bundle.tracing.min.js"
+  integrity="sha384-IDGicfmkFBjzbyXFRgxkdVAjmPeBqxWZUv7oUbKSCAc+OEMdNXzrciXnPJzd17Xc"
+  crossorigin="anonymous"
+></script>
+
+<script>
+  Sentry.init({
+    dsn: "___PUBLIC_DSN___",
+
+    dataCollection: {
+      // To disable sending user data and HTTP bodies, uncomment the lines below. For more info visit:
+      // https://docs.sentry.io/platforms/javascript/configuration/options/#dataCollection
+      // userInfo: false,
+      // httpBodies: [],
+    },
+
+    // Alternatively, use `process.env.npm_package_version` for a dynamic release version
+    // if your build tool supports it.
+    release: "my-project-name@2.3.12",
+    integrations: [
+      // ___PRODUCT_OPTION_START___ performance
+      Sentry.browserTracingIntegration(),
+      // ___PRODUCT_OPTION_END___ performance
+      // ___PRODUCT_OPTION_START___ session-replay
+      Sentry.replayIntegration(),
+      // ___PRODUCT_OPTION_END___ session-replay
+      // ___PRODUCT_OPTION_START___ user-feedback
+      Sentry.feedbackIntegration({
+        // Additional SDK configuration goes in here, for example:
+        colorScheme: "system",
+      }),
+      // ___PRODUCT_OPTION_END___ user-feedback
+    ],
+    // ___PRODUCT_OPTION_START___ logs
+
+    // Enable logs to be sent to Sentry
+    enableLogs: true,
+    // ___PRODUCT_OPTION_END___ logs
+    // ___PRODUCT_OPTION_START___ performance
+
+    // Set tracesSampleRate to 1.0 to capture 100%
+    // of transactions for tracing.
+    // We recommend adjusting this value in production
+    // Learn more at
+    // https://docs.sentry.io/platforms/javascript/configuration/options/#traces-sample-rate
+    tracesSampleRate: 1.0,
+
+    // Set `tracePropagationTargets` to control for which URLs trace propagation should be enabled
+    tracePropagationTargets: ["localhost", /^https:\/\/yourserver\.io\/api/],
+    // ___PRODUCT_OPTION_END___ performance
+    // ___PRODUCT_OPTION_START___ session-replay
+
+    // Capture Replay for 10% of all sessions,
+    // plus for 100% of sessions with an error
+    // Learn more at
+    // https://docs.sentry.io/platforms/javascript/session-replay/configuration/#general-integration-configuration
+    replaysSessionSampleRate: 0.1,
+    replaysOnErrorSampleRate: 1.0,
+    // ___PRODUCT_OPTION_END___ session-replay
+  });
+</script>
+```
+
 The stack traces in your Sentry errors probably won't look like your actual code without unminifying them. To fix this, upload your source maps to Sentry. The easiest way to do this is by using the Sentry Wizard.
 
 Alternatively, take a look at our [Uploading Source Maps](https://docs.sentry.io/platforms/javascript/sourcemaps/uploading/) documentation.
 
 Copied
+
+```
+npx @sentry/wizard@latest -i sourcemaps
+```
 
 ```
 npx @sentry/wizard@latest -i sourcemaps
@@ -137,6 +346,13 @@ Sentry.init({
 });
 ```
 
+```
+Sentry.init({
+  dsn: "___PUBLIC_DSN___",
+  tunnel: "/tunnel",
+});
+```
+
 Let's test your setup and confirm that data reaches your Sentry project.
 
 To verify that Sentry captures errors and creates issues in your Sentry project, add a button that throws an error when clicked.
@@ -144,6 +360,16 @@ To verify that Sentry captures errors and creates issues in your Sentry project,
 Open the page in a browser and click the button to throw an error.
 
 Copied
+
+```
+<script>
+  function triggerError() {
+    throw new Error("Sentry Test Error");
+  }
+</script>
+
+<button onclick="triggerError()">Break the World</button>
+```
 
 ```
 <script>
@@ -178,9 +404,40 @@ Copied
 <button onclick="triggerError()">Break the World</button>
 ```
 
+```
+<script>
+  function triggerError() {
+       await Sentry.startSpan(
+        { name: "Example Frontend Span", op: "test" },
+        async () => {
+          await new Promise(resolve => setTimeout(resolve, 200));
+
+          throw new Error("Sentry Test Error");
+        },
+      );
+     }
+</script>
+
+<button onclick="triggerError()">Break the World</button>
+```
+
 To verify that Sentry catches your logs, add some log statements to your application:
 
 Copied
+
+```
+Sentry.logger.info("User example action completed");
+
+Sentry.logger.warn("Slow operation detected", {
+  operation: "data_fetch",
+  duration: 3500,
+});
+
+Sentry.logger.error("Validation failed", {
+  field: "email",
+  reason: "Invalid email",
+});
+```
 
 ```
 Sentry.logger.info("User example action completed");

@@ -33,6 +33,14 @@ const nodeTools = {
 
   "readability-turndown": (html, url) => {
     const dom = new JSDOM(html, { url });
+    // Readability's _isProbablyVisible rejects every element under [hidden], and React 18
+    // Streaming SSR serializes revealed Suspense content inside `<div hidden id="S:N">...</div>`
+    // blocks (a browser only unhides them when the `$RC` runtime script fires on hydration).
+    // Without this strip, Readability on `platform.claude.com` docs and other React 18 docs
+    // (Sentry tab panels, Next.js RSC segments) sees only the sidebar nav and returns ~200 B.
+    // We strip the attribute so the extractor sees the post-hydration DOM shape that every
+    // real reader sees.
+    for (const n of dom.window.document.querySelectorAll("[hidden]")) n.removeAttribute("hidden");
     const article = new Readability(dom.window.document).parse();
     if (!article || !article.content) throw new Error("Readability returned null");
     return turndown().turndown(article.content);

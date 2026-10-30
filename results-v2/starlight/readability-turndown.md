@@ -14,6 +14,14 @@ Create a new Astro + Starlight project by running the following command in your 
 npm create astro@latest -- --template starlight
 ```
 
+```
+pnpm create astro --template starlight
+```
+
+```
+yarn create astro --template starlight
+```
+
 This will create a new [project directory](https://starlight.astro.build/guides/project-structure/) with all the necessary files and configurations for your site.
 
 ### Start the development server
@@ -30,6 +38,14 @@ Inside your project directory, run the following command to start the developmen
 
 ```
 npm run dev
+```
+
+```
+pnpm dev
+```
+
+```
+yarn dev
 ```
 
 This will log a message to your terminal with the URL of your local preview. Open this URL to start browsing your site.
@@ -58,6 +74,14 @@ Starlight is an Astro integration. You can update it and other Astro packages by
 
 ```
 npx @astrojs/upgrade
+```
+
+```
+pnpm dlx @astrojs/upgrade
+```
+
+```
+yarn dlx @astrojs/upgrade
 ```
 
 See the [Starlight changelog](https://github.com/withastro/starlight/blob/main/packages/starlight/CHANGELOG.md) for a full list of the changes made in each release.

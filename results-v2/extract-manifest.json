@@ -3,231 +3,231 @@
     "slug": "mintlify-anthropic",
     "tool": "page2ai",
     "bytes": 16612,
-    "ms": 46,
+    "ms": 44,
     "error": null
   },
   {
     "slug": "mintlify-anthropic",
     "tool": "readability-turndown",
-    "bytes": 218,
-    "ms": 315,
+    "bytes": 13732,
+    "ms": 225,
     "error": null
   },
   {
     "slug": "mintlify-anthropic",
     "tool": "defuddle-turndown",
     "bytes": 15695,
-    "ms": 741,
+    "ms": 724,
     "error": null
   },
   {
     "slug": "mintlify-anthropic",
     "tool": "turndown-raw",
     "bytes": 24738,
-    "ms": 76,
+    "ms": 90,
     "error": null
   },
   {
     "slug": "mintlify-anthropic",
     "tool": "trafilatura",
     "bytes": 12189,
-    "ms": 386,
+    "ms": 374,
     "error": null
   },
   {
     "slug": "mintlify-anthropic",
     "tool": "markitdown",
     "bytes": 24289,
-    "ms": 631,
+    "ms": 558,
     "error": null
   },
   {
     "slug": "docusaurus",
     "tool": "page2ai",
     "bytes": 13638,
-    "ms": 11,
+    "ms": 13,
     "error": null
   },
   {
     "slug": "docusaurus",
     "tool": "readability-turndown",
     "bytes": 12314,
-    "ms": 53,
+    "ms": 43,
     "error": null
   },
   {
     "slug": "docusaurus",
     "tool": "defuddle-turndown",
     "bytes": 12411,
-    "ms": 525,
+    "ms": 315,
     "error": null
   },
   {
     "slug": "docusaurus",
     "tool": "turndown-raw",
     "bytes": 16903,
-    "ms": 38,
+    "ms": 36,
     "error": null
   },
   {
     "slug": "docusaurus",
     "tool": "trafilatura",
     "bytes": 12478,
-    "ms": 349,
+    "ms": 334,
     "error": null
   },
   {
     "slug": "docusaurus",
     "tool": "markitdown",
     "bytes": 16676,
-    "ms": 576,
+    "ms": 557,
     "error": null
   },
   {
     "slug": "starlight",
     "tool": "page2ai",
     "bytes": 6197,
-    "ms": 13,
+    "ms": 12,
     "error": null
   },
   {
     "slug": "starlight",
     "tool": "readability-turndown",
-    "bytes": 4076,
-    "ms": 89,
+    "bytes": 4278,
+    "ms": 93,
     "error": null
   },
   {
     "slug": "starlight",
     "tool": "defuddle-turndown",
     "bytes": 3594,
-    "ms": 411,
+    "ms": 366,
     "error": null
   },
   {
     "slug": "starlight",
     "tool": "turndown-raw",
     "bytes": 8110,
-    "ms": 47,
+    "ms": 56,
     "error": null
   },
   {
     "slug": "starlight",
     "tool": "trafilatura",
     "bytes": 4366,
-    "ms": 362,
+    "ms": 356,
     "error": null
   },
   {
     "slug": "starlight",
     "tool": "markitdown",
     "bytes": 7834,
-    "ms": 583,
+    "ms": 591,
     "error": null
   },
   {
     "slug": "nextra",
     "tool": "page2ai",
     "bytes": 2325,
-    "ms": 16,
+    "ms": 19,
     "error": null
   },
   {
     "slug": "nextra",
     "tool": "readability-turndown",
     "bytes": 1067,
-    "ms": 81,
+    "ms": 115,
     "error": null
   },
   {
     "slug": "nextra",
     "tool": "defuddle-turndown",
     "bytes": 1254,
-    "ms": 470,
+    "ms": 622,
     "error": null
   },
   {
     "slug": "nextra",
     "tool": "turndown-raw",
     "bytes": 12528,
-    "ms": 44,
+    "ms": 87,
     "error": null
   },
   {
     "slug": "nextra",
     "tool": "trafilatura",
     "bytes": 1674,
-    "ms": 391,
+    "ms": 417,
     "error": null
   },
   {
     "slug": "nextra",
     "tool": "markitdown",
     "bytes": 11183,
-    "ms": 649,
+    "ms": 546,
     "error": null
   },
   {
     "slug": "fumadocs",
     "tool": "page2ai",
     "bytes": 5273,
-    "ms": 27,
+    "ms": 26,
     "error": null
   },
   {
     "slug": "fumadocs",
     "tool": "readability-turndown",
     "bytes": 3784,
-    "ms": 134,
+    "ms": 121,
     "error": null
   },
   {
     "slug": "fumadocs",
     "tool": "defuddle-turndown",
     "bytes": 3125,
-    "ms": 667,
+    "ms": 666,
     "error": null
   },
   {
     "slug": "fumadocs",
     "tool": "turndown-raw",
     "bytes": 6035,
-    "ms": 58,
+    "ms": 55,
     "error": null
   },
   {
     "slug": "fumadocs",
     "tool": "trafilatura",
     "bytes": 4125,
-    "ms": 363,
+    "ms": 377,
     "error": null
   },
   {
     "slug": "fumadocs",
     "tool": "markitdown",
     "bytes": 5962,
-    "ms": 581,
+    "ms": 577,
     "error": null
   },
   {
     "slug": "vitepress",
     "tool": "page2ai",
     "bytes": 7844,
-    "ms": 15,
+    "ms": 19,
     "error": null
   },
   {
     "slug": "vitepress",
     "tool": "readability-turndown",
     "bytes": 6999,
-    "ms": 129,
+    "ms": 131,
     "error": null
   },
   {
     "slug": "vitepress",
     "tool": "defuddle-turndown",
     "bytes": 6660,
-    "ms": 625,
+    "ms": 611,
     "error": null
   },
   {
@@ -241,56 +241,56 @@
     "slug": "vitepress",
     "tool": "trafilatura",
     "bytes": 6829,
-    "ms": 364,
+    "ms": 349,
     "error": null
   },
   {
     "slug": "vitepress",
     "tool": "markitdown",
     "bytes": 9097,
-    "ms": 606,
+    "ms": 533,
     "error": null
   },
   {
     "slug": "mdn",
     "tool": "page2ai",
     "bytes": 11250,
-    "ms": 29,
+    "ms": 23,
     "error": null
   },
   {
     "slug": "mdn",
     "tool": "readability-turndown",
     "bytes": 8563,
-    "ms": 148,
+    "ms": 143,
     "error": null
   },
   {
     "slug": "mdn",
     "tool": "defuddle-turndown",
     "bytes": 7949,
-    "ms": 916,
+    "ms": 894,
     "error": null
   },
   {
     "slug": "mdn",
     "tool": "turndown-raw",
     "bytes": 28325,
-    "ms": 67,
+    "ms": 74,
     "error": null
   },
   {
     "slug": "mdn",
     "tool": "trafilatura",
     "bytes": 6614,
-    "ms": 362,
+    "ms": 337,
     "error": null
   },
   {
     "slug": "mdn",
     "tool": "markitdown",
     "bytes": 28555,
-    "ms": 604,
+    "ms": 624,
     "error": null
   },
   {
@@ -304,245 +304,245 @@
     "slug": "tailwind",
     "tool": "readability-turndown",
     "bytes": 2340,
-    "ms": 141,
+    "ms": 139,
     "error": null
   },
   {
     "slug": "tailwind",
     "tool": "defuddle-turndown",
     "bytes": 2311,
-    "ms": 785,
+    "ms": 666,
     "error": null
   },
   {
     "slug": "tailwind",
     "tool": "turndown-raw",
     "bytes": 13029,
-    "ms": 71,
+    "ms": 61,
     "error": null
   },
   {
     "slug": "tailwind",
     "tool": "trafilatura",
     "bytes": 2038,
-    "ms": 361,
+    "ms": 359,
     "error": null
   },
   {
     "slug": "tailwind",
     "tool": "markitdown",
     "bytes": 12492,
-    "ms": 556,
+    "ms": 559,
     "error": null
   },
   {
     "slug": "svelte",
     "tool": "page2ai",
     "bytes": 7739,
-    "ms": 9,
+    "ms": 10,
     "error": null
   },
   {
     "slug": "svelte",
     "tool": "readability-turndown",
     "bytes": 824,
-    "ms": 41,
+    "ms": 48,
     "error": null
   },
   {
     "slug": "svelte",
     "tool": "defuddle-turndown",
     "bytes": 1023,
-    "ms": 549,
+    "ms": 578,
     "error": null
   },
   {
     "slug": "svelte",
     "tool": "turndown-raw",
     "bytes": 6419,
-    "ms": 20,
+    "ms": 26,
     "error": null
   },
   {
     "slug": "svelte",
     "tool": "trafilatura",
     "bytes": 1195,
-    "ms": 348,
+    "ms": 322,
     "error": null
   },
   {
     "slug": "svelte",
     "tool": "markitdown",
     "bytes": 5988,
-    "ms": 546,
+    "ms": 514,
     "error": null
   },
   {
     "slug": "biome",
     "tool": "page2ai",
     "bytes": 8049,
-    "ms": 22,
+    "ms": 27,
     "error": null
   },
   {
     "slug": "biome",
     "tool": "readability-turndown",
-    "bytes": 3482,
-    "ms": 81,
+    "bytes": 5748,
+    "ms": 143,
     "error": null
   },
   {
     "slug": "biome",
     "tool": "defuddle-turndown",
     "bytes": 2711,
-    "ms": 787,
+    "ms": 834,
     "error": null
   },
   {
     "slug": "biome",
     "tool": "turndown-raw",
     "bytes": 11691,
-    "ms": 85,
+    "ms": 64,
     "error": null
   },
   {
     "slug": "biome",
     "tool": "trafilatura",
     "bytes": 5137,
-    "ms": 389,
+    "ms": 391,
     "error": null
   },
   {
     "slug": "biome",
     "tool": "markitdown",
     "bytes": 11517,
-    "ms": 616,
+    "ms": 569,
     "error": null
   },
   {
     "slug": "python-docs",
     "tool": "page2ai",
     "bytes": 64225,
-    "ms": 60,
+    "ms": 59,
     "error": null
   },
   {
     "slug": "python-docs",
     "tool": "readability-turndown",
     "bytes": 59304,
-    "ms": 301,
+    "ms": 362,
     "error": null
   },
   {
     "slug": "python-docs",
     "tool": "defuddle-turndown",
     "bytes": 55179,
-    "ms": 3805,
+    "ms": 3590,
     "error": null
   },
   {
     "slug": "python-docs",
     "tool": "turndown-raw",
     "bytes": 61366,
-    "ms": 163,
+    "ms": 103,
     "error": null
   },
   {
     "slug": "python-docs",
     "tool": "trafilatura",
     "bytes": 46376,
-    "ms": 483,
+    "ms": 457,
     "error": null
   },
   {
     "slug": "python-docs",
     "tool": "markitdown",
     "bytes": 64584,
-    "ms": 695,
+    "ms": 763,
     "error": null
   },
   {
     "slug": "rust-book",
     "tool": "page2ai",
     "bytes": 13737,
-    "ms": 6,
+    "ms": 7,
     "error": null
   },
   {
     "slug": "rust-book",
     "tool": "readability-turndown",
     "bytes": 13101,
-    "ms": 43,
+    "ms": 45,
     "error": null
   },
   {
     "slug": "rust-book",
     "tool": "defuddle-turndown",
     "bytes": 12419,
-    "ms": 221,
+    "ms": 214,
     "error": null
   },
   {
     "slug": "rust-book",
     "tool": "turndown-raw",
     "bytes": 13095,
-    "ms": 20,
+    "ms": 32,
     "error": null
   },
   {
     "slug": "rust-book",
     "tool": "trafilatura",
     "bytes": 12988,
-    "ms": 329,
+    "ms": 359,
     "error": null
   },
   {
     "slug": "rust-book",
     "tool": "markitdown",
     "bytes": 12772,
-    "ms": 528,
+    "ms": 512,
     "error": null
   },
   {
     "slug": "hono",
     "tool": "page2ai",
     "bytes": 5735,
-    "ms": 19,
+    "ms": 20,
     "error": null
   },
   {
     "slug": "hono",
     "tool": "readability-turndown",
     "bytes": 4895,
-    "ms": 151,
+    "ms": 157,
     "error": null
   },
   {
     "slug": "hono",
     "tool": "defuddle-turndown",
     "bytes": 4541,
-    "ms": 840,
+    "ms": 733,
     "error": null
   },
   {
     "slug": "hono",
     "tool": "turndown-raw",
     "bytes": 9714,
-    "ms": 29,
+    "ms": 46,
     "error": null
   },
   {
     "slug": "hono",
     "tool": "trafilatura",
     "bytes": 4730,
-    "ms": 349,
+    "ms": 340,
     "error": null
   },
   {
     "slug": "hono",
     "tool": "markitdown",
     "bytes": 9132,
-    "ms": 546,
+    "ms": 572,
     "error": null
   },
   {
@@ -555,36 +555,36 @@
   {
     "slug": "gitbook-sentry",
     "tool": "readability-turndown",
-    "bytes": 10864,
-    "ms": 173,
+    "bytes": 18726,
+    "ms": 185,
     "error": null
   },
   {
     "slug": "gitbook-sentry",
     "tool": "defuddle-turndown",
     "bytes": 11014,
-    "ms": 1369,
+    "ms": 1154,
     "error": null
   },
   {
     "slug": "gitbook-sentry",
     "tool": "turndown-raw",
     "bytes": 23034,
-    "ms": 89,
+    "ms": 78,
     "error": null
   },
   {
     "slug": "gitbook-sentry",
     "tool": "trafilatura",
     "bytes": 16338,
-    "ms": 415,
+    "ms": 371,
     "error": null
   },
   {
     "slug": "gitbook-sentry",
     "tool": "markitdown",
     "bytes": 21953,
-    "ms": 636,
+    "ms": 582,
     "error": null
   }
 ]
