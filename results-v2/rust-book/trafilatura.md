@@ -1,4 +1,4 @@
-[Storing Lists of Values with Vectors](https://doc.rust-lang.org#storing-lists-of-values-with-vectors)
+## [Storing Lists of Values with Vectors](https://doc.rust-lang.org#storing-lists-of-values-with-vectors)
 
 The first collection type we’ll look at is `Vec<T>`, also known as a vector.
 Vectors allow you to store more than one value in a single data structure that
@@ -6,7 +6,7 @@ puts all the values next to each other in memory. Vectors can only store values
 of the same type. They are useful when you have a list of items, such as the
 lines of text in a file or the prices of items in a shopping cart.
 
-[Creating a New Vector](https://doc.rust-lang.org#creating-a-new-vector)
+### [Creating a New Vector](https://doc.rust-lang.org#creating-a-new-vector)
 
 To create a new, empty vector, we call the `Vec::new` function, as shown in
 Listing 8-1.
@@ -18,7 +18,8 @@ fn main() {
 ```
 [Listing 8-1](https://doc.rust-lang.org#listing-8-1): Creating a new, empty vector to hold values of type
 
-`i32`Note that we added a type annotation here. Because we aren’t inserting any
+`i32`
+Note that we added a type annotation here. Because we aren’t inserting any
 values into this vector, Rust doesn’t know what kind of elements we intend to
 store. This is an important point. Vectors are implemented using generics;
 we’ll cover how to use generics with your own types in Chapter 10. For now,
@@ -46,7 +47,7 @@ Because we’ve given initial `i32` values, Rust can infer that the type of `v`
 is `Vec<i32>`, and the type annotation isn’t necessary. Next, we’ll look at how
 to modify a vector.
 
-[Updating a Vector](https://doc.rust-lang.org#updating-a-vector)
+### [Updating a Vector](https://doc.rust-lang.org#updating-a-vector)
 
 To create a vector and then add elements to it, we can use the `push` method,
 as shown in Listing 8-3.
@@ -62,12 +63,13 @@ fn main() {
 ```
 [Listing 8-3](https://doc.rust-lang.org#listing-8-3): Using the
 
-`push` method to add values to a vectorAs with any variable, if we want to be able to change its value, we need to
+`push` method to add values to a vector
+As with any variable, if we want to be able to change its value, we need to
 make it mutable using the `mut` keyword, as discussed in Chapter 3. The numbers
 we place inside are all of type `i32`, and Rust infers this from the data, so
 we don’t need the `Vec<i32>` annotation.
 
-[Reading Elements of Vectors](https://doc.rust-lang.org#reading-elements-of-vectors)
+### [Reading Elements of Vectors](https://doc.rust-lang.org#reading-elements-of-vectors)
 
 There are two ways to reference a value stored in a vector: via indexing or by
 using the `get` method. In the following examples, we’ve annotated the types of
@@ -90,7 +92,8 @@ fn main() {
 ```
 [Listing 8-4](https://doc.rust-lang.org#listing-8-4): Using indexing syntax and using the
 
-`get` method to access an item in a vectorNote a few details here. We use the index value of `2` to get the third element
+`get` method to access an item in a vector
+Note a few details here. We use the index value of `2` to get the third element
 because vectors are indexed by number, starting at zero. Using `&` and `[]`
 gives us a reference to the element at the index value. When we use the `get`
 method with the index passed as an argument, we get an `Option<&T>` that we can
@@ -159,7 +162,7 @@ The code in Listing 8-6 might look like it should work: Why should a reference t
 Note: For more on the implementation details of the `Vec<T>` type, see [“The
 Rustonomicon”](https://doc.rust-lang.org/nomicon/vec/vec.html).
 
-[Iterating Over the Values in a Vector](https://doc.rust-lang.org#iterating-over-the-values-in-a-vector)
+### [Iterating Over the Values in a Vector](https://doc.rust-lang.org#iterating-over-the-values-in-a-vector)
 
 To access each element in a vector in turn, we would iterate through all of the
 elements rather than use indices to access one at a time. Listing 8-7 shows how
@@ -176,7 +179,8 @@ fn main() {
 ```
 [Listing 8-7](https://doc.rust-lang.org#listing-8-7): Printing each element in a vector by iterating over the elements using a
 
-`for` loopWe can also iterate over mutable references to each element in a mutable vector
+`for` loop
+We can also iterate over mutable references to each element in a mutable vector
 in order to make changes to all the elements. The `for` loop in Listing 8-8
 will add `50` to each element.
 
@@ -202,7 +206,7 @@ similar to the one we got with the code in Listing 8-6. The reference to the
 vector that the `for` loop holds prevents simultaneous modification of the
 whole vector.
 
-[Using an Enum to Store Multiple Types](https://doc.rust-lang.org#using-an-enum-to-store-multiple-types)
+### [Using an Enum to Store Multiple Types](https://doc.rust-lang.org#using-an-enum-to-store-multiple-types)
 
 Vectors can only store values that are of the same type. This can be inconvenient; there are definitely use cases for needing to store a list of items of different types. Fortunately, the variants of an enum are defined under the same enum type, so when we need one type to represent elements of different types, we can define and use an enum!
 
@@ -239,7 +243,7 @@ to review [the API documentation](https://doc.rust-lang.org/std/vec/struct.Vec.h
 useful methods defined on `Vec<T>` by the standard library. For example, in
 addition to `push`, a `pop` method removes and returns the last element.
 
-[Dropping a Vector Drops Its Elements](https://doc.rust-lang.org#dropping-a-vector-drops-its-elements)
+### [Dropping a Vector Drops Its Elements](https://doc.rust-lang.org#dropping-a-vector-drops-its-elements)
 
 Like any other `struct`, a vector is freed when it goes out of scope, as
 annotated in Listing 8-10.

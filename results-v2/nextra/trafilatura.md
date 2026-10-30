@@ -23,24 +23,26 @@ the [Custom Theme](https://nextra.site/docs/custom-theme) docs.
 
 The Nextra FAQ is a collection of useful questions and answers about the
 project. If you have a question that isn’t answered here, please
-[open a discussion ](https://github.com/shuding/nextra/discussions).
+[open a discussion](https://github.com/shuding/nextra/discussions) .
 
-### Can I use Nextra with Next.js `pages` router?
+## ### Can I use Nextra with Next.js `pages` router?
 
 
 `pages` router?
 Nextra 4 only works with the 
 
 `app` router. Only Nextra 1/2/3 supports the
-`pages` router.### Can I use X with Nextra?
+`pages` router.
+## ### Can I use X with Nextra?
 
 
 The answer is “yes” for most things. Since Nextra is just a Next.js plugin, almost all the things
 that can be done with React can be done with Nextra. Here are some examples and guides:
 
-### How can I add a live coding component in Nextra?
+## ### How can I add a live coding component in Nextra?
 
 
 There are libraries like 
 
-[Sandpack](https://sandpack.codesandbox.io)and[react-live](https://github.com/FormidableLabs/react-live)that can help you add live coding components to your MDX.Last updated on
+[Sandpack](https://sandpack.codesandbox.io)and[react-live](https://github.com/FormidableLabs/react-live)that can help you add live coding components to your MDX.
+Last updated on

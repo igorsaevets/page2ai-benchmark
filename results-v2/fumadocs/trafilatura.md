@@ -2,7 +2,7 @@
 
 Setup Fumadocs on Next.js.
 
-[Prerequisite](https://www.fumadocs.dev#prerequisite)
+## [Prerequisite](https://www.fumadocs.dev#prerequisite)
 
 Before continuing, make sure you have configured:
 
@@ -11,9 +11,10 @@ Before continuing, make sure you have configured:
 
 We will use [Fumadocs MDX](https://www.fumadocs.dev/docs/mdx) as a content source, you can configure it first:
 
-[Installation](https://www.fumadocs.dev#installation)
+### [Installation](https://www.fumadocs.dev#installation)
 
-`npm i fumadocs-mdx fumadocs-core @types/mdx`Create the configuration file:
+`npm i fumadocs-mdx fumadocs-core @types/mdx`
+Create the configuration file:
 
 ```
 import { defineDocs, defineConfig } from 'fumadocs-mdx/config';
@@ -53,7 +54,7 @@ Setup an import alias (recommended):
   }
 }
 ```
-[Integrate with Fumadocs](https://www.fumadocs.dev#integrate-with-fumadocs)
+### [Integrate with Fumadocs](https://www.fumadocs.dev#integrate-with-fumadocs)
 
 You can create a `lib/source.ts` file and obtain Fumadocs source from the `docs` collection output.
 
@@ -67,7 +68,7 @@ export const source = loader({
 ```
 The `.source` folder will be generated when you run `next dev` or `next build`.
 
-[Done](https://www.fumadocs.dev#done)
+### [Done](https://www.fumadocs.dev#done)
 
 You can now write content in `content/docs` folder.
 
@@ -75,9 +76,10 @@ Good to Know
 
 Fumadocs also supports other content sources, including [Content Collections](https://www.fumadocs.dev/docs/headless/content-collections) and headless CMS.
 
-[Getting Started](https://www.fumadocs.dev#getting-started)
+## [Getting Started](https://www.fumadocs.dev#getting-started)
 
-`npm i fumadocs-ui fumadocs-core`[Root Layout](https://www.fumadocs.dev#root-layout)
+`npm i fumadocs-ui fumadocs-core`
+### [Root Layout](https://www.fumadocs.dev#root-layout)
 
 Wrap the entire application inside [Root Provider](https://www.fumadocs.dev/docs/ui/layouts/root-provider), and add required styles to `body`.
 
@@ -97,7 +99,7 @@ export default function Layout({ children }: { children: ReactNode }) {
   );
 }
 ```
-[Styles](https://www.fumadocs.dev#styles)
+### [Styles](https://www.fumadocs.dev#styles)
 
 Add the following Tailwind CSS styles to `global.css`.
 
@@ -108,7 +110,7 @@ Add the following Tailwind CSS styles to `global.css`.
 ```
 It doesn't come with a default font, you may choose one from `next/font`.
 
-[Routes](https://www.fumadocs.dev#routes)
+### [Routes](https://www.fumadocs.dev#routes)
 
 Create a `lib/layout.shared.tsx` file to put the shared options for our layouts.
 
@@ -140,7 +142,7 @@ declare global {
 ```
 The search is powered by Orama, learn more about [Document Search](https://www.fumadocs.dev/docs/headless/search).
 
-[Finish](https://www.fumadocs.dev#finish)
+### [Finish](https://www.fumadocs.dev#finish)
 
 You can start the dev server and create MDX files.
 

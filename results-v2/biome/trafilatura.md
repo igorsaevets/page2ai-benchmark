@@ -3,7 +3,8 @@
 Biome is best installed as a development dependency of your projects, but it is
 also available as a [standalone executable](https://biomejs.dev/guides/manual-installation) that doesn’t require Node.js.
 
-`npm i -D -E @biomejs/biome``pnpm add -D -E @biomejs/biome``bun add -D -E @biomejs/biome``deno add -D npm:@biomejs/biome``yarn add -D -E @biomejs/biome`## Configuration
+`npm i -D -E @biomejs/biome``pnpm add -D -E @biomejs/biome``bun add -D -E @biomejs/biome``deno add -D npm:@biomejs/biome``yarn add -D -E @biomejs/biome`
+## Configuration
 
 [Section titled “Configuration”](https://biomejs.dev#configuration)
 
@@ -11,7 +12,8 @@ Although Biome can run with zero configuration, you’ll likely want to tweak so
 settings to suit your project’s needs, in which case you can run the following
 command to generate a `biome.json` configuration file.
 
-`npx @biomejs/biome init``pnpx @biomejs/biome init``bunx --bun @biomejs/biome init``deno run -A npm:@biomejs/biome init``yarn exec biome -- init`Lets get a quick overview of how to use Biome in your project.
+`npx @biomejs/biome init``pnpx @biomejs/biome init``bunx --bun @biomejs/biome init``deno run -A npm:@biomejs/biome init``yarn exec biome -- init`
+Lets get a quick overview of how to use Biome in your project.
 
 ### Command-line interface
 

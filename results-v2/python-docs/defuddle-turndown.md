@@ -1,6 +1,96 @@
+ [![Python logo](https://docs.python.org/3/_static/py.svg)](https://www.python.org/)
+
+Theme Auto Light Dark
+
+### [Table of Contents](https://docs.python.org/3/contents.html)
+
+*   [Coroutines and tasks](#)
+    *   [Coroutines](#coroutines)
+    *   [Awaitables](#awaitables)
+    *   [Creating tasks](#creating-tasks)
+    *   [Task cancellation](#task-cancellation)
+    *   [Task groups](#task-groups)
+        *   [Terminating a task group](#terminating-a-task-group)
+    *   [Sleeping](#sleeping)
+    *   [Running tasks concurrently](#running-tasks-concurrently)
+    *   [Eager task factory](#eager-task-factory)
+    *   [Shielding from cancellation](#shielding-from-cancellation)
+    *   [Timeouts](#timeouts)
+    *   [Waiting primitives](#waiting-primitives)
+    *   [Running in threads](#running-in-threads)
+    *   [Scheduling from other threads](#scheduling-from-other-threads)
+    *   [Introspection](#introspection)
+    *   [Task object](#task-object)
+
+#### Previous topic
+
+[Runners](https://docs.python.org/3/library/asyncio-runner.html "previous chapter")
+
+#### Next topic
+
+[Streams](https://docs.python.org/3/library/asyncio-stream.html "next chapter")
+
+### This page
+
+*   [Report a bug](https://docs.python.org/3/bugs.html)
+*   [Improve this page](https://docs.python.org/3/improve-page-nojs.html)
+*   [Show source](https://github.com/python/cpython/blob/main/Doc/library/asyncio-task.rst?plain=1)
+
+### Navigation
+
+*   [index](https://docs.python.org/3/genindex.html "General Index")
+*   [modules](https://docs.python.org/3/py-modindex.html "Python Module Index") |
+*   [next](https://docs.python.org/3/library/asyncio-stream.html "Streams") |
+*   [previous](https://docs.python.org/3/library/asyncio-runner.html "Runners") |
+*   ![Python logo](https://docs.python.org/3/_static/py.svg)
+*   [Python](https://www.python.org/) »
+
+*   [3.14.6 Documentation](https://docs.python.org/3/index.html) »
+*   [The Python Standard Library](https://docs.python.org/3/library/index.html) »
+*   [Networking and Interprocess Communication](https://docs.python.org/3/library/ipc.html) »
+*   [`asyncio` — Asynchronous I/O](https://docs.python.org/3/library/asyncio.html) »
+*   Coroutines and tasks
+*    
+    
+    |
+*   Theme Auto Light Dark |
+
+# Coroutines and tasks[¶](#coroutines-and-tasks "Link to this heading")
+
 This section outlines high-level asyncio APIs to work with coroutines and Tasks.
 
-## Coroutines
+*   [Coroutines](#coroutines)
+    
+*   [Awaitables](#awaitables)
+    
+*   [Creating tasks](#creating-tasks)
+    
+*   [Task cancellation](#task-cancellation)
+    
+*   [Task groups](#task-groups)
+    
+*   [Sleeping](#sleeping)
+    
+*   [Running tasks concurrently](#running-tasks-concurrently)
+    
+*   [Eager task factory](#eager-task-factory)
+    
+*   [Shielding from cancellation](#shielding-from-cancellation)
+    
+*   [Timeouts](#timeouts)
+    
+*   [Waiting primitives](#waiting-primitives)
+    
+*   [Running in threads](#running-in-threads)
+    
+*   [Scheduling from other threads](#scheduling-from-other-threads)
+    
+*   [Introspection](#introspection)
+    
+*   [Task object](#task-object)
+    
+
+## [Coroutines](#id2)[¶](#coroutines "Link to this heading")
 
 **Source code:** [Lib/asyncio/coroutines.py](https://github.com/python/cpython/tree/3.14/Lib/asyncio/coroutines.py)
 
@@ -8,25 +98,21 @@ This section outlines high-level asyncio APIs to work with coroutines and Tasks.
 
 [Coroutines](https://docs.python.org/3/glossary.html#term-coroutine) declared with the async/await syntax is the preferred way of writing asyncio applications. For example, the following snippet of code prints “hello”, waits 1 second, and then prints “world”:
 
-```
->>> import asyncio
+\>>> import asyncio
 
->>> async def main():
+\>>> async def main():
 ...     print('hello')
 ...     await asyncio.sleep(1)
 ...     print('world')
 
->>> asyncio.run(main())
+\>>> asyncio.run(main())
 hello
 world
-```
 
 Note that simply calling a coroutine will not schedule it to be executed:
 
-```
->>> main()
+\>>> main()
 <coroutine object main at 0x1053bb7c8>
-```
 
 To actually run a coroutine, asyncio provides the following mechanisms:
 
@@ -34,89 +120,79 @@ To actually run a coroutine, asyncio provides the following mechanisms:
     
 *   Awaiting on a coroutine. The following snippet of code will print “hello” after waiting for 1 second, and then print “world” after waiting for _another_ 2 seconds:
     
-    ```
     import asyncio
     import time
     
-    async def say_after(delay, what):
+    async def say\_after(delay, what):
         await asyncio.sleep(delay)
         print(what)
     
     async def main():
         print(f"started at {time.strftime('%X')}")
     
-        await say_after(1, 'hello')
-        await say_after(2, 'world')
+        await say\_after(1, 'hello')
+        await say\_after(2, 'world')
     
         print(f"finished at {time.strftime('%X')}")
     
     asyncio.run(main())
-    ```
     
     Expected output:
     
-    ```
     started at 17:13:52
     hello
     world
     finished at 17:13:55
-    ```
     
-*   The function to run coroutines concurrently as asyncio.
+*   The [`asyncio.create_task()`](#asyncio.create_task "asyncio.create_task") function to run coroutines concurrently as asyncio [`Tasks`](#asyncio.Task "asyncio.Task").
     
     Let’s modify the above example and run two `say_after` coroutines _concurrently_:
     
-    ```
     async def main():
-        task1 = asyncio.create_task(
-            say_after(1, 'hello'))
+        task1 \= asyncio.create\_task(
+            say\_after(1, 'hello'))
     
-        task2 = asyncio.create_task(
-            say_after(2, 'world'))
+        task2 \= asyncio.create\_task(
+            say\_after(2, 'world'))
     
         print(f"started at {time.strftime('%X')}")
     
-        # Wait until both tasks are completed (should take
-        # around 2 seconds.)
+        \# Wait until both tasks are completed (should take
+        \# around 2 seconds.)
         await task1
         await task2
     
         print(f"finished at {time.strftime('%X')}")
-    ```
     
     Note that expected output now shows that the snippet runs 1 second faster than before:
     
-    ```
     started at 17:14:32
     hello
     world
     finished at 17:14:34
-    ```
     
-*   The class provides a more modern alternative to. Using this API, the last example becomes:
+*   The [`asyncio.TaskGroup`](#asyncio.TaskGroup "asyncio.TaskGroup") class provides a more modern alternative to [`create_task()`](#asyncio.create_task "asyncio.create_task"). Using this API, the last example becomes:
     
-    ```
     async def main():
         async with asyncio.TaskGroup() as tg:
-            task1 = tg.create_task(
-                say_after(1, 'hello'))
+            task1 \= tg.create\_task(
+                say\_after(1, 'hello'))
     
-            task2 = tg.create_task(
-                say_after(2, 'world'))
+            task2 \= tg.create\_task(
+                say\_after(2, 'world'))
     
             print(f"started at {time.strftime('%X')}")
     
-        # The await is implicit when the context manager exits.
+        \# The await is implicit when the context manager exits.
     
         print(f"finished at {time.strftime('%X')}")
-    ```
     
     The timing and output should be the same as for the previous version.
     
-    Added in version 3.11:.
+    Added in version 3.11: [`asyncio.TaskGroup`](#asyncio.TaskGroup "asyncio.TaskGroup").
     
 
-## Awaitables
+## [Awaitables](#id3)[¶](#awaitables "Link to this heading")
 
 We say that an object is an **awaitable** object if it can be used in an [`await`](https://docs.python.org/3/reference/expressions.html#await) expression. Many asyncio APIs are designed to accept awaitables.
 
@@ -126,23 +202,21 @@ Coroutines
 
 Python coroutines are _awaitables_ and therefore can be awaited from other coroutines:
 
-```
 import asyncio
 
 async def nested():
     return 42
 
 async def main():
-    # Nothing happens if we just call "nested()".
-    # A coroutine object is created but not awaited,
-    # so it *won't run at all*.
-    nested()  # will raise a "RuntimeWarning".
+    \# Nothing happens if we just call "nested()".
+    \# A coroutine object is created but not awaited,
+    \# so it \*won't run at all\*.
+    nested()  \# will raise a "RuntimeWarning".
 
-    # Let's do it differently now and await it:
-    print(await nested())  # will print "42".
+    \# Let's do it differently now and await it:
+    print(await nested())  \# will print "42".
 
 asyncio.run(main())
-```
 
 Important
 
@@ -157,25 +231,23 @@ Tasks
 
 _Tasks_ are used to schedule coroutines _concurrently_.
 
-When a coroutine is wrapped into a _Task_ with functions like the coroutine is automatically scheduled to run soon:
+When a coroutine is wrapped into a _Task_ with functions like [`asyncio.create_task()`](#asyncio.create_task "asyncio.create_task") the coroutine is automatically scheduled to run soon:
 
-```
 import asyncio
 
 async def nested():
     return 42
 
 async def main():
-    # Schedule nested() to run soon concurrently
-    # with "main()".
-    task = asyncio.create_task(nested())
+    \# Schedule nested() to run soon concurrently
+    \# with "main()".
+    task \= asyncio.create\_task(nested())
 
-    # "task" can now be used to cancel "nested()", or
-    # can simply be awaited to wait until it is complete:
+    \# "task" can now be used to cancel "nested()", or
+    \# can simply be awaited to wait until it is complete:
     await task
 
 asyncio.run(main())
-```
 
 Futures
 
@@ -189,30 +261,28 @@ Normally **there is no need** to create Future objects at the application level 
 
 Future objects, sometimes exposed by libraries and some asyncio APIs, can be awaited:
 
-```
 async def main():
-    await function_that_returns_a_future_object()
+    await function\_that\_returns\_a\_future\_object()
 
-    # this is also valid:
+    \# this is also valid:
     await asyncio.gather(
-        function_that_returns_a_future_object(),
-        some_python_coroutine()
+        function\_that\_returns\_a\_future\_object(),
+        some\_python\_coroutine()
     )
-```
 
 A good example of a low-level function that returns a Future object is [`loop.run_in_executor()`](https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.run_in_executor "asyncio.loop.run_in_executor").
 
-## Creating tasks
+## [Creating tasks](#id4)[¶](#creating-tasks "Link to this heading")
 
 **Source code:** [Lib/asyncio/tasks.py](https://github.com/python/cpython/tree/3.14/Lib/asyncio/tasks.py)
 
 * * *
 
-asyncio.create\_task(_coro_, _\*_, _name=None_, _context=None_, _eager\_start=None_, _\*\*kwargs_) [¶](#asyncio.create_task "Link to this definition")
+asyncio.create\_task(_coro_, _\*_, _name\=None_, _context\=None_, _eager\_start\=None_, _\*\*kwargs_)[¶](#asyncio.create_task "Link to this definition")
 
-Wrap the _coro_ into a and schedule its execution. Return the Task object.
+Wrap the _coro_ [coroutine](#coroutine) into a [`Task`](#asyncio.Task "asyncio.Task") and schedule its execution. Return the Task object.
 
-The full function signature is largely the same as that of the constructor (or factory) - all of the keyword arguments to this function are passed through to that interface.
+The full function signature is largely the same as that of the [`Task`](#asyncio.Task "asyncio.Task") constructor (or factory) - all of the keyword arguments to this function are passed through to that interface.
 
 An optional keyword-only _context_ argument allows specifying a custom [`contextvars.Context`](https://docs.python.org/3/library/contextvars.html#contextvars.Context "contextvars.Context") for the _coro_ to run in. The current context copy is created when no _context_ is provided.
 
@@ -222,26 +292,24 @@ The task is executed in the loop returned by [`get_running_loop()`](https://docs
 
 Note
 
-is a new alternative leveraging structural concurrency; it allows for waiting for a group of related tasks with strong safety guarantees.
+[`asyncio.TaskGroup.create_task()`](#asyncio.TaskGroup.create_task "asyncio.TaskGroup.create_task") is a new alternative leveraging structural concurrency; it allows for waiting for a group of related tasks with strong safety guarantees.
 
 Important
 
 Save a reference to the result of this function, to avoid a task disappearing mid-execution. The event loop only keeps weak references to tasks. A task that isn’t referenced elsewhere may get garbage collected at any time, even before it’s done. For reliable “fire-and-forget” background tasks, gather them in a collection:
 
-```
-background_tasks = set()
+background\_tasks \= set()
 
 for i in range(10):
-    task = asyncio.create_task(some_coro(param=i))
+    task \= asyncio.create\_task(some\_coro(param\=i))
 
-    # Add task to the set. This creates a strong reference.
-    background_tasks.add(task)
+    \# Add task to the set. This creates a strong reference.
+    background\_tasks.add(task)
 
-    # To prevent keeping references to finished tasks forever,
-    # make each task remove its own reference from the set after
-    # completion:
-    task.add_done_callback(background_tasks.discard)
-```
+    \# To prevent keeping references to finished tasks forever,
+    \# make each task remove its own reference from the set after
+    \# completion:
+    task.add\_done\_callback(background\_tasks.discard)
 
 Added in version 3.7.
 
@@ -251,27 +319,27 @@ Changed in version 3.11: Added the _context_ parameter.
 
 Changed in version 3.14: Added the _eager\_start_ parameter by passing on all _kwargs_.
 
-## Task cancellation
+## [Task cancellation](#id5)[¶](#task-cancellation "Link to this heading")
 
 Tasks can easily and safely be cancelled. When a task is cancelled, [`asyncio.CancelledError`](https://docs.python.org/3/library/asyncio-exceptions.html#asyncio.CancelledError "asyncio.CancelledError") will be raised in the task at the next opportunity.
 
 It is recommended that coroutines use `try/finally` blocks to robustly perform clean-up logic. In case [`asyncio.CancelledError`](https://docs.python.org/3/library/asyncio-exceptions.html#asyncio.CancelledError "asyncio.CancelledError") is explicitly caught, it should generally be propagated when clean-up is complete. `asyncio.CancelledError` directly subclasses [`BaseException`](https://docs.python.org/3/library/exceptions.html#BaseException "BaseException") so most code will not need to be aware of it.
 
-The asyncio components that enable structured concurrency, like and, are implemented using cancellation internally and might misbehave if a coroutine swallows [`asyncio.CancelledError`](https://docs.python.org/3/library/asyncio-exceptions.html#asyncio.CancelledError "asyncio.CancelledError"). Similarly, user code should not generally call. However, in cases when suppressing `asyncio.CancelledError` is truly desired, it is necessary to also call `uncancel()` to completely remove the cancellation state.
+The asyncio components that enable structured concurrency, like [`asyncio.TaskGroup`](#asyncio.TaskGroup "asyncio.TaskGroup") and [`asyncio.timeout()`](#asyncio.timeout "asyncio.timeout"), are implemented using cancellation internally and might misbehave if a coroutine swallows [`asyncio.CancelledError`](https://docs.python.org/3/library/asyncio-exceptions.html#asyncio.CancelledError "asyncio.CancelledError"). Similarly, user code should not generally call [`uncancel`](#asyncio.Task.uncancel "asyncio.Task.uncancel"). However, in cases when suppressing `asyncio.CancelledError` is truly desired, it is necessary to also call `uncancel()` to completely remove the cancellation state.
 
-## Task groups
+## [Task groups](#id6)[¶](#task-groups "Link to this heading")
 
 Task groups combine a task creation API with a convenient and reliable way to wait for all tasks in the group to finish.
 
-_class_ asyncio.TaskGroup [¶](#asyncio.TaskGroup "Link to this definition")
+_class_ asyncio.TaskGroup[¶](#asyncio.TaskGroup "Link to this definition")
 
-An [asynchronous context manager](https://docs.python.org/3/reference/datamodel.html#async-context-managers) holding a group of tasks. Tasks can be added to the group using. All tasks are awaited when the context manager exits.
+An [asynchronous context manager](https://docs.python.org/3/reference/datamodel.html#async-context-managers) holding a group of tasks. Tasks can be added to the group using [`create_task()`](#asyncio.create_task "asyncio.create_task"). All tasks are awaited when the context manager exits.
 
 Added in version 3.11.
 
-create\_task(_coro_, _\*_, _name=None_, _context=None_, _eager\_start=None_, _\*\*kwargs_) [¶](#asyncio.TaskGroup.create_task "Link to this definition")
+create\_task(_coro_, _\*_, _name\=None_, _context\=None_, _eager\_start\=None_, _\*\*kwargs_)[¶](#asyncio.TaskGroup.create_task "Link to this definition")
 
-Create a task in this task group. The signature matches that of. If the task group is inactive (e.g. not yet entered, already finished, or in the process of shutting down), we will close the given `coro`.
+Create a task in this task group. The signature matches that of [`asyncio.create_task()`](#asyncio.create_task "asyncio.create_task"). If the task group is inactive (e.g. not yet entered, already finished, or in the process of shutting down), we will close the given `coro`.
 
 Changed in version 3.13: Close the given coroutine if the task group is not active.
 
@@ -279,13 +347,11 @@ Changed in version 3.14: Passes on all _kwargs_ to [`loop.create_task()`](https:
 
 Example:
 
-```
 async def main():
     async with asyncio.TaskGroup() as tg:
-        task1 = tg.create_task(some_coro(...))
-        task2 = tg.create_task(another_coro(...))
+        task1 \= tg.create\_task(some\_coro(...))
+        task2 \= tg.create\_task(another\_coro(...))
     print(f"Both tasks have completed now: {task1.result()}, {task2.result()}")
-```
 
 The `async with` statement will wait for all tasks in the group to finish. While waiting, new tasks may still be added to the group (for example, by passing `tg` into one of the coroutines and calling `tg.create_task()` in that coroutine). Once the last task has finished and the `async with` block is exited, no new tasks may be added to the group.
 
@@ -299,59 +365,55 @@ If the body of the `async with` statement exits with an exception (so [`__aexit_
 
 Task groups are careful not to mix up the internal cancellation used to “wake up” their [`__aexit__()`](https://docs.python.org/3/reference/datamodel.html#object.__aexit__ "object.__aexit__") with cancellation requests for the task in which they are running made by other parties. In particular, when one task group is syntactically nested in another, and both experience an exception in one of their child tasks simultaneously, the inner task group will process its exceptions, and then the outer task group will receive another cancellation and process its own exceptions.
 
-In the case where a task group is cancelled externally and also must raise an [`ExceptionGroup`](https://docs.python.org/3/library/exceptions.html#ExceptionGroup "ExceptionGroup"), it will call the parent task’s method. This ensures that a [`asyncio.CancelledError`](https://docs.python.org/3/library/asyncio-exceptions.html#asyncio.CancelledError "asyncio.CancelledError") will be raised at the next [`await`](https://docs.python.org/3/reference/expressions.html#await), so the cancellation is not lost.
+In the case where a task group is cancelled externally and also must raise an [`ExceptionGroup`](https://docs.python.org/3/library/exceptions.html#ExceptionGroup "ExceptionGroup"), it will call the parent task’s [`cancel()`](#asyncio.Task.cancel "asyncio.Task.cancel") method. This ensures that a [`asyncio.CancelledError`](https://docs.python.org/3/library/asyncio-exceptions.html#asyncio.CancelledError "asyncio.CancelledError") will be raised at the next [`await`](https://docs.python.org/3/reference/expressions.html#await), so the cancellation is not lost.
 
-Task groups preserve the cancellation count reported by.
+Task groups preserve the cancellation count reported by [`asyncio.Task.cancelling()`](#asyncio.Task.cancelling "asyncio.Task.cancelling").
 
 Changed in version 3.13: Improved handling of simultaneous internal and external cancellations and correct preservation of cancellation counts.
 
-### Terminating a task group
+### Terminating a task group[¶](#terminating-a-task-group "Link to this heading")
 
 While terminating a task group is not natively supported by the standard library, termination can be achieved by adding an exception-raising task to the task group and ignoring the raised exception:
 
-```python
 import asyncio
 from asyncio import TaskGroup
 
 class TerminateTaskGroup(Exception):
     """Exception raised to terminate a task group."""
 
-async def force_terminate_task_group():
+async def force\_terminate\_task\_group():
     """Used to force termination of a task group."""
     raise TerminateTaskGroup()
 
-async def job(task_id, sleep_time):
-    print(f'Task {task_id}: start')
-    await asyncio.sleep(sleep_time)
-    print(f'Task {task_id}: done')
+async def job(task\_id, sleep\_time):
+    print(f'Task {task\_id}: start')
+    await asyncio.sleep(sleep\_time)
+    print(f'Task {task\_id}: done')
 
 async def main():
     try:
         async with TaskGroup() as group:
-            # spawn some tasks
-            group.create_task(job(1, 0.5))
-            group.create_task(job(2, 1.5))
-            # sleep for 1 second
+            \# spawn some tasks
+            group.create\_task(job(1, 0.5))
+            group.create\_task(job(2, 1.5))
+            \# sleep for 1 second
             await asyncio.sleep(1)
-            # add an exception-raising task to force the group to terminate
-            group.create_task(force_terminate_task_group())
-    except* TerminateTaskGroup:
+            \# add an exception-raising task to force the group to terminate
+            group.create\_task(force\_terminate\_task\_group())
+    except\* TerminateTaskGroup:
         pass
 
 asyncio.run(main())
-```
 
 Expected output:
 
-```
 Task 1: start
 Task 2: start
 Task 1: done
-```
 
-## Sleeping
+## [Sleeping](#id7)[¶](#sleeping "Link to this heading")
 
-_async_ asyncio.sleep(_delay_, _result=None_) [¶](#asyncio.sleep "Link to this definition")
+_async_ asyncio.sleep(_delay_, _result\=None_)[¶](#asyncio.sleep "Link to this definition")
 
 Block for _delay_ seconds.
 
@@ -363,31 +425,29 @@ Setting the delay to 0 provides an optimized path to allow other tasks to run. T
 
 Example of coroutine displaying the current date every second for 5 seconds:
 
-```
 import asyncio
 import datetime as dt
 
-async def display_date():
-    loop = asyncio.get_running_loop()
-    end_time = loop.time() + 5.0
+async def display\_date():
+    loop \= asyncio.get\_running\_loop()
+    end\_time \= loop.time() + 5.0
     while True:
         print(dt.datetime.now())
-        if (loop.time() + 1.0) >= end_time:
+        if (loop.time() + 1.0) \>= end\_time:
             break
         await asyncio.sleep(1)
 
-asyncio.run(display_date())
-```
+asyncio.run(display\_date())
 
 Changed in version 3.10: Removed the _loop_ parameter.
 
 Changed in version 3.13: Raises [`ValueError`](https://docs.python.org/3/library/exceptions.html#ValueError "ValueError") if _delay_ is [`nan`](https://docs.python.org/3/library/math.html#math.nan "math.nan").
 
-## Running tasks concurrently
+## [Running tasks concurrently](#id8)[¶](#running-tasks-concurrently "Link to this heading")
 
-_awaitable_ asyncio.gather(_\*aws_, _return\_exceptions=False_) [¶](#asyncio.gather "Link to this definition")
+_awaitable_ asyncio.gather(_\*aws_, _return\_exceptions\=False_)[¶](#asyncio.gather "Link to this definition")
 
-Run in the _aws_ sequence _concurrently_.
+Run [awaitable objects](#asyncio-awaitables) in the _aws_ sequence _concurrently_.
 
 If any awaitable in _aws_ is a coroutine, it is automatically scheduled as a Task.
 
@@ -403,25 +463,24 @@ If any Task or Future from the _aws_ sequence is _cancelled_, it is treated as i
 
 Note
 
-A new alternative to create and run tasks concurrently and wait for their completion is. _TaskGroup_ provides stronger safety guarantees than _gather_ for scheduling a nesting of subtasks: if a task (or a subtask, a task scheduled by a task) raises an exception, _TaskGroup_ will, while _gather_ will not, cancel the remaining scheduled tasks.
+A new alternative to create and run tasks concurrently and wait for their completion is [`asyncio.TaskGroup`](#asyncio.TaskGroup "asyncio.TaskGroup"). _TaskGroup_ provides stronger safety guarantees than _gather_ for scheduling a nesting of subtasks: if a task (or a subtask, a task scheduled by a task) raises an exception, _TaskGroup_ will, while _gather_ will not, cancel the remaining scheduled tasks.
 
 Example:
 
-```
 import asyncio
 
 async def factorial(name, number):
-    f = 1
+    f \= 1
     for i in range(2, number + 1):
         print(f"Task {name}: Compute factorial({number}), currently i={i}...")
         await asyncio.sleep(1)
-        f *= i
+        f \*= i
     print(f"Task {name}: factorial({number}) = {f}")
     return f
 
 async def main():
-    # Schedule three calls *concurrently*:
-    L = await asyncio.gather(
+    \# Schedule three calls \*concurrently\*:
+    L \= await asyncio.gather(
         factorial("A", 2),
         factorial("B", 3),
         factorial("C", 4),
@@ -430,19 +489,18 @@ async def main():
 
 asyncio.run(main())
 
-# Expected output:
+\# Expected output:
 #
-#     Task A: Compute factorial(2), currently i=2...
-#     Task B: Compute factorial(3), currently i=2...
-#     Task C: Compute factorial(4), currently i=2...
-#     Task A: factorial(2) = 2
-#     Task B: Compute factorial(3), currently i=3...
-#     Task C: Compute factorial(4), currently i=3...
-#     Task B: factorial(3) = 6
-#     Task C: Compute factorial(4), currently i=4...
-#     Task C: factorial(4) = 24
-#     [2, 6, 24]
-```
+\#     Task A: Compute factorial(2), currently i=2...
+\#     Task B: Compute factorial(3), currently i=2...
+\#     Task C: Compute factorial(4), currently i=2...
+\#     Task A: factorial(2) = 2
+\#     Task B: Compute factorial(3), currently i=3...
+\#     Task C: Compute factorial(4), currently i=3...
+\#     Task B: factorial(3) = 6
+\#     Task C: Compute factorial(4), currently i=4...
+\#     Task C: factorial(4) = 24
+\#     \[2, 6, 24\]
 
 Note
 
@@ -454,13 +512,13 @@ Changed in version 3.10: Removed the _loop_ parameter.
 
 Deprecated since version 3.10: Deprecation warning is emitted if no positional arguments are provided or not all positional arguments are Future-like objects and there is no running event loop.
 
-## Eager task factory
+## [Eager task factory](#id9)[¶](#eager-task-factory "Link to this heading")
 
-asyncio.eager\_task\_factory(_loop_, _coro_, _\*_, _name=None_, _context=None_) [¶](#asyncio.eager_task_factory "Link to this definition")
+asyncio.eager\_task\_factory(_loop_, _coro_, _\*_, _name\=None_, _context\=None_)[¶](#asyncio.eager_task_factory "Link to this definition")
 
 A task factory for eager task execution.
 
-When using this factory (via [`loop.set_task_factory(asyncio.eager_task_factory)`](https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.set_task_factory "asyncio.loop.set_task_factory")), coroutines begin execution synchronously during construction. Tasks are only scheduled on the event loop if they block. This can be a performance improvement as the overhead of loop scheduling is avoided for coroutines that complete synchronously.
+When using this factory (via [`loop.set_task_factory(asyncio.eager_task_factory)`](https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.set_task_factory "asyncio.loop.set_task_factory")), coroutines begin execution synchronously during [`Task`](#asyncio.Task "asyncio.Task") construction. Tasks are only scheduled on the event loop if they block. This can be a performance improvement as the overhead of loop scheduling is avoided for coroutines that complete synchronously.
 
 A common example where this is beneficial is coroutines which employ caching or memoization to avoid actual I/O when possible.
 
@@ -470,36 +528,32 @@ Immediate execution of the coroutine is a semantic change. If the coroutine retu
 
 Added in version 3.12.
 
-asyncio.create\_eager\_task\_factory(_custom\_task\_constructor_) [¶](#asyncio.create_eager_task_factory "Link to this definition")
+asyncio.create\_eager\_task\_factory(_custom\_task\_constructor_)[¶](#asyncio.create_eager_task_factory "Link to this definition")
 
-Create an eager task factory, similar to, using the provided _custom\_task\_constructor_ when creating a new task instead of the default.
+Create an eager task factory, similar to [`eager_task_factory()`](#asyncio.eager_task_factory "asyncio.eager_task_factory"), using the provided _custom\_task\_constructor_ when creating a new task instead of the default [`Task`](#asyncio.Task "asyncio.Task").
 
-_custom\_task\_constructor_ must be a _callable_ with the signature matching the signature of. The callable must return a -compatible object.
+_custom\_task\_constructor_ must be a _callable_ with the signature matching the signature of [`Task.__init__`](#asyncio.Task "asyncio.Task"). The callable must return a [`asyncio.Task`](#asyncio.Task "asyncio.Task")\-compatible object.
 
 This function returns a _callable_ intended to be used as a task factory of an event loop via [`loop.set_task_factory(factory)`](https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.set_task_factory "asyncio.loop.set_task_factory")).
 
 Added in version 3.12.
 
-## Shielding from cancellation
+## [Shielding from cancellation](#id10)[¶](#shielding-from-cancellation "Link to this heading")
 
-_awaitable_ asyncio.shield(_aw_) [¶](#asyncio.shield "Link to this definition")
+_awaitable_ asyncio.shield(_aw_)[¶](#asyncio.shield "Link to this definition")
 
-Protect an from being.
+Protect an [awaitable object](#asyncio-awaitables) from being [`cancelled`](#asyncio.Task.cancel "asyncio.Task.cancel").
 
 If _aw_ is a coroutine it is automatically scheduled as a Task.
 
 The statement:
 
-```
-task = asyncio.create_task(something())
-res = await shield(task)
-```
+task \= asyncio.create\_task(something())
+res \= await shield(task)
 
 is equivalent to:
 
-```
-res = await something()
-```
+res \= await something()
 
 _except_ that if the coroutine containing it is cancelled, the Task running in `something()` is not cancelled. From the point of view of `something()`, the cancellation did not happen. Although its caller is still cancelled, so the “await” expression still raises a [`CancelledError`](https://docs.python.org/3/library/asyncio-exceptions.html#asyncio.CancelledError "asyncio.CancelledError").
 
@@ -507,13 +561,11 @@ If `something()` is cancelled by other means (i.e. from within itself) that woul
 
 If it is desired to completely ignore cancellation (not recommended) the `shield()` function should be combined with a try/except clause, as follows:
 
-```
-task = asyncio.create_task(something())
+task \= asyncio.create\_task(something())
 try:
-    res = await shield(task)
+    res \= await shield(task)
 except CancelledError:
-    res = None
-```
+    res \= None
 
 Important
 
@@ -523,50 +575,46 @@ Changed in version 3.10: Removed the _loop_ parameter.
 
 Deprecated since version 3.10: Deprecation warning is emitted if _aw_ is not Future-like object and there is no running event loop.
 
-## Timeouts
+## [Timeouts](#id11)[¶](#timeouts "Link to this heading")
 
-asyncio.timeout(_delay_) [¶](#asyncio.timeout "Link to this definition")
+asyncio.timeout(_delay_)[¶](#asyncio.timeout "Link to this definition")
 
 Return an [asynchronous context manager](https://docs.python.org/3/reference/datamodel.html#async-context-managers) that can be used to limit the amount of time spent waiting on something.
 
 _delay_ can either be `None`, or a float/int number of seconds to wait. If _delay_ is `None`, no time limit will be applied; this can be useful if the delay is unknown when the context manager is created.
 
-In either case, the context manager can be rescheduled after creation using.
+In either case, the context manager can be rescheduled after creation using [`Timeout.reschedule()`](#asyncio.Timeout.reschedule "asyncio.Timeout.reschedule").
 
 Example:
 
-```
 async def main():
     async with asyncio.timeout(10):
-        await long_running_task()
-```
+        await long\_running\_task()
 
 If `long_running_task` takes more than 10 seconds to complete, the context manager will cancel the current task and handle the resulting [`asyncio.CancelledError`](https://docs.python.org/3/library/asyncio-exceptions.html#asyncio.CancelledError "asyncio.CancelledError") internally, transforming it into a [`TimeoutError`](https://docs.python.org/3/library/exceptions.html#TimeoutError "TimeoutError") which can be caught and handled.
 
 Note
 
-The context manager is what transforms the [`asyncio.CancelledError`](https://docs.python.org/3/library/asyncio-exceptions.html#asyncio.CancelledError "asyncio.CancelledError") into a [`TimeoutError`](https://docs.python.org/3/library/exceptions.html#TimeoutError "TimeoutError"), which means the `TimeoutError` can only be caught _outside_ of the context manager.
+The [`asyncio.timeout()`](#asyncio.timeout "asyncio.timeout") context manager is what transforms the [`asyncio.CancelledError`](https://docs.python.org/3/library/asyncio-exceptions.html#asyncio.CancelledError "asyncio.CancelledError") into a [`TimeoutError`](https://docs.python.org/3/library/exceptions.html#TimeoutError "TimeoutError"), which means the `TimeoutError` can only be caught _outside_ of the context manager.
 
 Example of catching [`TimeoutError`](https://docs.python.org/3/library/exceptions.html#TimeoutError "TimeoutError"):
 
-```
 async def main():
     try:
         async with asyncio.timeout(10):
-            await long_running_task()
+            await long\_running\_task()
     except TimeoutError:
         print("The long operation timed out, but we've handled it.")
 
     print("This statement will run regardless.")
-```
 
-The context manager produced by can be rescheduled to a different deadline and inspected.
+The context manager produced by [`asyncio.timeout()`](#asyncio.timeout "asyncio.timeout") can be rescheduled to a different deadline and inspected.
 
-_class_ asyncio.Timeout(_when_) [¶](#asyncio.Timeout "Link to this definition")
+_class_ asyncio.Timeout(_when_)[¶](#asyncio.Timeout "Link to this definition")
 
 An [asynchronous context manager](https://docs.python.org/3/reference/datamodel.html#async-context-managers) for cancelling overdue coroutines.
 
-Prefer using or rather than instantiating `Timeout` directly.
+Prefer using [`asyncio.timeout()`](#asyncio.timeout "asyncio.timeout") or [`asyncio.timeout_at()`](#asyncio.timeout_at "asyncio.timeout_at") rather than instantiating `Timeout` directly.
 
 `when` should be an absolute time at which the context should time out, as measured by the event loop’s clock:
 
@@ -575,65 +623,61 @@ Prefer using or rather than instantiating `Timeout` directly.
 *   If `when < loop.time()`, the timeout will trigger on the next iteration of the event loop.
     
 
-> when() → [float](https://docs.python.org/3/library/functions.html#float "float") | [None](https://docs.python.org/3/library/constants.html#None "None") [¶](#asyncio.Timeout.when "Link to this definition")
+> when() → [float](https://docs.python.org/3/library/functions.html#float "float") | [None](https://docs.python.org/3/library/constants.html#None "None")[¶](#asyncio.Timeout.when "Link to this definition")
 > 
 > Return the current deadline, or `None` if the current deadline is not set.
 > 
-> reschedule(_when: [float](https://docs.python.org/3/library/functions.html#float "float") | [None](https://docs.python.org/3/library/constants.html#None "None")_) [¶](#asyncio.Timeout.reschedule "Link to this definition")
+> reschedule(_when: [float](https://docs.python.org/3/library/functions.html#float "float") | [None](https://docs.python.org/3/library/constants.html#None "None")_)[¶](#asyncio.Timeout.reschedule "Link to this definition")
 > 
 > Reschedule the timeout.
 > 
-> expired() → [bool](https://docs.python.org/3/library/functions.html#bool "bool") [¶](#asyncio.Timeout.expired "Link to this definition")
+> expired() → [bool](https://docs.python.org/3/library/functions.html#bool "bool")[¶](#asyncio.Timeout.expired "Link to this definition")
 > 
 > Return whether the context manager has exceeded its deadline (expired).
 
 Example:
 
-```
 async def main():
     try:
-        # We do not know the timeout when starting, so we pass ``None``.
+        \# We do not know the timeout when starting, so we pass \`\`None\`\`.
         async with asyncio.timeout(None) as cm:
-            # We know the timeout now, so we reschedule it.
-            new_deadline = get_running_loop().time() + 10
-            cm.reschedule(new_deadline)
+            \# We know the timeout now, so we reschedule it.
+            new\_deadline \= get\_running\_loop().time() + 10
+            cm.reschedule(new\_deadline)
 
-            await long_running_task()
+            await long\_running\_task()
     except TimeoutError:
         pass
 
     if cm.expired():
         print("Looks like we haven't finished on time.")
-```
 
 Timeout context managers can be safely nested.
 
 Added in version 3.11.
 
-asyncio.timeout\_at(_when_) [¶](#asyncio.timeout_at "Link to this definition")
+asyncio.timeout\_at(_when_)[¶](#asyncio.timeout_at "Link to this definition")
 
-Similar to, except _when_ is the absolute time to stop waiting, or `None`.
+Similar to [`asyncio.timeout()`](#asyncio.timeout "asyncio.timeout"), except _when_ is the absolute time to stop waiting, or `None`.
 
 Example:
 
-```
 async def main():
-    loop = get_running_loop()
-    deadline = loop.time() + 20
+    loop \= get\_running\_loop()
+    deadline \= loop.time() + 20
     try:
-        async with asyncio.timeout_at(deadline):
-            await long_running_task()
+        async with asyncio.timeout\_at(deadline):
+            await long\_running\_task()
     except TimeoutError:
         print("The long operation timed out, but we've handled it.")
 
     print("This statement will run regardless.")
-```
 
 Added in version 3.11.
 
-_async_ asyncio.wait\_for(_aw_, _timeout_) [¶](#asyncio.wait_for "Link to this definition")
+_async_ asyncio.wait\_for(_aw_, _timeout_)[¶](#asyncio.wait_for "Link to this definition")
 
-Wait for the _aw_ to complete with a timeout.
+Wait for the _aw_ [awaitable](#asyncio-awaitables) to complete with a timeout.
 
 If _aw_ is a coroutine it is automatically scheduled as a Task.
 
@@ -641,7 +685,7 @@ _timeout_ can either be `None` or a float or int number of seconds to wait for. 
 
 If a timeout occurs, it cancels the task and raises [`TimeoutError`](https://docs.python.org/3/library/exceptions.html#TimeoutError "TimeoutError").
 
-To avoid the task, wrap it in.
+To avoid the task [`cancellation`](#asyncio.Task.cancel "asyncio.Task.cancel"), wrap it in [`shield()`](#asyncio.shield "asyncio.shield").
 
 The function will wait until the future is actually cancelled, so the total wait time may exceed the _timeout_. If an exception happens during cancellation, it is propagated.
 
@@ -649,25 +693,23 @@ If the wait is cancelled, the future _aw_ is also cancelled.
 
 Example:
 
-```
 async def eternity():
-    # Sleep for one hour
+    \# Sleep for one hour
     await asyncio.sleep(3600)
     print('yay!')
 
 async def main():
-    # Wait for at most 1 second
+    \# Wait for at most 1 second
     try:
-        await asyncio.wait_for(eternity(), timeout=1.0)
+        await asyncio.wait\_for(eternity(), timeout\=1.0)
     except TimeoutError:
         print('timeout!')
 
 asyncio.run(main())
 
-# Expected output:
+\# Expected output:
 #
-#     timeout!
-```
+\#     timeout!
 
 Changed in version 3.7: When _aw_ is cancelled due to a timeout, `wait_for` waits for _aw_ to be cancelled. Previously, it raised [`TimeoutError`](https://docs.python.org/3/library/exceptions.html#TimeoutError "TimeoutError") immediately.
 
@@ -675,11 +717,11 @@ Changed in version 3.10: Removed the _loop_ parameter.
 
 Changed in version 3.11: Raises [`TimeoutError`](https://docs.python.org/3/library/exceptions.html#TimeoutError "TimeoutError") instead of [`asyncio.TimeoutError`](https://docs.python.org/3/library/asyncio-exceptions.html#asyncio.TimeoutError "asyncio.TimeoutError").
 
-## Waiting primitives
+## [Waiting primitives](#id12)[¶](#waiting-primitives "Link to this heading")
 
-_async_ asyncio.wait(_aws_, _\*_, _timeout=None_, _return\_when=ALL\_COMPLETED_) [¶](#asyncio.wait "Link to this definition")
+_async_ asyncio.wait(_aws_, _\*_, _timeout\=None_, _return\_when\=ALL\_COMPLETED_)[¶](#asyncio.wait "Link to this definition")
 
-Run [`Future`](https://docs.python.org/3/library/asyncio-future.html#asyncio.Future "asyncio.Future") and instances in the _aws_ iterable concurrently and block until the condition specified by _return\_when_.
+Run [`Future`](https://docs.python.org/3/library/asyncio-future.html#asyncio.Future "asyncio.Future") and [`Task`](#asyncio.Task "asyncio.Task") instances in the _aws_ iterable concurrently and block until the condition specified by _return\_when_.
 
 The _aws_ iterable must not be empty.
 
@@ -687,9 +729,7 @@ Returns two sets of Tasks/Futures: `(done, pending)`.
 
 Usage:
 
-```
-done, pending = await asyncio.wait(aws)
-```
+done, pending \= await asyncio.wait(aws)
 
 _timeout_ (a float or int), if specified, can be used to control the maximum number of seconds to wait before returning.
 
@@ -701,19 +741,19 @@ Constant
 
 Description
 
-asyncio.FIRST\_COMPLETED [¶](#asyncio.FIRST_COMPLETED "Link to this definition")
+asyncio.FIRST\_COMPLETED[¶](#asyncio.FIRST_COMPLETED "Link to this definition")
 
 The function will return when any future finishes or is cancelled.
 
-asyncio.FIRST\_EXCEPTION [¶](#asyncio.FIRST_EXCEPTION "Link to this definition")
+asyncio.FIRST\_EXCEPTION[¶](#asyncio.FIRST_EXCEPTION "Link to this definition")
 
-The function will return when any future finishes by raising an exception. If no future raises an exception then it is equivalent to.
+The function will return when any future finishes by raising an exception. If no future raises an exception then it is equivalent to [`ALL_COMPLETED`](#asyncio.ALL_COMPLETED "asyncio.ALL_COMPLETED").
 
-asyncio.ALL\_COMPLETED [¶](#asyncio.ALL_COMPLETED "Link to this definition")
+asyncio.ALL\_COMPLETED[¶](#asyncio.ALL_COMPLETED "Link to this definition")
 
 The function will return when all futures finish or are cancelled.
 
-Unlike, `wait()` does not cancel the futures when a timeout occurs.
+Unlike [`wait_for()`](#asyncio.wait_for "asyncio.wait_for"), `wait()` does not cancel the futures when a timeout occurs.
 
 If `wait()` is cancelled, the futures in _aws_ are not cancelled and continue to run.
 
@@ -723,43 +763,39 @@ Changed in version 3.11: Passing coroutine objects to `wait()` directly is forbi
 
 Changed in version 3.12: Added support for generators yielding tasks.
 
-asyncio.as\_completed(_aws_, _\*_, _timeout=None_) [¶](#asyncio.as_completed "Link to this definition")
+asyncio.as\_completed(_aws_, _\*_, _timeout\=None_)[¶](#asyncio.as_completed "Link to this definition")
 
-Run in the _aws_ iterable concurrently. The returned object can be iterated to obtain the results of the awaitables as they finish.
+Run [awaitable objects](#asyncio-awaitables) in the _aws_ iterable concurrently. The returned object can be iterated to obtain the results of the awaitables as they finish.
 
 The object returned by `as_completed()` can be iterated as an [asynchronous iterator](https://docs.python.org/3/glossary.html#term-asynchronous-iterator) or a plain [iterator](https://docs.python.org/3/glossary.html#term-iterator). When asynchronous iteration is used, the originally-supplied awaitables are yielded if they are tasks or futures. This makes it easy to correlate previously-scheduled tasks with their results. Example:
 
-```
-ipv4_connect = create_task(open_connection("127.0.0.1", 80))
-ipv6_connect = create_task(open_connection("::1", 80))
-tasks = [ipv4_connect, ipv6_connect]
+ipv4\_connect \= create\_task(open\_connection("127.0.0.1", 80))
+ipv6\_connect \= create\_task(open\_connection("::1", 80))
+tasks \= \[ipv4\_connect, ipv6\_connect\]
 
-async for earliest_connect in as_completed(tasks):
-    # earliest_connect is done. The result can be obtained by
-    # awaiting it or calling earliest_connect.result()
-    reader, writer = await earliest_connect
+async for earliest\_connect in as\_completed(tasks):
+    \# earliest\_connect is done. The result can be obtained by
+    \# awaiting it or calling earliest\_connect.result()
+    reader, writer \= await earliest\_connect
 
-    if earliest_connect is ipv6_connect:
+    if earliest\_connect is ipv6\_connect:
         print("IPv6 connection established.")
     else:
         print("IPv4 connection established.")
-```
 
 During asynchronous iteration, implicitly-created tasks will be yielded for supplied awaitables that aren’t tasks or futures.
 
 When used as a plain iterator, each iteration yields a new coroutine that returns the result or raises the exception of the next completed awaitable. This pattern is compatible with Python versions older than 3.13:
 
-```
-ipv4_connect = create_task(open_connection("127.0.0.1", 80))
-ipv6_connect = create_task(open_connection("::1", 80))
-tasks = [ipv4_connect, ipv6_connect]
+ipv4\_connect \= create\_task(open\_connection("127.0.0.1", 80))
+ipv6\_connect \= create\_task(open\_connection("::1", 80))
+tasks \= \[ipv4\_connect, ipv6\_connect\]
 
-for next_connect in as_completed(tasks):
-    # next_connect is not one of the original task objects. It must be
-    # awaited to obtain the result value or raise the exception of the
-    # awaitable that finishes next.
-    reader, writer = await next_connect
-```
+for next\_connect in as\_completed(tasks):
+    \# next\_connect is not one of the original task objects. It must be
+    \# awaited to obtain the result value or raise the exception of the
+    \# awaitable that finishes next.
+    reader, writer \= await next\_connect
 
 A [`TimeoutError`](https://docs.python.org/3/library/exceptions.html#TimeoutError "TimeoutError") is raised if the timeout occurs before all awaitables are done. This is raised by the `async for` loop during asynchronous iteration or by the coroutines yielded during plain iteration.
 
@@ -773,9 +809,9 @@ Changed in version 3.12: Added support for generators yielding tasks.
 
 Changed in version 3.13: The result can now be used as either an [asynchronous iterator](https://docs.python.org/3/glossary.html#term-asynchronous-iterator) or as a plain [iterator](https://docs.python.org/3/glossary.html#term-iterator) (previously it was only a plain iterator).
 
-## Running in threads
+## [Running in threads](#id13)[¶](#running-in-threads "Link to this heading")
 
-_async_ asyncio.to\_thread(_func_, _/_, _\*args_, _\*\*kwargs_) [¶](#asyncio.to_thread "Link to this definition")
+_async_ asyncio.to\_thread(_func_, _/_, _\*args_, _\*\*kwargs_)[¶](#asyncio.to_thread "Link to this definition")
 
 Asynchronously run function _func_ in a separate thread.
 
@@ -785,32 +821,30 @@ Return a coroutine that can be awaited to get the eventual result of _func_.
 
 This coroutine function is primarily intended to be used for executing IO-bound functions/methods that would otherwise block the event loop if they were run in the main thread. For example:
 
-```
-def blocking_io():
-    print(f"start blocking_io at {time.strftime('%X')}")
-    # Note that time.sleep() can be replaced with any blocking
-    # IO-bound operation, such as file operations.
+def blocking\_io():
+    print(f"start blocking\_io at {time.strftime('%X')}")
+    \# Note that time.sleep() can be replaced with any blocking
+    \# IO-bound operation, such as file operations.
     time.sleep(1)
-    print(f"blocking_io complete at {time.strftime('%X')}")
+    print(f"blocking\_io complete at {time.strftime('%X')}")
 
 async def main():
     print(f"started main at {time.strftime('%X')}")
 
     await asyncio.gather(
-        asyncio.to_thread(blocking_io),
+        asyncio.to\_thread(blocking\_io),
         asyncio.sleep(1))
 
     print(f"finished main at {time.strftime('%X')}")
 
 asyncio.run(main())
 
-# Expected output:
+\# Expected output:
 #
-# started main at 19:50:53
-# start blocking_io at 19:50:53
-# blocking_io complete at 19:50:54
-# finished main at 19:50:54
-```
+\# started main at 19:50:53
+\# start blocking\_io at 19:50:53
+\# blocking\_io complete at 19:50:54
+\# finished main at 19:50:54
 
 Directly calling `blocking_io()` in any coroutine would block the event loop for its duration, resulting in an additional 1 second of run time. Instead, by using `asyncio.to_thread()`, we can run it in a separate thread without blocking the event loop.
 
@@ -820,9 +854,9 @@ Due to the [GIL](https://docs.python.org/3/glossary.html#term-GIL), `asyncio.to_
 
 Added in version 3.9.
 
-## Scheduling from other threads
+## [Scheduling from other threads](#id14)[¶](#scheduling-from-other-threads "Link to this heading")
 
-asyncio.run\_coroutine\_threadsafe(_coro_, _loop_) [¶](#asyncio.run_coroutine_threadsafe "Link to this definition")
+asyncio.run\_coroutine\_threadsafe(_coro_, _loop_)[¶](#asyncio.run_coroutine_threadsafe "Link to this definition")
 
 Submit a coroutine to the given event loop. Thread-safe.
 
@@ -830,69 +864,64 @@ Return a [`concurrent.futures.Future`](https://docs.python.org/3/library/concurr
 
 This function is meant to be called from a different OS thread than the one where the event loop is running. Example:
 
-```
-def in_thread(loop: asyncio.AbstractEventLoop) -> None:
-    # Run some blocking IO
-    pathlib.Path("example.txt").write_text("hello world", encoding="utf8")
+def in\_thread(loop: asyncio.AbstractEventLoop) \-> None:
+    \# Run some blocking IO
+    pathlib.Path("example.txt").write\_text("hello world", encoding\="utf8")
 
-    # Create a coroutine
-    coro = asyncio.sleep(1, result=3)
+    \# Create a coroutine
+    coro \= asyncio.sleep(1, result\=3)
 
-    # Submit the coroutine to a given loop
-    future = asyncio.run_coroutine_threadsafe(coro, loop)
+    \# Submit the coroutine to a given loop
+    future \= asyncio.run\_coroutine\_threadsafe(coro, loop)
 
-    # Wait for the result with an optional timeout argument
-    assert future.result(timeout=2) == 3
+    \# Wait for the result with an optional timeout argument
+    assert future.result(timeout\=2) \== 3
 
-async def amain() -> None:
-    # Get the running loop
-    loop = asyncio.get_running_loop()
+async def amain() \-> None:
+    \# Get the running loop
+    loop \= asyncio.get\_running\_loop()
 
-    # Run something in a thread
-    await asyncio.to_thread(in_thread, loop)
-```
+    \# Run something in a thread
+    await asyncio.to\_thread(in\_thread, loop)
 
 It’s also possible to run the other way around. Example:
 
-```
 @contextlib.contextmanager
-def loop_in_thread() -> Generator[asyncio.AbstractEventLoop]:
-    loop_fut = concurrent.futures.Future[asyncio.AbstractEventLoop]()
-    stop_event = asyncio.Event()
+def loop\_in\_thread() \-> Generator\[asyncio.AbstractEventLoop\]:
+    loop\_fut \= concurrent.futures.Future\[asyncio.AbstractEventLoop\]()
+    stop\_event \= asyncio.Event()
 
-    async def main() -> None:
-        loop_fut.set_result(asyncio.get_running_loop())
-        await stop_event.wait()
+    async def main() \-> None:
+        loop\_fut.set\_result(asyncio.get\_running\_loop())
+        await stop\_event.wait()
 
     with concurrent.futures.ThreadPoolExecutor(1) as tpe:
-        complete_fut = tpe.submit(asyncio.run, main())
-        for fut in concurrent.futures.as_completed((loop_fut, complete_fut)):
-            if fut is loop_fut:
-                loop = loop_fut.result()
+        complete\_fut \= tpe.submit(asyncio.run, main())
+        for fut in concurrent.futures.as\_completed((loop\_fut, complete\_fut)):
+            if fut is loop\_fut:
+                loop \= loop\_fut.result()
                 try:
                     yield loop
                 finally:
-                    loop.call_soon_threadsafe(stop_event.set)
+                    loop.call\_soon\_threadsafe(stop\_event.set)
             else:
                 fut.result()
 
-# Create a loop in another thread
-with loop_in_thread() as loop:
-    # Create a coroutine
-    coro = asyncio.sleep(1, result=3)
+\# Create a loop in another thread
+with loop\_in\_thread() as loop:
+    \# Create a coroutine
+    coro \= asyncio.sleep(1, result\=3)
 
-    # Submit the coroutine to a given loop
-    future = asyncio.run_coroutine_threadsafe(coro, loop)
+    \# Submit the coroutine to a given loop
+    future \= asyncio.run\_coroutine\_threadsafe(coro, loop)
 
-    # Wait for the result with an optional timeout argument
-    assert future.result(timeout=2) == 3
-```
+    \# Wait for the result with an optional timeout argument
+    assert future.result(timeout\=2) \== 3
 
 If an exception is raised in the coroutine, the returned Future will be notified. It can also be used to cancel the task in the event loop:
 
-```
 try:
-    result = future.result(timeout)
+    result \= future.result(timeout)
 except TimeoutError:
     print('The coroutine took too long, cancelling the task...')
     future.cancel()
@@ -900,7 +929,6 @@ except Exception as exc:
     print(f'The coroutine raised an exception: {exc!r}')
 else:
     print(f'The coroutine returned: {result!r}')
-```
 
 See the [concurrency and multithreading](https://docs.python.org/3/library/asyncio-dev.html#asyncio-multithreading) section of the documentation.
 
@@ -908,51 +936,51 @@ Unlike other asyncio functions this function requires the _loop_ argument to be 
 
 Added in version 3.5.1.
 
-## Introspection
+## [Introspection](#id15)[¶](#introspection "Link to this heading")
 
-asyncio.current\_task(_loop=None_) [¶](#asyncio.current_task "Link to this definition")
+asyncio.current\_task(_loop\=None_)[¶](#asyncio.current_task "Link to this definition")
 
-Return the currently running instance, or `None` if no task is running.
+Return the currently running [`Task`](#asyncio.Task "asyncio.Task") instance, or `None` if no task is running.
 
 If _loop_ is `None` [`get_running_loop()`](https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_running_loop "asyncio.get_running_loop") is used to get the current loop.
 
 Added in version 3.7.
 
-asyncio.all\_tasks(_loop=None_) [¶](#asyncio.all_tasks "Link to this definition")
+asyncio.all\_tasks(_loop\=None_)[¶](#asyncio.all_tasks "Link to this definition")
 
-Return a set of not yet finished objects run by the loop.
+Return a set of not yet finished [`Task`](#asyncio.Task "asyncio.Task") objects run by the loop.
 
 If _loop_ is `None`, [`get_running_loop()`](https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_running_loop "asyncio.get_running_loop") is used for getting current loop.
 
 Added in version 3.7.
 
-asyncio.iscoroutine(_obj_) [¶](#asyncio.iscoroutine "Link to this definition")
+asyncio.iscoroutine(_obj_)[¶](#asyncio.iscoroutine "Link to this definition")
 
 Return `True` if _obj_ is a coroutine object.
 
 Added in version 3.4.
 
-## Task object
+## [Task object](#id16)[¶](#task-object "Link to this heading")
 
-_class_ asyncio.Task(_coro_, _\*_, _loop=None_, _name=None_, _context=None_, _eager\_start=False_) [¶](#asyncio.Task "Link to this definition")
+_class_ asyncio.Task(_coro_, _\*_, _loop\=None_, _name\=None_, _context\=None_, _eager\_start\=False_)[¶](#asyncio.Task "Link to this definition")
 
-A [`Future-like`](https://docs.python.org/3/library/asyncio-future.html#asyncio.Future "asyncio.Future") object that runs a Python. Not thread-safe.
+A [`Future-like`](https://docs.python.org/3/library/asyncio-future.html#asyncio.Future "asyncio.Future") object that runs a Python [coroutine](#coroutine). Not thread-safe.
 
 Tasks are used to run coroutines in event loops. If a coroutine awaits on a Future, the Task suspends the execution of the coroutine and waits for the completion of the Future. When the Future is _done_, the execution of the wrapped coroutine resumes.
 
 Event loops use cooperative scheduling: an event loop runs one Task at a time. While a Task awaits for the completion of a Future, the event loop runs other Tasks, callbacks, or performs IO operations.
 
-Use the high-level function to create Tasks, or the low-level [`loop.create_task()`](https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.create_task "asyncio.loop.create_task") or [`ensure_future()`](https://docs.python.org/3/library/asyncio-future.html#asyncio.ensure_future "asyncio.ensure_future") functions. Manual instantiation of Tasks is discouraged.
+Use the high-level [`asyncio.create_task()`](#asyncio.create_task "asyncio.create_task") function to create Tasks, or the low-level [`loop.create_task()`](https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.create_task "asyncio.loop.create_task") or [`ensure_future()`](https://docs.python.org/3/library/asyncio-future.html#asyncio.ensure_future "asyncio.ensure_future") functions. Manual instantiation of Tasks is discouraged.
 
-To cancel a running Task use the method. Calling it will cause the Task to throw a [`CancelledError`](https://docs.python.org/3/library/asyncio-exceptions.html#asyncio.CancelledError "asyncio.CancelledError") exception into the wrapped coroutine. If a coroutine is awaiting on a Future object during cancellation, the Future object will be cancelled.
+To cancel a running Task use the [`cancel()`](#asyncio.Task.cancel "asyncio.Task.cancel") method. Calling it will cause the Task to throw a [`CancelledError`](https://docs.python.org/3/library/asyncio-exceptions.html#asyncio.CancelledError "asyncio.CancelledError") exception into the wrapped coroutine. If a coroutine is awaiting on a Future object during cancellation, the Future object will be cancelled.
 
-can be used to check if the Task was cancelled. The method returns `True` if the wrapped coroutine did not suppress the [`CancelledError`](https://docs.python.org/3/library/asyncio-exceptions.html#asyncio.CancelledError "asyncio.CancelledError") exception and was actually cancelled.
+[`cancelled()`](#asyncio.Task.cancelled "asyncio.Task.cancelled") can be used to check if the Task was cancelled. The method returns `True` if the wrapped coroutine did not suppress the [`CancelledError`](https://docs.python.org/3/library/asyncio-exceptions.html#asyncio.CancelledError "asyncio.CancelledError") exception and was actually cancelled.
 
-inherits from [`Future`](https://docs.python.org/3/library/asyncio-future.html#asyncio.Future "asyncio.Future") all of its APIs except [`Future.set_result()`](https://docs.python.org/3/library/asyncio-future.html#asyncio.Future.set_result "asyncio.Future.set_result") and [`Future.set_exception()`](https://docs.python.org/3/library/asyncio-future.html#asyncio.Future.set_exception "asyncio.Future.set_exception").
+[`asyncio.Task`](#asyncio.Task "asyncio.Task") inherits from [`Future`](https://docs.python.org/3/library/asyncio-future.html#asyncio.Future "asyncio.Future") all of its APIs except [`Future.set_result()`](https://docs.python.org/3/library/asyncio-future.html#asyncio.Future.set_result "asyncio.Future.set_result") and [`Future.set_exception()`](https://docs.python.org/3/library/asyncio-future.html#asyncio.Future.set_exception "asyncio.Future.set_exception").
 
 An optional keyword-only _context_ argument allows specifying a custom [`contextvars.Context`](https://docs.python.org/3/library/contextvars.html#contextvars.Context "contextvars.Context") for the _coro_ to run in. If no _context_ is provided, the Task copies the current context and later runs its coroutine in the copied context.
 
-An optional keyword-only _eager\_start_ argument allows eagerly starting the execution of the at task creation time. If set to `True` and the event loop is running, the task will start executing the coroutine immediately, until the first time the coroutine blocks. If the coroutine returns or raises without blocking, the task will be finished eagerly and will skip scheduling to the event loop.
+An optional keyword-only _eager\_start_ argument allows eagerly starting the execution of the [`asyncio.Task`](#asyncio.Task "asyncio.Task") at task creation time. If set to `True` and the event loop is running, the task will start executing the coroutine immediately, until the first time the coroutine blocks. If the coroutine returns or raises without blocking, the task will be finished eagerly and will skip scheduling to the event loop.
 
 Tasks are [generic](https://docs.python.org/3/library/typing.html#generics) over the return type of their wrapped coroutines.
 
@@ -966,13 +994,13 @@ Changed in version 3.11: Added the _context_ parameter.
 
 Changed in version 3.12: Added the _eager\_start_ parameter.
 
-done() [¶](#asyncio.Task.done "Link to this definition")
+done()[¶](#asyncio.Task.done "Link to this definition")
 
 Return `True` if the Task is _done_.
 
 A Task is _done_ when the wrapped coroutine either returned a value, raised an exception, or the Task was cancelled.
 
-result() [¶](#asyncio.Task.result "Link to this definition")
+result()[¶](#asyncio.Task.result "Link to this definition")
 
 Return the result of the Task.
 
@@ -982,7 +1010,7 @@ If the Task has been _cancelled_, this method raises a [`CancelledError`](https:
 
 If the Task’s result isn’t yet available, this method raises an [`InvalidStateError`](https://docs.python.org/3/library/asyncio-exceptions.html#asyncio.InvalidStateError "asyncio.InvalidStateError") exception.
 
-exception() [¶](#asyncio.Task.exception "Link to this definition")
+exception()[¶](#asyncio.Task.exception "Link to this definition")
 
 Return the exception of the Task.
 
@@ -992,7 +1020,7 @@ If the Task has been _cancelled_, this method raises a [`CancelledError`](https:
 
 If the Task isn’t _done_ yet, this method raises an [`InvalidStateError`](https://docs.python.org/3/library/asyncio-exceptions.html#asyncio.InvalidStateError "asyncio.InvalidStateError") exception.
 
-add\_done\_callback(_callback_, _\*_, _context=None_) [¶](#asyncio.Task.add_done_callback "Link to this definition")
+add\_done\_callback(_callback_, _\*_, _context\=None_)[¶](#asyncio.Task.add_done_callback "Link to this definition")
 
 Add a callback to be run when the Task is _done_.
 
@@ -1000,7 +1028,7 @@ This method should only be used in low-level callback-based code.
 
 See the documentation of [`Future.add_done_callback()`](https://docs.python.org/3/library/asyncio-future.html#asyncio.Future.add_done_callback "asyncio.Future.add_done_callback") for more details.
 
-remove\_done\_callback(_callback_) [¶](#asyncio.Task.remove_done_callback "Link to this definition")
+remove\_done\_callback(_callback_)[¶](#asyncio.Task.remove_done_callback "Link to this definition")
 
 Remove _callback_ from the callbacks list.
 
@@ -1008,7 +1036,7 @@ This method should only be used in low-level callback-based code.
 
 See the documentation of [`Future.remove_done_callback()`](https://docs.python.org/3/library/asyncio-future.html#asyncio.Future.remove_done_callback "asyncio.Future.remove_done_callback") for more details.
 
-get\_stack(_\*_, _limit=None_) [¶](#asyncio.Task.get_stack "Link to this definition")
+get\_stack(_\*_, _limit\=None_)[¶](#asyncio.Task.get_stack "Link to this definition")
 
 Return the list of stack frames for this Task.
 
@@ -1020,35 +1048,35 @@ Only one stack frame is returned for a suspended coroutine.
 
 The optional _limit_ argument sets the maximum number of frames to return; by default all available frames are returned. The ordering of the returned list differs depending on whether a stack or a traceback is returned: the newest frames of a stack are returned, but the oldest frames of a traceback are returned. (This matches the behavior of the traceback module.)
 
-print\_stack(_\*_, _limit=None_, _file=None_) [¶](#asyncio.Task.print_stack "Link to this definition")
+print\_stack(_\*_, _limit\=None_, _file\=None_)[¶](#asyncio.Task.print_stack "Link to this definition")
 
 Print the stack or traceback for this Task.
 
-This produces output similar to that of the traceback module for the frames retrieved by.
+This produces output similar to that of the traceback module for the frames retrieved by [`get_stack()`](#asyncio.Task.get_stack "asyncio.Task.get_stack").
 
-The _limit_ argument is passed to directly.
+The _limit_ argument is passed to [`get_stack()`](#asyncio.Task.get_stack "asyncio.Task.get_stack") directly.
 
 The _file_ argument is an I/O stream to which the output is written; by default output is written to [`sys.stdout`](https://docs.python.org/3/library/sys.html#sys.stdout "sys.stdout").
 
-get\_coro() [¶](#asyncio.Task.get_coro "Link to this definition")
+get\_coro()[¶](#asyncio.Task.get_coro "Link to this definition")
 
 Return the coroutine object wrapped by the `Task`.
 
 Note
 
-This will return `None` for Tasks which have already completed eagerly. See the.
+This will return `None` for Tasks which have already completed eagerly. See the [Eager Task Factory](#eager-task-factory).
 
 Added in version 3.8.
 
 Changed in version 3.12: Newly added eager task execution means result may be `None`.
 
-get\_context() [¶](#asyncio.Task.get_context "Link to this definition")
+get\_context()[¶](#asyncio.Task.get_context "Link to this definition")
 
 Return the [`contextvars.Context`](https://docs.python.org/3/library/contextvars.html#contextvars.Context "contextvars.Context") object associated with the task.
 
 Added in version 3.12.
 
-get\_name() [¶](#asyncio.Task.get_name "Link to this definition")
+get\_name()[¶](#asyncio.Task.get_name "Link to this definition")
 
 Return the name of the Task.
 
@@ -1056,7 +1084,7 @@ If no name has been explicitly assigned to the Task, the default asyncio Task im
 
 Added in version 3.8.
 
-set\_name(_value_) [¶](#asyncio.Task.set_name "Link to this definition")
+set\_name(_value_)[¶](#asyncio.Task.set_name "Link to this definition")
 
 Set the name of the Task.
 
@@ -1066,7 +1094,7 @@ In the default Task implementation, the name will be visible in the [`repr()`](h
 
 Added in version 3.8.
 
-cancel(_msg=None_) [¶](#asyncio.Task.cancel "Link to this definition")
+cancel(_msg\=None_)[¶](#asyncio.Task.cancel "Link to this definition")
 
 Request the Task to be cancelled.
 
@@ -1074,7 +1102,7 @@ If the Task is already _done_ or _cancelled_, return `False`, otherwise, return 
 
 The method arranges for a [`CancelledError`](https://docs.python.org/3/library/asyncio-exceptions.html#asyncio.CancelledError "asyncio.CancelledError") exception to be thrown into the wrapped coroutine on the next cycle of the event loop.
 
-The coroutine then has a chance to clean up or even deny the request by suppressing the exception with a [`try`](https://docs.python.org/3/reference/compound_stmts.html#try) … … `except CancelledError` … [`finally`](https://docs.python.org/3/reference/compound_stmts.html#finally) block. Therefore, unlike [`Future.cancel()`](https://docs.python.org/3/library/asyncio-future.html#asyncio.Future.cancel "asyncio.Future.cancel"), `Task.cancel()` does not guarantee that the Task will be cancelled, although suppressing cancellation completely is not common and is actively discouraged. Should the coroutine nevertheless decide to suppress the cancellation, it needs to call in addition to catching the exception.
+The coroutine then has a chance to clean up or even deny the request by suppressing the exception with a [`try`](https://docs.python.org/3/reference/compound_stmts.html#try) … … `except CancelledError` … [`finally`](https://docs.python.org/3/reference/compound_stmts.html#finally) block. Therefore, unlike [`Future.cancel()`](https://docs.python.org/3/library/asyncio-future.html#asyncio.Future.cancel "asyncio.Future.cancel"), `Task.cancel()` does not guarantee that the Task will be cancelled, although suppressing cancellation completely is not common and is actively discouraged. Should the coroutine nevertheless decide to suppress the cancellation, it needs to call [`Task.uncancel()`](#asyncio.Task.uncancel "asyncio.Task.uncancel") in addition to catching the exception.
 
 Changed in version 3.9: Added the _msg_ parameter.
 
@@ -1082,49 +1110,47 @@ Changed in version 3.11: The `msg` parameter is propagated from cancelled task t
 
 The following example illustrates how coroutines can intercept the cancellation request:
 
-```
-async def cancel_me():
-    print('cancel_me(): before sleep')
+async def cancel\_me():
+    print('cancel\_me(): before sleep')
 
     try:
-        # Wait for 1 hour
+        \# Wait for 1 hour
         await asyncio.sleep(3600)
     except asyncio.CancelledError:
-        print('cancel_me(): cancel sleep')
+        print('cancel\_me(): cancel sleep')
         raise
     finally:
-        print('cancel_me(): after sleep')
+        print('cancel\_me(): after sleep')
 
 async def main():
-    # Create a "cancel_me" Task
-    task = asyncio.create_task(cancel_me())
+    \# Create a "cancel\_me" Task
+    task \= asyncio.create\_task(cancel\_me())
 
-    # Wait for 1 second
+    \# Wait for 1 second
     await asyncio.sleep(1)
 
     task.cancel()
     try:
         await task
     except asyncio.CancelledError:
-        print("main(): cancel_me is cancelled now")
+        print("main(): cancel\_me is cancelled now")
 
 asyncio.run(main())
 
-# Expected output:
+\# Expected output:
 #
-#     cancel_me(): before sleep
-#     cancel_me(): cancel sleep
-#     cancel_me(): after sleep
-#     main(): cancel_me is cancelled now
-```
+\#     cancel\_me(): before sleep
+\#     cancel\_me(): cancel sleep
+\#     cancel\_me(): after sleep
+\#     main(): cancel\_me is cancelled now
 
-cancelled() [¶](#asyncio.Task.cancelled "Link to this definition")
+cancelled()[¶](#asyncio.Task.cancelled "Link to this definition")
 
 Return `True` if the Task is _cancelled_.
 
-The Task is _cancelled_ when the cancellation was requested with and the wrapped coroutine propagated the [`CancelledError`](https://docs.python.org/3/library/asyncio-exceptions.html#asyncio.CancelledError "asyncio.CancelledError") exception thrown into it.
+The Task is _cancelled_ when the cancellation was requested with [`cancel()`](#asyncio.Task.cancel "asyncio.Task.cancel") and the wrapped coroutine propagated the [`CancelledError`](https://docs.python.org/3/library/asyncio-exceptions.html#asyncio.CancelledError "asyncio.CancelledError") exception thrown into it.
 
-uncancel() [¶](#asyncio.Task.uncancel "Link to this definition")
+uncancel()[¶](#asyncio.Task.uncancel "Link to this definition")
 
 Decrement the count of cancellation requests to this Task.
 
@@ -1134,35 +1160,98 @@ Note that once execution of a cancelled task completed, further calls to `uncanc
 
 Added in version 3.11.
 
-This method is used by asyncio’s internals and isn’t expected to be used by end-user code. In particular, if a Task gets successfully uncancelled, this allows for elements of structured concurrency like and to continue running, isolating cancellation to the respective structured block. For example:
+This method is used by asyncio’s internals and isn’t expected to be used by end-user code. In particular, if a Task gets successfully uncancelled, this allows for elements of structured concurrency like [Task groups](#taskgroups) and [`asyncio.timeout()`](#asyncio.timeout "asyncio.timeout") to continue running, isolating cancellation to the respective structured block. For example:
 
-```
-async def make_request_with_timeout():
+async def make\_request\_with\_timeout():
     try:
         async with asyncio.timeout(1):
-            # Structured block affected by the timeout:
-            await make_request()
-            await make_another_request()
+            \# Structured block affected by the timeout:
+            await make\_request()
+            await make\_another\_request()
     except TimeoutError:
         log("There was a timeout")
-    # Outer code not affected by the timeout:
-    await unrelated_code()
-```
+    \# Outer code not affected by the timeout:
+    await unrelated\_code()
 
-While the block with `make_request()` and `make_another_request()` might get cancelled due to the timeout, `unrelated_code()` should continue running even in case of the timeout. This is implemented with `uncancel()`. context managers use in a similar fashion.
+While the block with `make_request()` and `make_another_request()` might get cancelled due to the timeout, `unrelated_code()` should continue running even in case of the timeout. This is implemented with `uncancel()`. [`TaskGroup`](#asyncio.TaskGroup "asyncio.TaskGroup") context managers use [`uncancel()`](#asyncio.Task.uncancel "asyncio.Task.uncancel") in a similar fashion.
 
 If end-user code is, for some reason, suppressing cancellation by catching [`CancelledError`](https://docs.python.org/3/library/asyncio-exceptions.html#asyncio.CancelledError "asyncio.CancelledError"), it needs to call this method to remove the cancellation state.
 
-When this method decrements the cancellation count to zero, the method checks if a previous call had arranged for [`CancelledError`](https://docs.python.org/3/library/asyncio-exceptions.html#asyncio.CancelledError "asyncio.CancelledError") to be thrown into the task. If it hasn’t been thrown yet, that arrangement will be rescinded (by resetting the internal `_must_cancel` flag).
+When this method decrements the cancellation count to zero, the method checks if a previous [`cancel()`](#asyncio.Task.cancel "asyncio.Task.cancel") call had arranged for [`CancelledError`](https://docs.python.org/3/library/asyncio-exceptions.html#asyncio.CancelledError "asyncio.CancelledError") to be thrown into the task. If it hasn’t been thrown yet, that arrangement will be rescinded (by resetting the internal `_must_cancel` flag).
 
 Changed in version 3.13: Changed to rescind pending cancellation requests upon reaching zero.
 
-cancelling() [¶](#asyncio.Task.cancelling "Link to this definition")
+cancelling()[¶](#asyncio.Task.cancelling "Link to this definition")
 
-Return the number of pending cancellation requests to this Task, i.e., the number of calls to less the number of calls.
+Return the number of pending cancellation requests to this Task, i.e., the number of calls to [`cancel()`](#asyncio.Task.cancel "asyncio.Task.cancel") less the number of [`uncancel()`](#asyncio.Task.uncancel "asyncio.Task.uncancel") calls.
 
-Note that if this number is greater than zero but the Task is still executing, will still return `False`. This is because this number can be lowered by calling, which can lead to the task not being cancelled after all if the cancellation requests go down to zero.
+Note that if this number is greater than zero but the Task is still executing, [`cancelled()`](#asyncio.Task.cancelled "asyncio.Task.cancelled") will still return `False`. This is because this number can be lowered by calling [`uncancel()`](#asyncio.Task.uncancel "asyncio.Task.uncancel"), which can lead to the task not being cancelled after all if the cancellation requests go down to zero.
 
-This method is used by asyncio’s internals and isn’t expected to be used by end-user code. See for more details.
+This method is used by asyncio’s internals and isn’t expected to be used by end-user code. See [`uncancel()`](#asyncio.Task.uncancel "asyncio.Task.uncancel") for more details.
 
 Added in version 3.11.
+
+### [Table of Contents](https://docs.python.org/3/contents.html)
+
+*   [Coroutines and tasks](#)
+    *   [Coroutines](#coroutines)
+    *   [Awaitables](#awaitables)
+    *   [Creating tasks](#creating-tasks)
+    *   [Task cancellation](#task-cancellation)
+    *   [Task groups](#task-groups)
+        *   [Terminating a task group](#terminating-a-task-group)
+    *   [Sleeping](#sleeping)
+    *   [Running tasks concurrently](#running-tasks-concurrently)
+    *   [Eager task factory](#eager-task-factory)
+    *   [Shielding from cancellation](#shielding-from-cancellation)
+    *   [Timeouts](#timeouts)
+    *   [Waiting primitives](#waiting-primitives)
+    *   [Running in threads](#running-in-threads)
+    *   [Scheduling from other threads](#scheduling-from-other-threads)
+    *   [Introspection](#introspection)
+    *   [Task object](#task-object)
+
+#### Previous topic
+
+[Runners](https://docs.python.org/3/library/asyncio-runner.html "previous chapter")
+
+#### Next topic
+
+[Streams](https://docs.python.org/3/library/asyncio-stream.html "next chapter")
+
+### This page
+
+*   [Report a bug](https://docs.python.org/3/bugs.html)
+*   [Improve this page](https://docs.python.org/3/improve-page-nojs.html)
+*   [Show source](https://github.com/python/cpython/blob/main/Doc/library/asyncio-task.rst?plain=1)
+
+«
+
+### Navigation
+
+*   [index](https://docs.python.org/3/genindex.html "General Index")
+*   [modules](https://docs.python.org/3/py-modindex.html "Python Module Index") |
+*   [next](https://docs.python.org/3/library/asyncio-stream.html "Streams") |
+*   [previous](https://docs.python.org/3/library/asyncio-runner.html "Runners") |
+*   ![Python logo](https://docs.python.org/3/_static/py.svg)
+*   [Python](https://www.python.org/) »
+
+*   [3.14.6 Documentation](https://docs.python.org/3/index.html) »
+*   [The Python Standard Library](https://docs.python.org/3/library/index.html) »
+*   [Networking and Interprocess Communication](https://docs.python.org/3/library/ipc.html) »
+*   [`asyncio` — Asynchronous I/O](https://docs.python.org/3/library/asyncio.html) »
+*   Coroutines and tasks
+*    
+    
+    |
+*   Theme Auto Light Dark |
+
+© [Copyright](https://docs.python.org/3/copyright.html) 2001 Python Software Foundation.  
+This page is licensed under the Python Software Foundation License Version 2.  
+Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License.  
+See [History and License](https://docs.python.org/license.html) for more information.  
+  
+The Python Software Foundation is a non-profit corporation. [Please donate.](https://www.python.org/psf/donations/)  
+  
+Last updated on Jul 28, 2026 (10:34 UTC). [Found a bug](https://docs.python.org/bugs.html)?  
+Created using [Sphinx](https://www.sphinx-doc.org/) 8.2.3.

@@ -6,7 +6,8 @@ Using Hono is super easy. We can set up the project, write code, develop with a 
 
 Starter templates are available for each platform. Use the following "create-hono" command.
 
-`npm create hono@latest my-app``yarn create hono my-app``pnpm create hono@latest my-app``bun create hono@latest my-app``deno init --npm hono@latest my-app`Then you will be asked which template you would like to use. Let's select Cloudflare Workers for this example.
+`npm create hono@latest my-app``yarn create hono my-app``pnpm create hono@latest my-app``bun create hono@latest my-app``deno init --npm hono@latest my-app`
+Then you will be asked which template you would like to use. Let's select Cloudflare Workers for this example.
 
 ```
 ? Which template do you want to use?
@@ -40,7 +41,8 @@ bun i
 ```
 Once the package installation is complete, run the following command to start up a local server.
 
-`npm run dev``yarn dev``pnpm dev``bun run dev`## Hello World [](https://hono.dev#hello-world)
+`npm run dev``yarn dev``pnpm dev``bun run dev`
+## Hello World [](https://hono.dev#hello-world)
 
 You can write code in TypeScript with the Cloudflare Workers development tool "Wrangler", Deno, Bun, or others without being aware of transpiling.
 
@@ -58,7 +60,8 @@ export default app
 ```
 Start the development server and access `http://localhost:8787` with your browser.
 
-`npm run dev``yarn dev``pnpm dev``bun run dev`## Return JSON [](https://hono.dev#return-json)
+`npm run dev``yarn dev``pnpm dev``bun run dev`
+## Return JSON [](https://hono.dev#return-json)
 
 Returning JSON is also easy. The following is an example of handling a GET Request to `/api/hello` and returning an `application/json` Response.
 

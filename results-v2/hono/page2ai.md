@@ -1,12 +1,12 @@
 ---
 title: "Getting Started"
 source: "https://hono.dev/docs/getting-started/basic"
-captured_at: "2026-10-18T09:59:44.469Z"
+captured_at: "2026-10-30T20:44:48.648Z"
 language: "en-US"
 description: "Web framework built on Web Standards for Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Node.js, and others. Fast, but not only fast."
 canonical: "https://hono.dev/docs/getting-started/basic"
 extractor: "page2ai-core"
-extractor_version: "0.2.2"
+extractor_version: "0.3.2"
 ---
 
 # Getting Started
