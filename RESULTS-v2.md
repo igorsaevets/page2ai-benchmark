@@ -2,7 +2,7 @@
 
 # Results, protocol v0.2
 
-Scored 2026-10-30T21:15:53.104Z. Protocol and metric definitions: [PROTOCOL.md](PROTOCOL.md), including every
+Scored 2026-10-30T22:02:39.551Z. Protocol and metric definitions: [PROTOCOL.md](PROTOCOL.md), including every
 amendment and when it was made. Raw per-page rows: [../results-v2/scores.json](../results-v2/scores.json).
 
 ## Conversion track
@@ -14,7 +14,7 @@ Every tool received the same cached HTML bytes. No tool fetched anything.
 | tool | pages | code recall | heading recall | prose recall | nav leak | **f_score** | f_score_prose |
 |---|---:|---:|---:|---:|---:|---:|---:|
 | `page2ai` | 14 | 100.0% | 94.0% | 76.0% | 6.8% | **0.9327** | 0.8591 |
-| `trafilatura` | 14 | 87.5% | 78.6% | 69.9% | 4.5% | **0.8133** | 0.7747 |
+| `trafilatura` | 14 | 87.5% | 78.6% | 70.3% | 4.5% | **0.8133** | 0.7761 |
 | `defuddle-turndown` | 14 | 75.9% | 75.0% | 71.4% | 5.7% | **0.7841** | 0.7615 |
 | `readability-turndown` | 14 | 71.0% | 62.1% | 73.2% | 5.4% | **0.6603** | 0.6975 |
 
@@ -24,7 +24,7 @@ here as the floor the metric is validated against, not as competitors:
 | tool | pages | code recall | heading recall | prose recall | nav leak | **f_score** | f_score_prose |
 |---|---:|---:|---:|---:|---:|---:|---:|
 | `turndown-raw` | 14 | 95.0% | 100.0% | 78.3% | 92.9% | **0.0714** | 0.0714 |
-| `markitdown` | 14 | 0.0% | 0.0% | 0.0% | 0.0% | **0** | 0 |
+| `markitdown` | 14 | 95.8% | 100.0% | 78.3% | 92.9% | **0.0714** | 0.0714 |
 
 
 **Article pages only (13 pages; mintlify-anthropic excluded)**
@@ -32,7 +32,7 @@ here as the floor the metric is validated against, not as competitors:
 | tool | pages | code recall | heading recall | prose recall | nav leak | **f_score** | f_score_prose |
 |---|---:|---:|---:|---:|---:|---:|---:|
 | `page2ai` | 13 | 100.0% | 100.0% | 76.0% | 2.6% | **0.9865** | 0.9072 |
-| `trafilatura` | 13 | 87.5% | 83.4% | 69.9% | 1.3% | **0.8563** | 0.8147 |
+| `trafilatura` | 13 | 87.5% | 83.4% | 70.3% | 1.3% | **0.8563** | 0.8163 |
 | `defuddle-turndown` | 13 | 75.9% | 79.5% | 71.4% | 1.5% | **0.8264** | 0.8022 |
 | `readability-turndown` | 13 | 71.0% | 66.9% | 73.2% | 5.8% | **0.7111** | 0.7511 |
 
@@ -42,7 +42,7 @@ here as the floor the metric is validated against, not as competitors:
 | tool | pages | code recall | heading recall | prose recall | nav leak | **f_score** | f_score_prose |
 |---|---:|---:|---:|---:|---:|---:|---:|
 | `turndown-raw` | 13 | 95.0% | 100.0% | 78.3% | 92.3% | **0.0769** | 0.0769 |
-| `markitdown` | 13 | 0.0% | 0.0% | 0.0% | 0.0% | **0** | 0 |
+| `markitdown` | 13 | 95.8% | 100.0% | 78.3% | 92.3% | **0.0769** | 0.0769 |
 
 
 Both tables are shown because the second one is more favourable to the tool this benchmark's author
@@ -77,16 +77,16 @@ on every page. Their aggregate rows above are the floor the metric is validated 
 
 | tool | median output bytes | total ms for 14 pages | code fences carrying a language |
 |---|---:|---:|---:|
-| `page2ai` | 11250 | 284 | 75.9% |
-| `trafilatura` | 6830 | 7183 | 0.0% |
-| `defuddle-turndown` | 6660 | 11753 | 67.8% |
-| `readability-turndown` | 4895 | 1779 | 0.0% |
-| `turndown-raw` | 13029 | 802 | 16.2% |
-| `markitdown` | 0 | 896 | n/a |
+| `page2ai` | 11250 | 326 | 75.9% |
+| `trafilatura` | 6614 | 5251 | 0.0% |
+| `defuddle-turndown` | 6660 | 12711 | 67.8% |
+| `readability-turndown` | 4895 | 1880 | 0.0% |
+| `turndown-raw` | 13029 | 837 | 16.2% |
+| `markitdown` | 12492 | 8353 | 0.0% |
 
 ### Is heading recall fakeable by leaking the table of contents?
 
-Audited 2026-10-30T21:15:54.486Z by `protocol-v2/toc_audit.mjs`. Raw: [../results-v2/toc-audit.json](../results-v2/toc-audit.json).
+Audited 2026-10-30T22:02:41.057Z by `protocol-v2/toc_audit.mjs`. Raw: [../results-v2/toc-audit.json](../results-v2/toc-audit.json).
 
 **52 of 170 ground-truth headings (30.6%) also appear outside the article.** On **4 of 14** pages (starlight, fumadocs, biome, python-docs) *every* heading is duplicated outside the content root, so on those pages `heading_recall` cannot tell extraction from leakage for any tool.
 
@@ -95,11 +95,11 @@ Recomputed over the 10 pages where both figures are defined, so that the compari
 | tool | heading recall | strict (article-only headings) | delta |
 |---|---:|---:|---:|
 | `turndown-raw` *(baseline)* | 100.0% | 100.0% | 0.0pp |
+| `markitdown` *(baseline)* | 100.0% | 100.0% | 0.0pp |
 | `page2ai` | 91.7% | 90.0% | -1.7pp |
 | `defuddle-turndown` | 67.7% | 70.2% | +2.5pp |
 | `trafilatura` | 71.5% | 69.8% | -1.7pp |
 | `readability-turndown` | 58.2% | 58.7% | +0.5pp |
-| `markitdown` *(baseline)* | 0.0% | 0.0% | 0.0pp |
 
 No tool moves by more than 3 points and `page2ai` moves by **zero**: the duplication did not inflate this benchmark author's own tool. Both whole-document baselines stay at 100%, which is exactly the predicted behaviour, since they recall every heading by reproducing the entire page.
 

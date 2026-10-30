@@ -6,7 +6,7 @@
 
 💥 Ready for more? Use **advanced features** like versioning, i18n, search and theme customizations.
 
-💅 Check the **[best Docusaurus sites](https://docusaurus.io/showcase?tags=favorite)** for inspiration.
+💅 Check the ** best Docusaurus sites** for inspiration.
 
 🧐 Docusaurus is a **static-site generator**. It builds a **single-page application** with fast client-side navigation, leveraging the full power of **React** to make your site interactive. It provides out-of-the-box **documentation features** but can be used to create **any kind of site** (personal website, product, blog, marketing landing pages, etc).
 
@@ -27,11 +27,11 @@ Start the site:
 cd my-website
 npx docusaurus start
 ```
-Open [`http://localhost:3000`](http://localhost:3000) and follow the tutorial.
+Open [ http://localhost:3000](http://localhost:3000) and follow the tutorial.
 
-Use **[docusaurus.new](https://docusaurus.new)** to test Docusaurus immediately in your browser!
+Use ** docusaurus.new** to test Docusaurus immediately in your browser!
 
-Or read the **[5-minute tutorial](https://tutorial.docusaurus.io)** online.
+Or read the ** 5-minute tutorial** online.
 
 ## Docusaurus: Documentation Made Easy[](https://docusaurus.io#docusaurus-documentation-made-easy)
 
@@ -50,10 +50,10 @@ A [lot of users](https://docusaurus.io/showcase) are already using Docusaurus v2
 - ✅ You want the full power of React and MDX
 - ✅ You do not need support for IE11
 
-**Use [Docusaurus v1](https://v1.docusaurus.io/) if:**
+**Use  Docusaurus v1 if:**
 
 - ❌ You don't want a single-page application (SPA)
-- ❌ You need support for IE11 (...do you? IE [has already reached end-of-life](https://docs.microsoft.com/en-us/lifecycle/products/internet-explorer-11) and is no longer officially supported)
+- ❌ You need support for IE11 (...do you? IE [has already reached end-of-life](https://docs.microsoft.com/en-us/lifecycle/products/internet-explorer-11)and is no longer officially supported)
 
 For existing v1 users that are seeking to upgrade to v2+, you can follow our [migration guides](https://docusaurus.io/docs/migration).
 
@@ -61,43 +61,43 @@ For existing v1 users that are seeking to upgrade to v2+, you can follow our [mi
 
 Docusaurus is built with high attention to the developer and contributor experience.
 
-- ⚛️ **Built with 💚 and React** :
-  - Extend and customize with React
-  - Gain full control of your site's browsing experience by providing your own React components
-- 🔌 **Pluggable** :
-  - Bootstrap your site with a basic template, then use advanced features and plugins
-  - Open source your plugins to share with the community
-- ✂️ **Developer experience** :
-  - Start writing your docs right now
-  - Universal configuration entry point to make it more maintainable by contributors
-  - Hot reloading with lightning-fast incremental build on changes
-  - Route-based code and data splitting
-  - Publish to GitHub Pages, Netlify, Vercel, and other deployment services with ease
+- ⚛️ **Built with 💚 and React**:- Extend and customize with React
+- Gain full control of your site's browsing experience by providing your own React components
+ 
+- 🔌 **Pluggable**:- Bootstrap your site with a basic template, then use advanced features and plugins
+- Open source your plugins to share with the community
+ 
+- ✂️ **Developer experience**:- Start writing your docs right now
+- Universal configuration entry point to make it more maintainable by contributors
+- Hot reloading with lightning-fast incremental build on changes
+- Route-based code and data splitting
+- Publish to GitHub Pages, Netlify, Vercel, and other deployment services with ease
+ 
 
 Our shared goal—to help your users quickly find what they need and understand your products better. We share our best practices to help you build your docs site right and well.
 
-- 🎯 **SEO friendly** :
-  - HTML files are statically generated for every possible path.
-  - Page-specific SEO to help your users land on your official docs directly relating their problems at hand.
-- 📝 **Powered by MDX** :
-  - Write interactive components via JSX and React embedded in Markdown.
-  - Share your code in live editors to get your users to love your products on the spot.
-- 🔍 **Search** : Your full site is searchable.
-- 💾 **Document Versioning** : Helps you keep documentation in sync with project releases.
-- 🌍 **Internationalization (i18n)** : Translate your site in multiple locales.
+- 🎯 **SEO friendly**:- HTML files are statically generated for every possible path.
+- Page-specific SEO to help your users land on your official docs directly relating their problems at hand.
+ 
+- 📝 **Powered by MDX**:- Write interactive components via JSX and React embedded in Markdown.
+- Share your code in live editors to get your users to love your products on the spot.
+ 
+- 🔍 **Search**: Your full site is searchable.
+- 💾 **Document Versioning**: Helps you keep documentation in sync with project releases.
+- 🌍 **Internationalization (i18n)**: Translate your site in multiple locales.
 
 Docusaurus v2+ is born to be compassionately accessible to all your users, and lightning-fast.
 
-- ⚡️ **Lightning-fast** . Docusaurus v2+ follows the[PRPL Pattern](https://developers.google.com/web/fundamentals/performance/prpl-pattern/) that makes sure your content loads blazing fast.
-- 🦖 **Accessible** . Attention to accessibility, making your site equally accessible to all users.
+- ⚡️ **Lightning-fast**. Docusaurus v2+ follows the[PRPL Pattern](https://developers.google.com/web/fundamentals/performance/prpl-pattern/)that makes sure your content loads blazing fast.
+- 🦖 **Accessible**. Attention to accessibility, making your site equally accessible to all users.
 
 ## Design principles[](https://docusaurus.io#design-principles)
 
-- **Little to learn** . Docusaurus should be easy to learn and use as the API is quite small. Most things will still be achievable by users, even if it takes them more code and more time to write. Not having abstractions is better than having the wrong abstractions, and we don't want users to have to hack around the wrong abstractions. Mandatory talk—[Minimal API Surface Area](https://www.youtube.com/watch?v=4anAwXYqLG8) .
-- **Intuitive** . Users will not feel overwhelmed when looking at the project directory of a Docusaurus project or adding new features. It should look intuitive and easy to build on top of, using approaches they are familiar with.
-- **Layered architecture** . The separations of concerns between each layer of our stack (content/theming/styling) should be clear—well-abstracted and modular.
-- **Sensible defaults** . Common and popular performance optimizations and configurations will be done for users but they are given the option to override them.
-- **No vendor lock-in** . Users are not required to use the default plugins or CSS, although they are highly encouraged to. Certain core infrastructures like React Loadable and React Router cannot be swapped because we do default performance optimization on them, but not higher-level ones. Choice of Markdown engines, CSS frameworks, CSS methodology, and other architectures will be entirely up to users.
+- **Little to learn**. Docusaurus should be easy to learn and use as the API is quite small. Most things will still be achievable by users, even if it takes them more code and more time to write. Not having abstractions is better than having the wrong abstractions, and we don't want users to have to hack around the wrong abstractions. Mandatory talk—- [Minimal API Surface Area](https://www.youtube.com/watch?v=4anAwXYqLG8).
+- **Intuitive**. Users will not feel overwhelmed when looking at the project directory of a Docusaurus project or adding new features. It should look intuitive and easy to build on top of, using approaches they are familiar with.
+- **Layered architecture**. The separations of concerns between each layer of our stack (content/theming/styling) should be clear—well-abstracted and modular.
+- **Sensible defaults**. Common and popular performance optimizations and configurations will be done for users but they are given the option to override them.
+- **No vendor lock-in**. Users are not required to use the default plugins or CSS, although they are highly encouraged to. Certain core infrastructures like React Loadable and React Router cannot be swapped because we do default performance optimization on them, but not higher-level ones. Choice of Markdown engines, CSS frameworks, CSS methodology, and other architectures will be entirely up to users.
 
 We believe that, as developers, knowing how a library works helps us become better at using it. Hence we're dedicating effort to explaining the architecture and various components of Docusaurus with the hope that users reading it will gain a deeper understanding of the tool and be even more proficient in using it.
 

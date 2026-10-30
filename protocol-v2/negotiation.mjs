@@ -6,12 +6,23 @@
 // this file exists to keep separate.
 
 import { readFile, writeFile, mkdir } from "node:fs/promises";
+import { existsSync } from "node:fs";
 import { join } from "node:path";
 import { execFileSync } from "node:child_process";
 import { fetchAndConvert } from "@page2ai/core";
 import { ROOT, RESULTS, HERE, sha256 } from "./lib.mjs";
 
-const PY = process.env.BENCH_PYTHON || "python";
+// Same python resolution as extract.mjs: BENCH_PYTHON overrides; otherwise prefer the
+// repo-root `.venv/` (created by `npm run v2:py-setup`); otherwise fall back to PATH.
+function resolvePy() {
+  if (process.env.BENCH_PYTHON) return process.env.BENCH_PYTHON;
+  const venvPy = process.platform === "win32"
+    ? join(ROOT, ".venv", "Scripts", "python.exe")
+    : join(ROOT, ".venv", "bin", "python");
+  if (existsSync(venvPy)) return venvPy;
+  return "python";
+}
+const PY = resolvePy();
 const cfg = JSON.parse(await readFile(join(ROOT, "protocol-v2", "sites.json"), "utf8"));
 await mkdir(RESULTS, { recursive: true });
 

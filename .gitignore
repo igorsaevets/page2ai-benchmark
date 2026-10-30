@@ -2,6 +2,7 @@ node_modules
 *.log
 .env
 .env.local
+.venv/
 
 dev-corpus/results/
 corpus-selection/capture-out/
