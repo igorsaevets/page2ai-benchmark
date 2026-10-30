@@ -1,0 +1,13 @@
+diff --git a/node_modules/@asamuzakjp/dom-selector/src/index.js b/node_modules/@asamuzakjp/dom-selector/src/index.js
+index 91473e6..f28a1bc 100644
+--- a/node_modules/@asamuzakjp/dom-selector/src/index.js
++++ b/node_modules/@asamuzakjp/dom-selector/src/index.js
+@@ -32,7 +32,7 @@ import {
+   TARGET_SELF
+ } from './js/constant.js';
+ const CACHE_SIZE = 4096;
+-const MAX_LENGTH = 2048;
++const MAX_LENGTH = 65536;
+ const DEFAULT_SUBJECT = Object.freeze({
+   id: null,
+   className: null,

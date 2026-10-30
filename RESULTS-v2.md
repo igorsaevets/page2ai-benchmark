@@ -2,7 +2,7 @@
 
 # Results, protocol v0.2
 
-Scored 2026-10-30T20:44:53.568Z. Protocol and metric definitions: [PROTOCOL.md](PROTOCOL.md), including every
+Scored 2026-10-30T21:15:53.104Z. Protocol and metric definitions: [PROTOCOL.md](PROTOCOL.md), including every
 amendment and when it was made. Raw per-page rows: [../results-v2/scores.json](../results-v2/scores.json).
 
 ## Conversion track
@@ -15,8 +15,8 @@ Every tool received the same cached HTML bytes. No tool fetched anything.
 |---|---:|---:|---:|---:|---:|---:|---:|
 | `page2ai` | 14 | 100.0% | 94.0% | 76.0% | 6.8% | **0.9327** | 0.8591 |
 | `trafilatura` | 14 | 87.5% | 78.6% | 69.9% | 4.5% | **0.8133** | 0.7747 |
+| `defuddle-turndown` | 14 | 75.9% | 75.0% | 71.4% | 5.7% | **0.7841** | 0.7615 |
 | `readability-turndown` | 14 | 71.0% | 62.1% | 73.2% | 5.4% | **0.6603** | 0.6975 |
-| `defuddle-turndown` | 14 | 95.0% | 100.0% | 75.7% | 92.9% | **0.0714** | 0.0714 |
 
 Whole-document converters, shown separately because they perform no content extraction and are
 here as the floor the metric is validated against, not as competitors:
@@ -33,8 +33,8 @@ here as the floor the metric is validated against, not as competitors:
 |---|---:|---:|---:|---:|---:|---:|---:|
 | `page2ai` | 13 | 100.0% | 100.0% | 76.0% | 2.6% | **0.9865** | 0.9072 |
 | `trafilatura` | 13 | 87.5% | 83.4% | 69.9% | 1.3% | **0.8563** | 0.8147 |
+| `defuddle-turndown` | 13 | 75.9% | 79.5% | 71.4% | 1.5% | **0.8264** | 0.8022 |
 | `readability-turndown` | 13 | 71.0% | 66.9% | 73.2% | 5.8% | **0.7111** | 0.7511 |
-| `defuddle-turndown` | 13 | 95.0% | 100.0% | 75.7% | 92.3% | **0.0769** | 0.0769 |
 
 Whole-document converters, shown separately because they perform no content extraction and are
 here as the floor the metric is validated against, not as competitors:
@@ -54,20 +54,20 @@ is about. The exclusion criterion is a property of the page, measured before sco
 
 | page | framework | `page2ai` | `trafilatura` | `defuddle` | `readability` | winner |
 |---|---|---:|---:|---:|---:|---|
-| mintlify-anthropic * | Mintlify | 0.2331 | 0.2544 | 0 | 0 | trafilatura |
-| docusaurus | Docusaurus | 1 | 1 | 0 | 0.7333 | page2ai |
-| starlight | Starlight (Astro) | 0.9231 | 0.9231 | 0 | 0.5941 | page2ai |
-| nextra | Nextra | 1 | 1 | 0 | 0.9756 | page2ai |
-| fumadocs | Fumadocs | 1 | 1 | 0 | 0.95 | page2ai |
-| vitepress | VitePress | 1 | 1 | 0 | 0.9697 | page2ai |
-| mdn | Yari (MDN) | 0.9937 | 0.8571 | 0 | 0.8915 | page2ai |
-| tailwind | Next.js (Tailwind docs) | 1 | 0.48 | 1 | 0.566 | page2ai |
-| svelte | SvelteKit (Svelte docs) | 1 | 0.375 | 0 | 0.1429 | page2ai |
-| biome | Astro (Biome docs) | 0.9762 | 0.497 | 0 | 0.3604 | page2ai |
-| python-docs | Sphinx | 1 | 1 | 0 | 0.7595 | page2ai |
-| rust-book | mdBook | 1 | 1 | 0 | 0.6667 | page2ai |
-| hono | VitePress (Hono docs) | 0.9643 | 1 | 0 | 1 | readability |
-| gitbook-sentry | Docusaurus (Sentry docs) | 0.9677 | 1 | 0 | 0.6341 | trafilatura |
+| mintlify-anthropic * | Mintlify | 0.2331 | 0.2544 | 0.2331 | 0 | trafilatura |
+| docusaurus | Docusaurus | 1 | 1 | 0.973 | 0.7333 | page2ai |
+| starlight | Starlight (Astro) | 0.9231 | 0.9231 | 0.7869 | 0.5941 | page2ai |
+| nextra | Nextra | 1 | 1 | 0.9091 | 0.9756 | page2ai |
+| fumadocs | Fumadocs | 1 | 1 | 1 | 0.95 | page2ai |
+| vitepress | VitePress | 1 | 1 | 0.9697 | 0.9697 | page2ai |
+| mdn | Yari (MDN) | 0.9937 | 0.8571 | 0.8571 | 0.8915 | page2ai |
+| tailwind | Next.js (Tailwind docs) | 1 | 0.48 | 0.566 | 0.566 | page2ai |
+| svelte | SvelteKit (Svelte docs) | 1 | 0.375 | 0.2667 | 0.1429 | page2ai |
+| biome | Astro (Biome docs) | 0.9762 | 0.497 | 0.494 | 0.3604 | page2ai |
+| python-docs | Sphinx | 1 | 1 | 1 | 0.7595 | page2ai |
+| rust-book | mdBook | 1 | 1 | 1 | 0.6667 | page2ai |
+| hono | VitePress (Hono docs) | 0.9643 | 1 | 0.9778 | 1 | readability |
+| gitbook-sentry | Docusaurus (Sentry docs) | 0.9677 | 1 | 0.9434 | 0.6341 | trafilatura |
 
 Pages marked `*` carry no article in their server HTML. `turndown-raw` and `markitdown` are
 omitted from this table; both reproduce the whole document, so they win recall and lose cleanliness
@@ -77,16 +77,16 @@ on every page. Their aggregate rows above are the floor the metric is validated 
 
 | tool | median output bytes | total ms for 14 pages | code fences carrying a language |
 |---|---:|---:|---:|
-| `page2ai` | 11250 | 316 | 75.9% |
-| `trafilatura` | 6830 | 7476 | 0.0% |
-| `readability-turndown` | 4895 | 2031 | 0.0% |
-| `defuddle-turndown` | 15481 | 18708 | 16.2% |
-| `turndown-raw` | 13029 | 871 | 16.2% |
-| `markitdown` | 0 | 995 | n/a |
+| `page2ai` | 11250 | 284 | 75.9% |
+| `trafilatura` | 6830 | 7183 | 0.0% |
+| `defuddle-turndown` | 6660 | 11753 | 67.8% |
+| `readability-turndown` | 4895 | 1779 | 0.0% |
+| `turndown-raw` | 13029 | 802 | 16.2% |
+| `markitdown` | 0 | 896 | n/a |
 
 ### Is heading recall fakeable by leaking the table of contents?
 
-Audited 2026-10-30T20:44:55.098Z by `protocol-v2/toc_audit.mjs`. Raw: [../results-v2/toc-audit.json](../results-v2/toc-audit.json).
+Audited 2026-10-30T21:15:54.486Z by `protocol-v2/toc_audit.mjs`. Raw: [../results-v2/toc-audit.json](../results-v2/toc-audit.json).
 
 **52 of 170 ground-truth headings (30.6%) also appear outside the article.** On **4 of 14** pages (starlight, fumadocs, biome, python-docs) *every* heading is duplicated outside the content root, so on those pages `heading_recall` cannot tell extraction from leakage for any tool.
 
@@ -94,9 +94,9 @@ Recomputed over the 10 pages where both figures are defined, so that the compari
 
 | tool | heading recall | strict (article-only headings) | delta |
 |---|---:|---:|---:|
-| `defuddle-turndown` | 100.0% | 100.0% | 0.0pp |
 | `turndown-raw` *(baseline)* | 100.0% | 100.0% | 0.0pp |
 | `page2ai` | 91.7% | 90.0% | -1.7pp |
+| `defuddle-turndown` | 67.7% | 70.2% | +2.5pp |
 | `trafilatura` | 71.5% | 69.8% | -1.7pp |
 | `readability-turndown` | 58.2% | 58.7% | +0.5pp |
 | `markitdown` *(baseline)* | 0.0% | 0.0% | 0.0pp |

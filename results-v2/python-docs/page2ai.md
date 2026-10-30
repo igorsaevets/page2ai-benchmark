@@ -1,7 +1,7 @@
 ---
 title: "Coroutines and tasks"
 source: "https://docs.python.org/3/library/asyncio-task.html"
-captured_at: "2026-10-30T20:44:41.889Z"
+captured_at: "2026-10-30T21:15:43.390Z"
 language: "en"
 description: "This section outlines high-level asyncio APIs to work with coroutines and Tasks. Coroutines, Awaitables, Creating tasks, Task cancellation, Task groups, Sleeping, Running tasks concurrently, Eager ..."
 canonical: "https://docs.python.org/3/library/asyncio-task.html"
