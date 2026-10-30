@@ -32,13 +32,14 @@
     "audit:webmainbench": "node webmainbench-groundtruth-audit.mjs",
     "v2:fetch": "node protocol-v2/fetch.mjs",
     "v2:groundtruth": "node protocol-v2/groundtruth.mjs",
+    "v2:py-setup": "node protocol-v2/py-setup.mjs",
     "v2:extract": "node protocol-v2/extract.mjs",
     "v2:score": "node protocol-v2/score.mjs",
     "v2:report": "node protocol-v2/report.mjs",
     "v2:smoke": "node protocol-v2/smoke.mjs",
     "v2:smoke:strict": "cross-env BENCH_SMOKE_STRICT=1 node protocol-v2/smoke.mjs",
     "v2:negotiation": "node protocol-v2/negotiation.mjs",
-    "v2": "node protocol-v2/groundtruth.mjs && node protocol-v2/extract.mjs && cross-env BENCH_SMOKE_SOFT=1 node protocol-v2/smoke.mjs && node protocol-v2/score.mjs && node protocol-v2/toc_audit.mjs && node protocol-v2/report.mjs",
+    "v2": "node protocol-v2/py-setup.mjs && node protocol-v2/groundtruth.mjs && node protocol-v2/extract.mjs && cross-env BENCH_SMOKE_SOFT=1 node protocol-v2/smoke.mjs && node protocol-v2/score.mjs && node protocol-v2/toc_audit.mjs && node protocol-v2/report.mjs",
     "v2:tocaudit": "node protocol-v2/toc_audit.mjs"
   },
   "dependencies": {

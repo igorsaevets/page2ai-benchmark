@@ -41,8 +41,7 @@ The `budget_tokens` parameter sets a target for how many tokens Claude can use f
 
 `budget_tokens` must satisfy these constraints:
 
-`max_tokens`.`budget_tokens` can exceed `max_tokens: 0` (
-The budget is a target rather than a strict cap. Actual token usage varies with the task, and Claude may stop reasoning well before the budget is exhausted; `max_tokens` remains the hard ceiling on total output.
+`max_tokens`.`max_tokens` limit for the turn, so the budget must leave room for the final response. The one exception is `budget_tokens` can exceed `max_tokens` because the budget spans all thinking blocks within one assistant turn.`budget_tokens` must be less than `max_tokens`, extended thinking cannot be combined with `max_tokens: 0` (The budget is a target rather than a strict cap. Actual token usage varies with the task, and Claude may stop reasoning well before the budget is exhausted; `max_tokens` remains the hard ceiling on total output.
 
 On Claude Opus 4.5, the only extended-thinking-only model that supports [effort](https://platform.claude.com/docs/en/build-with-claude/effort), effort shapes the overall response while `budget_tokens` sets thinking depth; set both.
 
@@ -58,12 +57,11 @@ On Claude Opus 4.5, Claude Sonnet 4.5, and earlier Claude 4 models (Claude Opus 
 
 The 4.6 generation splits in manual mode:
 
-`type: "enabled"` is still functional but deprecated. Prefer `thinking: {type: "adaptive"}` if you need reasoning between tool calls on this model.
-Claude Haiku 4.5 does not support interleaved thinking. On the Claude API, the beta header is accepted but ignored.
+`type: "enabled"` is still functional but deprecated. Prefer `thinking: {type: "adaptive"}` if you need reasoning between tool calls on this model.Claude Haiku 4.5 does not support interleaved thinking. On the Claude API, the beta header is accepted but ignored.
 
 Two more considerations for interleaved thinking in manual mode:
 
-How platforms treat the beta header differs. The Claude API and [Claude Platform on AWS](https://platform.claude.com/docs/en/build-with-claude/claude-platform-on-aws) accept `interleaved-thinking-2025-05-14` on any model and ignore it where unsupported. Acceptance is not the same as effect: on models that reject `type: "enabled"` (4.7 and later) or lack manual-mode interleaving (Claude Opus 4.6), the header has no manual-mode effect; adaptive thinking interleaves automatically there.
+`budget_tokens` can exceed `max_tokens` here; the How platforms treat the beta header differs. The Claude API and [Claude Platform on AWS](https://platform.claude.com/docs/en/build-with-claude/claude-platform-on-aws) accept `interleaved-thinking-2025-05-14` on any model and ignore it where unsupported. Acceptance is not the same as effect: on models that reject `type: "enabled"` (4.7 and later) or lack manual-mode interleaving (Claude Opus 4.6), the header has no manual-mode effect; adaptive thinking interleaves automatically there.
 
 Partner-operated platforms ([Amazon Bedrock](https://platform.claude.com/docs/en/build-with-claude/claude-in-amazon-bedrock) and [Google Cloud](https://platform.claude.com/docs/en/build-with-claude/claude-on-vertex-ai)) likewise accept the header on any model without returning an error, and ignore it on models that don't support interleaved thinking.
 
@@ -91,7 +89,7 @@ If your model supports only extended thinking (Claude Sonnet 4.5, Claude Opus 4.
 
 You need to migrate off `type: "enabled"` if:
 
-The mapping is small: remove `budget_tokens`, set `thinking: {type: "adaptive"}`, and control reasoning depth with `output_config: {effort: ...}` instead of a token budget.
+`budget_tokens` is deprecated.`type: "enabled"` returns a 400 error.The mapping is small: remove `budget_tokens`, set `thinking: {type: "adaptive"}`, and control reasoning depth with `output_config: {effort: ...}` instead of a token budget.
 
 ```
 {

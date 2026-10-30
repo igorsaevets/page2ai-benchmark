@@ -1,7 +1,7 @@
 ---
 title: "Extended thinking"
 source: "https://platform.claude.com/docs/en/build-with-claude/extended-thinking"
-captured_at: "2026-10-30T21:15:29.924Z"
+captured_at: "2026-10-30T22:02:09.677Z"
 language: "en-US"
 description: "Configure manual extended thinking with a fixed budget_tokens budget on Claude models that support it, and migrate to adaptive thinking."
 canonical: "https://platform.claude.com/docs/en/build-with-claude/extended-thinking"

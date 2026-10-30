@@ -359,12 +359,17 @@ this removes the measured artifact, not the exact-substring design.
 ```bash
 git clone https://github.com/igorsaevets/page2ai-benchmark
 cd page2ai-benchmark
-npm install
-python -m pip install -r protocol-v2/requirements.txt
+npm install                     # includes postinstall patch-package
+npm run v2:py-setup             # creates .venv/ at the repo root and installs
+                                # protocol-v2/requirements.txt (trafilatura, markitdown).
+                                # Set BENCH_PYTHON=/path/to/python to use an existing
+                                # interpreter instead (CI, other environments).
 
 # offline, against the committed corpus. Equivalent to `npm run v2`:
+node protocol-v2/py-setup.mjs
 node protocol-v2/groundtruth.mjs
 node protocol-v2/extract.mjs
+node protocol-v2/smoke.mjs      # peer-median smoke check, soft-fail by default
 node protocol-v2/score.mjs
 node protocol-v2/toc_audit.mjs
 node protocol-v2/report.mjs

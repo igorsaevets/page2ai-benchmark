@@ -1,7 +1,7 @@
 ---
 title: "Storing Lists of Values with Vectors"
 source: "https://doc.rust-lang.org/book/ch08-01-vectors.html"
-captured_at: "2026-10-30T21:15:48.023Z"
+captured_at: "2026-10-30T22:02:33.329Z"
 language: "en"
 canonical: "https://doc.rust-lang.org/book/ch08-01-vectors.html"
 extractor: "page2ai-core"

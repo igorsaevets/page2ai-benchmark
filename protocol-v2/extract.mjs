@@ -2,15 +2,27 @@
 // No tool fetches anything. Fetch strategy therefore cannot influence this track.
 
 import { readFile, writeFile, mkdir } from "node:fs/promises";
+import { existsSync } from "node:fs";
 import { join } from "node:path";
 import { execFileSync } from "node:child_process";
 import { JSDOM } from "jsdom";
 import { Readability } from "@mozilla/readability";
 import TurndownService from "turndown";
 import { htmlToMarkdown } from "@page2ai/core";
-import { CORPUS, RESULTS, HERE } from "./lib.mjs";
+import { CORPUS, RESULTS, HERE, ROOT } from "./lib.mjs";
 
-const PY = process.env.BENCH_PYTHON || "python";
+// Python resolver: BENCH_PYTHON (explicit override, e.g. CI) wins; otherwise the dedicated
+// `.venv/` at the repo root (created by `npm run v2:py-setup`); otherwise fall back to
+// `python` on PATH so pre-existing installations still work.
+function resolvePy() {
+  if (process.env.BENCH_PYTHON) return process.env.BENCH_PYTHON;
+  const venvPy = process.platform === "win32"
+    ? join(ROOT, ".venv", "Scripts", "python.exe")
+    : join(ROOT, ".venv", "bin", "python");
+  if (existsSync(venvPy)) return venvPy;
+  return "python";
+}
+const PY = resolvePy();
 
 function turndown() {
   return new TurndownService({ codeBlockStyle: "fenced", headingStyle: "atx", fence: "```" });
