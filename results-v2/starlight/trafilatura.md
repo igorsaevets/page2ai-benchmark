@@ -14,7 +14,8 @@ See the [manual setup instructions](https://starlight.astro.build/manual-setup/)
 
 Create a new Astro + Starlight project by running the following command in your terminal:
 
-`npm create astro@latest -- --template starlight``pnpm create astro --template starlight``yarn create astro --template starlight`This will create a new [project directory](https://starlight.astro.build/guides/project-structure/) with all the necessary files and configurations for your site.
+`npm create astro@latest -- --template starlight``pnpm create astro --template starlight``yarn create astro --template starlight`
+This will create a new [project directory](https://starlight.astro.build/guides/project-structure/) with all the necessary files and configurations for your site.
 
 ### Start the development server
 
@@ -24,7 +25,8 @@ When working locally, [Astro’s development server](https://docs.astro.build/en
 
 Inside your project directory, run the following command to start the development server:
 
-`npm run dev``pnpm dev``yarn dev`This will log a message to your terminal with the URL of your local preview. Open this URL to start browsing your site.
+`npm run dev``pnpm dev``yarn dev`
+This will log a message to your terminal with the URL of your local preview. Open this URL to start browsing your site.
 
 ### Add content
 
@@ -40,11 +42,11 @@ Read more about file-based routing and support for MDX and Markdoc files in the 
 
 [Section titled “Next steps”](https://starlight.astro.build#next-steps)
 
-- **Configure:**Learn about common options in- [“Customizing Starlight”](https://starlight.astro.build/guides/customization/).
-- **Navigate:**Set up your sidebar with the- [“Sidebar Navigation”](https://starlight.astro.build/guides/sidebar/)guide.
-- **Components:**Discover built-in cards, tabs, and more in the- [“Components”](https://starlight.astro.build/components/using-components/)guide.
-- **Extend:**Explore community add-ons in our- [“Plugins”](https://starlight.astro.build/resources/plugins/)and- [“Themes”](https://starlight.astro.build/resources/themes/)catalogs.
-- **Deploy:**Publish your work with the- [“Deploy your site”](https://docs.astro.build/en/guides/deploy/)guide in the Astro docs.
+- **Configure:** Learn about common options in[“Customizing Starlight”](https://starlight.astro.build/guides/customization/) .
+- **Navigate:** Set up your sidebar with the[“Sidebar Navigation”](https://starlight.astro.build/guides/sidebar/) guide.
+- **Components:** Discover built-in cards, tabs, and more in the[“Components”](https://starlight.astro.build/components/using-components/) guide.
+- **Extend:** Explore community add-ons in our[“Plugins”](https://starlight.astro.build/resources/plugins/) and[“Themes”](https://starlight.astro.build/resources/themes/) catalogs.
+- **Deploy:** Publish your work with the[“Deploy your site”](https://docs.astro.build/en/guides/deploy/) guide in the Astro docs.
 
 ## Updating Starlight
 
@@ -52,7 +54,8 @@ Read more about file-based routing and support for MDX and Markdoc files in the 
 
 Starlight is an Astro integration. You can update it and other Astro packages by running the following command in your terminal:
 
-`npx @astrojs/upgrade``pnpm dlx @astrojs/upgrade``yarn dlx @astrojs/upgrade`See the [Starlight changelog](https://github.com/withastro/starlight/blob/main/packages/starlight/CHANGELOG.md) for a full list of the changes made in each release.
+`npx @astrojs/upgrade``pnpm dlx @astrojs/upgrade``yarn dlx @astrojs/upgrade`
+See the [Starlight changelog](https://github.com/withastro/starlight/blob/main/packages/starlight/CHANGELOG.md) for a full list of the changes made in each release.
 
 ## Troubleshooting Starlight
 

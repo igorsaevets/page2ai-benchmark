@@ -1,12 +1,12 @@
 ---
 title: "Getting Started"
 source: "https://starlight.astro.build/getting-started/"
-captured_at: "2026-10-18T09:59:25.106Z"
+captured_at: "2026-10-30T20:44:26.409Z"
 language: "en"
 description: "Learn how to start building your next documentation site with Starlight by Astro."
 canonical: "https://starlight.astro.build/getting-started/"
 extractor: "page2ai-core"
-extractor_version: "0.2.2"
+extractor_version: "0.3.2"
 ---
 
 # Getting Started
