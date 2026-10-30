@@ -3,161 +3,161 @@
     "slug": "mintlify-anthropic",
     "tool": "page2ai",
     "bytes": 16612,
-    "ms": 58,
+    "ms": 48,
     "error": null
   },
   {
     "slug": "mintlify-anthropic",
     "tool": "readability-turndown",
     "bytes": 218,
-    "ms": 359,
+    "ms": 366,
     "error": null
   },
   {
     "slug": "mintlify-anthropic",
     "tool": "defuddle-turndown",
-    "bytes": 28060,
-    "ms": 1031,
+    "bytes": 15695,
+    "ms": 742,
     "error": null
   },
   {
     "slug": "mintlify-anthropic",
     "tool": "turndown-raw",
     "bytes": 24738,
-    "ms": 77,
+    "ms": 78,
     "error": null
   },
   {
     "slug": "mintlify-anthropic",
     "tool": "trafilatura",
     "bytes": 11791,
-    "ms": 667,
+    "ms": 555,
     "error": null
   },
   {
     "slug": "mintlify-anthropic",
     "tool": "markitdown",
     "bytes": 0,
-    "ms": 63,
+    "ms": 60,
     "error": "  File \"D:\\WEB to MD\\page2ai-benchmark\\protocol-v2\\py_tools.py\", line 29, in run_markitdown\r |     from markitdown import MarkItDown, StreamInfo\r | ModuleNotFoundError: No module named 'markitdown'"
   },
   {
     "slug": "docusaurus",
     "tool": "page2ai",
     "bytes": 13638,
-    "ms": 12,
+    "ms": 11,
     "error": null
   },
   {
     "slug": "docusaurus",
     "tool": "readability-turndown",
     "bytes": 12314,
-    "ms": 84,
+    "ms": 43,
     "error": null
   },
   {
     "slug": "docusaurus",
     "tool": "defuddle-turndown",
-    "bytes": 18149,
-    "ms": 679,
+    "bytes": 12411,
+    "ms": 286,
     "error": null
   },
   {
     "slug": "docusaurus",
     "tool": "turndown-raw",
     "bytes": 16903,
-    "ms": 40,
+    "ms": 22,
     "error": null
   },
   {
     "slug": "docusaurus",
     "tool": "trafilatura",
     "bytes": 12649,
-    "ms": 467,
+    "ms": 526,
     "error": null
   },
   {
     "slug": "docusaurus",
     "tool": "markitdown",
     "bytes": 0,
-    "ms": 65,
+    "ms": 86,
     "error": "  File \"D:\\WEB to MD\\page2ai-benchmark\\protocol-v2\\py_tools.py\", line 29, in run_markitdown\r |     from markitdown import MarkItDown, StreamInfo\r | ModuleNotFoundError: No module named 'markitdown'"
   },
   {
     "slug": "starlight",
     "tool": "page2ai",
     "bytes": 6197,
-    "ms": 16,
+    "ms": 14,
     "error": null
   },
   {
     "slug": "starlight",
     "tool": "readability-turndown",
     "bytes": 4076,
-    "ms": 76,
+    "ms": 98,
     "error": null
   },
   {
     "slug": "starlight",
     "tool": "defuddle-turndown",
-    "bytes": 9533,
-    "ms": 728,
+    "bytes": 3594,
+    "ms": 436,
     "error": null
   },
   {
     "slug": "starlight",
     "tool": "turndown-raw",
     "bytes": 8110,
-    "ms": 45,
+    "ms": 41,
     "error": null
   },
   {
     "slug": "starlight",
     "tool": "trafilatura",
     "bytes": 4368,
-    "ms": 483,
+    "ms": 503,
     "error": null
   },
   {
     "slug": "starlight",
     "tool": "markitdown",
     "bytes": 0,
-    "ms": 60,
+    "ms": 65,
     "error": "  File \"D:\\WEB to MD\\page2ai-benchmark\\protocol-v2\\py_tools.py\", line 29, in run_markitdown\r |     from markitdown import MarkItDown, StreamInfo\r | ModuleNotFoundError: No module named 'markitdown'"
   },
   {
     "slug": "nextra",
     "tool": "page2ai",
     "bytes": 2325,
-    "ms": 10,
+    "ms": 12,
     "error": null
   },
   {
     "slug": "nextra",
     "tool": "readability-turndown",
     "bytes": 1067,
-    "ms": 84,
+    "ms": 64,
     "error": null
   },
   {
     "slug": "nextra",
     "tool": "defuddle-turndown",
-    "bytes": 15481,
-    "ms": 585,
+    "bytes": 1254,
+    "ms": 381,
     "error": null
   },
   {
     "slug": "nextra",
     "tool": "turndown-raw",
     "bytes": 12528,
-    "ms": 29,
+    "ms": 67,
     "error": null
   },
   {
     "slug": "nextra",
     "tool": "trafilatura",
     "bytes": 1685,
-    "ms": 477,
+    "ms": 479,
     "error": null
   },
   {
@@ -171,280 +171,280 @@
     "slug": "fumadocs",
     "tool": "page2ai",
     "bytes": 5273,
-    "ms": 21,
+    "ms": 18,
     "error": null
   },
   {
     "slug": "fumadocs",
     "tool": "readability-turndown",
     "bytes": 3784,
-    "ms": 94,
+    "ms": 119,
     "error": null
   },
   {
     "slug": "fumadocs",
     "tool": "defuddle-turndown",
-    "bytes": 6875,
-    "ms": 915,
+    "bytes": 3125,
+    "ms": 606,
     "error": null
   },
   {
     "slug": "fumadocs",
     "tool": "turndown-raw",
     "bytes": 6035,
-    "ms": 76,
+    "ms": 72,
     "error": null
   },
   {
     "slug": "fumadocs",
     "tool": "trafilatura",
     "bytes": 4161,
-    "ms": 485,
+    "ms": 483,
     "error": null
   },
   {
     "slug": "fumadocs",
     "tool": "markitdown",
     "bytes": 0,
-    "ms": 82,
+    "ms": 62,
     "error": "  File \"D:\\WEB to MD\\page2ai-benchmark\\protocol-v2\\py_tools.py\", line 29, in run_markitdown\r |     from markitdown import MarkItDown, StreamInfo\r | ModuleNotFoundError: No module named 'markitdown'"
   },
   {
     "slug": "vitepress",
     "tool": "page2ai",
     "bytes": 7844,
-    "ms": 17,
+    "ms": 14,
     "error": null
   },
   {
     "slug": "vitepress",
     "tool": "readability-turndown",
     "bytes": 6999,
-    "ms": 123,
+    "ms": 103,
     "error": null
   },
   {
     "slug": "vitepress",
     "tool": "defuddle-turndown",
-    "bytes": 10827,
-    "ms": 814,
+    "bytes": 6660,
+    "ms": 668,
     "error": null
   },
   {
     "slug": "vitepress",
     "tool": "turndown-raw",
     "bytes": 9825,
-    "ms": 44,
+    "ms": 30,
     "error": null
   },
   {
     "slug": "vitepress",
     "tool": "trafilatura",
     "bytes": 6830,
-    "ms": 500,
+    "ms": 506,
     "error": null
   },
   {
     "slug": "vitepress",
     "tool": "markitdown",
     "bytes": 0,
-    "ms": 68,
+    "ms": 58,
     "error": "  File \"D:\\WEB to MD\\page2ai-benchmark\\protocol-v2\\py_tools.py\", line 29, in run_markitdown\r |     from markitdown import MarkItDown, StreamInfo\r | ModuleNotFoundError: No module named 'markitdown'"
   },
   {
     "slug": "mdn",
     "tool": "page2ai",
     "bytes": 11250,
-    "ms": 20,
+    "ms": 23,
     "error": null
   },
   {
     "slug": "mdn",
     "tool": "readability-turndown",
     "bytes": 8563,
-    "ms": 138,
+    "ms": 118,
     "error": null
   },
   {
     "slug": "mdn",
     "tool": "defuddle-turndown",
-    "bytes": 37560,
-    "ms": 1458,
+    "bytes": 7949,
+    "ms": 758,
     "error": null
   },
   {
     "slug": "mdn",
     "tool": "turndown-raw",
     "bytes": 28325,
-    "ms": 55,
+    "ms": 48,
     "error": null
   },
   {
     "slug": "mdn",
     "tool": "trafilatura",
     "bytes": 8155,
-    "ms": 485,
+    "ms": 475,
     "error": null
   },
   {
     "slug": "mdn",
     "tool": "markitdown",
     "bytes": 0,
-    "ms": 73,
+    "ms": 60,
     "error": "  File \"D:\\WEB to MD\\page2ai-benchmark\\protocol-v2\\py_tools.py\", line 29, in run_markitdown\r |     from markitdown import MarkItDown, StreamInfo\r | ModuleNotFoundError: No module named 'markitdown'"
   },
   {
     "slug": "tailwind",
     "tool": "page2ai",
     "bytes": 18722,
-    "ms": 24,
+    "ms": 18,
     "error": null
   },
   {
     "slug": "tailwind",
     "tool": "readability-turndown",
     "bytes": 2340,
-    "ms": 123,
+    "ms": 121,
     "error": null
   },
   {
     "slug": "tailwind",
     "tool": "defuddle-turndown",
-    "bytes": 18373,
-    "ms": 1283,
+    "bytes": 2311,
+    "ms": 575,
     "error": null
   },
   {
     "slug": "tailwind",
     "tool": "turndown-raw",
     "bytes": 13029,
-    "ms": 59,
+    "ms": 52,
     "error": null
   },
   {
     "slug": "tailwind",
     "tool": "trafilatura",
     "bytes": 2165,
-    "ms": 580,
+    "ms": 530,
     "error": null
   },
   {
     "slug": "tailwind",
     "tool": "markitdown",
     "bytes": 0,
-    "ms": 93,
+    "ms": 58,
     "error": "  File \"D:\\WEB to MD\\page2ai-benchmark\\protocol-v2\\py_tools.py\", line 29, in run_markitdown\r |     from markitdown import MarkItDown, StreamInfo\r | ModuleNotFoundError: No module named 'markitdown'"
   },
   {
     "slug": "svelte",
     "tool": "page2ai",
     "bytes": 7739,
-    "ms": 7,
+    "ms": 4,
     "error": null
   },
   {
     "slug": "svelte",
     "tool": "readability-turndown",
     "bytes": 824,
-    "ms": 43,
+    "ms": 23,
     "error": null
   },
   {
     "slug": "svelte",
     "tool": "defuddle-turndown",
-    "bytes": 8237,
-    "ms": 709,
+    "bytes": 1023,
+    "ms": 675,
     "error": null
   },
   {
     "slug": "svelte",
     "tool": "turndown-raw",
     "bytes": 6419,
-    "ms": 45,
+    "ms": 31,
     "error": null
   },
   {
     "slug": "svelte",
     "tool": "trafilatura",
     "bytes": 1206,
-    "ms": 707,
+    "ms": 507,
     "error": null
   },
   {
     "slug": "svelte",
     "tool": "markitdown",
     "bytes": 0,
-    "ms": 124,
+    "ms": 61,
     "error": "  File \"D:\\WEB to MD\\page2ai-benchmark\\protocol-v2\\py_tools.py\", line 29, in run_markitdown\r |     from markitdown import MarkItDown, StreamInfo\r | ModuleNotFoundError: No module named 'markitdown'"
   },
   {
     "slug": "biome",
     "tool": "page2ai",
     "bytes": 8049,
-    "ms": 36,
+    "ms": 23,
     "error": null
   },
   {
     "slug": "biome",
     "tool": "readability-turndown",
     "bytes": 3482,
-    "ms": 148,
+    "ms": 80,
     "error": null
   },
   {
     "slug": "biome",
     "tool": "defuddle-turndown",
-    "bytes": 13420,
-    "ms": 2622,
+    "bytes": 2711,
+    "ms": 714,
     "error": null
   },
   {
     "slug": "biome",
     "tool": "turndown-raw",
     "bytes": 11691,
-    "ms": 64,
+    "ms": 62,
     "error": null
   },
   {
     "slug": "biome",
     "tool": "trafilatura",
     "bytes": 5139,
-    "ms": 505,
+    "ms": 506,
     "error": null
   },
   {
     "slug": "biome",
     "tool": "markitdown",
     "bytes": 0,
-    "ms": 62,
+    "ms": 71,
     "error": "  File \"D:\\WEB to MD\\page2ai-benchmark\\protocol-v2\\py_tools.py\", line 29, in run_markitdown\r |     from markitdown import MarkItDown, StreamInfo\r | ModuleNotFoundError: No module named 'markitdown'"
   },
   {
     "slug": "python-docs",
     "tool": "page2ai",
     "bytes": 64225,
-    "ms": 49,
+    "ms": 50,
     "error": null
   },
   {
     "slug": "python-docs",
     "tool": "readability-turndown",
     "bytes": 59304,
-    "ms": 360,
+    "ms": 319,
     "error": null
   },
   {
     "slug": "python-docs",
     "tool": "defuddle-turndown",
-    "bytes": 65299,
-    "ms": 4641,
+    "bytes": 55179,
+    "ms": 3459,
     "error": null
   },
   {
     "slug": "python-docs",
     "tool": "turndown-raw",
     "bytes": 61366,
-    "ms": 133,
+    "ms": 147,
     "error": null
   },
   {
@@ -458,77 +458,77 @@
     "slug": "python-docs",
     "tool": "markitdown",
     "bytes": 0,
-    "ms": 61,
+    "ms": 58,
     "error": "  File \"D:\\WEB to MD\\page2ai-benchmark\\protocol-v2\\py_tools.py\", line 29, in run_markitdown\r |     from markitdown import MarkItDown, StreamInfo\r | ModuleNotFoundError: No module named 'markitdown'"
   },
   {
     "slug": "rust-book",
     "tool": "page2ai",
     "bytes": 13737,
-    "ms": 4,
+    "ms": 7,
     "error": null
   },
   {
     "slug": "rust-book",
     "tool": "readability-turndown",
     "bytes": 13101,
-    "ms": 40,
+    "ms": 30,
     "error": null
   },
   {
     "slug": "rust-book",
     "tool": "defuddle-turndown",
-    "bytes": 13358,
-    "ms": 285,
+    "bytes": 12419,
+    "ms": 204,
     "error": null
   },
   {
     "slug": "rust-book",
     "tool": "turndown-raw",
     "bytes": 13095,
-    "ms": 26,
+    "ms": 29,
     "error": null
   },
   {
     "slug": "rust-book",
     "tool": "trafilatura",
     "bytes": 13019,
-    "ms": 489,
+    "ms": 486,
     "error": null
   },
   {
     "slug": "rust-book",
     "tool": "markitdown",
     "bytes": 0,
-    "ms": 61,
+    "ms": 58,
     "error": "  File \"D:\\WEB to MD\\page2ai-benchmark\\protocol-v2\\py_tools.py\", line 29, in run_markitdown\r |     from markitdown import MarkItDown, StreamInfo\r | ModuleNotFoundError: No module named 'markitdown'"
   },
   {
     "slug": "hono",
     "tool": "page2ai",
     "bytes": 5735,
-    "ms": 13,
+    "ms": 19,
     "error": null
   },
   {
     "slug": "hono",
     "tool": "readability-turndown",
     "bytes": 4895,
-    "ms": 159,
+    "ms": 137,
     "error": null
   },
   {
     "slug": "hono",
     "tool": "defuddle-turndown",
-    "bytes": 11186,
-    "ms": 1143,
+    "bytes": 4541,
+    "ms": 915,
     "error": null
   },
   {
     "slug": "hono",
     "tool": "turndown-raw",
     "bytes": 9714,
-    "ms": 61,
+    "ms": 36,
     "error": null
   },
   {
@@ -542,49 +542,49 @@
     "slug": "hono",
     "tool": "markitdown",
     "bytes": 0,
-    "ms": 61,
+    "ms": 68,
     "error": "  File \"D:\\WEB to MD\\page2ai-benchmark\\protocol-v2\\py_tools.py\", line 29, in run_markitdown\r |     from markitdown import MarkItDown, StreamInfo\r | ModuleNotFoundError: No module named 'markitdown'"
   },
   {
     "slug": "gitbook-sentry",
     "tool": "page2ai",
     "bytes": 21711,
-    "ms": 29,
+    "ms": 23,
     "error": null
   },
   {
     "slug": "gitbook-sentry",
     "tool": "readability-turndown",
     "bytes": 10864,
-    "ms": 200,
+    "ms": 158,
     "error": null
   },
   {
     "slug": "gitbook-sentry",
     "tool": "defuddle-turndown",
-    "bytes": 24245,
-    "ms": 1815,
+    "bytes": 11014,
+    "ms": 1334,
     "error": null
   },
   {
     "slug": "gitbook-sentry",
     "tool": "turndown-raw",
     "bytes": 23034,
-    "ms": 117,
+    "ms": 87,
     "error": null
   },
   {
     "slug": "gitbook-sentry",
     "tool": "trafilatura",
     "bytes": 13505,
-    "ms": 532,
+    "ms": 528,
     "error": null
   },
   {
     "slug": "gitbook-sentry",
     "tool": "markitdown",
     "bytes": 0,
-    "ms": 61,
+    "ms": 70,
     "error": "  File \"D:\\WEB to MD\\page2ai-benchmark\\protocol-v2\\py_tools.py\", line 29, in run_markitdown\r |     from markitdown import MarkItDown, StreamInfo\r | ModuleNotFoundError: No module named 'markitdown'"
   }
 ]

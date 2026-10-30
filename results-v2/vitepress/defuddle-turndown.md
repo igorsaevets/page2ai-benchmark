@@ -1,195 +1,10 @@
-[Skip to content](#VPContent)
-
-[![](https://vitepress.dev/vitepress-logo-mini.svg)VitePress](https://vitepress.dev/)
-
-Search⌘CtrlK
-
-Main Navigation
-
-*   [Guide](https://vitepress.dev/guide/what-is-vitepress)
-*   [Reference](https://vitepress.dev/reference/site-config)
-*   2.0.0-alpha.18
-    
-    *   [1.6.4](https://vuejs.github.io/vitepress/v1/)
-        
-    *   [Changelog](https://github.com/vuejs/vitepress/blob/main/CHANGELOG.md)
-        
-    *   [Contributing](https://github.com/vuejs/vitepress/blob/main/.github/contributing.md)
-        
-    
-
-*   English
-*   [简体中文](https://vitepress.dev/zh/guide/getting-started)
-    
-*   [Português](https://vitepress.dev/pt/guide/getting-started)
-    
-*   [Русский](https://vitepress.dev/ru/guide/getting-started)
-    
-*   [Español](https://vitepress.dev/es/guide/getting-started)
-    
-*   [한국어](https://vitepress.dev/ko/guide/getting-started)
-    
-*   [فارسی](https://vitepress.dev/fa/guide/getting-started)
-    
-*   [日本語](https://vitepress.dev/ja/guide/getting-started)
-    
-
-*   [](https://github.com/vuejs/vitepress)
-
-*   English
-*   [简体中文](https://vitepress.dev/zh/guide/getting-started)
-    
-*   [Português](https://vitepress.dev/pt/guide/getting-started)
-    
-*   [Русский](https://vitepress.dev/ru/guide/getting-started)
-    
-*   [Español](https://vitepress.dev/es/guide/getting-started)
-    
-*   [한국어](https://vitepress.dev/ko/guide/getting-started)
-    
-*   [فارسی](https://vitepress.dev/fa/guide/getting-started)
-    
-*   [日本語](https://vitepress.dev/ja/guide/getting-started)
-    
-
-Appearance
-
-*   [](https://github.com/vuejs/vitepress)
-
-Menu
-
-Return to top
-
-Sidebar Navigation
-
-## Introduction
-
-*   [
-    
-    What is VitePress?
-    
-    ](https://vitepress.dev/guide/what-is-vitepress)
-    
-    [
-    
-    Getting Started
-    
-    ](https://vitepress.dev/guide/getting-started)
-    
-    [
-    
-    Routing
-    
-    ](https://vitepress.dev/guide/routing)
-    
-    [
-    
-    Deploy
-    
-    ](https://vitepress.dev/guide/deploy)
-    
-
-## Writing
-
-*   [
-    
-    Markdown Extensions
-    
-    ](https://vitepress.dev/guide/markdown)
-    
-    [
-    
-    Asset Handling
-    
-    ](https://vitepress.dev/guide/asset-handling)
-    
-    [
-    
-    Frontmatter
-    
-    ](https://vitepress.dev/guide/frontmatter)
-    
-    [
-    
-    Using Vue in Markdown
-    
-    ](https://vitepress.dev/guide/using-vue)
-    
-    [
-    
-    Internationalization
-    
-    ](https://vitepress.dev/guide/i18n)
-    
-
-## Customization
-
-*   [
-    
-    Using a Custom Theme
-    
-    ](https://vitepress.dev/guide/custom-theme)
-    
-    [
-    
-    Extending the Default Theme
-    
-    ](https://vitepress.dev/guide/extending-default-theme)
-    
-    [
-    
-    Build-Time Data Loading
-    
-    ](https://vitepress.dev/guide/data-loading)
-    
-    [
-    
-    SSR Compatibility
-    
-    ](https://vitepress.dev/guide/ssr-compat)
-    
-    [
-    
-    Connecting to a CMS
-    
-    ](https://vitepress.dev/guide/cms)
-    
-
-## Experimental
-
-*   [
-    
-    MPA Mode
-    
-    ](https://vitepress.dev/guide/mpa-mode)
-    
-    [
-    
-    Sitemap Generation
-    
-    ](https://vitepress.dev/guide/sitemap-generation)
-    
-
-*   [
-    
-    Config & API Reference
-    
-    ](https://vitepress.dev/reference/site-config)
-    
-
-On this page
-
-Are you an LLM? You can read better optimized documentation at /guide/getting-started.md for this page in Markdown format
-
-# Getting Started [​](#getting-started)
-
-## Try It Online [​](#try-it-online)
+## Try It Online
 
 You can try VitePress directly in your browser on [StackBlitz](https://vitepress.new/).
 
-## Installation [​](#installation)
+## Installation
 
-### Prerequisites [​](#prerequisites)
+### Prerequisites
 
 *   [Node.js](https://nodejs.org/) version 22 or higher.
 *   Terminal for accessing VitePress via its command line interface (CLI).
@@ -198,35 +13,23 @@ You can try VitePress directly in your browser on [StackBlitz](https://vitepress
 
 VitePress can be used on its own, or be installed into an existing project. In both cases, you can install it with:
 
-npmpnpmyarnbundeno
-
-sh
-
-```
+```sh
 $ npm add -D vitepress@next
 ```
 
-sh
-
-```
+```sh
 $ pnpm add -D vitepress@next
 ```
 
-sh
-
-```
+```sh
 $ yarn add -D vitepress@next vue
 ```
 
-sh
-
-```
+```sh
 $ bun add -D vitepress@next
 ```
 
-sh
-
-```
+```sh
 $ deno add -D vitepress@next
 ```
 
@@ -234,33 +37,23 @@ NOTE
 
 VitePress is an ESM-only package. Don't use `require()` to import it, and make sure your nearest `package.json` contains `"type": "module"`, or change the file extension of your relevant files like `.vitepress/config.js` to `.mjs`/`.mts`. Refer to [Vite's troubleshooting guide](http://vite.dev/guide/troubleshooting.html#this-package-is-esm-only) for more details. Also, inside async CJS contexts, you can use `await import('vitepress')` instead.
 
-### Setup Wizard [​](#setup-wizard)
+### Setup Wizard
 
 VitePress ships with a command line setup wizard that will help you scaffold a basic project. After installation, start the wizard by running:
 
-npmpnpmyarnbun
-
-sh
-
-```
+```sh
 $ npx vitepress init
 ```
 
-sh
-
-```
+```sh
 $ pnpm vitepress init
 ```
 
-sh
-
-```
+```sh
 $ yarn vitepress init
 ```
 
-sh
-
-```
+```sh
 $ bun vitepress init
 ```
 
@@ -303,7 +96,7 @@ Vue as Peer Dependency
 
 If you intend to perform customization that uses Vue components or APIs, you should also explicitly install `vue` as a dependency.
 
-## File Structure [​](#file-structure)
+## File Structure
 
 If you are building a standalone VitePress site, you can scaffold the site in your current directory (`./`). However, if you are installing VitePress in an existing project alongside other source code, it is recommended to scaffold the site in a nested directory (e.g. `./docs`) so that it is separate from the rest of the project.
 
@@ -326,15 +119,11 @@ TIP
 
 By default, VitePress stores its dev server cache in `.vitepress/cache`, and the production build output in `.vitepress/dist`. If using Git, you should add them to your `.gitignore` file. These locations can also be [configured](https://vitepress.dev/reference/site-config#outdir).
 
-### The Config File [​](#the-config-file)
+### The Config File
 
 The config file (`.vitepress/config.js`) allows you to customize various aspects of your VitePress site, with the most basic options being the title and description of the site:
 
-.vitepress/config.js
-
-js
-
-```
+```js
 export default {
   // site-level options
   title: 'VitePress',
@@ -348,7 +137,7 @@ export default {
 
 You can also configure the behavior of the theme via the `themeConfig` option. Consult the [Config Reference](https://vitepress.dev/reference/site-config) for full details on all config options.
 
-### Source Files [​](#source-files)
+### Source Files
 
 Markdown files outside the `.vitepress` directory are considered **source files**.
 
@@ -356,15 +145,11 @@ VitePress uses **file-based routing**: each `.md` file is compiled into a corres
 
 VitePress also provides the ability to generate clean URLs, rewrite paths, and dynamically generate pages. These will be covered in the [Routing Guide](https://vitepress.dev/guide/routing).
 
-## Up and Running [​](#up-and-running)
+## Up and Running
 
 The tool should have also injected the following npm scripts to your `package.json` if you allowed it to do so during the setup process:
 
-package.json
-
-json
-
-```
+```json
 {
   ...
   "scripts": {
@@ -378,57 +163,37 @@ json
 
 The `docs:dev` script will start a local dev server with instant hot updates. Run it with the following command:
 
-npmpnpmyarnbun
-
-sh
-
-```
+```sh
 $ npm run docs:dev
 ```
 
-sh
-
-```
+```sh
 $ pnpm run docs:dev
 ```
 
-sh
-
-```
+```sh
 $ yarn docs:dev
 ```
 
-sh
-
-```
+```sh
 $ bun run docs:dev
 ```
 
 Instead of npm scripts, you can also invoke VitePress directly with:
 
-npmpnpmyarnbun
-
-sh
-
-```
+```sh
 $ npx vitepress dev docs
 ```
 
-sh
-
-```
+```sh
 $ pnpm vitepress dev docs
 ```
 
-sh
-
-```
+```sh
 $ yarn vitepress dev docs
 ```
 
-sh
-
-```
+```sh
 $ bun vitepress dev docs
 ```
 
@@ -436,7 +201,7 @@ More command line usage is documented in the [CLI Reference](https://vitepress.d
 
 The dev server should be running at `http://localhost:5173`. Visit the URL in your browser to see your new site in action!
 
-## What's Next? [​](#what-s-next)
+## What's Next?
 
 *   To better understand how markdown files are mapped to generated HTML, proceed to the [Routing Guide](https://vitepress.dev/guide/routing).
     
@@ -447,18 +212,3 @@ The dev server should be running at `http://localhost:5173`. Visit the URL in yo
 *   If you want to further customize the appearance of your site, explore how to either [Extend the Default Theme](https://vitepress.dev/guide/extending-default-theme) or [Build a Custom Theme](https://vitepress.dev/guide/custom-theme).
     
 *   Once your documentation site takes shape, make sure to read the [Deployment Guide](https://vitepress.dev/guide/deploy).
-    
-
-[Edit this page on GitHub](https://github.com/vuejs/vitepress/edit/main/docs/en/guide/getting-started.md)
-
-Last updated:
-
-Pager
-
-[Previous pageWhat is VitePress?](https://vitepress.dev/guide/what-is-vitepress)
-
-[Next pageRouting](https://vitepress.dev/guide/routing)
-
-Released under the MIT License.
-
-Copyright © 2019-present Evan You

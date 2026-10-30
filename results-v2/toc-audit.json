@@ -1,5 +1,5 @@
 {
-  "audited_at": "2026-10-30T20:44:55.098Z",
+  "audited_at": "2026-10-30T21:15:54.486Z",
   "question": "Does duplicated TOC/sidebar heading text let a tool score heading recall without extracting the article?",
   "corpus_headings": 170,
   "corpus_headings_also_in_chrome": 52,
@@ -14,13 +14,6 @@
   ],
   "summary": [
     {
-      "tool": "defuddle-turndown",
-      "heading_recall_all_pages": 1,
-      "heading_recall_same_pages": 1,
-      "heading_recall_strict": 1,
-      "delta_like_for_like": 0
-    },
-    {
       "tool": "turndown-raw",
       "heading_recall_all_pages": 1,
       "heading_recall_same_pages": 1,
@@ -33,6 +26,13 @@
       "heading_recall_same_pages": 0.9167,
       "heading_recall_strict": 0.9,
       "delta_like_for_like": -0.0167
+    },
+    {
+      "tool": "defuddle-turndown",
+      "heading_recall_all_pages": 0.7498,
+      "heading_recall_same_pages": 0.6765,
+      "heading_recall_strict": 0.7017,
+      "delta_like_for_like": 0.0253
     },
     {
       "tool": "trafilatura",
@@ -80,8 +80,8 @@
           "n_hit_ambiguous": 0
         },
         "defuddle-turndown": {
-          "heading_recall": 1,
-          "heading_recall_strict": 1,
+          "heading_recall": 0.1667,
+          "heading_recall_strict": 0,
           "n_hit_ambiguous": 1
         },
         "turndown-raw": {
@@ -124,9 +124,9 @@
           "n_hit_ambiguous": 0
         },
         "defuddle-turndown": {
-          "heading_recall": 1,
+          "heading_recall": 0.9412,
           "heading_recall_strict": 1,
-          "n_hit_ambiguous": 1
+          "n_hit_ambiguous": 0
         },
         "turndown-raw": {
           "heading_recall": 1,
@@ -170,9 +170,9 @@
           "n_hit_ambiguous": 4
         },
         "defuddle-turndown": {
-          "heading_recall": 1,
+          "heading_recall": 0.875,
           "heading_recall_strict": null,
-          "n_hit_ambiguous": 8
+          "n_hit_ambiguous": 7
         },
         "turndown-raw": {
           "heading_recall": 1,
@@ -216,9 +216,9 @@
           "n_hit_ambiguous": 3
         },
         "defuddle-turndown": {
-          "heading_recall": 1,
+          "heading_recall": 0.8333,
           "heading_recall_strict": 1,
-          "n_hit_ambiguous": 3
+          "n_hit_ambiguous": 2
         },
         "turndown-raw": {
           "heading_recall": 1,
@@ -306,9 +306,9 @@
           "n_hit_ambiguous": 0
         },
         "defuddle-turndown": {
-          "heading_recall": 1,
+          "heading_recall": 0.9,
           "heading_recall_strict": 1,
-          "n_hit_ambiguous": 1
+          "n_hit_ambiguous": 0
         },
         "turndown-raw": {
           "heading_recall": 1,
@@ -348,8 +348,8 @@
           "n_hit_ambiguous": 0
         },
         "defuddle-turndown": {
-          "heading_recall": 1,
-          "heading_recall_strict": 1,
+          "heading_recall": 0.6364,
+          "heading_recall_strict": 0.6364,
           "n_hit_ambiguous": 0
         },
         "turndown-raw": {
@@ -390,8 +390,8 @@
           "n_hit_ambiguous": 0
         },
         "defuddle-turndown": {
-          "heading_recall": 1,
-          "heading_recall_strict": 1,
+          "heading_recall": 0.2581,
+          "heading_recall_strict": 0.2581,
           "n_hit_ambiguous": 0
         },
         "turndown-raw": {
@@ -432,8 +432,8 @@
           "n_hit_ambiguous": 0
         },
         "defuddle-turndown": {
-          "heading_recall": 1,
-          "heading_recall_strict": 1,
+          "heading_recall": 0.1818,
+          "heading_recall_strict": 0.1818,
           "n_hit_ambiguous": 0
         },
         "turndown-raw": {
@@ -478,9 +478,9 @@
           "n_hit_ambiguous": 4
         },
         "defuddle-turndown": {
-          "heading_recall": 1,
+          "heading_recall": 0.8571,
           "heading_recall_strict": null,
-          "n_hit_ambiguous": 7
+          "n_hit_ambiguous": 6
         },
         "turndown-raw": {
           "heading_recall": 1,
@@ -611,9 +611,9 @@
           "n_hit_ambiguous": 2
         },
         "defuddle-turndown": {
-          "heading_recall": 1,
+          "heading_recall": 0.9,
           "heading_recall_strict": 1,
-          "n_hit_ambiguous": 2
+          "n_hit_ambiguous": 1
         },
         "turndown-raw": {
           "heading_recall": 1,
@@ -656,8 +656,8 @@
           "n_hit_ambiguous": 2
         },
         "defuddle-turndown": {
-          "heading_recall": 1,
-          "heading_recall_strict": 1,
+          "heading_recall": 0.9474,
+          "heading_recall_strict": 0.9412,
           "n_hit_ambiguous": 2
         },
         "turndown-raw": {

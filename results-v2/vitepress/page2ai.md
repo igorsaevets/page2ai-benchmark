@@ -1,7 +1,7 @@
 ---
 title: "Getting Started"
 source: "https://vitepress.dev/guide/getting-started"
-captured_at: "2026-10-30T20:44:30.754Z"
+captured_at: "2026-10-30T21:15:36.356Z"
 language: "en-US"
 description: "Get up and running with VitePress. Learn how to install, scaffold, and start developing your documentation site."
 canonical: "https://vitepress.dev/guide/getting-started"
