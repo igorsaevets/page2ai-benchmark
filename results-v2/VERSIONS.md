@@ -1,7 +1,7 @@
 # Resolved tool versions for the committed scored run
 
 Corpus captured 2026-07-28; the offline extract/score track was last re-executed
-2026-10-18 (see the dated notes below).
+2026-10-30 (#26; see the dated notes below).
 
 The manifests declare ranges (`^`/`~`); this file records what the committed
 `package-lock.json` / `requirements.txt` actually resolved for the run whose
@@ -13,12 +13,17 @@ versions without opening the lockfile.
 
 | package | version |
 |---|---|
-| @page2ai/core | 0.2.2 |
+| @page2ai/core | 0.3.2 |
 | @mozilla/readability | 0.6.0 |
 | defuddle | 0.19.5 |
 | turndown | 7.2.4 |
-| jsdom | 30.0.1 |
-| linkedom | 0.18.13 |
+| jsdom | 30.1.3 |
+| @asamuzakjp/dom-selector | 10.0.4, patched (`patches/@asamuzakjp+dom-selector+10.0.4.patch`: selector cap 2048 to 65536) |
+| linkedom | 0.18.14 |
+
+These are the versions in `package-lock.json` at the commit that last wrote
+`scores.json` (#26, 2026-10-30). Until 2026-11-21 this table still showed the
+2026-10-18 run (core 0.2.2, jsdom 30.0.1, linkedom 0.18.13).
 
 Note: the initial v2 scoring ran on @page2ai/core 0.1.4; the committed extracts
 and scores were re-run on 0.1.5 (see the "page2ai 0.1.5 re-run" commit).
@@ -54,13 +59,26 @@ string "0.1.13" to "0.2.2" in frontmatter), 4 pages by 20-146 bytes (improved
 boilerplate removal: tab labels, copy buttons, keyboard shortcuts). Non-page2ai
 tools reproduced byte-for-byte (control arm clean).
 
+On 2026-10-30 three changes re-scored the offline track: #23 moved
+@page2ai/core to 0.3.2; #24 took jsdom 30.1.3 and raised the 2048-character
+selector cap of @asamuzakjp/dom-selector 10.0.4 to 65536 with patch-package
+(`patches/`), so defuddle extracts again instead of falling back to the whole
+document; #26 unhides `[hidden]` before Readability so React 18 Suspense
+content is extracted. #25 moved the Python extractors into their own `.venv`.
+`scores.json` was last written by #26; the table above lists that run.
+
 On 2026-11-21 a Dependabot round moved @page2ai/core 0.4.0 to 0.4.21, linkedom
 0.18.14 to 0.18.15 and turndown 7.2.4 to 7.2.5 (jsdom stays 30.1.3, defuddle
-0.19.6). The offline extract track ran on the old lock (control) and on the new
-one: all 84 extractions are identical apart from page2ai's `captured_at` and
-`extractor_version` frontmatter lines, so the committed outputs and scores hold.
+0.19.6; core 0.4.0 (#28) and defuddle 0.19.6 (#27) had come in on 2026-11-02
+without a re-run).
+The offline extract track ran on the old lock (control) and on the new one: all
+84 extractions are identical apart from page2ai's `captured_at` and
+`extractor_version` frontmatter lines. The control arm also reproduces the
+committed files: 70 byte-identical, and the 14 page2ai files differ only in
+`extractor_version` (0.3.2 committed). So the committed outputs and scores hold
+for core 0.3.2 through 0.4.21 and defuddle 0.19.5 and 0.19.6.
 jsdom 31 is not taken yet: it replaces @asamuzakjp/dom-selector (and with it the
-2048-character patch above) with a new selector and computed-style engine, which
+selector-cap patch from #24) with a new selector and computed-style engine, which
 feeds the readability and defuddle arms and needs its own re-run.
 
 ## Python tools (from protocol-v2/requirements.txt, pinned)
