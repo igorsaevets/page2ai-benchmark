@@ -5,6 +5,13 @@ updates:
     schedule:
       interval: weekly
     open-pull-requests-limit: 5
+    ignore:
+      # jsdom 31 replaces @asamuzakjp/dom-selector (patched here for its 2048-character
+      # selector cap) with a new selector and computed-style engine that feeds the
+      # readability and defuddle arms: a major is a re-run of the scored track, by hand
+      # (results-v2/VERSIONS.md, 2026-11-21).
+      - dependency-name: jsdom
+        update-types: ["version-update:semver-major"]
   - package-ecosystem: github-actions
     directory: /
     schedule:

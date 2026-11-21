@@ -54,6 +54,15 @@ string "0.1.13" to "0.2.2" in frontmatter), 4 pages by 20-146 bytes (improved
 boilerplate removal: tab labels, copy buttons, keyboard shortcuts). Non-page2ai
 tools reproduced byte-for-byte (control arm clean).
 
+On 2026-11-21 a Dependabot round moved @page2ai/core 0.4.0 to 0.4.21, linkedom
+0.18.14 to 0.18.15 and turndown 7.2.4 to 7.2.5 (jsdom stays 30.1.3, defuddle
+0.19.6). The offline extract track ran on the old lock (control) and on the new
+one: all 84 extractions are identical apart from page2ai's `captured_at` and
+`extractor_version` frontmatter lines, so the committed outputs and scores hold.
+jsdom 31 is not taken yet: it replaces @asamuzakjp/dom-selector (and with it the
+2048-character patch above) with a new selector and computed-style engine, which
+feeds the readability and defuddle arms and needs its own re-run.
+
 ## Python tools (from protocol-v2/requirements.txt, pinned)
 
 | package | version |
